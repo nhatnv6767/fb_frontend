@@ -32,6 +32,7 @@
     height: fit-content;
     border-radius: 10px;
     margin: 1rem auto;
+    user-select: none;
 }
 
 .login_2_wrap button {
@@ -39,5 +40,5 @@
     height: 50px;
     font-size: 17px;
     font-weight: 700;
-    user-select: none;
 }
+
