@@ -24,7 +24,7 @@ export default function LoginInput({placeholder, bottom, ...props}) {
                 {...field}
                 {...props}
             />
-            
+
             {meta.touched && meta.error && bottom ? (
                 <div className="input_error">
                     {
@@ -34,7 +34,8 @@ export default function LoginInput({placeholder, bottom, ...props}) {
                 </div>
             ) : ""
             }
-            {meta.touched && meta.error && <i className="error_icon"></i>}
+            {/* It's a ternary operator. If `bottom` is true, then the `top` will be `60%`. */}
+            {meta.touched && meta.error && <i className="error_icon" style={{top: `${!bottom && "60%"}`}}></i>}
         </div>
     );
 }
