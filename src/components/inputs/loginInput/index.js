@@ -1,12 +1,14 @@
 import "./style.css";
+import {useField} from "formik";
 
-export default function LoginInput({type, name, placeholder}) {
+export default function LoginInput({placeholder, ...props}) {
+    const [field, meta] = useField(props);
     return (
         <div className="input_wrap">
             <input
-                type={type}
-                name={name}
                 placeholder={placeholder}
+                {...field}
+                {...props}
             />
         </div>
     );
