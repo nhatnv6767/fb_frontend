@@ -18,6 +18,8 @@ export default function Login() {
                                     (formik) => (
                                         <Form>
                                             <input type="text"/>
+                                            <input type="text"/>
+                                            <button type="submit">Log In</button>
                                         </Form>
                                     )
                                 }
