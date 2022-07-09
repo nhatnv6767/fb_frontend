@@ -86,11 +86,30 @@
     /* Adding a shadow to the element. */
     box-shadow: 0 1px 2px var(--shadow-1);
     border-radius: 10px;
-    padding: 15px;
-    padding-bottom: 1rem;
+    padding: 15px 15px 1rem;
     width: 350px;
+    /* Used to set the height of the element to the height of its content. */
     height: fit-content;
-    color: var(--color-primary)
+    /* Using a CSS variable to set the color of the text. */
+    color: var(--color-primary);
+}
+
+.register_header {
+    position: relative;
+    /* Making the element a flex container and setting the direction of the items in the flexbox to column. */
+    display: flex;
+    flex-direction: column;
+    /* Setting the gap between the items in the flexbox to 10px. */
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--bg-third);
+}
+
+.register_header i {
+    /* Used to position the element relative to its parent. */
+    position: absolute;
+    right: 0;
+    cursor: pointer;
 }
 
 /* --------- Register --------- */
