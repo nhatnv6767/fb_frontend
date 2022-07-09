@@ -70,6 +70,21 @@
     font-size: 15px;
 }
 
+/* ------------------ Footer -------------------- */
+
+.login_footer {
+    height: 22vh;
+    background: var(--bg-primary);
+    padding: 1.5rem;
+}
+
+.login_footer_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ------------------ Footer -------------------- */
+
 /* ------------------ Media queries ----------------- */
 /* A media query. It is used to change the style of the page when the screen size is greater than 850px. */
 @media (min-width: 850px) {
