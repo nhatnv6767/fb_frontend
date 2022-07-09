@@ -22,7 +22,11 @@ export default function LoginInput({placeholder, bottom, ...props}) {
                     }
 
                     {
-                        meta.touched && meta.error && <div className="error_arrow_top"></div>
+                        meta.touched && meta.error && (
+                            <div
+                                className={destopView ? "error_arrow_left" : "error_arrow_top"}
+                            ></div>
+                        )
                     }
                 </div>
             ) : ""
@@ -47,7 +51,11 @@ export default function LoginInput({placeholder, bottom, ...props}) {
                         meta.touched && meta.error && <ErrorMessage name={field.name}/>
                     }
                     {
-                        meta.touched && meta.error && <div className="error_arrow_bottom"></div>
+                        meta.touched && meta.error && (
+                            <div
+                                className={destopView ? "error_arrow_left" : "error_arrow_top"}
+                            ></div>
+                        )
                     }
                 </div>
             ) : ""
