@@ -78,6 +78,7 @@
         align-items: center;
         max-width: 1000px;
         margin: 0 auto;
+        padding: 0 1rem;
     }
 
     .login_1 {
@@ -90,6 +91,14 @@
     .login_1 img {
         width: 300px;
         margin-left: -1.7rem;
+    }
+
+    .login_1 span {
+        font-size: 20px;
+    }
+
+    .login_2_wrap {
+        width: 400px;
     }
 }
 
