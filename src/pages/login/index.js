@@ -4,11 +4,14 @@ import {Link} from "react-router-dom";
 import LoginInput from "../../components/inputs/loginInput";
 import {useState} from "react";
 
+const loginInfos = {
+    email: "",
+    password: '',
+};
+
 export default function Login() {
-    const [login, setLogin] = useState("logininit");
-    console.log("login", login);
-    setLogin("Welcome");
-    console.log("setLogin", login);
+    const [login, setLogin] = useState(loginInfos);
+    const {email, password} = login;
     return (
         <div className="login">
             <div className="login_wrapper">
@@ -24,8 +27,8 @@ export default function Login() {
                             <Formik
                                 /* Setting the initial values of the formik form. */
                                 initialValues={{
-                                    email: '',
-                                    password: '',
+                                    email,
+                                    password,
                                 }}
                             >
                                 {
