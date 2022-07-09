@@ -53,7 +53,7 @@ export default function LoginInput({placeholder, bottom, ...props}) {
                     {
                         meta.touched && meta.error && (
                             <div
-                                className={destopView ? "error_arrow_left" : "error_arrow_top"}
+                                className={destopView ? "error_arrow_left" : "error_arrow_bottom"}
                             ></div>
                         )
                     }
