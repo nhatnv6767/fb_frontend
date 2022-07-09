@@ -46,7 +46,7 @@
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     position: absolute;
-    bottom: -10px;
+    bottom: -9px;
 }
 
 .error_arrow_bottom {
