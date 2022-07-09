@@ -1,9 +1,13 @@
 import "./style.css";
 
-export default function LoginInput({placeholder}) {
+export default function LoginInput({type, name, placeholder}) {
     return (
         <div className="input_wrap">
-            <input placeholder={placeholder}/>
+            <input
+                type={type}
+                name={name}
+                placeholder={placeholder}
+            />
         </div>
     );
 }
