@@ -25,6 +25,8 @@ export default function Login() {
                     <div className="login_2">
                         <div className="login_2_wrap">
                             <Formik
+                                /* A prop that is used to tell the formik form to re-render when the initial values change. */
+                                enableReinitialize
                                 /* Setting the initial values of the formik form. */
                                 initialValues={{
                                     email,
