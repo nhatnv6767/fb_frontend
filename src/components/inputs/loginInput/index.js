@@ -14,7 +14,7 @@ export default function LoginInput({placeholder, ...props}) {
             <input
                 /* It's a ternary operator. If `meta.touched` and `meta.error` are both true, then the className will be
                 `input_error_border`. */
-                className={meta.touched && meta.error && "input_error_border"}
+                className={meta.touched && meta.error ? "input_error_border" : ""}
                 type={field.type}
                 name={field.name}
                 placeholder={placeholder}
