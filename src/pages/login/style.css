@@ -111,6 +111,13 @@
     border: 1px solid var(--bg-third);
 }
 
+.footer_square i {
+    /* Used to reduce the size of the icon. */
+    transform: scale(0.8);
+    /* Used to invert the color of the icon. */
+    -webkit-filter: invert(40%);
+}
+
 /* ------------------ Footer -------------------- */
 
 /* ------------------ Media queries ----------------- */
