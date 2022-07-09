@@ -21,6 +21,7 @@ export default function LoginInput({placeholder, ...props}) {
                 {...field}
                 {...props}
             />
+            {meta.touched && meta.error && <i className="error_icon"></i>}
         </div>
     );
 }
