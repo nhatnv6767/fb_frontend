@@ -1,3 +1,5 @@
+import {Form, Formik} from "formik";
+
 export default function RegisterForm() {
     return (
         <div className="blur">
@@ -7,6 +9,17 @@ export default function RegisterForm() {
                     <span>Sign Up</span>
                     <span>it's quick and easy</span>
                 </div>
+                <Formik>
+                    {
+                        (formik) => (
+                            <Form className="register_form">
+                                <div className="regi_line">
+                                    
+                                </div>
+                            </Form>
+                        )
+                    }
+                </Formik>
             </div>
         </div>
     );
