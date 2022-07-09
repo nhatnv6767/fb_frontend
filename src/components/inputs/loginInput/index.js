@@ -6,6 +6,8 @@ export default function LoginInput({placeholder, ...props}) {
     return (
         <div className="input_wrap">
             <input
+                type={field.type}
+                name={field.name}
                 placeholder={placeholder}
                 {...field}
                 {...props}
