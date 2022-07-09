@@ -11,7 +11,11 @@ export default function Login() {
                             Facebook helps you connect and share with the people in your life.
                         </span>
                     </div>
-                    <div className="login_2"></div>
+                    <div className="login_2">
+                        <div className="login_2_wrap">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div className="register"></div>
             </div>
