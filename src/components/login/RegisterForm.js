@@ -1,5 +1,5 @@
 export default function RegisterForm() {
     return (
-        <div className="register"></div>
+        <div className="blur"></div>
     );
 }
