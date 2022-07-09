@@ -26,7 +26,9 @@ export default function Login() {
                                     )
                                 }
                             </Formik>
-                            <Link to="/forgot" className="forgot_password">Forgoten password?</Link>
+                            <Link to="/forgot" className="forgot_password">
+                                Forgoten password?
+                            </Link>
                             <div className="sign_splitter"></div>
                             <button className="blue_btn open_signup">Create Account</button>
                         </div>
