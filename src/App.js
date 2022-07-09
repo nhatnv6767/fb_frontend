@@ -1,13 +1,13 @@
-import {LiveVideo} from "./svg"
+import {Routes, Route} from "react-router-dom";
+
 function App() {
-  const get = async () => {
-    const res = await fetch('http://localhost:8000')
-    console.log(res)
-  }
-  get()
-  return <div>
-    welcome to frontend
-  </div>;
+    return (
+        <div>
+            <Routes>
+                <Route path="/login"/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
