@@ -99,7 +99,7 @@ export default function Login() {
                         </Link>
                     </div>
                     <div className="footer_splitter"></div>
-                    <div className="login_footer wrap">
+                    <div className="login_footer_wrap">
                         <Link to="/">Sign Up</Link>
                         <Link to="/">Log In</Link>
                         <Link to="/">Messenger</Link>

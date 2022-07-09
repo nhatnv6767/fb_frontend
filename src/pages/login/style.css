@@ -101,6 +101,16 @@
     text-decoration: underline;
 }
 
+.footer_square {
+    background: var(--bg-secondary);
+    height: 19px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bg-third);
+}
+
 /* ------------------ Footer -------------------- */
 
 /* ------------------ Media queries ----------------- */
