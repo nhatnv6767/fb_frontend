@@ -22,3 +22,10 @@
 .input_error_border {
     border-color: #b94a48 !important;
 }
+
+.input_wrap i {
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    transform: scale(0.8);
+}
