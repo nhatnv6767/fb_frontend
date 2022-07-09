@@ -67,3 +67,11 @@
     left: -19.5rem;
     top: -3px;
 }
+
+.error_arrow_left {
+    border-left: 10px solid yellow;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: -10px;
+}
