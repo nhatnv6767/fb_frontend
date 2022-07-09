@@ -1,3 +1,4 @@
+import "./style.css";
 import {Formik, Form} from "formik";
 import {Link} from "react-router-dom";
 
