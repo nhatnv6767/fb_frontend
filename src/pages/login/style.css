@@ -131,6 +131,12 @@
 /* ------------------ Footer -------------------- */
 
 /* ------------------ Media queries ----------------- */
+@media (min-width: 539px) {
+    .login_2_wrap {
+        max-width: 520px;
+    }
+}
+
 /* A media query. It is used to change the style of the page when the screen size is greater than 850px. */
 @media (min-width: 850px) {
     .login_wrap {
