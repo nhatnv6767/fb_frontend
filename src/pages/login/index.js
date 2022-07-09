@@ -1,4 +1,5 @@
 import {Formik, Form} from "formik";
+import {Link} from "react-router-dom";
 
 export default function Login() {
     return (
@@ -24,6 +25,7 @@ export default function Login() {
                                     )
                                 }
                             </Formik>
+                            <Link to="/forgot">Forgoten password?</Link>
                         </div>
                     </div>
                 </div>
