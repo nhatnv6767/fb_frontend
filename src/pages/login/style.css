@@ -132,8 +132,14 @@
 
 /* ------------------ Media queries ----------------- */
 @media (min-width: 539px) {
-    .login_2_wrap {
+    .login_footer_wrap {
         max-width: 520px;
+    }
+}
+
+@media (min-width: 650px) {
+    .login_footer_wrap {
+        max-width: 650px;
     }
 }
 
@@ -168,6 +174,10 @@
 
     .input_wrap {
         width: 360px !important;
+    }
+
+    .login_footer_wrap {
+        max-width: 900px;
     }
 }
 
