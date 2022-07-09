@@ -5,7 +5,7 @@ export default function LoginInput({placeholder, ...props}) {
     const [field, meta] = useField(props);
     return (
         <div className="input_wrap">
-            <div>
+            <div className="input_error">
                 {
                     /* meta.touched: A boolean that is true if the field has been touched. */
                     meta.touched && meta.error && <ErrorMessage name={field.name}/>
