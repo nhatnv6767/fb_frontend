@@ -40,3 +40,13 @@
     border-radius: 5px;
     margin-bottom: 15px;
 }
+
+.error_arrow_top {
+    border-top: 10px solid yellow;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.error_arrow_bottom {
+
+}
