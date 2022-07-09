@@ -100,6 +100,10 @@
     .login_2_wrap {
         width: 400px;
     }
+
+    .input_wrap {
+        width: 360px !important;
+    }
 }
 
 /* ------------------ Media queries ----------------- */
