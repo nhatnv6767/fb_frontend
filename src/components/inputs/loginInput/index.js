@@ -5,12 +5,15 @@ export default function LoginInput({placeholder, ...props}) {
     const [field, meta] = useField(props);
     return (
         <div className="input_wrap">
-            <div className="input_error">
-                {
-                    /* meta.touched: A boolean that is true if the field has been touched. */
-                    meta.touched && meta.error && <ErrorMessage name={field.name}/>
-                }
-            </div>
+            {meta.touched && meta.error ? (
+                <div className="input_error">
+                    {
+                        /* meta.touched: A boolean that is true if the field has been touched. */
+                        meta.touched && meta.error && <ErrorMessage name={field.name}/>
+                    }
+                </div>
+            ) : ""
+            }
             <input
                 /* It's a ternary operator. If `meta.touched` and `meta.error` are both true, then the className will be
                 `input_error_border`. */
