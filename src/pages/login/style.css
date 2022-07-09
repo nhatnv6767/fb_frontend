@@ -90,6 +90,17 @@
     margin: 0 auto;
 }
 
+.login_footer_wrap a {
+    /* A CSS property that makes the element a flex container. */
+    display: flex;
+    /* Aligning the items in the flexbox to the center. */
+    align-items: center;
+}
+
+.login_footer_wrap a:hover {
+    text-decoration: underline;
+}
+
 /* ------------------ Footer -------------------- */
 
 /* ------------------ Media queries ----------------- */
