@@ -2,8 +2,8 @@ import "./style.css";
 
 export default function LoginInput() {
     return (
-        <div>
-            <input type="text"/>
+        <div className="input_wrap">
+            <input type="text" placeholder="Email address or Phone number"/>
             <input type="text"/>
         </div>
     );
