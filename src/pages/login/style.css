@@ -81,6 +81,13 @@
 .login_footer_wrap {
     display: flex;
     flex-wrap: wrap;
+    /* Setting the gap between the items in the flexbox to 3px on the top and bottom and 10px on the left and right. */
+    gap: 3px 10px;
+    font-size: 13px;
+    color: var(--color-secondary);
+    max-width: 350px;
+    /* Centering the element horizontally. */
+    margin: 0 auto;
 }
 
 /* ------------------ Footer -------------------- */
