@@ -21,6 +21,7 @@ export default function Login() {
                                     (formik) => (
                                         <Form>
                                             <LoginInput/>
+                                            <LoginInput/>
                                             <button type="submit" className="blue_btn">Log In</button>
                                         </Form>
                                     )
