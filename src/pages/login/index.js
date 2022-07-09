@@ -1,4 +1,4 @@
-import React from 'react';
+import {Formik, Form} from "formik";
 
 export default function Login() {
     return (
@@ -13,7 +13,15 @@ export default function Login() {
                     </div>
                     <div className="login_2">
                         <div className="login_2_wrap">
-                            
+                            <Formik>
+                                {
+                                    (formik) => (
+                                        <Form>
+                                            <input type="text"/>
+                                        </Form>
+                                    )
+                                }
+                            </Formik>
                         </div>
                     </div>
                 </div>
