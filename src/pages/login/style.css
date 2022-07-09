@@ -118,6 +118,16 @@
     -webkit-filter: invert(40%);
 }
 
+.footer_splitter {
+    width: 100%;
+    height: 1px;
+    background: var(--bg-third);
+    /* Setting the margin of the element to 10px on the top and bottom and 0px on the left and right. */
+    margin: 10px auto;
+    /* Used to set the maximum width of the element to 900px. */
+    max-width: 900px;
+}
+
 /* ------------------ Footer -------------------- */
 
 /* ------------------ Media queries ----------------- */
