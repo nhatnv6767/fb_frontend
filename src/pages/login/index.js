@@ -20,7 +20,11 @@ export default function Login() {
     };
 
     const loginValidation = Yup.object({
-        email: Yup.string().required(),
+        email: Yup.string()
+            .required("Email address is required.")
+            .email("Must be a valid email.")
+            .max(100, "Email must be at most 100 characters"),
+        password: Yup.string().required("Password is required."),
     });
     return (
         <div className="login">
