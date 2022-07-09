@@ -2,8 +2,11 @@ import "./style.css";
 import {Formik, Form} from "formik";
 import {Link} from "react-router-dom";
 import LoginInput from "../../components/inputs/loginInput";
+import {useState} from "react";
 
 export default function Login() {
+    const [login, setLogin] = useState("logininit");
+    console.log("login", login);
     return (
         <div className="login">
             <div className="login_wrapper">
@@ -17,6 +20,7 @@ export default function Login() {
                     <div className="login_2">
                         <div className="login_2_wrap">
                             <Formik
+                                /* Setting the initial values of the formik form. */
                                 initialValues={{
                                     email: '',
                                     password: '',
