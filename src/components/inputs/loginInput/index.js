@@ -53,7 +53,13 @@ export default function LoginInput({placeholder, bottom, ...props}) {
             ) : ""
             }
             {/* It's a ternary operator. If `bottom` is true, then the `top` will be `60%`. */}
-            {meta.touched && meta.error && <i className="error_icon" style={{top: `${!bottom && "63%"}`}}></i>}
+            {meta.touched && meta.error && (
+                <i
+                    className="error_icon"
+                    style={{top: `${!bottom && !destopView && "63%"}`}}
+                >
+                </i>
+            )}
         </div>
     );
 }
