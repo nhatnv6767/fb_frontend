@@ -7,6 +7,8 @@ import {useState} from "react";
 export default function Login() {
     const [login, setLogin] = useState("logininit");
     console.log("login", login);
+    setLogin("Welcome");
+    console.log("setLogin", login);
     return (
         <div className="login">
             <div className="login_wrapper">
