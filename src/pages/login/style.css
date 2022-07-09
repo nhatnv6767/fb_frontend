@@ -1,3 +1,5 @@
+/* --------- Login --------- */
+
 .login_wrapper {
     background: var(--bg-secondary);
 }
@@ -69,6 +71,23 @@
 .sign_extra {
     font-size: 15px;
 }
+
+/* --------- Login --------- */
+
+/* --------- Register --------- */
+
+.register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Used to center the element horizontally and vertically. */
+    transform: translate(-50%, -50%);
+    background: var(--bg-primary);
+    /* Adding a shadow to the element. */
+    box-shadow: 0 1px 2px var(--shadow-1);
+}
+
+/* --------- Register --------- */
 
 /* ------------------ Footer -------------------- */
 
