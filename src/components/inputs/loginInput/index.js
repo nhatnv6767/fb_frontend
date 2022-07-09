@@ -12,7 +12,8 @@ export default function LoginInput({placeholder, bottom, ...props}) {
     return (
         <div className="input_wrap">
             {meta.touched && meta.error && !bottom ? (
-                <div className="input_error" style={{transform: 'translateY(3px)'}}>
+                <div className={destopView ? "input_error input_error_desktop" : "input_error"}
+                     style={{transform: 'translateY(3px)'}}>
                     {
                         /* meta.touched: A boolean that is true if the field has been touched. */
                         meta.touched && meta.error && <ErrorMessage name={field.name}/>
