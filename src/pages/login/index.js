@@ -20,7 +20,7 @@ export default function Login() {
                                 {
                                     (formik) => (
                                         <Form>
-                                            <LoginInput/>
+                                            <LoginInput type="text" placeholder="Email address or Phone number"/>
                                             <LoginInput/>
                                             <button type="submit" className="blue_btn">Log In</button>
                                         </Form>
