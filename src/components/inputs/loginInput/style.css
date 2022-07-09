@@ -45,6 +45,7 @@
     border-top: 10px solid yellow;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
+    position: absolute;
 }
 
 .error_arrow_bottom {
