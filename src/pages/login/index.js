@@ -29,6 +29,10 @@ export default function Login() {
                             <div className="sign_splitter"></div>
                             <button className="blue_btn open_signup">Create Account</button>
                         </div>
+                        <Link to="">
+                            <b>Create a Page</b>
+                            for a celebrity, brand or business.
+                        </Link>
                     </div>
                 </div>
                 <div className="register"></div>
