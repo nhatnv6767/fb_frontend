@@ -6,7 +6,10 @@ export default function Login() {
             <div className="login_wrapper">
                 <div className="login_wrap">
                     <div className="login_1">
-                        <img src="../../public/icons/facebook.svg" alt=""/>
+                        <img src="../../icons/facebook.svg" alt=""/>
+                        <span>
+                            Facebook helps you connect and share with the people in your life.
+                        </span>
                     </div>
                     <div className="login_2"></div>
                 </div>
