@@ -125,6 +125,17 @@ export default function Login() {
                         <Link to="/">Careers</Link>
                         <Link to="/">Privacy</Link>
                         <Link to="/">Cookies</Link>
+                        <Link to="/">
+                            Ad choices
+                            <i className="adChoices_icon"></i>
+                        </Link>
+                        <Link to="/">Terms</Link>
+                        <Link to="/">Help</Link>
+                    </div>
+                    <div className="login_footer_wrap">
+                        <Link to="/" style={{fontSize: "12px", marginTop: "10px"}}>
+                            Meta © 2022
+                        </Link>
                     </div>
                 </footer>
             </div>
