@@ -64,7 +64,7 @@ export default function LoginInput({placeholder, bottom, ...props}) {
             {meta.touched && meta.error && (
                 <i
                     className="error_icon"
-                    style={{top: `${!bottom && !destopView && "63%"}`}}
+                    style={{top: `${!bottom && !destopView ? "63%" : "15px"}`}}
                 >
                 </i>
             )}
