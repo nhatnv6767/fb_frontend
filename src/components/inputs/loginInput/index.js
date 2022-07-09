@@ -1,8 +1,14 @@
 import "./style.css";
 import {ErrorMessage, useField} from "formik";
+import {useMediaQuery} from "react-responsive";
 
 export default function LoginInput({placeholder, bottom, ...props}) {
     const [field, meta] = useField(props);
+    const destopView = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 850px)",
+    });
+    console.log(destopView);
     return (
         <div className="input_wrap">
             {meta.touched && meta.error && !bottom ? (
