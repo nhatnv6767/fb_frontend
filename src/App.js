@@ -7,6 +7,7 @@ function App() {
     return (
         <div>
             <Routes>
+
                 <Route path="/login" element={<Login/>} exact/>
                 <Route path="/profile" element={<Profile/>} exact/>
                 <Route path="/" element={<Home/>} exact/>
@@ -16,3 +17,5 @@ function App() {
 }
 
 export default App;
+/* `element` is a prop that is passed to the `Route` component. It is used to render the component that
+is passed to it. */
