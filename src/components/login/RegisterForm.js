@@ -46,7 +46,8 @@ export default function RegisterForm() {
         /* Getting the number of days in a month. */
         return new Date(bYear, bMonth, 0).getDate();
     };
-    console.log(getDays());
+    const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
+    console.log(days);
 
     return (
         <div className="blur">
@@ -95,15 +96,15 @@ export default function RegisterForm() {
                                         Date of birth <i className="info_icon"></i>
                                     </div>
                                     <div className="reg_grid">
-                                        <select name="bDay">
+                                        <select name="bDay" onChange={handleRegisterChange}>
                                             <option>15</option>
                                         </select>
-                                        <select name="bMonth" value={bMonth}>
+                                        <select name="bMonth" value={bMonth} onChange={handleRegisterChange}>
                                             {months.map((month, i) => (
                                                 <option value={month} key={i}>{month}</option>
                                             ))}
                                         </select>
-                                        <select name="bYear" value={bYear}>
+                                        <select name="bYear" value={bYear} onChange={handleRegisterChange}>
                                             {years.map((year, i) => (
                                                 <option value={year} key={i}>{year}</option>
                                             ))}
