@@ -95,7 +95,7 @@ export default function RegisterForm() {
                                                 onChange={handleRegisterChange}
                                             />
                                         </label>
-                                        <label htmlFor="male">
+                                        <label htmlFor="female">
                                             Female
                                             <input
                                                 type="radio"
@@ -105,7 +105,7 @@ export default function RegisterForm() {
                                                 onChange={handleRegisterChange}
                                             />
                                         </label>
-                                        <label htmlFor="male">
+                                        <label htmlFor="custom">
                                             Custom
                                             <input
                                                 type="radio"
@@ -116,6 +116,14 @@ export default function RegisterForm() {
                                             />
                                         </label>
                                     </div>
+                                </div>
+                                <div className="reg_infos">
+                                    By clicking Sign Up, you agree to our <span>Terms, Data Policy&nbsp;</span>and {" "}
+                                    <span>Cookies Policy.</span> You may
+                                    receive SMS Notifications from us and can opt out any time.
+                                </div>
+                                <div className="reg_btn_wrapper">
+                                    <button className="blue_btn open_signup">Sign Up</button>
                                 </div>
                             </Form>
                         )
