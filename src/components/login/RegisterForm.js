@@ -1,11 +1,16 @@
 import {Form, Formik} from "formik";
 import RegisterInput from "../inputs/registerInput";
+import {useState} from "react";
 
 export default function RegisterForm() {
 
-    const handleRegisterChange = () => {
-        
-    }
+    /* Destructuring the user and setUser from the useState hook. */
+    const {user, setUser} = useState();
+    const handleRegisterChange = (e) => {
+        const {name, value} = e.target;
+        /* A spread operator. It is taking the current state of the user and adding the new value to it. */
+        setUser({...user, [name]: value});
+    };
 
     return (
         <div className="blur">
