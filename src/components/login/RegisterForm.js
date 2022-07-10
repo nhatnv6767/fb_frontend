@@ -15,7 +15,7 @@ export default function RegisterForm() {
         gender: "",
     };
 
-    console.log(new Date().getDate());
+
     /* Destructuring the user and setUser from the useState hook. */
     const {user, setUser} = useState(userInfos);
     const handleRegisterChange = (e) => {
@@ -23,6 +23,8 @@ export default function RegisterForm() {
         /* A spread operator. It is taking the current state of the user and adding the new value to it. */
         setUser({...user, [name]: value});
     };
+
+    console.log(user)
 
     return (
         <div className="blur">
