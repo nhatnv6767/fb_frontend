@@ -68,6 +68,17 @@ export default function RegisterForm() {
                                     <div className="reg_line_header">
                                         Date of birth <i className="info_icon"></i>
                                     </div>
+                                    <div className="reg_grid">
+                                        <select name="bDay">
+                                            <option>15</option>
+                                        </select>
+                                        <select name="bMonth">
+                                            <option>15</option>
+                                        </select>
+                                        <select name="bYear">
+                                            <option>15</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </Form>
                         )
