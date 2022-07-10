@@ -39,6 +39,10 @@ export default function RegisterForm() {
 
     /* Creating an array of 100 years. */
     const years = Array.from(new Array(100), (val, index) => bYear - index);
+    /* Creating an array of 12 months. */
+    const months = Array.from(new Array(12), (val, index) => 1 + index);
+
+    const days = Array.from(new Array(12), (val, index) => 1 + index);
     console.log(years);
 
     return (
@@ -91,8 +95,10 @@ export default function RegisterForm() {
                                         <select name="bDay">
                                             <option>15</option>
                                         </select>
-                                        <select name="bMonth">
-                                            <option>15</option>
+                                        <select name="bMonth" value={bMonth}>
+                                            {months.map((month, i) => (
+                                                <option value={month} key={i}>{month}</option>
+                                            ))}
                                         </select>
                                         <select name="bYear" value={bYear}>
                                             {years.map((year, i) => (
