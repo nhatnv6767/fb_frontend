@@ -156,6 +156,10 @@
     color: var(--color-secondary);
 }
 
+.reg_line_header i {
+    margin-top: 3px;
+}
+
 .reg_grid {
     margin-top: 5px;
     /* Creating a grid with 3 columns and each column will take up 1 fraction of the available space. */
