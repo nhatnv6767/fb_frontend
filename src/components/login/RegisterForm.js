@@ -18,6 +18,16 @@ export default function RegisterForm() {
 
     /* Destructuring the user and setUser from the useState hook. */
     const [user, setUser] = useState(userInfos);
+    const {
+        first_name,
+        last_name,
+        email,
+        password,
+        bYear,
+        bMonth,
+        bDay,
+        gender,
+    } = user;
     const handleRegisterChange = (e) => {
         console.log(e);
         const {name, value} = e.target;
@@ -26,6 +36,10 @@ export default function RegisterForm() {
     };
 
     console.log(user);
+
+    /* Creating an array of 100 years. */
+    const years = Array.from(new Array(100), (val, index) => bYear - index);
+    console.log(years);
 
     return (
         <div className="blur">
