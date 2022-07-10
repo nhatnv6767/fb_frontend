@@ -24,7 +24,7 @@ export default function RegisterForm() {
         setUser({...user, [name]: value});
     };
 
-    console.log(user)
+    console.log(user);
 
     return (
         <div className="blur">
@@ -43,13 +43,13 @@ export default function RegisterForm() {
                                         type="text"
                                         placeholder="First name"
                                         name="first_name"
-                                        onChange={{handleRegisterChange}}
+                                        onChange={handleRegisterChange}
                                     />
                                     <RegisterInput
                                         type="text"
                                         placeholder="Surname"
                                         name="last_name"
-                                        onChange={{handleRegisterChange}}
+                                        onChange={handleRegisterChange}
                                     />
                                 </div>
                                 <div className="reg_line">
@@ -57,7 +57,7 @@ export default function RegisterForm() {
                                         type="text"
                                         placeholder="Mobile number or email address"
                                         name="email"
-                                        onChange={{handleRegisterChange}}
+                                        onChange={handleRegisterChange}
                                     />
                                 </div>
                                 <div className="reg_line">
@@ -65,7 +65,7 @@ export default function RegisterForm() {
                                         type="password"
                                         placeholder="New password"
                                         name="password"
-                                        onChange={{handleRegisterChange}}
+                                        onChange={handleRegisterChange}
                                     />
                                 </div>
                                 <div className="reg_col">
