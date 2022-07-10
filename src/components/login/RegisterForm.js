@@ -47,7 +47,6 @@ export default function RegisterForm() {
         return new Date(bYear, bMonth, 0).getDate();
     };
     const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
-    console.log(days);
 
     return (
         <div className="blur">
