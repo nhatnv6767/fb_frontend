@@ -64,6 +64,11 @@ export default function RegisterForm() {
                                         onChange={{handleRegisterChange}}
                                     />
                                 </div>
+                                <div className="reg_col">
+                                    <div className="reg_line_header">
+                                        Date of birth <i className="info_icon"></i>
+                                    </div>
+                                </div>
                             </Form>
                         )
                     }
