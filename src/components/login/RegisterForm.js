@@ -2,18 +2,18 @@ import {Form, Formik} from "formik";
 import RegisterInput from "../inputs/registerInput";
 import {useState} from "react";
 
-const userInfos = {
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: "",
-    bYear: "",
-    bMonth: "",
-    bDay: "",
-    gender: "",
-};
 
 export default function RegisterForm() {
+    const userInfos = {
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: "",
+        bYear: "",
+        bMonth: "",
+        bDay: "",
+        gender: "",
+    };
     /* Destructuring the user and setUser from the useState hook. */
     const {user, setUser} = useState(userInfos);
     const handleRegisterChange = (e) => {
