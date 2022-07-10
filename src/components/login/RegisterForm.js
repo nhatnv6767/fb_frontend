@@ -9,13 +9,13 @@ export default function RegisterForm() {
         last_name: "",
         email: "",
         password: "",
-        bYear: "",
+        bYear: new Date().getFullYear(),
         bMonth: "",
         bDay: "",
         gender: "",
     };
 
-    console.log(new Date())
+    console.log(new Date().getFullYear());
     /* Destructuring the user and setUser from the useState hook. */
     const {user, setUser} = useState(userInfos);
     const handleRegisterChange = (e) => {
