@@ -123,6 +123,59 @@
     color: var(--color-secondary);
 }
 
+.register_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg_line {
+    /* Setting the padding of the element to 7px on the top and bottom and 0px on the left and right. */
+    padding: 7px 0;
+    /* It makes the element a flex container. */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reg_col {
+    /* Used to position the element relative to its parent. */
+    position: relative;
+    /* Used to align the element to the start of the flexbox. */
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.reg_line_header {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    color: var(--color-secondary);
+}
+
+.reg_grid {
+    margin-top: 5px;
+    /* Creating a grid with 3 columns and each column will take up 1 fraction of the available space. */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 35px;
+    width: 100%;
+}
+
+.reg_grid select {
+    width: 90px;
+    font-size: 16px;
+    /* Using a CSS variable to set the color of the text. */
+    color: var(--color-primary);
+    background: var(--bg-primary);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* --------- Register --------- */
 
 /* ------------------ Footer -------------------- */
