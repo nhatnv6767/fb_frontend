@@ -94,8 +94,10 @@ export default function RegisterForm() {
                                         <select name="bMonth">
                                             <option>15</option>
                                         </select>
-                                        <select name="bYear">
-                                            <option>15</option>
+                                        <select name="bYear" value={bYear}>
+                                            {years.map((year, i) => (
+                                                <option value={year} key={i}>{year}</option>
+                                            ))}
                                         </select>
                                     </div>
                                 </div>
