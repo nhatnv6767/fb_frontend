@@ -8,7 +8,6 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
         /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
         query: "(min-width: 850px)",
     });
-    console.log(destopView);
     return (
         <div className="input_wrap">
             {meta.touched && meta.error && !bottom ? (

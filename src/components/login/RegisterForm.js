@@ -14,6 +14,8 @@ export default function RegisterForm() {
         bDay: "",
         gender: "",
     };
+
+    console.log(new Date())
     /* Destructuring the user and setUser from the useState hook. */
     const {user, setUser} = useState(userInfos);
     const handleRegisterChange = (e) => {
