@@ -27,7 +27,11 @@ export default function DateOfBirthSelect(
                     <option value={year} key={i}>{year}</option>
                 ))}
             </select>
-            {dateError && <div className="input_error">{dateError}</div>}
+            {dateError && (
+                <div className="input_error">
+                    {dateError}
+                </div>
+            )}
         </div>
     );
 }
