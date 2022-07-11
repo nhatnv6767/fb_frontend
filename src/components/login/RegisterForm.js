@@ -4,6 +4,7 @@ import {useState} from "react";
 import * as Yup from "yup";
 import DateOfBirthSelect from "./DateOfBirthSelect";
 import GenderSelect from "./GenderSelect";
+import async from "async";
 
 export default function RegisterForm() {
     const userInfos = {
@@ -73,6 +74,13 @@ export default function RegisterForm() {
 
     const [dateError, setDateError] = useState("");
     const [genderError, setGenderError] = useState("");
+
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+    const [loading, setLoading] = useState("");
+    const registerSubmit = async () => {
+
+    }
     return (
         <div className="blur">
             <div className="register">
