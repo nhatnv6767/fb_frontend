@@ -1,11 +1,28 @@
+import {useMediaQuery} from "react-responsive";
+
 export default function MyComponent(
     {
         handleRegisterChange,
         genderError,
     }
 ) {
+    const view1 = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 539px)",
+    });
+    const view2 = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 850px)",
+    });
+    const view3 = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 1170px)",
+    });
     return (
-        <div className="reg_grid">
+        <div
+            className="reg_grid"
+            style={{marginBottom: `${genderError && !view3 && "70px"}`}}
+        >
             <label htmlFor="male">
                 Male
                 <input
