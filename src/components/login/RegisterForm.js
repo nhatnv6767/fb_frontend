@@ -81,7 +81,7 @@ export default function RegisterForm() {
     const [loading, setLoading] = useState(false);
     const registerSubmit = async () => {
         try {
-
+            const {data} = await axios.post();
         } catch (e) {
             setLoading(false);
             setSuccess("");
