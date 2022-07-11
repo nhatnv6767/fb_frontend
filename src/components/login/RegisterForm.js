@@ -30,7 +30,6 @@ export default function RegisterForm() {
     } = user;
     const yearTemp = new Date().getFullYear();
     const handleRegisterChange = (e) => {
-        console.log(e);
         const {name, value} = e.target;
         /* A spread operator. It is taking the current state of the user and adding the new value to it. */
         setUser({...user, [name]: value});
@@ -95,7 +94,7 @@ export default function RegisterForm() {
                     validationSchema={registerValidation}
                     onSubmit={() => {
                         let current_date = new Date();
-                        let picked_date = new Date(bYear, bMonth, bDay);
+                        let picked_date = new Date(bYear, bMonth - 1, bDay);
                         console.log(picked_date);
                     }}
                 >
