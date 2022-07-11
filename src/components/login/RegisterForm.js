@@ -48,7 +48,14 @@ export default function RegisterForm() {
     };
     const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
 
-    const registerValidation = Yup.object();
+    const registerValidation = Yup.object({
+        first_name: Yup.string().required("What's your First name?")
+            .min(2, "First name must be between 2 and 16 characters.")
+            .max(16, "First name must be between 2 and 16 characters.")
+            // \s : allow space
+            .matches(/^[aA-zZ\s]+$/, 'Numbers and special characters are not allowed.')
+        ,
+    });
 
     return (
         <div className="blur">
