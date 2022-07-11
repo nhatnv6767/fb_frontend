@@ -21,7 +21,7 @@ export default function MyComponent(
     return (
         <div
             className="reg_grid"
-            style={{marginBottom: `${genderError && !view3 && "70px"}`}}
+            style={{marginBottom: `${genderError && !view3 ? "70px" : "0"}`}}
         >
             <label htmlFor="male">
                 Male
