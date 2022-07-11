@@ -1,6 +1,13 @@
 export default function DateOfBirthSelect(
     {
-        bDay, bMonth, bYear, days, months, years, handleRegisterChange, dateError
+        bDay,
+        bMonth,
+        bYear,
+        days,
+        months,
+        years,
+        handleRegisterChange,
+        dateError,
     }
 ) {
     return (
