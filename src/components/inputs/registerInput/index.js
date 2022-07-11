@@ -48,8 +48,8 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
 
             {meta.touched && meta.error ? (
                 <div
-                    className={view2 ? "input_error input_error_desktop" : "input_error"}
-                    style={{transform: 'translateY(2px)'}}
+                    className={view3 ? "input_error input_error_desktop" : "input_error"}
+                    style={{transform: 'translateY(2px)', left: ``}}
                 >
                     {
                         meta.touched && meta.error && <ErrorMessage name={field.name}/>
@@ -57,7 +57,7 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
                     {
                         meta.touched && meta.error && (
                             <div
-                                className={view2 ? "error_arrow_left" : "error_arrow_bottom"}
+                                className={view3 ? "error_arrow_left" : "error_arrow_bottom"}
                             ></div>
                         )
                     }
