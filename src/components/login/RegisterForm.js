@@ -100,8 +100,6 @@ export default function RegisterForm() {
                         let picked_date = new Date(bYear, bMonth - 1, bDay);
                         let atleast14 = new Date(1970 + 14, 0, 1);
                         let noMoreThan70 = new Date(1970 + 70, 0, 1);
-                        console.log("atleast14", atleast14);
-                        // AGE
                         if (current_date - picked_date < atleast14) {
                             setDateError(
                                 "It look like you're entered the wrong info. Please make sure that you use your real date of birth."
