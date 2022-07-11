@@ -93,6 +93,9 @@ export default function RegisterForm() {
                         gender,
                     }}
                     validationSchema={registerValidation}
+                    onSubmit={() => {
+
+                    }}
                 >
                     {
                         (formik) => (
