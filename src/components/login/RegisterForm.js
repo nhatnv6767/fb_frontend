@@ -56,7 +56,21 @@ export default function RegisterForm() {
                     <span>Sign Up</span>
                     <span>it's quick and easy</span>
                 </div>
-                <Formik>
+                <Formik
+                    /* A prop that is passed to the Formik component. It is used to reset the form to its initial values. */
+                    enableReinitialize
+                    /* Passing the initial values of the form to the Formik component. */
+                    initialValues={{
+                        first_name,
+                        last_name,
+                        email,
+                        password,
+                        bYear,
+                        bMonth,
+                        bDay,
+                        gender,
+                    }}
+                >
                     {
                         (formik) => (
                             <Form className="register_form">
