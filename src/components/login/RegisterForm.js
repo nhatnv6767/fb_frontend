@@ -70,6 +70,7 @@ export default function RegisterForm() {
     });
 
     const [dateError, setDateError] = useState("");
+    const [genderError, setGenderError] = useState("");
     return (
         <div className="blur">
             <div className="register">
@@ -111,6 +112,7 @@ export default function RegisterForm() {
                             );
                             // GENDER
                         } else if (gender === "") {
+                            setGenderError("Please choose a gender. You can change who can see this later.");
                         }
                     }}
                 >
