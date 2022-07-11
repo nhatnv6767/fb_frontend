@@ -107,6 +107,7 @@ export default function RegisterForm() {
                 /* Dispatching an action to the reducer. */
                 dispatch({type: "LOGIN", payload: rest});
                 Cookies.set("user", JSON.stringify(rest));
+                navigate("/");
             }, 2000);
         } catch (e) {
             setLoading(false);
