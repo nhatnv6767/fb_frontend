@@ -3,7 +3,6 @@
 }
 
 .register_input_wrap input {
-    width: 300px;
     background: var(--bg-secondary);
 }
 
