@@ -278,6 +278,7 @@
 
 .reg_grid .input_error {
     width: 300px;
+    position: absolute;
 }
 
 /* ------------------ Date and gender errors -------------------- */

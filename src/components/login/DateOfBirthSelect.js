@@ -1,3 +1,5 @@
+import {useMediaQuery} from "react-responsive";
+
 export default function DateOfBirthSelect(
     {
         bDay,
@@ -10,6 +12,18 @@ export default function DateOfBirthSelect(
         dateError,
     }
 ) {
+    const view1 = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 539px)",
+    });
+    const view2 = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 850px)",
+    });
+    const view3 = useMediaQuery({
+        /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
+        query: "(min-width: 1170px)",
+    });
     return (
         <div className="reg_grid">
             <select name="bDay" value={bDay} onChange={handleRegisterChange}>
