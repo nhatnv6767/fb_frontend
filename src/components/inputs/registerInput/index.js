@@ -40,14 +40,7 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
                 </div>
             ) : ""
             }
-            {/* It's a ternary operator. If `bottom` is true, then the `top` will be `60%`. */}
-            {meta.touched && meta.error && (
-                <i
-                    className="error_icon"
-                    style={{top: `${!bottom && !destopView ? "63%" : "15px"}`}}
-                >
-                </i>
-            )}
+            {meta.touched && meta.error && <i className="error_icon"></i>}
         </div>
     );
 }
