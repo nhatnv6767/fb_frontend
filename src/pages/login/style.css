@@ -282,6 +282,10 @@
     top: 70px;
 }
 
+.input_error_select_large {
+    left: -107%;
+}
+
 /* ------------------ Date and gender errors -------------------- */
 
 /* ------------------ Media queries ----------------- */
