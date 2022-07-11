@@ -6,3 +6,7 @@
     width: 300px;
     background: var(--bg-secondary);
 }
+
+.register_input_wrap .input_error {
+    max-width: 300px;
+}
