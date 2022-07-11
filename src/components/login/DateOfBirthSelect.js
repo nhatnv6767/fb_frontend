@@ -27,7 +27,7 @@ export default function DateOfBirthSelect(
     return (
         <div
             className="reg_grid"
-            style={{marginBottom: `${dateError && !view3 && "90px"}`}}
+            style={{marginBottom: `${dateError && !view3 ? "90px" : ""}`}}
         >
             <select name="bDay" value={bDay} onChange={handleRegisterChange}>
                 {days.map((day, i) => (
@@ -46,7 +46,7 @@ export default function DateOfBirthSelect(
             </select>
             {dateError && (
                 <div className={!view3 ? "input_error" : "input_error input_error_select_large"}>
-                    <div className="error_arrow_bottom"></div>
+                    <div className={!view3 ? "error_arrow_bottom" : "error_arrow_left"}></div>
                     {dateError}
                 </div>
             )}
