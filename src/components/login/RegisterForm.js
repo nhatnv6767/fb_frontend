@@ -28,6 +28,7 @@ export default function RegisterForm() {
         bDay,
         gender,
     } = user;
+    const yearTemp = new Date().getFullYear();
     const handleRegisterChange = (e) => {
         console.log(e);
         const {name, value} = e.target;
@@ -35,10 +36,8 @@ export default function RegisterForm() {
         setUser({...user, [name]: value});
     };
 
-    console.log(user);
-
     /* Creating an array of 100 years. */
-    const years = Array.from(new Array(100), (val, index) => bYear - index);
+    const years = Array.from(new Array(100), (val, index) => yearTemp - index);
     /* Creating an array of 12 months. */
     const months = Array.from(new Array(12), (val, index) => 1 + index);
 
@@ -47,6 +46,8 @@ export default function RegisterForm() {
         return new Date(bYear, bMonth, 0).getDate();
     };
     const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
+
+    console.log(user);
 
     return (
         <div className="blur">
