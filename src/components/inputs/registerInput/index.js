@@ -66,7 +66,11 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
                     {
                         meta.touched && meta.error && (
                             <div
-                                className={view3 ? "error_arrow_left" : "error_arrow_bottom"}
+                                className={
+                                    view3 && field.name !== "last_name"
+                                        ? "error_arrow_left"
+                                        : "error_arrow_bottom"
+                                }
                             ></div>
                         )
                     }
