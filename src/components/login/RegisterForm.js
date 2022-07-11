@@ -80,7 +80,11 @@ export default function RegisterForm() {
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
     const registerSubmit = async () => {
+        try {
 
+        } catch (e) {
+
+        }
     };
     return (
         <div className="blur">
