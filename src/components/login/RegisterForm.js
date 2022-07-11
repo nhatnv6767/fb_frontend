@@ -94,6 +94,10 @@ export default function RegisterForm() {
             });
             setError("");
             setSuccess(data.message);
+            /* Destructuring the data object.
+            The message is being extracted from the data object and the rest of the data
+            object is being stored in the rest variable. */
+            const {message, ...rest} = data;
         } catch (e) {
             setLoading(false);
             setSuccess("");
