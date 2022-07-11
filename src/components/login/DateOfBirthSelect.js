@@ -1,4 +1,8 @@
-export default function DateOfBirthSelect() {
+export default function DateOfBirthSelect(
+    {
+        bDay, bMonth, bYear, days, months, years, handleRegisterChange, dateError
+    }
+) {
     return (
         <div className="reg_grid">
             <select name="bDay" value={bDay} onChange={handleRegisterChange}>
