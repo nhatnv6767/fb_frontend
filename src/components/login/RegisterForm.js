@@ -112,9 +112,14 @@ export default function RegisterForm() {
                             );
                             // GENDER
                         } else if (gender === "") {
+                            setDateError("");
                             setGenderError("Please choose a gender. You can change who can see this later.");
+                        } else {
+                            setDateError("");
+                            setGenderError("");
                         }
-                    }}
+                    }
+                    }
                 >
                     {
                         (formik) => (
