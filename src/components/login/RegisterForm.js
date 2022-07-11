@@ -93,14 +93,16 @@ export default function RegisterForm() {
                     }}
                     validationSchema={registerValidation}
                     onSubmit={() => {
+                        /* Checking if the user is underage or over 70 years old. */
                         let current_date = new Date();
-                        let temp_year = current_date.getFullYear();
                         let picked_date = new Date(bYear, bMonth - 1, bDay);
-                        let atleast14 = new Date(temp_year - 14, 0, 1);
-                        let noMoreThan70 = new Date(temp_year - 70, 0, 1);
+                        let atleast14 = new Date(1970 + 14, 0, 1);
+                        let noMoreThan70 = new Date(1970 + 70, 0, 1);
                         console.log("atleast14", atleast14);
                         if (current_date - picked_date < atleast14) {
-                            console.log("underage you are not 14");
+                            console.log("Underage you are not 14 years old");
+                        } else if (current_date - picked_date > noMoreThan70) {
+                            console.log("You are more than 70 years old");
                         }
                     }}
                 >
