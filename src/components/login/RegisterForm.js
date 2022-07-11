@@ -1,7 +1,7 @@
 import {Form, Formik} from "formik";
 import RegisterInput from "../inputs/registerInput";
 import {useState} from "react";
-
+import * as Yup from "yup";
 
 export default function RegisterForm() {
     const userInfos = {
@@ -48,6 +48,8 @@ export default function RegisterForm() {
     };
     const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
 
+    const registerValidation = Yup.object();
+
     return (
         <div className="blur">
             <div className="register">
@@ -70,6 +72,7 @@ export default function RegisterForm() {
                         bDay,
                         gender,
                     }}
+                    validationSchema={registerValidation}
                 >
                     {
                         (formik) => (
