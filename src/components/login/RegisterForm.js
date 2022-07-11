@@ -69,6 +69,7 @@ export default function RegisterForm() {
 
     });
 
+    const [dateError, setDateError] = useState("");
     return (
         <div className="blur">
             <div className="register">
@@ -100,9 +101,15 @@ export default function RegisterForm() {
                         let noMoreThan70 = new Date(1970 + 70, 0, 1);
                         console.log("atleast14", atleast14);
                         if (current_date - picked_date < atleast14) {
-                            console.log("Underage you are not 14 years old");
+                            setDateError(
+                                "It look like you're entered the wrong info. Please make sure that you use your real date of birth."
+                            );
                         } else if (current_date - picked_date > noMoreThan70) {
-                            console.log("You are more than 70 years old");
+                            setDateError(
+                                "It look like you're entered the wrong info. Please make sure that you use your real date of birth."
+                            );
+                        } else {
+
                         }
                     }}
                 >
