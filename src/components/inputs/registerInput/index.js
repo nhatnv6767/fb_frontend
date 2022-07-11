@@ -9,7 +9,7 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
         query: "(min-width: 850px)",
     });
     return (
-        <div className="input_wrap">
+        <div className="input_wrap register_input_wrap">
 
             <input
                 /* It's a ternary operator. If `meta.touched` and `meta.error` are both true, then the className will be

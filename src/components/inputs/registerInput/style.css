@@ -1,0 +1,8 @@
+.register_input_wrap {
+    width: 100% !important;
+}
+
+.register_input_wrap input {
+    width: 300px;
+    background: var(--bg-secondary);
+}
