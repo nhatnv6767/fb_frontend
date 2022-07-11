@@ -36,6 +36,7 @@ export default function RegisterForm() {
         setUser({...user, [name]: value});
     };
 
+
     /* Creating an array of 100 years. */
     const years = Array.from(new Array(100), (val, index) => yearTemp - index);
     /* Creating an array of 12 months. */
@@ -46,8 +47,6 @@ export default function RegisterForm() {
         return new Date(bYear, bMonth, 0).getDate();
     };
     const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
-
-    console.log(user);
 
     return (
         <div className="blur">
