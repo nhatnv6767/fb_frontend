@@ -284,6 +284,7 @@
 
 .input_error_select_large {
     left: -107%;
+    top: 15px !important;
 }
 
 /* ------------------ Date and gender errors -------------------- */
