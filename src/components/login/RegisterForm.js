@@ -8,9 +8,11 @@ import DotLoader from "react-spinners/DotLoader";
 import axios from "axios";
 import {useDispatch} from "react-redux";
 import Cookies from "js-cookie";
-
+import {useNavigate} from "react-router-dom";
 
 export default function RegisterForm() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const userInfos = {
         first_name: "",
         last_name: "",
@@ -82,7 +84,7 @@ export default function RegisterForm() {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
-    const dispatch = useDispatch();
+
     const registerSubmit = async () => {
         try {
             const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
@@ -104,6 +106,7 @@ export default function RegisterForm() {
             setTimeout(() => {
                 /* Dispatching an action to the reducer. */
                 dispatch({type: "LOGIN", payload: rest});
+                Cookies.set("user", JSON.stringify(rest));
             }, 2000);
         } catch (e) {
             setLoading(false);
