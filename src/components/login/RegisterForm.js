@@ -4,7 +4,8 @@ import {useState} from "react";
 import * as Yup from "yup";
 import DateOfBirthSelect from "./DateOfBirthSelect";
 import GenderSelect from "./GenderSelect";
-import async from "async";
+import DotLoader from "react-spinners/DotLoader";
+
 
 export default function RegisterForm() {
     const userInfos = {
