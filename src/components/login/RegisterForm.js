@@ -166,6 +166,7 @@ export default function RegisterForm() {
                                                 <option value={year} key={i}>{year}</option>
                                             ))}
                                         </select>
+                                        {dateError && <div className="error_input">{dateError}</div>}
                                     </div>
                                 </div>
                                 <div className="reg_col">
