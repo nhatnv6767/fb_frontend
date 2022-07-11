@@ -10,26 +10,7 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
     });
     return (
         <div className="input_wrap">
-            {meta.touched && meta.error && !bottom ? (
-                <div
-                    className={destopView ? "input_error input_error_desktop" : "input_error"}
-                    style={{transform: 'translateY(3px)'}}
-                >
-                    {
-                        /* meta.touched: A boolean that is true if the field has been touched. */
-                        meta.touched && meta.error && <ErrorMessage name={field.name}/>
-                    }
 
-                    {
-                        meta.touched && meta.error && (
-                            <div
-                                className={destopView ? "error_arrow_left" : "error_arrow_top"}
-                            ></div>
-                        )
-                    }
-                </div>
-            ) : ""
-            }
             <input
                 /* It's a ternary operator. If `meta.touched` and `meta.error` are both true, then the className will be
                 `input_error_border`. */
@@ -41,7 +22,7 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
                 {...props}
             />
 
-            {meta.touched && meta.error && bottom ? (
+            {meta.touched && meta.error ? (
                 <div
                     className={destopView ? "input_error input_error_desktop" : "input_error"}
                     style={{transform: 'translateY(2px)'}}
