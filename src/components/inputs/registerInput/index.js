@@ -16,6 +16,9 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
         /* It's a media query. It's a way to apply CSS styles based on the device's screen size. */
         query: "(min-width: 1170px)",
     });
+
+    const test1 = view3 && field.name === "first_name";
+    const test2 = view3 && field.name === "last_name";
     return (
         <div className="input_wrap register_input_wrap">
 
@@ -49,7 +52,13 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
             {meta.touched && meta.error ? (
                 <div
                     className={view3 ? "input_error input_error_desktop" : "input_error"}
-                    style={{transform: 'translateY(2px)', left: ``}}
+                    style={{
+                        transform: 'translateY(2px)',
+                        /* It's a ternary operator. If `test1` is true, then the value will be `-107%`. If `test2` is true,
+                        then the value
+                        will be `107%`. Otherwise, the value will be an empty string. */
+                        left: `${test1 ? "-107%" : test2 ? "107%" : ""}`
+                    }}
                 >
                     {
                         meta.touched && meta.error && <ErrorMessage name={field.name}/>
