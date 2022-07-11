@@ -207,6 +207,7 @@ export default function RegisterForm() {
                                                 onChange={handleRegisterChange}
                                             />
                                         </label>
+                                        {genderError && <div className="input_error">{genderError}</div>}
                                     </div>
                                 </div>
                                 <div className="reg_infos">
