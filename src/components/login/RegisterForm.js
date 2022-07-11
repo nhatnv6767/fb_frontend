@@ -76,7 +76,7 @@ export default function RegisterForm() {
     const [genderError, setGenderError] = useState("");
 
     const [error, setError] = useState("You got an error");
-    const [success, setSuccess] = useState("");
+    const [success, setSuccess] = useState("SUCCCCC");
     const [loading, setLoading] = useState("");
     const registerSubmit = async () => {
 

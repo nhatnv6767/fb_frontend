@@ -289,6 +289,20 @@
 
 /* ------------------ Date and gender errors -------------------- */
 
+
+/* ------------------ Error and success styles -------------------- */
+
+.error_text {
+    color: #b94a48;
+}
+
+.success_text {
+    color: var(--green-color);
+}
+
+/* ------------------ Error and success styles -------------------- */
+
+
 /* ------------------ Media queries ----------------- */
 @media (min-width: 539px) {
     .login_footer_wrap {
