@@ -152,7 +152,16 @@ export default function RegisterForm() {
                                     <div className="reg_line_header">
                                         Date of birth <i className="info_icon"></i>
                                     </div>
-                                    <DateOfBirthSelect/>
+                                    <DateOfBirthSelect
+                                        bDay={bDay}
+                                        bMonth={bMonth}
+                                        bYear={bYear}
+                                        days={days}
+                                        months={months}
+                                        years={years}
+                                        handleRegisterChange={handleRegisterChange}
+                                        dateError={dateError}
+                                    />
                                 </div>
                                 <div className="reg_col">
                                     <div className="reg_line_header">
