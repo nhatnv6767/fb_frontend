@@ -94,7 +94,9 @@ export default function RegisterForm() {
                     }}
                     validationSchema={registerValidation}
                     onSubmit={() => {
-
+                        let current_date = new Date();
+                        let picked_date = new Date(bYear, bMonth, bDay);
+                        console.log(picked_date);
                     }}
                 >
                     {
