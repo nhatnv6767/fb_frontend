@@ -6,6 +6,7 @@ import DateOfBirthSelect from "./DateOfBirthSelect";
 import GenderSelect from "./GenderSelect";
 import DotLoader from "react-spinners/DotLoader";
 import axios from "axios";
+import {useDispatch} from "react-redux";
 
 
 export default function RegisterForm() {
@@ -80,6 +81,7 @@ export default function RegisterForm() {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch();
     const registerSubmit = async () => {
         try {
             const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
@@ -98,6 +100,10 @@ export default function RegisterForm() {
             The message is being extracted from the data object and the rest of the data
             object is being stored in the rest variable. */
             const {message, ...rest} = data;
+            setTimeout(() => {
+                /* Dispatching an action to the reducer. */
+                dispatch({type: "LOGIN", payload: rest});
+            }, 2000);
         } catch (e) {
             setLoading(false);
             setSuccess("");
