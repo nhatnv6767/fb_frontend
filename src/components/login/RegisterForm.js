@@ -80,7 +80,7 @@ export default function RegisterForm() {
     const [loading, setLoading] = useState("");
     const registerSubmit = async () => {
 
-    }
+    };
     return (
         <div className="blur">
             <div className="register">
@@ -195,6 +195,7 @@ export default function RegisterForm() {
                                 <div className="reg_btn_wrapper">
                                     <button className="blue_btn open_signup">Sign Up</button>
                                 </div>
+                                {error && <div className="error_text">{error}</div>}
                             </Form>
                         )
                     }
