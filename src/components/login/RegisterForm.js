@@ -7,6 +7,7 @@ import GenderSelect from "./GenderSelect";
 import DotLoader from "react-spinners/DotLoader";
 import axios from "axios";
 import {useDispatch} from "react-redux";
+import Cookies from "js-cookie";
 
 
 export default function RegisterForm() {
