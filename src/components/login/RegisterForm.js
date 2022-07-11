@@ -117,6 +117,7 @@ export default function RegisterForm() {
                         } else {
                             setDateError("");
                             setGenderError("");
+                            registerSubmit();
                         }
                     }
                     }
