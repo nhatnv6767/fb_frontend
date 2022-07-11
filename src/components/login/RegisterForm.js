@@ -2,6 +2,7 @@ import {Form, Formik} from "formik";
 import RegisterInput from "../inputs/registerInput";
 import {useState} from "react";
 import * as Yup from "yup";
+import DateOfBirthSelect from "./DateOfBirthSelect";
 
 export default function RegisterForm() {
     const userInfos = {
@@ -151,24 +152,7 @@ export default function RegisterForm() {
                                     <div className="reg_line_header">
                                         Date of birth <i className="info_icon"></i>
                                     </div>
-                                    <div className="reg_grid">
-                                        <select name="bDay" value={bDay} onChange={handleRegisterChange}>
-                                            {days.map((day, i) => (
-                                                <option value={day} key={i}>{day}</option>
-                                            ))}
-                                        </select>
-                                        <select name="bMonth" value={bMonth} onChange={handleRegisterChange}>
-                                            {months.map((month, i) => (
-                                                <option value={month} key={i}>{month}</option>
-                                            ))}
-                                        </select>
-                                        <select name="bYear" value={bYear} onChange={handleRegisterChange}>
-                                            {years.map((year, i) => (
-                                                <option value={year} key={i}>{year}</option>
-                                            ))}
-                                        </select>
-                                        {dateError && <div className="input_error">{dateError}</div>}
-                                    </div>
+                                    <DateOfBirthSelect/>
                                 </div>
                                 <div className="reg_col">
                                     <div className="reg_line_header">
