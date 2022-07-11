@@ -75,7 +75,7 @@ export default function RegisterForm() {
     const [dateError, setDateError] = useState("");
     const [genderError, setGenderError] = useState("");
 
-    const [error, setError] = useState("");
+    const [error, setError] = useState("You got an error");
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState("");
     const registerSubmit = async () => {
@@ -196,6 +196,7 @@ export default function RegisterForm() {
                                     <button className="blue_btn open_signup">Sign Up</button>
                                 </div>
                                 {error && <div className="error_text">{error}</div>}
+                                {success && <div className="success_text">{success}</div>}
                             </Form>
                         )
                     }
