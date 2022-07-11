@@ -53,7 +53,12 @@ export default function MyComponent(
                     onChange={handleRegisterChange}
                 />
             </label>
-            {genderError && <div className="input_error">{genderError}</div>}
+            {genderError && (
+                <div className="input_error">
+                    <div className="error_arrow_bottom"></div>
+                    {genderError}
+                </div>
+            )}
         </div>
     );
 }
