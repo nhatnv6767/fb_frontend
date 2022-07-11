@@ -25,7 +25,10 @@ export default function DateOfBirthSelect(
         query: "(min-width: 1170px)",
     });
     return (
-        <div className="reg_grid">
+        <div
+            className="reg_grid"
+            style={{marginBottom: `${dateError && !view3 && "90px"}`}}
+        >
             <select name="bDay" value={bDay} onChange={handleRegisterChange}>
                 {days.map((day, i) => (
                     <option value={day} key={i}>{day}</option>
