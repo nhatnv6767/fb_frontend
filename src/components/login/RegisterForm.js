@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import DateOfBirthSelect from "./DateOfBirthSelect";
 import GenderSelect from "./GenderSelect";
 import DotLoader from "react-spinners/DotLoader";
-
+import axios from "axios";
 
 export default function RegisterForm() {
     const userInfos = {
@@ -83,7 +83,9 @@ export default function RegisterForm() {
         try {
 
         } catch (e) {
-
+            setLoading(false);
+            setSuccess("");
+            setError(e.response.data.message);
         }
     };
     return (
