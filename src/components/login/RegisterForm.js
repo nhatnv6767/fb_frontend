@@ -196,6 +196,11 @@ export default function RegisterForm() {
                                 <div className="reg_btn_wrapper">
                                     <button className="blue_btn open_signup">Sign Up</button>
                                 </div>
+                                <DotLoader
+                                    color="#1876f2"
+                                    loading={loading}
+                                    size={30}
+                                />
                                 {error && <div className="error_text">{error}</div>}
                                 {success && <div className="success_text">{success}</div>}
                             </Form>
