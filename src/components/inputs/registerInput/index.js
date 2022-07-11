@@ -67,9 +67,16 @@ export default function RegisterInput({placeholder, bottom, ...props}) {
                         meta.touched && meta.error && (
                             <div
                                 className={
+                                    /* It's a ternary operator. If `field.name` is not equal to `last_name`, then the
+                                    className will be
+                                    `error_arrow_left`. If `field.name` is equal to `last_name`, then the className will
+                                    be `error_arrow_right`.
+                                    Otherwise, the className will be `error_arrow_bottom`. */
                                     view3 && field.name !== "last_name"
                                         ? "error_arrow_left"
-                                        : "error_arrow_bottom"
+                                        : view3 && field.name === "last_name"
+                                            ? "error_arrow_right"
+                                            : "error_arrow_bottom"
                                 }
                             ></div>
                         )
