@@ -29,6 +29,7 @@ export default function DateOfBirthSelect(
             </select>
             {dateError && (
                 <div className="input_error">
+                    <div className="error_arrow_bottom"></div>
                     {dateError}
                 </div>
             )}
