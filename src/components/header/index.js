@@ -1,6 +1,6 @@
 import "./style.css";
 import {Link} from "react-router-dom";
-import {Logo} from "../../svg";
+import {Logo, Search} from "../../svg";
 
 export default function Header() {
     return (
@@ -11,6 +11,10 @@ export default function Header() {
                         <Logo/>
                     </div>
                 </Link>
+                <div className="search search1">
+                    <Search/>
+                    <input type="text" placeholder="Search Facebook"/>
+                </div>
             </div>
             <div className="header_middle"></div>
             <div className="header_right"></div>
