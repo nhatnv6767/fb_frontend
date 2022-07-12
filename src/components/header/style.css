@@ -156,3 +156,14 @@ header {
     background: var(--bg-third);
     cursor: pointer;
 }
+
+.right_notification {
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    backgound: #e41e3f;
+    border-radius: 50px;
+    padding: 1px 6px;
+    font-size: 13px;
+    color: #fff;
+}
