@@ -39,11 +39,15 @@ export default function LoginForm({setVisible}) {
 
     const loginSubmit = async () => {
         try {
-
+            const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
+                email,
+                password,
+            });
         } catch (e) {
             setLoading(false);
+            setError(e.response.data.message);
         }
-    }
+    };
     return (
         <div className="login_wrap">
             <div className="login_1">
