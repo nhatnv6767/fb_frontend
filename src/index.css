@@ -79,3 +79,20 @@ a {
 .hover2:hover {
     background: var(--bg-third);
 }
+
+/* Selecting the second child of the class `middle_icon` */
+.middle_icon:nth-child(2) {
+    transform: translateX(-2px);
+}
+
+.middle_icon:nth-child(3) {
+    transform: translateX(-3px);
+}
+
+.middle_icon:nth-child(4) {
+    transform: translateX(-5px);
+}
+
+.middle_icon:nth-child(5) {
+    transform: translateX(-5px);
+}
