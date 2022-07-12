@@ -13,7 +13,7 @@ export default function Login() {
         <div className="login">
             <div className="login_wrapper">
                 <LoginForm/>
-                <RegisterForm/>
+                {visible && <RegisterForm/>}
                 <Footer/>
             </div>
         </div>
