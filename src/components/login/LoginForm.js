@@ -33,8 +33,16 @@ export default function LoginForm({setVisible}) {
         password: Yup.string().required("Password is required."),
     });
 
-    const loginSubmit = async () => {
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+    const [loading, setLoading] = useState(false);
 
+    const loginSubmit = async () => {
+        try {
+
+        } catch (e) {
+            setLoading(false);
+        }
     }
     return (
         <div className="login_wrap">
