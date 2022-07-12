@@ -32,6 +32,10 @@ export default function LoginForm({setVisible}) {
             .max(100, "Email must be at most 100 characters"),
         password: Yup.string().required("Password is required."),
     });
+
+    const loginSubmit = async () => {
+
+    }
     return (
         <div className="login_wrap">
             <div className="login_1">
@@ -51,6 +55,9 @@ export default function LoginForm({setVisible}) {
                             password,
                         }}
                         validationSchema={loginValidation}
+                        onSubmit={() => {
+                            loginSubmit();
+                        }}
                     >
                         {
                             (formik) => (
