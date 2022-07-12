@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Logo, Search} from "../../svg";
 
 export default function Header() {
+    const color = "#65676b";
     return (
         <header>
             <div className="header_left">
@@ -12,7 +13,7 @@ export default function Header() {
                     </div>
                 </Link>
                 <div className="search search1">
-                    <Search/>
+                    <Search color={color}/>
                     <input
                         type="text"
                         placeholder="Search Facebook"
