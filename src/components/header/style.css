@@ -139,3 +139,20 @@ header {
     border: 1px solid #b0b3b8;
     transform: translateX(-1px);
 }
+
+.profile_link span {
+    margin-bottom: 3px;
+}
+
+.circle_icon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    background: var(--bg-third);
+    cursor: pointer;
+}
