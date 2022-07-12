@@ -94,3 +94,7 @@ header {
     height: 56px;
     transform: translateX(0);
 }
+
+.active svg {
+    transform: translateY(1px) translateX(-1px);
+}
