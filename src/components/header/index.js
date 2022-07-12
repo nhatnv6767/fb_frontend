@@ -1,11 +1,15 @@
 import "./style.css";
 import {Link} from "react-router-dom";
 import {
+    ArrowDown,
     Friends,
     Gaming,
     HomeActive,
     Logo,
     Market,
+    Menu,
+    Messenger,
+    Notifications,
     Search,
     Watch
 } from "../../svg";
@@ -52,8 +56,23 @@ export default function Header() {
             </div>
             <div className="header_right">
                 <Link to="/profile" className="profile_link hover1">
-                    <img src="" alt=""/>
+                    {/* A nullish coalescing operator. It is a new operator in ES2020. It is used to check if the value is
+                    null or undefined. */}
+                    <img src={user?.picture} alt=""/>
+                    <span>{user?.first_name}</span>
                 </Link>
+                <div className="circle_icon">
+                    <Menu/>
+                </div>
+                <div className="circle_icon">
+                    <Messenger/>
+                </div>
+                <div className="circle_icon">
+                    <Notifications/>
+                </div>
+                <div className="circle_icon">
+                    <ArrowDown/>
+                </div>
             </div>
         </header>
     );
