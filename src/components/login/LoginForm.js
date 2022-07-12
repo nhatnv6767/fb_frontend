@@ -103,6 +103,10 @@ export default function LoginForm({setVisible}) {
                     <Link to="/forgot" className="forgot_password">
                         Forgoten password?
                     </Link>
+                    {
+                        error &&
+                        <div className="error_text">{error}</div>
+                    }
                     <div className="sign_splitter"></div>
                     <button
                         className="blue_btn open_signup"
