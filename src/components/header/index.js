@@ -9,8 +9,11 @@ import {
     Search,
     Watch
 } from "../../svg";
+import {useSelector} from "react-redux";
 
 export default function Header() {
+    const {user} = useSelector((user) => ({...user}));
+    console.log(user);
     const color = "#65676b";
     return (
         <header>
@@ -47,7 +50,11 @@ export default function Header() {
                     <Gaming color={color}/>
                 </Link>
             </div>
-            <div className="header_right"></div>
+            <div className="header_right">
+                <Link to="/profile" className="profile_link hover1">
+                    <img src="" alt=""/>
+                </Link>
+            </div>
         </header>
     );
 }
