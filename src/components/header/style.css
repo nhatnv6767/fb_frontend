@@ -109,3 +109,33 @@ header {
     font-size: 13px;
     color: #fff;
 }
+
+.header_right {
+    display: flex;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile_link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 3px 10px 3px 6px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    /* The height of the line. */
+    line-height: 19px;
+    margin-right: 10px;
+}
+
+.profile_link img {
+    width: 20.7px;
+    height: 20.7px;
+    border-radius: 50%;
+    border: 1px solid #b0b3b8;
+    transform: translateX(-1px);
+}
