@@ -96,3 +96,7 @@ a {
 .middle_icon:nth-child(5) {
     transform: translateX(-5px);
 }
+
+.active {
+    border-bottom: 3px solid var(--blue-color);
+}
