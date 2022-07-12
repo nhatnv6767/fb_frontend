@@ -30,7 +30,7 @@ export default function Header() {
                 </div>
             </div>
             <div className="header_middle">
-                <Link to="/" className="middle_icon">
+                <Link to="/" className="middle_icon active">
                     <HomeActive color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon hover1">
