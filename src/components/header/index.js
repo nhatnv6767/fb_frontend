@@ -31,19 +31,19 @@ export default function Header() {
             </div>
             <div className="header_middle">
                 <Link to="/" className="middle_icon">
-                    <HomeActive/>
+                    <HomeActive color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon">
-                    <Friends/>
+                    <Friends color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon">
-                    <Watch/>
+                    <Watch color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon">
-                    <Market/>
+                    <Market color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon">
-                    <Gaming/>
+                    <Gaming color={color}/>
                 </Link>
             </div>
             <div className="header_right"></div>
