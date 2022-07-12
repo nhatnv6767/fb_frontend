@@ -43,6 +43,14 @@ export default function LoginForm({setVisible}) {
                 email,
                 password,
             });
+
+            /* Destructuring the data object.
+            The message is being extracted from the data object and the rest of the data
+            object is being stored in the rest variable. */
+            /* Dispatching an action to the reducer. */
+            dispatch({type: "LOGIN", payload: data});
+            Cookies.set("user", JSON.stringify(data));
+            navigate("/");
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);
