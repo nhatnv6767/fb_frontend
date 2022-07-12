@@ -1,10 +1,8 @@
 import {useEffect} from "react";
 
-export default function clickOutside(ref, fun) {
+export default function useClickOutside(ref, fun) {
     useEffect(() => {
-        return () => {
-            effect;
-        };
-    }, [input]);
+        console.log("useEffect");
+    }, []);
 
 }
