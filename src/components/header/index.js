@@ -13,7 +13,11 @@ export default function Header() {
                 </Link>
                 <div className="search search1">
                     <Search/>
-                    <input type="text" placeholder="Search Facebook"/>
+                    <input
+                        type="text"
+                        placeholder="Search Facebook"
+                        className="hide_input"
+                    />
                 </div>
             </div>
             <div className="header_middle"></div>
