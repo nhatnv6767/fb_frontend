@@ -38,3 +38,16 @@ header {
     border-radius: 50px;
     cursor: text;
 }
+
+.search input {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.search input::placeholder {
+    transform: translateY(-1px);
+    transform: translateX(4px);
+}
