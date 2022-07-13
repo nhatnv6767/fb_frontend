@@ -1,8 +1,10 @@
 import {Return, Search} from "../../svg";
+import {useRef} from "react";
 
 export default function SearchMenu(color) {
+    const menu = useRef(null);
     return (
-        <div className="header_left search_area scrollbar">
+        <div className="header_left search_area scrollbar" ref={menu}>
             <div className="search_wrap">
                 <div className="header_logo">
                     <div className="circle hover1">
