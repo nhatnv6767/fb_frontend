@@ -1,8 +1,12 @@
 import {Return, Search} from "../../svg";
 import {useRef} from "react";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function SearchMenu(color) {
     const menu = useRef(null);
+    useClickOutside(menu, () => {
+
+    })
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
             <div className="search_wrap">

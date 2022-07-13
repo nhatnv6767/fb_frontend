@@ -42,7 +42,10 @@ export default function Header() {
             </div>
             {
                 showSearchMenu &&
-                <SearchMenu color={color}/>
+                <SearchMenu
+                    color={color}
+                    setShowSearchMenu={setShowSearchMenu()}
+                />
             }
 
             <div className="header_middle">
