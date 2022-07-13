@@ -28,6 +28,6 @@ export default function useClickOutside(ref, fun) {
         /* `[]` is the second argument to `useEffect`. It is an array of dependencies. If the array is empty, then the
         function will only be called once. If the array is not empty, then the function will be called every time one of the
         dependencies changes. */
-    }, []);
+    }, [ref]);
 
 }
