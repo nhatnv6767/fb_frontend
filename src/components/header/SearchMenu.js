@@ -34,7 +34,14 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                         )
                     }
 
-                    <input type="text" placeholder="Search Facebook" ref={input}/>
+                    <input
+                        type="text"
+                        placeholder="Search Facebook"
+                        ref={input}
+                        onFocus={() => {
+                            setIconVisible(false);
+                        }}
+                    />
                 </div>
             </div>
             <div className="search_history_header">
