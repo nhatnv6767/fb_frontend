@@ -24,20 +24,20 @@ export default function Header() {
     return (
         <header>
             <div className="header_left">
-                <div style={{display: "none"}}>
-                    <Link to="/" className="header_logo">
-                        <div className="circle">
-                            <Logo/>
-                        </div>
-                    </Link>
-                    <div className="search search1">
-                        <Search color={color}/>
-                        <input
-                            type="text"
-                            placeholder="Search Facebook"
-                            className="hide_input"
-                        />
+                <Link to="/" className="header_logo">
+                    <div className="circle">
+                        <Logo/>
                     </div>
+                </Link>
+                <div className="search search1" onClick={() => {
+                    setShowSearchMenu(true);
+                }}>
+                    <Search color={color}/>
+                    <input
+                        type="text"
+                        placeholder="Search Facebook"
+                        className="hide_input"
+                    />
                 </div>
             </div>
             {
