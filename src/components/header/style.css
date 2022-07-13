@@ -199,4 +199,32 @@ header {
     padding: 8px 16px 10px 6px;
 }
 
+.search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search_area .search {
+    padding: 10px 44px 10px 12px;
+    width: 252px;
+    gap: 4px;
+}
+
+.search_area .search input {
+    padding-left: 4px;
+}
+
+.search_area .search svg {
+    transform: translateY(1px);
+}
+
+.search_area .search input::placeholder {
+    transform: translateY(-2px);
+}
+
+.search_area .search input:focus::placeholder {
+    transform: translateY(-1px);
+}
+
 /* --------- Search Menu --------- */
