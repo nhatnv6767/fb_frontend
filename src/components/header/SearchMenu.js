@@ -5,6 +5,7 @@ import useClickOutside from "../../helpers/clickOutside";
 /* Destructuring the props object. */
 export default function SearchMenu({color, setShowSearchMenu}) {
     const menu = useRef(null);
+    const input = useRef(null);
     useClickOutside(menu, () => {
         setShowSearchMenu(false);
     });
@@ -22,7 +23,7 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                     <div>
                         <Search color={color}/>
                     </div>
-                    <input type="text" placeholder="Search Facebook"/>
+                    <input type="text" placeholder="Search Facebook" ref={input}/>
                 </div>
             </div>
             <div className="search_history_header">
