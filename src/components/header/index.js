@@ -29,9 +29,12 @@ export default function Header() {
                         <Logo/>
                     </div>
                 </Link>
-                <div className="search search1" onClick={() => {
-                    setShowSearchMenu(true);
-                }}>
+                <div
+                    className="search search1"
+                    onClick={() => {
+                        setShowSearchMenu(true);
+                    }}
+                >
                     <Search color={color}/>
                     <input
                         type="text"
@@ -41,11 +44,12 @@ export default function Header() {
                 </div>
             </div>
             {
-                showSearchMenu &&
-                <SearchMenu
-                    color={color}
-                    setShowSearchMenu={setShowSearchMenu}
-                />
+                showSearchMenu && (
+                    <SearchMenu
+                        color={color}
+                        setShowSearchMenu={setShowSearchMenu}
+                    />
+                )
             }
 
             <div className="header_middle">
