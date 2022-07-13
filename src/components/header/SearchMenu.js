@@ -1,9 +1,10 @@
 import {Return, Search} from "../../svg";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 
 /* Destructuring the props object. */
 export default function SearchMenu({color, setShowSearchMenu}) {
+    const [iconVisible, setIconVisible] = useState(true);
     const menu = useRef(null);
     const input = useRef(null);
     useClickOutside(menu, () => {
@@ -19,12 +20,20 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                         <Return color={color}/>
                     </div>
                 </div>
-                <div className="search" onClick={() => {
-                    input.current.focus();
-                }}>
-                    <div>
-                        <Search color={color}/>
-                    </div>
+                <div
+                    className="search"
+                    onClick={() => {
+                        input.current.focus();
+                    }}
+                >
+                    {
+                        iconVisible && (
+                            <div>
+                                <Search color={color}/>
+                            </div>
+                        )
+                    }
+
                     <input type="text" placeholder="Search Facebook" ref={input}/>
                 </div>
             </div>
