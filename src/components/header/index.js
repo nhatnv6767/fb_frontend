@@ -44,7 +44,7 @@ export default function Header() {
                 showSearchMenu &&
                 <SearchMenu
                     color={color}
-                    setShowSearchMenu={setShowSearchMenu()}
+                    setShowSearchMenu={setShowSearchMenu}
                 />
             }
 
