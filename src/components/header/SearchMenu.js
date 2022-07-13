@@ -2,6 +2,7 @@ import {Return, Search} from "../../svg";
 import {useRef} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 
+/* Destructuring the props object. */
 export default function SearchMenu({color, setShowSearchMenu}) {
     const menu = useRef(null);
     useClickOutside(menu, () => {
