@@ -12,6 +12,7 @@ header {
     color: var(--color-primary);
 }
 
+/* --------- Header Left --------- */
 .header_left {
     display: flex;
     align-items: center;
@@ -51,6 +52,9 @@ header {
     transform: translateY(-1px);
 }
 
+/* --------- Header Left --------- */
+
+/* --------- Header Middle --------- */
 .header_middle {
     display: flex;
     align-items: center;
@@ -109,6 +113,10 @@ header {
     color: #fff;
 }
 
+/* --------- Header Middle --------- */
+
+
+/* --------- Header Right --------- */
 .header_right {
     display: flex;
     position: absolute;
@@ -166,3 +174,18 @@ header {
     font-size: 13px;
     color: #fff;
 }
+
+/* --------- Header Right --------- */
+
+
+/* --------- Search Menu --------- */
+.search_area {
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--bg-primary);
+    box-shadow: 0 12px 12px var(--shadow-1), inset 0 0 0 0 var(--shadow-inset);
+}
+
+/* --------- Search Menu --------- */
