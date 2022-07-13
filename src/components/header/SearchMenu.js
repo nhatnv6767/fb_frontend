@@ -13,8 +13,10 @@ export default function SearchMenu(color) {
                     <div>
                         <Search color={color}/>
                     </div>
+                    <input type="text" placeholder="Search Facebook"/>
                 </div>
             </div>
+            <div className="search_history_header"></div>
         </div>
     );
 }
