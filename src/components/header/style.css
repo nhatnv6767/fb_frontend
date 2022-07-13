@@ -193,6 +193,10 @@ header {
     transition: all 0.2s;
     /* A CSS property that controls the rendering of fonts. */
     -webkitfont-smoothing: antialiased;
+    z-index: 1;
+    min-height: 400px;
+    max-height: 70vh;
+    padding: 8px 16px 10px 6px;
 }
 
 /* --------- Search Menu --------- */
