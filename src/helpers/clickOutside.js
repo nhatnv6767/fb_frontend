@@ -1,5 +1,7 @@
 import {useEffect} from "react";
 
+/* `ref` is a reference to the element that we want to detect the outside click on. `fun` is the function that we want to
+call when the outside click is detected. */
 export default function useClickOutside(ref, fun) {
     useEffect(() => {
         const listener = (e) => {
@@ -9,7 +11,9 @@ export default function useClickOutside(ref, fun) {
             }
             fun();
         };
+        /* `mousedown` is an event that is triggered when the mouse is pressed down on an element. */
         document.addEventListener("mousedown", listener);
+        /* `touchstart` is an event that is triggered when the user touches an element. */
         document.addEventListener("touchstart", listener);
 
         return () => {

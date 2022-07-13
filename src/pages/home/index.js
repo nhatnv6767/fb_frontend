@@ -10,7 +10,11 @@ export default function Home() {
     return (
         <div>
             <Header/>
-            <div className="card" ref={el}></div>
+            <div
+                className="card" ref={el}
+            >
+
+            </div>
         </div>
     );
 }
