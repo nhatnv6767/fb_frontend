@@ -37,7 +37,7 @@ export default function Header() {
                     />
                 </div>
             </div>
-            <SearchMenu/>
+            <SearchMenu color={color}/>
             <div className="header_middle">
                 <Link to="/" className="middle_icon active">
                     <HomeActive color={color}/>

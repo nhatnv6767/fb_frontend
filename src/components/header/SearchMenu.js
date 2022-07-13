@@ -1,6 +1,6 @@
 import {Return, Search} from "../../svg";
 
-export default function SearchMenu() {
+export default function SearchMenu(color) {
     return (
         <div className="header_left search_area scrollbar">
             <div className="search_wrap">
@@ -11,7 +11,7 @@ export default function SearchMenu() {
                 </div>
                 <div className="search">
                     <div>
-                        <Search/>
+                        <Search color={color}/>
                     </div>
                 </div>
             </div>
