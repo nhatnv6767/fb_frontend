@@ -41,6 +41,10 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                         onFocus={() => {
                             setIconVisible(false);
                         }}
+                        /* A callback function that is called when the input loses focus. */
+                        onBlur={() => {
+                            setIconVisible(true);
+                        }}
                     />
                 </div>
             </div>
