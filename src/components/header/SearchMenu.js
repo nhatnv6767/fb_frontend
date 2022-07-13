@@ -19,7 +19,9 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                         <Return color={color}/>
                     </div>
                 </div>
-                <div className="search">
+                <div className="search" onClick={() => {
+                    input.current.focus();
+                }}>
                     <div>
                         <Search color={color}/>
                     </div>
