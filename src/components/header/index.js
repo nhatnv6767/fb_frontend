@@ -15,11 +15,12 @@ import {
 } from "../../svg";
 import {useSelector} from "react-redux";
 import SearchMenu from "./SearchMenu";
+import {useState} from "react";
 
 export default function Header() {
     const {user} = useSelector((user) => ({...user}));
-    console.log(user);
     const color = "#65676b";
+    const [showSearchMenu, setShowSearchMenu] = useState(false);
     return (
         <header>
             <div className="header_left">
@@ -39,7 +40,11 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <SearchMenu color={color}/>
+            {
+                showSearchMenu &&
+                <SearchMenu color={color}/>
+            }
+
             <div className="header_middle">
                 <Link to="/" className="middle_icon active">
                     <HomeActive color={color}/>
