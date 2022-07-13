@@ -227,6 +227,10 @@ header {
     transform: translateY(-1px);
 }
 
+.search_history {
+    width: 100%;
+}
+
 .search_history_header {
     width: 100%;
     display: flex;
