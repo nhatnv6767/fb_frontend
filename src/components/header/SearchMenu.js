@@ -2,7 +2,7 @@ import {Return, Search} from "../../svg";
 import {useRef} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 
-export default function SearchMenu(color, setShowSearchMenu) {
+export default function SearchMenu({color, setShowSearchMenu}) {
     const menu = useRef(null);
     useClickOutside(menu, () => {
         setShowSearchMenu(false);
