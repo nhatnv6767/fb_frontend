@@ -181,11 +181,18 @@ header {
 /* --------- Search Menu --------- */
 .search_area {
     position: absolute;
+    /* Aligning the items to the top of the container. */
     align-items: flex-start;
     flex-direction: column;
     gap: 6px;
     background: var(--bg-primary);
     box-shadow: 0 12px 12px var(--shadow-1), inset 0 0 0 0 var(--shadow-inset);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* Making the transition of the search menu smooth. */
+    transition: all 0.2s;
+    /* A CSS property that controls the rendering of fonts. */
+    -webkitfont-smoothing: antialiased;
 }
 
 /* --------- Search Menu --------- */
