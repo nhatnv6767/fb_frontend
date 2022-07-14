@@ -93,11 +93,16 @@ export default function Header() {
                 <div
                     className="circle_icon hover1"
                     ref={allmenu}
-                    onClick={() => {
-                        setShowAllMenu(prev => !prev);
-                    }}
+
                 >
-                    <Menu/>
+                    <div
+                        onClick={() => {
+                            setShowAllMenu(prev => !prev);
+                        }}
+                    >
+                        <Menu/>
+                    </div>
+
                     {
                         showAllMenu &&
                         <AllMenu/>
