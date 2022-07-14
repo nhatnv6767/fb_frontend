@@ -1,3 +1,5 @@
+import {menu, create} from "../../data/allMenu";
+
 export default function AllMenu() {
     return (
         <div className="all_menu">
