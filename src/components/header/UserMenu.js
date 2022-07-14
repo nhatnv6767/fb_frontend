@@ -35,6 +35,33 @@ export default function UserMenu({user}) {
                     <i className="right_icon"></i>
                 </div>
             </div>
+
+            <div className="mmenu_item hover3">
+                <div className="small_circle">
+                    <i className="help_filled_icon"></i>
+                </div>
+                <span>Help & support</span>
+                <div className="rArrow">
+                    <i className="right_icon"></i>
+                </div>
+            </div>
+
+            <div className="mmenu_item hover3">
+                <div className="small_circle">
+                    <i className="dark_filled_icon"></i>
+                </div>
+                <span>Display & Accessibility</span>
+                <div className="rArrow">
+                    <i className="right_icon"></i>
+                </div>
+            </div>
+
+            <div className="mmenu_item hover3">
+                <div className="small_circle">
+                    <i className="settings_filled_icon"></i>
+                </div>
+                <span>Log Out</span>
+            </div>
         </div>
     );
 }
