@@ -14,21 +14,21 @@ export default function HelpSupport({setVisible}) {
             </div>
             <div className="mmenu_item hover3">
                 <div className="small_circle">
-                    <i className="settings_filled_icon"></i>
+                    <i className="help_center_icon"></i>
                 </div>
-                <span>Settings</span>
+                <span>Help Center</span>
             </div>
             <div className="mmenu_item hover3">
                 <div className="small_circle">
-                    <i className="privacy_checkup_icon"></i>
+                    <i className="email_icon"></i>
                 </div>
-                <span>Privacy Checkup</span>
+                <span>Support Inbox</span>
             </div>
             <div className="mmenu_item hover3">
                 <div className="small_circle">
-                    <i className="privacy_shortcuts_icon"></i>
+                    <i className="info_filled_icon"></i>
                 </div>
-                <span>Privacy Shorcuts</span>
+                <span>Report a Problem</span>
             </div>
         </div>
     );
