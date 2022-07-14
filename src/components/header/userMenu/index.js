@@ -3,7 +3,7 @@ import {useState} from "react";
 import SettingsPrivacy from "./SettingsPrivacy";
 
 export default function UserMenu({user}) {
-    const [visible, setVisible] = useState(1);
+    const [visible, setVisible] = useState(0);
     return (
         <div className="mmenu">
             {
@@ -32,7 +32,12 @@ export default function UserMenu({user}) {
                             </div>
                         </div>
                         <div className="mmenu_splitter"></div>
-                        <div className="mmenu_item hover3">
+                        <div
+                            className="mmenu_item hover3"
+                            onClick={() => {
+                                setVisible(1);
+                            }}
+                        >
                             <div className="small_circle">
                                 <i className="settings_filled_icon"></i>
                             </div>
