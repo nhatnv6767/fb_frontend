@@ -1,9 +1,10 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import SettingsPrivacy from "./SettingsPrivacy";
+import HelpSupport from "./HelpSupport";
 
 export default function UserMenu({user}) {
-    const [visible, setVisible] = useState(0);
+    const [visible, setVisible] = useState(2);
     return (
         <div className="mmenu">
             {
@@ -79,6 +80,13 @@ export default function UserMenu({user}) {
             {
                 visible === 1 &&
                 <SettingsPrivacy
+                    setVisible={setVisible}
+                />
+            }
+
+            {
+                visible === 2 &&
+                <HelpSupport
                     setVisible={setVisible}
                 />
             }
