@@ -107,7 +107,7 @@ export default function Header() {
                 </div>
                 <div className="circle_icon hover1">
                     <ArrowDown/>
-                    <UserMenu/>
+                    <UserMenu user={user}/>
                 </div>
             </div>
         </header>
