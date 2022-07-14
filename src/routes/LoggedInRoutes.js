@@ -1,7 +1,6 @@
+import {useSelector} from "react-redux";
+
 export default function LoggedInRoutes() {
-    return (
-        <div>
-            LoggedInRoutes
-        </div>
-    );
+    // use Redux
+    const {user} = useSelector((state) => ({...state}));
 }
