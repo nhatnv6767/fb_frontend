@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 export default function UserMenu({user}) {
+    const [visible, setVisible] = useState(0);
     return (
         <div className="mmenu">
             <Link to="/profile" className="mmenu_header hover3">
