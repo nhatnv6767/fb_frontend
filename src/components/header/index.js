@@ -113,11 +113,14 @@ export default function Header() {
                 <div
                     className="circle_icon hover1"
                     ref={usermenu}
-                    onClick={() => {
-                        setShowUserMenu(prev => !prev);
-                    }}
                 >
-                    <ArrowDown/>
+                    <div
+                        onClick={() => {
+                            setShowUserMenu(prev => !prev);
+                        }}
+                    >
+                        <ArrowDown/>
+                    </div>
                     {showUserMenu &&
                         <UserMenu user={user}/>
                     }
