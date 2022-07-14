@@ -5,7 +5,7 @@ import HelpSupport from "./HelpSupport";
 import DisplayAccessibility from "./DisplayAccessibility";
 
 export default function UserMenu({user}) {
-    const [visible, setVisible] = useState(3);
+    const [visible, setVisible] = useState(0);
     return (
         <div className="mmenu">
             {
@@ -64,7 +64,12 @@ export default function UserMenu({user}) {
                             </div>
                         </div>
 
-                        <div className="mmenu_item hover3">
+                        <div
+                            className="mmenu_item hover3"
+                            onClick={() => {
+                                setVisible(3);
+                            }}
+                        >
                             <div className="small_circle">
                                 <i className="dark_filled_icon"></i>
                             </div>
