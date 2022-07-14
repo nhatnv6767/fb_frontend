@@ -80,6 +80,10 @@ a {
     background: var(--bg-third);
 }
 
+.hover3:hover {
+    background: #d4d6da3a;
+}
+
 
 .card {
     height: 500px;
