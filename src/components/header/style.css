@@ -482,6 +482,9 @@ header {
 .rArrow {
     /* A position property that positions an element relative to its first positioned (not static) ancestor element. */
     position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /*--- User menu -----*/
