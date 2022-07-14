@@ -8,6 +8,16 @@ export default function AllMenu() {
                         <i className="amm_s_ic"></i>
                         <input type="text" placeholder="Search Menu"/>
                     </div>
+                    <div className="all_menu_group">
+                        <div className="all_menu_group_header">Social</div>
+                        <div className="all_menu-item hover1">
+                            <img src="../../left/campus.png" alt=""/>
+                            <div className="all_menu_col">
+                                <span>Campus</span>
+                                <span>C</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
