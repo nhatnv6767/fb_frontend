@@ -18,7 +18,7 @@ import SearchMenu from "./SearchMenu";
 import {useRef, useState} from "react";
 import AllMenu from "./AllMenu";
 import useClickOutside from "../../helpers/clickOutside";
-import UserMenu from "./UserMenu";
+import UserMenu from "./userMenu";
 
 export default function Header() {
     const {user} = useSelector((user) => ({...user}));
