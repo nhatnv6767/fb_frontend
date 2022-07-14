@@ -2,9 +2,10 @@ import {Link} from "react-router-dom";
 import {useState} from "react";
 import SettingsPrivacy from "./SettingsPrivacy";
 import HelpSupport from "./HelpSupport";
+import DisplayAccessibility from "./DisplayAccessibility";
 
 export default function UserMenu({user}) {
-    const [visible, setVisible] = useState(0);
+    const [visible, setVisible] = useState(3);
     return (
         <div className="mmenu">
             {
@@ -92,6 +93,13 @@ export default function UserMenu({user}) {
             {
                 visible === 2 &&
                 <HelpSupport
+                    setVisible={setVisible}
+                />
+            }
+
+            {
+                visible === 3 &&
+                <DisplayAccessibility
                     setVisible={setVisible}
                 />
             }
