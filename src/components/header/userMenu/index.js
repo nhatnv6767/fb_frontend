@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
+import SettingsPrivacy from "./SettingsPrivacy";
 
 export default function UserMenu({user}) {
     const [visible, setVisible] = useState(0);
@@ -70,6 +71,10 @@ export default function UserMenu({user}) {
                         </div>
                     </div>
                 )
+            }
+            {
+                visible === 1 &&
+                <SettingsPrivacy/>
             }
         </div>
     );
