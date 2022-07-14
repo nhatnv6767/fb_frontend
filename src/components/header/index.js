@@ -25,6 +25,7 @@ export default function Header() {
     const color = "#65676b";
     const [showSearchMenu, setShowSearchMenu] = useState(false);
     const [showAllMenu, setShowAllMenu] = useState(false);
+    const [showUserMenu, setShowUserMenu] = useState(false);
     const allmenu = useRef(null);
     useClickOutside(allmenu, () => {
         setShowAllMenu(false);
@@ -105,9 +106,17 @@ export default function Header() {
                     <Notifications/>
                     <div className="right_notification">5</div>
                 </div>
-                <div className="circle_icon hover1">
+                <div
+                    className="circle_icon hover1"
+                    onClick={() => {
+                        setShowUserMenu(prev => !prev);
+                    }}
+                >
                     <ArrowDown/>
-                    <UserMenu user={user}/>
+                    {showUserMenu &&
+                        <UserMenu user={user}/>
+                    }
+
                 </div>
             </div>
         </header>
