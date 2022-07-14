@@ -58,7 +58,7 @@ export default function UserMenu({user}) {
 
             <div className="mmenu_item hover3">
                 <div className="small_circle">
-                    <i className="settings_filled_icon"></i>
+                    <i className="logout_filled_icon"></i>
                 </div>
                 <span>Log Out</span>
             </div>
