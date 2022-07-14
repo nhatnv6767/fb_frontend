@@ -79,7 +79,12 @@ export default function Header() {
                     <img src={user?.picture} alt=""/>
                     <span>{user?.first_name}</span>
                 </Link>
-                <div className="circle_icon hover1">
+                <div
+                    className="circle_icon hover1"
+                    onClick={() => {
+                        setShowAllMenu(!showAllMenu);
+                    }}
+                >
                     <Menu/>
                     {
                         showAllMenu &&
