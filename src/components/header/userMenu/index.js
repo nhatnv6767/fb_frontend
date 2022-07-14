@@ -3,7 +3,7 @@ import {useState} from "react";
 import SettingsPrivacy from "./SettingsPrivacy";
 
 export default function UserMenu({user}) {
-    const [visible, setVisible] = useState(0);
+    const [visible, setVisible] = useState(1);
     return (
         <div className="mmenu">
             {
