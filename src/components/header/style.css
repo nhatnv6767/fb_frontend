@@ -460,9 +460,29 @@ header {
 }
 
 .mmenu_span1 {
-
+    font-size: 14px !important;
 }
 
+.mmenu_span2 {
+    font-size: 12px !important;
+    color: var(--color-secondary);
+}
+
+.mmenu_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 7px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.rArrow {
+    /* A position property that positions an element relative to its first positioned (not static) ancestor element. */
+    position: absolute;
+}
 
 /*--- User menu -----*/
 
