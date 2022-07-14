@@ -2,7 +2,7 @@ export default function SettingsPrivacy() {
     return (
         <div className="absolute_wrap">
             <div className="absolute_wrap_header">
-                <div className="circle">
+                <div className="circle hover1">
                     <i className="arrow_back_icon"></i>
                 </div>
                 Settings & privacy
