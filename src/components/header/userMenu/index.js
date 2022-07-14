@@ -4,7 +4,7 @@ import SettingsPrivacy from "./SettingsPrivacy";
 import HelpSupport from "./HelpSupport";
 
 export default function UserMenu({user}) {
-    const [visible, setVisible] = useState(2);
+    const [visible, setVisible] = useState(0);
     return (
         <div className="mmenu">
             {
@@ -48,7 +48,12 @@ export default function UserMenu({user}) {
                             </div>
                         </div>
 
-                        <div className="mmenu_item hover3">
+                        <div
+                            className="mmenu_item hover3"
+                            onClick={() => {
+                                setVisible(2);
+                            }}
+                        >
                             <div className="small_circle">
                                 <i className="help_filled_icon"></i>
                             </div>
