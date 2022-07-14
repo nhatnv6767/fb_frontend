@@ -28,7 +28,11 @@ export default function UserMenu({user}) {
             <div className="mmenu_splitter"></div>
             <div className="mmenu_item hover3">
                 <div className="small_circle">
-                    <div className="settings_filled_icon"></div>
+                    <i className="settings_filled_icon"></i>
+                </div>
+                <span>Settings & privacy</span>
+                <div className="rArrow">
+                    <i className="right_icon"></i>
                 </div>
             </div>
         </div>
