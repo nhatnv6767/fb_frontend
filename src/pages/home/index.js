@@ -12,14 +12,7 @@ export default function Home() {
     return (
         <div>
             <Header/>
-            {visible &&
-                <div
-                    /* A React hook that allows us to access the DOM element. */
-                    className="card" ref={el}
-                >
 
-                </div>
-            }
         </div>
     );
 }
