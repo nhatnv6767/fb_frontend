@@ -19,9 +19,9 @@ export default function DisplayAccessibility({setVisible}) {
                 <div className="mmenu_col">
                     <span className="mmenu_span1">Dark Mode</span>
                     <span className="mmenu_span2">
-            Adjust the appearance of Facebook to reduce glare and give your eyes
-            a break.
-          </span>
+                        Adjust the appearance of Facebook to reduce glare and give your eyes
+                        a break.
+                    </span>
                 </div>
             </div>
             <label htmlFor="darkOff" className="hover1">
@@ -39,8 +39,8 @@ export default function DisplayAccessibility({setVisible}) {
                 <div className="mmenu_col">
                     <span className="mmenu_span1">Compact mode</span>
                     <span className="mmenu_span2">
-            Make your font size smaller so more content can fit on the screen.
-          </span>
+                        Make your font size smaller so more content can fit on the screen.
+                    </span>
                 </div>
             </div>
             <label htmlFor="compactOff" className="hover1">
