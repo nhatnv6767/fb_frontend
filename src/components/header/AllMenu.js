@@ -14,7 +14,9 @@ export default function AllMenu() {
                             <img src="../../left/campus.png" alt=""/>
                             <div className="all_menu_col">
                                 <span>Campus</span>
-                                <span>C</span>
+                                <span>
+                                    A unique, exclusive space for collage students on Facebook.
+                                </span>
                             </div>
                         </div>
                     </div>
