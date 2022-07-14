@@ -1,11 +1,11 @@
-export default function AllMenuItem() {
+export default function AllMenuItem({name, description, icon}) {
     return (
         <div className="all_menu-item hover1">
-            <img src="../../left/campus.png" alt=""/>
+            <img src={`../../left/${icon}.png`} alt=""/>
             <div className="all_menu_col">
-                <span>Campus</span>
+                <span>{name}</span>
                 <span>
-                    A unique, exclusive space for collage students on Facebook.
+                    {description}
                 </span>
             </div>
         </div>

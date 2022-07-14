@@ -13,7 +13,11 @@ export default function AllMenu() {
                     </div>
                     <div className="all_menu_group">
                         <div className="all_menu_group_header">Social</div>
-                        <AllMenuItem/>
+                        {
+                            menu.map((item, i) => {
+                                <AllMenuItem/>;
+                            })
+                        }
                     </div>
                 </div>
             </div>
