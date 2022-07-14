@@ -14,7 +14,7 @@ export default function AllMenu() {
                     <div className="all_menu_group">
                         <div className="all_menu_group_header">Social</div>
                         {
-                            menu.map((item, i) => (
+                            menu.slice(0, 6).map((item, i) => (
                                 <AllMenuItem
                                     name={item.name}
                                     description={item.description}
