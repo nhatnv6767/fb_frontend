@@ -1,4 +1,5 @@
 import {menu, create} from "../../data/allMenu";
+import AllMenuItem from "./AllMenuItem";
 
 export default function AllMenu() {
     return (
@@ -12,15 +13,7 @@ export default function AllMenu() {
                     </div>
                     <div className="all_menu_group">
                         <div className="all_menu_group_header">Social</div>
-                        <div className="all_menu-item hover1">
-                            <img src="../../left/campus.png" alt=""/>
-                            <div className="all_menu_col">
-                                <span>Campus</span>
-                                <span>
-                                    A unique, exclusive space for collage students on Facebook.
-                                </span>
-                            </div>
-                        </div>
+                        <AllMenuItem/>
                     </div>
                 </div>
             </div>
