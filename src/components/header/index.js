@@ -18,6 +18,7 @@ import SearchMenu from "./SearchMenu";
 import {useRef, useState} from "react";
 import AllMenu from "./AllMenu";
 import useClickOutside from "../../helpers/clickOutside";
+import UserMenu from "./UserMenu";
 
 export default function Header() {
     const {user} = useSelector((user) => ({...user}));
@@ -106,6 +107,7 @@ export default function Header() {
                 </div>
                 <div className="circle_icon hover1">
                     <ArrowDown/>
+                    <UserMenu/>
                 </div>
             </div>
         </header>
