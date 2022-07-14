@@ -19,6 +19,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -32,6 +33,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -45,6 +47,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -58,6 +61,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -71,6 +75,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -84,6 +89,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -97,6 +103,7 @@ export default function AllMenu() {
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
+                                    key={i}
                                 />
                             ))
                         }
@@ -106,7 +113,12 @@ export default function AllMenu() {
                     <div className="all_right_header">Create</div>
                     {
                         create.map((item, i) => (
-                            <div className="all_right_item hover1"></div>
+                            <div className="all_right_item hover1">
+                                <div className="all_right_circle">
+                                    <i className={item.icon}></i>
+                                </div>
+                                {item.name}
+                            </div>
                         ))
                     }
                 </div>
