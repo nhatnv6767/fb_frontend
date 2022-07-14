@@ -73,7 +73,9 @@ export default function UserMenu({user}) {
             }
             {
                 visible === 1 &&
-                <SettingsPrivacy/>
+                <SettingsPrivacy
+                    setVisible={setVisible}
+                />
             }
         </div>
     );

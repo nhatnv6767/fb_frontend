@@ -1,8 +1,13 @@
-export default function SettingsPrivacy() {
+export default function SettingsPrivacy({setVisible}) {
     return (
         <div className="absolute_wrap">
             <div className="absolute_wrap_header">
-                <div className="circle hover1">
+                <div
+                    className="circle hover1"
+                    onClick={() => {
+                        setVisible(0);
+                    }}
+                >
                     <i className="arrow_back_icon"></i>
                 </div>
                 Settings & privacy
