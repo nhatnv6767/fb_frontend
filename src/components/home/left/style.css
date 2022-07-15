@@ -8,6 +8,7 @@
     overflow-y: auto;
     color: var(--color-primary);
     padding: 15px 0 5rem;
+    user-select: none;
 }
 
 .left_link {
