@@ -1,7 +1,7 @@
-export default function LeftLink() {
+export default function LeftLink({img, text, notification}) {
     return (
-        <div>
-            LeftLink
+        <div className="left_link">
+            <img src="" alt=""/>
         </div>
     );
 }

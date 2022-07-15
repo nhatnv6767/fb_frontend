@@ -1,4 +1,5 @@
 import "./style.css";
+import LeftLink from "./LeftLink";
 
 export default function LeftHome({user}) {
     return (
@@ -7,6 +8,7 @@ export default function LeftHome({user}) {
                 <img src={user?.picture} alt=""/>
                 <span>{user?.first_name} {user?.last_name}</span>
             </div>
+            <LeftLink/>
         </div>
     );
 }
