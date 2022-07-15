@@ -20,6 +20,9 @@ export default function LeftHome({user}) {
                     />
                 ))
             }
+            <div className="left_link hover1">
+
+            </div>
         </div>
     );
 }
