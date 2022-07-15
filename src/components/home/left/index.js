@@ -28,7 +28,7 @@ export default function LeftHome({user}) {
                     <div
                         className="left_link hover1"
                         onClick={() => {
-                            setVisible(true)
+                            setVisible(true);
                         }}
                     >
                         <div className="small_circle">
@@ -54,7 +54,7 @@ export default function LeftHome({user}) {
                         <div
                             className="left_link hover1"
                             onClick={() => {
-                                setVisible(false)
+                                setVisible(false);
                             }}
                         >
                             <div className="small_circle rotate360">
@@ -67,6 +67,13 @@ export default function LeftHome({user}) {
             }
 
             <div className="splitter"></div>
+            <div className="shortcut">
+                <div className="heading">Your Shortcuts</div>
+                <div className="edit_shortcut">Edit</div>
+            </div>
+            <div className="shortcut_list">
+
+            </div>
         </div>
     );
 }
