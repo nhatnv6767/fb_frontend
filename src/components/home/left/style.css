@@ -74,3 +74,27 @@
     background: var(--divider);
     margin: 9px 2px 0 12px;
 }
+
+.shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    padding: 13px 10px 11px 10px;
+}
+
+.edit_shortcut {
+    font-size: 14px;
+    color: var(--blue-color);
+    display: none;
+    cursor: pointer;
+}
+
+.shortcut:hover .edit_shortcut {
+    display: block;
+}
