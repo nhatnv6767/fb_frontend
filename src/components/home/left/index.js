@@ -65,6 +65,8 @@ export default function LeftHome({user}) {
                     </div>
                 )
             }
+
+            <div className="splitter"></div>
         </div>
     );
 }

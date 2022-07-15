@@ -68,3 +68,9 @@
 .rotate360 {
     transform: rotate(180deg);
 }
+
+.splitter {
+    height: 1.3px;
+    background: var(--divider);
+    margin: 9px 2px 0 12px;
+}
