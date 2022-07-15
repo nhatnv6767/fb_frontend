@@ -38,6 +38,12 @@ export default function LeftHome({user}) {
                         />
                     ))
                 }
+                <div className="left_link hover1">
+                    <div className="small_circle">
+                        <ArrowDown1/>
+                    </div>
+                    <span>See less</span>
+                </div>
             </div>
         </div>
     );
