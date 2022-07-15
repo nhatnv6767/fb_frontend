@@ -4,6 +4,7 @@ import {left} from "../../../data/home";
 import {Link} from "react-router-dom";
 import {ArrowDown1} from "../../../svg";
 import {useState} from "react";
+import Shortcut from "./Shortcut";
 
 export default function LeftHome({user}) {
     const [visible, setVisible] = useState(false);
@@ -72,7 +73,7 @@ export default function LeftHome({user}) {
                 <div className="edit_shortcut">Edit</div>
             </div>
             <div className="shortcut_list">
-
+                <Shortcut/>
             </div>
         </div>
     );
