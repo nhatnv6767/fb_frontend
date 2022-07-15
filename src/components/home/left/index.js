@@ -23,12 +23,16 @@ export default function LeftHome({user}) {
                     />
                 ))
             }
-            <div className="left_link hover1">
-                <div className="small_circle">
-                    <ArrowDown1/>
-                </div>
-                <span>See more</span>
-            </div>
+            {
+                !visible && (
+                    <div className="left_link hover1">
+                        <div className="small_circle">
+                            <ArrowDown1/>
+                        </div>
+                        <span>See more</span>
+                    </div>
+                )
+            }
             {
                 visible && (
                     <div className="more_left">
