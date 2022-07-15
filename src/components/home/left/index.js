@@ -2,7 +2,7 @@ import "./style.css";
 
 export default function LeftHome() {
     return (
-        <div>
+        <div className="left_home">
             LeftHome
         </div>
     );
