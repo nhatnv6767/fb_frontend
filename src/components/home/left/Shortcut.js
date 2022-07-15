@@ -1,7 +1,7 @@
-export default function Shortcut() {
+export default function Shortcut({link, img, name}) {
     return (
-        <div>
+        <a>
             Shortcut
-        </div>
+        </a>
     );
 }

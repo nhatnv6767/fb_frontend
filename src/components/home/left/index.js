@@ -73,7 +73,16 @@ export default function LeftHome({user}) {
                 <div className="edit_shortcut">Edit</div>
             </div>
             <div className="shortcut_list">
-                <Shortcut/>
+                <Shortcut
+                    link="https://www.youtube.com/"
+                    img="../../images/ytb.png"
+                    name="My Youtube channel"
+                />
+                <Shortcut
+                    link="https://www.instagram.com/"
+                    img="../../images/insta.png"
+                    name="My Instagram"
+                />
             </div>
         </div>
     );
