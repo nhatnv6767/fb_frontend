@@ -98,3 +98,25 @@
 .shortcut:hover .edit_shortcut {
     display: block;
 }
+
+.shortcut_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.shortcut_item img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.shortcut_item span {
+    margin-bottom: 3px;
+}
