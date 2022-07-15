@@ -84,7 +84,7 @@ export default function LeftHome({user}) {
                     name="My Instagram"
                 />
             </div>
-            <div className="fb_copyright">
+            <div className={`fb_copyright ${visible && "relative_fb_copyright"}`}>
                 <Link to="/">Privacy </Link>
                 <span>. </span>
                 <Link to="/">Terms </Link>
