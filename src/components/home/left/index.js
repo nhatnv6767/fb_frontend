@@ -3,7 +3,9 @@ import "./style.css";
 export default function LeftHome() {
     return (
         <div className="left_home">
-            LeftHome
+            <div className="left_link">
+                <img src="" alt=""/>
+            </div>
         </div>
     );
 }
