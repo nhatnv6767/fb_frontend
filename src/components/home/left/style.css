@@ -64,3 +64,7 @@
     left: -10px;
     bottom: 2px;
 }
+
+.rotate360 {
+    transform: rotate(180deg);
+}
