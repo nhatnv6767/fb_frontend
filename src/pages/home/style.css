@@ -104,3 +104,13 @@
     }
 }
 
+
+@media (max-width: 885px) {
+    .right_home {
+        display: none;
+    }
+
+    .createPost {
+        width: 110% !important;
+    }
+}
