@@ -16,7 +16,7 @@ export default function Home() {
             <LeftHome user={user}/>
             <div className="home_middle">
                 <Stories/>
-                <SendVerification/>
+                <SendVerification user={user}/>
                 <CreatePost user={user}/>
             </div>
             <RightHome user={user}/>

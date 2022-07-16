@@ -1,11 +1,26 @@
 import "./style.css";
 import {useState} from "react";
+import axios from "axios";
 
-export default function SendVerification() {
+export default function SendVerification({user}) {
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const sendVerificationLink = async () => {
-
+        try {
+            /* we're not going to send anything right here,
+            because we're only just going to see the token that's going to be the header
+            */
+            const {data} = await axios
+                .post(`${process.env.REACT_APP_BACKEND_URL}/sendVerification`
+                    , {}
+                    , {
+                        headers: {
+                            Authorization: `Bearer ${user.token}`,
+                        },
+                    });
+        } catch (e) {
+            setError(e.response.data.message);
+        }
     };
     return (
         <div className="send_verification">
