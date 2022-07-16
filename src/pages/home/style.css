@@ -145,4 +145,19 @@
         width: 7vw;
         height: 7vw;
     }
+
+    .left_home::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .left_home {
+        display: none;
+    }
+
+    .home_middle {
+        position: absolute;
+        margin-left: 0;
+    }
 }
