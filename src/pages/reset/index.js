@@ -20,6 +20,7 @@ export default function Reset() {
     const [conf_password, setConf_password] = useState("");
     const [error, setError] = useState("");
     const [visible, setVisible] = useState(0);
+    const [userInfos, setUserInfos] = useState("");
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
@@ -58,6 +59,8 @@ export default function Reset() {
                             setEmail={setEmail}
                             error={error}
                             setLoading={setLoading}
+                            setError={setError}
+                            setUserInfos={setUserInfos}
                         />
                     )
                 }
