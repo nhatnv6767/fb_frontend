@@ -48,6 +48,9 @@ export default function Activate() {
             }, 3000);
         } catch (e) {
             setError(e.response.data.message);
+            setTimeout(() => {
+                navigate("/");
+            }, 3000);
         }
     };
     return (
