@@ -15,7 +15,13 @@ export default function LoginInput({placeholder, bottom, ...props}) {
         <div className="input_wrap">
             {meta.touched && meta.error && !bottom ? (
                 <div
-                    className={destopView ? "input_error input_error_desktop" : "input_error"}
+                    className={
+                        destopView && view1050 && field.name === "password"
+                            ? "input_error input_error_desktop err_res_password"
+                            : destopView
+                                ? "input_error input_error_desktop"
+                                : "input_error"
+                    }
                     style={{transform: 'translateY(3px)'}}
                 >
                     {
