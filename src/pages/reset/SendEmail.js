@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function SendEmail({user}) {
     return (
         <div className="reset_form dynamic_height">
@@ -18,7 +20,19 @@ export default function SendEmail({user}) {
                     </label>
                 </div>
 
-                <div className="reset_right"></div>
+                <div className="reset_right">
+                    <img src={user?.picture} alt=""/>
+                    <span>email@gmail.com</span>
+                    <span>Facebook user</span>
+                </div>
+            </div>
+            <div className="reset_form_btns">
+                <Link to="/login" className="gray_btn">
+                    Cancel
+                </Link>
+                <button type="submit" className="blue_btn">
+                    Search
+                </button>
             </div>
         </div>
     );
