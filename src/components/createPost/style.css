@@ -42,3 +42,10 @@
     background: var(--bg-third);
     margin: 7px 10px;
 }
+
+.createPost_body {
+    padding: 0 10px 8px 10px;
+    display: grid;
+    /* Creating a grid with 3 columns, each column taking up 1 fraction of the total width. */
+    grid-template-columns: repeat(3, 1fr);
+}
