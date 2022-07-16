@@ -74,6 +74,12 @@
 }
 
 @media (max-width: 960px) {
+    .createPost {
+        width: 93% !important;
+    }
 
+    .stories {
+        width: 95% !important;
+    }
 }
 
