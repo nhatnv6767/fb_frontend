@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Header from "../../components/header";
 import LeftHome from "../../components/home/left";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import RightHome from "../../components/home/right";
 import Stories from "../../components/home/stories";
 import "./style.css";
@@ -12,6 +12,7 @@ import Cookies from "js-cookie";
 import axios from "axios";
 
 export default function Activate() {
+    const dispatch = useDispatch();
     const {user} = useSelector((user) => ({...user}));
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
@@ -36,6 +37,11 @@ export default function Activate() {
             setSuccess(data.message);
             /* Setting the user cookie to the user object with the verified property set to true. */
             Cookies.set("user", JSON.stringify({...user, verified: true}));
+            dispatch({
+                type: "VERIFY",
+                // make sure that we change the verify to true in the cookies and the element of store
+                payload: true,
+            });
         } catch (e) {
             setError(e.response.data.message);
         }
