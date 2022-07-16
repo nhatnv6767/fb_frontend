@@ -8,6 +8,10 @@ export default function SendEmail() {
             <div className="reset_form_header">
                 Reset Your Password
             </div>
+            <div className="reset_grid">
+                <div className="reset_left"></div>
+                <div className="reset_right"></div>
+            </div>
         </div>
     );
 }
