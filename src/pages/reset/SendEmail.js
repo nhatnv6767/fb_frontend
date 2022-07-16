@@ -1,8 +1,4 @@
-import {Form, Formik} from "formik";
-import LoginInput from "../../components/inputs/loginInput";
-import {Link} from "react-router-dom";
-
-export default function SendEmail() {
+export default function SendEmail({user}) {
     return (
         <div className="reset_form dynamic_height">
             <div className="reset_form_header">
@@ -17,9 +13,11 @@ export default function SendEmail() {
                         <input type="radio" name="" id="email" checked readOnly/>
                         <div className="label_col">
                             <span>Send code via email</span>
+                            <span>email@gmail.com</span>
                         </div>
                     </label>
                 </div>
+
                 <div className="reset_right"></div>
             </div>
         </div>
