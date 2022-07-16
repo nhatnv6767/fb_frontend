@@ -26,3 +26,9 @@
         width: 18vw;
     }
 }
+
+@media (max-width: 1030px) {
+    .left_home .left_link span {
+        display: none;
+    }
+}
