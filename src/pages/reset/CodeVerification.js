@@ -2,7 +2,7 @@ import {Form, Formik} from "formik";
 import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 
-export default function CodeVerification({email, setEmail, error}) {
+export default function CodeVerification({code, setCode, error}) {
     return (
         <div className="reset_form">
             <div className="reset_form_header">
@@ -14,7 +14,7 @@ export default function CodeVerification({email, setEmail, error}) {
             <Formik
                 enableReinitialize
                 initialValues={{
-                    email,
+                    code,
                 }}
             >
                 {
@@ -22,8 +22,8 @@ export default function CodeVerification({email, setEmail, error}) {
                         <Form>
                             <LoginInput
                                 type="text"
-                                name="email"
-                                onChange={(e) => setEmail(e.target.value)}
+                                name="code"
+                                onChange={(e) => setCode(e.target.value)}
                                 placeholder="Code"
                             />
                             {
