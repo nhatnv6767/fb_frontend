@@ -49,3 +49,14 @@
     /* Creating a grid with 3 columns, each column taking up 1 fraction of the total width. */
     grid-template-columns: repeat(3, 1fr);
 }
+
+.createPost_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    padding: 7px;
+    color: var(--color-secondary);
+    border-radius: 10px;
+}
