@@ -85,9 +85,17 @@
 }
 
 /* ---------- Queries ---------- */
+/* It's a media query. It's saying that if the screen is less than 350px, then apply the following styles. */
 @media (max-width: 350px) {
     .reset_form form input {
         width: 290px;
+    }
+}
+
+/* It's a media query. It's saying that if the screen is greater than 650px, then apply the following styles. */
+@media (min-width: 650px) {
+    .reset_form {
+        width: 570px;
     }
 }
 
