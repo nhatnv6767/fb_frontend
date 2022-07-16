@@ -3,7 +3,7 @@ import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 import * as Yup from "yup";
 
-export default function SearchAccount({email, setEmail, error}) {
+export default function SearchAccount({email, setEmail, error, setLoading}) {
     const validateEmail = Yup.object({
         email: Yup.string()
             .required("Email address is required.")

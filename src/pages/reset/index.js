@@ -14,6 +14,7 @@ export default function Reset() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
     const [code, setCode] = useState("");
     const [password, setPassword] = useState("");
     const [conf_password, setConf_password] = useState("");
@@ -56,6 +57,7 @@ export default function Reset() {
                             email={email}
                             setEmail={setEmail}
                             error={error}
+                            setLoading={setLoading}
                         />
                     )
                 }
