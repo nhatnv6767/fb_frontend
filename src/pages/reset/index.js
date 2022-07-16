@@ -68,9 +68,8 @@ export default function Reset() {
                 }
 
                 {
-                    visible === 1 && (
+                    visible === 1 && userInfos && (
                         <SendEmail
-                            user={user}
                             userInfos={userInfos}
                         />
                     )
