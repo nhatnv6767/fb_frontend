@@ -155,7 +155,7 @@
     }
 
     .reset_form_btns {
-        padding-left: 50%;
+        padding-left: 40% !important;
     }
 }
 
