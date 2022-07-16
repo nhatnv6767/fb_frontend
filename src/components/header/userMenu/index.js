@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import SettingsPrivacy from "./SettingsPrivacy";
 import HelpSupport from "./HelpSupport";
@@ -8,12 +8,14 @@ import Cookies from "js-cookie";
 
 export default function UserMenu({user}) {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [visible, setVisible] = useState(0);
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
             type: "LOGOUT",
         });
+        navigate("/login");
     };
     return (
         <div className="mmenu">
