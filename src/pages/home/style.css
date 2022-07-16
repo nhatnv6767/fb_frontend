@@ -134,6 +134,15 @@
     }
 
     .create_story_card {
-        -webkit-filter: brightness(96%);
+        filter: brightness(96%);
+    }
+
+    .stories .white_circle {
+        right: 5px;
+    }
+
+    .story_profile_pic {
+        width: 7vw;
+        height: 7vw;
     }
 }
