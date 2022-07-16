@@ -113,4 +113,12 @@
     .createPost {
         width: 110% !important;
     }
+
+    .stories {
+        width: 113% !important;
+    }
+
+    .home_middle {
+        margin-left: 9%;
+    }
 }
