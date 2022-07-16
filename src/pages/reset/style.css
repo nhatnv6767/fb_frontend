@@ -74,7 +74,7 @@
     padding: 10px;
     position: relative;
     width: 100%;
-    padding-left: 40%;
+    padding-left: 65%;
     border-top: 1px solid var(--bg-third);
 }
 
@@ -174,7 +174,7 @@
     }
 
     .reset_form_btns {
-        padding-left: 60%;
+        padding-left: 65%;
     }
 
 }
