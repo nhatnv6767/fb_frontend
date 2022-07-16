@@ -1,5 +1,6 @@
 import "./style.css";
 import {Plus} from "../../../svg";
+import {stories} from "../../../data/home";
 
 export default function Stories() {
     return (
@@ -11,6 +12,11 @@ export default function Stories() {
                 </div>
                 <div className="story_create_text">Create Story</div>
             </div>
+            {
+                stories.map((story, i) => (
+                    <></>
+                ))
+            }
         </div>
     );
 }
