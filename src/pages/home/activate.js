@@ -7,12 +7,13 @@ import Stories from "../../components/home/stories";
 import "./style.css";
 import CreatePost from "../../components/createPost";
 import ActivateForm from "./ActivateForm";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import Cookies from "js-cookie";
 import axios from "axios";
 
 export default function Activate() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const {user} = useSelector((user) => ({...user}));
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
@@ -42,6 +43,9 @@ export default function Activate() {
                 // make sure that we change the verify to true in the cookies and the element of store
                 payload: true,
             });
+            setTimeout(() => {
+                navigate("/");
+            }, 3000);
         } catch (e) {
             setError(e.response.data.message);
         }
