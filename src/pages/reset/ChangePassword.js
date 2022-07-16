@@ -50,6 +50,8 @@ export default function ChangePassword({
                                 name="conf_password"
                                 onChange={(e) => setConf_password(e.target.value)}
                                 placeholder="Confirm new password"
+                                // allow to know that this element should be after the input itself
+                                bottom
                             />
                             {
                                 error && <div className="error_text">{error}</div>
