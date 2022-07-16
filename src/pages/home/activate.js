@@ -15,12 +15,27 @@ export default function Activate() {
     const [loading, setLoading] = useState(true);
     return (
         <div className="home">
-            <ActivateForm
-                type="success"
-                header="Account verification succeeded"
-                text={success}
-                loading={loading}
-            />
+            {
+                success && (
+                    <ActivateForm
+                        type="success"
+                        header="Account verification succeeded."
+                        text={success}
+                        loading={loading}
+                    />
+                )
+            }
+
+            {
+                error && (
+                    <ActivateForm
+                        type="error"
+                        header="Account verification failed."
+                        text={error}
+                        loading={loading}
+                    />
+                )
+            }
             <Header/>
             <LeftHome user={user}/>
             <div className="home_middle">
