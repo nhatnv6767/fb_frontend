@@ -15,7 +15,7 @@ export default function Home() {
             <LeftHome user={user}/>
             <div className="home_middle">
                 <Stories/>
-                <CreatePost/>
+                <CreatePost user={user}/>
             </div>
             <RightHome user={user}/>
         </div>
