@@ -18,6 +18,7 @@ export default function SendVerification({user}) {
                             Authorization: `Bearer ${user.token}`,
                         },
                     });
+            setSuccess(data.message);
         } catch (e) {
             setError(e.response.data.message);
         }
