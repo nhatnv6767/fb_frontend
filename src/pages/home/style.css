@@ -30,8 +30,10 @@
 @media (max-width: 1030px) {
     .left_home .left_link span,
     .left_home .left_link .col,
-    .shortcut, .shortcut_item span,
-    .splitter, .fb_copyright {
+    .shortcut,
+    .shortcut_item span,
+    .splitter,
+    .fb_copyright {
         display: none;
     }
 
