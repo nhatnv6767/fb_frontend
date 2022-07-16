@@ -20,3 +20,25 @@
     border-radius: 50%;
     object-fit: cover;
 }
+
+.open_post {
+    background: var(--bg-forth);
+    color: var(--color-secondary);
+    height: 41px;
+    /* Making the `open_post` div take up all the remaining space. */
+    flex: 1;
+    border-radius: 50px;
+    font-size: 17px;
+    /* Making the text in the `open_post` div have a height of 21px. */
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.create_splitter {
+    width: 95%;
+    height: 1px;
+    background: var(--bg-third);
+    margin: 7px 10px;
+}
