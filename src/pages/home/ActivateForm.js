@@ -10,12 +10,12 @@ export default function ActivateForm({type, header, text, loading}) {
                 <div className="popup_message">
                     Account verification succeeded
                 </div>
+                <PropagateLoader
+                    color="#1876f2"
+                    size={30}
+                    loading={loading}
+                />
             </div>
-            <PropagateLoader
-                color="#1876f2"
-                size={30}
-                loading={true}
-            />
         </div>
     );
 }

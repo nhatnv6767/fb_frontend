@@ -12,7 +12,7 @@ export default function Activate() {
     const {user} = useSelector((user) => ({...user}));
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     return (
         <div className="home">
             <ActivateForm
