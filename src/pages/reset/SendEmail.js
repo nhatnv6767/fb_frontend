@@ -28,10 +28,10 @@ export default function SendEmail({user}) {
             </div>
             <div className="reset_form_btns">
                 <Link to="/login" className="gray_btn">
-                    Cancel
+                    Not You?
                 </Link>
                 <button type="submit" className="blue_btn">
-                    Search
+                    Continue
                 </button>
             </div>
         </div>
