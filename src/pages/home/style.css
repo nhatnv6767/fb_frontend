@@ -122,3 +122,18 @@
         margin-left: 9%;
     }
 }
+
+@media (max-width: 805px) {
+    .stories {
+        grid-template-columns: repeat(6, 13vw);
+    }
+
+    .story_profile_name,
+    .story_create_text {
+        display: none;
+    }
+
+    .create_story_card {
+        -webkit-filter: brightness(96%);
+    }
+}
