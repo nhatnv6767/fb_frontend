@@ -4,3 +4,11 @@
     top: 4rem;
     width: 17vw;
 }
+
+.splitter1 {
+    height: 1.3px;
+    background: var(--divider);
+    width: 17vw;
+    margin: 6px 2px 0 12px;
+}
+
