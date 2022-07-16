@@ -6,6 +6,7 @@ import {Form, Formik} from "formik";
 import {useState} from "react";
 import LoginInput from "../../components/inputs/loginInput";
 import SearchAccount from "./SearchAccount";
+import SendEmail from "./SendEmail";
 
 export default function Reset() {
     const {user} = useSelector((state) => ({...state}));
@@ -51,6 +52,14 @@ export default function Reset() {
                             email={email}
                             setEmail={setEmail}
                             error={error}
+                        />
+                    )
+                }
+
+                {
+                    visible === 1 && (
+                        <SendEmail
+
                         />
                     )
                 }
