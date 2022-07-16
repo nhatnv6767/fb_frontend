@@ -3,12 +3,18 @@ import {useState} from "react";
 import SettingsPrivacy from "./SettingsPrivacy";
 import HelpSupport from "./HelpSupport";
 import DisplayAccessibility from "./DisplayAccessibility";
+import {useDispatch} from "react-redux";
+import Cookies from "js-cookie";
 
 export default function UserMenu({user}) {
+    const dispatch = useDispatch();
     const [visible, setVisible] = useState(0);
     const logout = () => {
-
-    }
+        Cookies.set('user', "");
+        dispatch({
+            type: "LOGOUT",
+        });
+    };
     return (
         <div className="mmenu">
             {
@@ -85,7 +91,7 @@ export default function UserMenu({user}) {
                         <div
                             className="mmenu_item hover3"
                             onClick={() => {
-                                logout()
+                                logout();
                             }}
                         >
                             <div className="small_circle">
