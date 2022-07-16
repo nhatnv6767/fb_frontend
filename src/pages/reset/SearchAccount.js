@@ -10,6 +10,10 @@ export default function SearchAccount({email, setEmail, error}) {
             .email("Must be a valid email address.")
             .max(50, "Email address can't be more than 50 characters.")
     });
+
+    const handleSearch = () => {
+
+    }
     return (
         <div className="reset_form">
             <div className="reset_form_header">
@@ -24,6 +28,9 @@ export default function SearchAccount({email, setEmail, error}) {
                     email,
                 }}
                 validationSchema={validateEmail}
+                onSubmit={() => {
+                    handleSearch();
+                }}
             >
                 {
                     (formik) => (
