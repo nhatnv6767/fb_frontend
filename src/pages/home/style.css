@@ -52,4 +52,8 @@
         position: relative;
         margin-left: 55px;
     }
+
+    .right_home {
+        width: 20vw;
+    }
 }
