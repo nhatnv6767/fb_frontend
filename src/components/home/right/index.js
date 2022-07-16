@@ -1,5 +1,6 @@
 import "./style.css";
 import {Dots, NewRoom, Search} from "../../../svg";
+import Contact from "./Contact";
 
 export default function RightHome() {
     const color = "#65676b";
@@ -22,7 +23,9 @@ export default function RightHome() {
                         </div>
                     </div>
                 </div>
-                <div className="contacts_list"></div>
+                <div className="contacts_list">
+                    <Contact/>
+                </div>
             </div>
         </div>
     );
