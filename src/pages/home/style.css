@@ -56,4 +56,12 @@
     .right_home {
         width: 20vw;
     }
+
+    .contacts_header_right {
+        right: 10%;
+    }
+
+    .contact_circle {
+        width: 20px;
+    }
 }
