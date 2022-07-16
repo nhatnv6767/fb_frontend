@@ -1,7 +1,8 @@
 import "./style.css";
-import {NewRoom} from "../../../svg";
+import {Dots, NewRoom, Search} from "../../../svg";
 
 export default function RightHome() {
+    const color = "#65676b";
     return (
         <div className="right_home">
             <div className="heading">Sponsored</div>
@@ -11,10 +12,17 @@ export default function RightHome() {
                     <div className="contacts_header_left">Contacts</div>
                     <div className="contacts_header_right">
                         <div className="contact_circle">
-                            <NewRoom/>
+                            <NewRoom color={color}/>
+                        </div>
+                        <div className="contact_circle">
+                            <Search color={color}/>
+                        </div>
+                        <div className="contact_circle">
+                            <Dots color={color}/>
                         </div>
                     </div>
                 </div>
+                <div className="contacts_list"></div>
             </div>
         </div>
     );
