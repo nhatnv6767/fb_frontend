@@ -14,7 +14,7 @@ export default function Reset() {
     const navigate = useNavigate();
     const {email, setEmail} = useState("");
     const {error, setError} = useState("");
-    const [visible, setVisible] = useState(0);
+    const [visible, setVisible] = useState(1);
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
