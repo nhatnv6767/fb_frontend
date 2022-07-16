@@ -1,0 +1,16 @@
+.reset {
+    background: var(--bg-secondary);
+    height: 100vh;
+    /* It's setting the color of the text to the value of the `--bg-primary` variable. */
+    color: var(--bg-primary);
+}
+
+.reset_header {
+    background: var(--bg-primary);
+    box-shadow: 1px 8px 15px -7px var(--shadow-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: 50px;
+}
