@@ -101,7 +101,7 @@ export default function LoginForm({setVisible}) {
                             )
                         }
                     </Formik>
-                    <Link to="/forgot" className="forgot_password">
+                    <Link to="/reset" className="forgot_password">
                         Forgoten password?
                     </Link>
                     <DotLoader
