@@ -34,4 +34,8 @@
     .splitter {
         display: none;
     }
+
+    .left_link {
+        background: var(--bg-third);
+    }
 }
