@@ -11,12 +11,12 @@ export default function ChangePassword({
                                            error,
                                        }) {
     return (
-        <div className="reset_form">
+        <div className="reset_form" style={{height: "310px"}}>
             <div className="reset_form_header">
                 Change Password
             </div>
             <div className="reset_form_text">
-                Please enter code that been sent to your email.
+                Pick a strong password.
             </div>
             <Formik
                 enableReinitialize
