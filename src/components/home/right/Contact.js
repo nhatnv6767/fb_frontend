@@ -1,9 +1,12 @@
-export default function Contact() {
+export default function Contact({user}) {
     return (
         <div className="contact">
             <div className="contact_img">
-                <img src="" alt=""/>
+                <img src={user?.picture} alt=""/>
             </div>
+            <span>
+                {user?.first_name} {user?.last_name}
+            </span>
         </div>
     );
 }
