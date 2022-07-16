@@ -98,6 +98,7 @@
     bottom: 10px;
     /* It's breaking the word if it's too long. */
     word-break: break-word;
+    width: 100px;
     color: #fff;
     font-size: 14px;
     padding-left: 10px;
