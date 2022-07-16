@@ -4,11 +4,10 @@ import {Link} from "react-router-dom";
 
 export default function SendEmail() {
     return (
-        <div className="reset_form">
+        <div className="reset_form dynamic_height">
             <div className="reset_form_header">
-                Find Your Account
+                Reset Your Password
             </div>
-
         </div>
     );
 }
