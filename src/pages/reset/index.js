@@ -71,6 +71,7 @@ export default function Reset() {
                     visible === 1 && (
                         <SendEmail
                             user={user}
+                            userInfos={userInfos}
                         />
                     )
                 }
