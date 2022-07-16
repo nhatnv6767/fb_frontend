@@ -10,6 +10,9 @@ export default function Home() {
         <div>
             <Header/>
             <LeftHome user={user}/>
+            <div className="home_middle">
+
+            </div>
             <RightHome user={user}/>
         </div>
     );
