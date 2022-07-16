@@ -6,10 +6,10 @@ export default function CodeVerification({email, setEmail, error}) {
     return (
         <div className="reset_form">
             <div className="reset_form_header">
-                Find Your Account
+                Code verification
             </div>
             <div className="reset_form_text">
-                Please enter your email address or mobile number to search for your account.
+                Please enter code that been sent to your email.
             </div>
             <Formik
                 enableReinitialize
@@ -24,7 +24,7 @@ export default function CodeVerification({email, setEmail, error}) {
                                 type="text"
                                 name="email"
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Email address or mobile number"
+                                placeholder="Code"
                             />
                             {
                                 error && <div className="error_text">{error}</div>
@@ -34,7 +34,7 @@ export default function CodeVerification({email, setEmail, error}) {
                                     Cancel
                                 </Link>
                                 <button type="submit" className="blue_btn">
-                                    Search
+                                    Continue
                                 </button>
                             </div>
                         </Form>
