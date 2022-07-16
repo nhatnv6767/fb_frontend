@@ -9,6 +9,7 @@ import CreatePost from "../../components/createPost";
 import ActivateForm from "./ActivateForm";
 import {useParams} from "react-router-dom";
 import async from "async";
+import axios from "axios";
 
 export default function Activate() {
     const {user} = useSelector((user) => ({...user}));
@@ -23,11 +24,17 @@ export default function Activate() {
 
     const activateAccount = async () => {
         try {
-
+            setLoading(true);
+            const {data} = await axios
+                .post(`${process.env.REACT_APP_BACKEND_URL}/activate`, {token}, {
+                    headers: {
+                        Authorization: `Bearer ${user.token}`,
+                    }
+                });
         } catch (e) {
-            setError(e.response.data.message)
+            setError(e.response.data.message);
         }
-    }
+    };
     return (
         <div className="home">
             {
