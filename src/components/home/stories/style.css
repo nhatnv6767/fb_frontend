@@ -50,3 +50,12 @@
     top: 87%;
     font-size: 12px;
 }
+
+.story {
+    cursor: pointer;
+    position: relative;
+    height: 190px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
