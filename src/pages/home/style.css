@@ -14,7 +14,7 @@
 
 @media (max-width: 1175px) {
     .stories,
-    .createPost {
+    .createPost, .send_verification {
         width: 84% !important;
     }
 
@@ -68,13 +68,13 @@
     }
 
     .stories,
-    .createPost {
+    .createPost, .send_verification {
         width: 100% !important;
     }
 }
 
 @media (max-width: 960px) {
-    .createPost {
+    .createPost, .send_verification {
         width: 93% !important;
     }
 
@@ -110,7 +110,7 @@
         display: none;
     }
 
-    .createPost {
+    .createPost, .send_verification {
         width: 110% !important;
     }
 
@@ -165,7 +165,7 @@
         margin-left: 0;
     }
 
-    .stories, .createPost {
+    .stories, .createPost, .send_verification {
         width: 100% !important;
     }
 
@@ -181,7 +181,7 @@
         height: 30vw;
     }
 
-    .createPost_icon {
+    .createPost, .send_verification_icon {
         font-size: 12px !important;
     }
 
@@ -189,7 +189,7 @@
         font-size: 16px !important;
     }
 
-    .createPost_icon svg {
+    .createPost, .send_verification_icon svg {
         width: 20px;
     }
 }
