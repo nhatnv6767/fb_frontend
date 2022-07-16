@@ -11,9 +11,9 @@ export default function SearchAccount({email, setEmail, error}) {
             .max(50, "Email address can't be more than 50 characters.")
     });
 
-    const handleSearch = () => {
+    const handleSearch = async () => {
 
-    }
+    };
     return (
         <div className="reset_form">
             <div className="reset_form_header">
