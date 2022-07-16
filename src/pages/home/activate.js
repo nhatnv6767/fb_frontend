@@ -7,12 +7,15 @@ import Stories from "../../components/home/stories";
 import "./style.css";
 import CreatePost from "../../components/createPost";
 import ActivateForm from "./ActivateForm";
+import {useParams} from "react-router-dom";
 
 export default function Activate() {
     const {user} = useSelector((user) => ({...user}));
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(true);
+    const {token} = useParams();
+    console.log(token);
     return (
         <div className="home">
             {
