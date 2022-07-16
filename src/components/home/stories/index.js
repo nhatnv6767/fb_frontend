@@ -1,5 +1,5 @@
 import "./style.css";
-import {Plus} from "../../../svg";
+import {ArrowRight, Plus} from "../../../svg";
 import {stories} from "../../../data/home";
 import Story from "./Story";
 
@@ -18,6 +18,9 @@ export default function Stories() {
                     <Story story={story}/>
                 ))
             }
+            <div className="white_circle">
+                <ArrowRight color="#65676b"/>
+            </div>
         </div>
     );
 }
