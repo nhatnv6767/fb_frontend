@@ -103,6 +103,15 @@
     padding: 5px;
 }
 
+.reset_grid input {
+    width: 20px;
+    height: 20px;
+}
+
+.label_col {
+
+}
+
 /* ---------- Queries ---------- */
 /* It's a media query. It's saying that if the screen is less than 350px, then apply the following styles. */
 @media (max-width: 350px) {

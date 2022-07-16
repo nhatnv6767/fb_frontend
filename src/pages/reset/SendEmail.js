@@ -11,7 +11,7 @@ export default function SendEmail({user}) {
                     <div className="reset_form_text">
                         How do you want to receive the code to reset your password?
                     </div>
-                    <label htmlFor="email">
+                    <label htmlFor="email" className="hover1">
                         <input type="radio" name="" id="email" checked readOnly/>
                         <div className="label_col">
                             <span>Send code via email</span>
