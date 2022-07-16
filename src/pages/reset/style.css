@@ -64,7 +64,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid var(--bg-third);
 }
 
 .reset_form_btns {
@@ -157,7 +156,6 @@
 @media (min-width: 650px) {
     .reset_form {
         width: 570px;
-        height: 320px;
     }
 
     .reset_grid {
