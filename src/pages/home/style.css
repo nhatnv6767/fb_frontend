@@ -15,7 +15,7 @@
 @media (max-width: 1175px) {
     .stories,
     .createPost {
-        width: 84%;
+        width: 84% !important;
     }
 
     .home_middle {
