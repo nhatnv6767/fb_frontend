@@ -26,11 +26,13 @@ export default function Activate() {
         try {
             setLoading(true);
             const {data} = await axios
-                .post(`${process.env.REACT_APP_BACKEND_URL}/activate`, {token}, {
-                    headers: {
-                        Authorization: `Bearer ${user.token}`,
-                    }
-                });
+                .post(`${process.env.REACT_APP_BACKEND_URL}/activate`,
+                    {token},
+                    {
+                        headers: {
+                            Authorization: `Bearer ${user.token}`,
+                        }
+                    });
         } catch (e) {
             setError(e.response.data.message);
         }
