@@ -1,7 +1,9 @@
 export default function Contact() {
     return (
-        <div>
-            Contact
+        <div className="contact">
+            <div className="contact_img">
+                <img src="" alt=""/>
+            </div>
         </div>
     );
 }

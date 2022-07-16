@@ -10,7 +10,7 @@ export default function Home() {
         <div>
             <Header/>
             <LeftHome user={user}/>
-            <RightHome/>
+            <RightHome user={user}/>
         </div>
     );
 }
