@@ -47,4 +47,9 @@
         display: grid;
         place-items: center;
     }
+
+    .home_middle {
+        position: relative;
+        margin-left: 55px;
+    }
 }
