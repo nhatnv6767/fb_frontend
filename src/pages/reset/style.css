@@ -223,4 +223,12 @@ then apply the following styles. */
     }
 }
 
+@media (min-width: 1050px) {
+    .reset_form .input_error_desktop {
+        width: 320px;
+        /* It's moving the element to the left by 95% of the width of the parent element. */
+        left: -92%;
+    }
+}
+
 /* ---------- Queries ---------- */
