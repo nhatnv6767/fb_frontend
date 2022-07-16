@@ -15,7 +15,7 @@
 @media (max-width: 1175px) {
     .stories,
     .createPost {
-        width: 84%;
+        width: 84% !important;
     }
 
     .home_middle {
@@ -66,9 +66,10 @@
     .contact_circle {
         width: 20px;
     }
+
+    .stories,
+    .createPost {
+        width: 100% !important;
+    }
 }
 
-.stories,
-.createPost {
-    width: 100%;
-}
