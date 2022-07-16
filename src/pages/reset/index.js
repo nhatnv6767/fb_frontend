@@ -2,12 +2,15 @@ import "./style.css";
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import Cookies from "js-cookie";
-import {Formik} from "formik";
+import {Form, Formik} from "formik";
+import {useState} from "react";
+import LoginInput from "../../components/inputs/loginInput";
 
 export default function Reset() {
     const {user} = useSelector((state) => ({...state}));
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const {email, setEmail} = useState("");
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
@@ -47,9 +50,19 @@ export default function Reset() {
                         Please enter your email address or mobile number to search for your account.
                     </div>
                     <Formik
-                        initialValues={{}}
+                        enableReinitialize
+                        initialValues={{
+                            email,
+                        }}
                     >
+                        {
+                            (formik) => {
+                                <Form>
+                                    <LoginInput/>
+                                </Form>
+                            }
 
+                        }
                     </Formik>
                 </div>
             </div>
