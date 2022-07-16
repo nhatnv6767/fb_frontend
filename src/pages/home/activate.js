@@ -8,7 +8,7 @@ import "./style.css";
 import CreatePost from "../../components/createPost";
 import ActivateForm from "./ActivateForm";
 import {useParams} from "react-router-dom";
-import async from "async";
+import Cookies from "js-cookie";
 import axios from "axios";
 
 export default function Activate() {
@@ -34,6 +34,8 @@ export default function Activate() {
                         }
                     });
             setSuccess(data.message);
+            /* Setting the user cookie to the user object with the verified property set to true. */
+            Cookies.set("user", JSON.stringify({...user, verified: true}));
         } catch (e) {
             setError(e.response.data.message);
         }
