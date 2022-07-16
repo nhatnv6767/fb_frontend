@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Header from "../../components/header";
 import LeftHome from "../../components/home/left";
 import {useSelector} from "react-redux";
@@ -8,14 +8,26 @@ import "./style.css";
 import CreatePost from "../../components/createPost";
 import ActivateForm from "./ActivateForm";
 import {useParams} from "react-router-dom";
+import async from "async";
 
 export default function Activate() {
     const {user} = useSelector((user) => ({...user}));
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(true);
+    /* A hook that allows us to get the parameters from the URL. */
     const {token} = useParams();
-    console.log(token);
+    useEffect(() => {
+        activateAccount();
+    }, []);
+
+    const activateAccount = async () => {
+        try {
+
+        } catch (e) {
+            setError(e.response.data.message)
+        }
+    }
     return (
         <div className="home">
             {
