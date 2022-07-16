@@ -14,3 +14,13 @@
     padding: 0 1rem;
     margin-bottom: 50px;
 }
+
+.reset_header img {
+    width: 160px;
+}
+
+.right_reset {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
