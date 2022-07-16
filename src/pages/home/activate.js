@@ -9,6 +9,9 @@ import CreatePost from "../../components/createPost";
 
 export default function Activate() {
     const {user} = useSelector((user) => ({...user}));
+    const [success, setSuccess] = useState("");
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
     return (
         <div className="home">
             <Header/>
