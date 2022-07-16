@@ -74,6 +74,7 @@
     padding: 10px;
     position: relative;
     width: 100%;
+    padding-left: 40%;
     border-top: 1px solid var(--bg-third);
 }
 
@@ -152,6 +153,10 @@
     .reset_form .error_icon {
         right: 20px;
     }
+
+    .reset_form_btns {
+        padding-left: 50%;
+    }
 }
 
 /* It's a media query. It's saying that if the screen is greater than 650px, then apply the following styles. */
@@ -166,6 +171,10 @@
 
     .dynamic_height {
         height: 330px;
+    }
+
+    .reset_form_btns {
+        padding-left: 60%;
     }
 
 }
