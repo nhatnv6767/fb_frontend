@@ -7,5 +7,7 @@
 
 .home_middle {
     margin-top: 75px;
-    margin-left: 31.8vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
