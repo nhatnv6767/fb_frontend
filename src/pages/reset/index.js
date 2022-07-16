@@ -28,6 +28,7 @@ export default function Reset() {
         });
         navigate("/login");
     };
+    console.log(userInfos);
     return (
         <div className="reset">
             <div className="reset_header">
