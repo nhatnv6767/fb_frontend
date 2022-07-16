@@ -144,6 +144,15 @@
     .reset_form {
         width: 570px;
     }
+
+    .reset_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dynamic_height {
+        height: 330px;
+    }
+
 }
 
 /* ---------- Queries ---------- */
