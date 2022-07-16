@@ -83,3 +83,12 @@
 .reset_form_btns button {
     width: 90px;
 }
+
+/* ---------- Queries ---------- */
+@media (max-width: 350px) {
+    .reset_form form input {
+        width: 290px;
+    }
+}
+
+/* ---------- Queries ---------- */
