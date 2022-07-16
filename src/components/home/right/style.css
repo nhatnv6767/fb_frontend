@@ -55,3 +55,27 @@
     /* Setting the padding for the top, right, bottom, and left sides of the element. */
     padding: 5px;
 }
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.contact_img img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    /* A CSS property that specifies how an element responds to the height and width of its content box. */
+    object-fit: cover;
+}
+
+.contact span {
+    transform: translateY(-5px);
+}
