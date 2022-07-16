@@ -78,8 +78,11 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 50%;
-    height: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--blue-color);
 }
 
 .story_profile_pic img {
