@@ -134,8 +134,25 @@
 /* ---------- Queries ---------- */
 /* It's a media query. It's saying that if the screen is less than 350px, then apply the following styles. */
 @media (max-width: 350px) {
+    .reset_form {
+        height: fit-content;
+    }
+
+    .reset_form_btns {
+        position: relative;
+        align-self: flex-end;
+    }
+
     .reset_form form input {
         width: 290px;
+    }
+
+    .reset_form .input_error {
+        width: 290px;
+    }
+
+    .reset_form .error_icon {
+        right: 20px;
     }
 }
 
