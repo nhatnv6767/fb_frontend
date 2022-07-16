@@ -11,6 +11,7 @@ export default function Reset() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {email, setEmail} = useState("");
+    const {error, setError} = useState("");
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
@@ -64,6 +65,9 @@ export default function Reset() {
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="Email address or mobile number"
                                     />
+                                    {
+                                        error && <div className="error_text">{error}</div>
+                                    }
                                 </Form>
                             )
 
