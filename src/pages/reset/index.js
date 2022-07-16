@@ -18,7 +18,7 @@ export default function Reset() {
     const [password, setPassword] = useState("");
     const [conf_password, setConf_password] = useState("");
     const [error, setError] = useState("");
-    const [visible, setVisible] = useState(2);
+    const [visible, setVisible] = useState(3);
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
