@@ -73,6 +73,8 @@
     margin-top: 5px;
     padding: 10px;
     position: relative;
+    width: 100%;
+    border-top: 1px solid var(--bg-third);
 }
 
 .reset_form_btns a,
