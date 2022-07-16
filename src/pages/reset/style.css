@@ -143,6 +143,7 @@
 @media (min-width: 650px) {
     .reset_form {
         width: 570px;
+        height: 320px;
     }
 
     .reset_grid {
@@ -160,15 +161,16 @@ then apply the following styles. */
 @media (min-width: 850px) and (max-width: 1050px) {
     .reset_form .input_error {
         left: 0;
-        top: -60px;
+        top: 60px;
+        width: 100%;
     }
 
     .reset_form .error_arrow_left {
-        border-top: 10px solid #b94a48;
+        border-bottom: 10px solid #b94a48;
         border-right: 10px solid transparent;
         border-left: 10px solid transparent;
         position: absolute;
-        top: 44px;
+        top: -19px;
         left: 10px;
         width: 10px;
     }
