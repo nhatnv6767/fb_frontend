@@ -61,6 +61,7 @@ export default function Reset() {
                             setLoading={setLoading}
                             setError={setError}
                             setUserInfos={setUserInfos}
+                            setVisible={setVisible}
                         />
                     )
                 }
