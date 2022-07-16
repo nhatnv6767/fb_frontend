@@ -81,5 +81,26 @@
     .stories {
         width: 95% !important;
     }
+
+    .home_middle {
+        margin-left: 10%;
+    }
+
+    .right_home {
+        left: 78%;
+        width: 20vw;
+    }
+
+    .splitter1 {
+        width: 20vw;
+    }
+
+    .contact_circle {
+        width: 30px;
+    }
+
+    .contacts_header_right {
+        right: 0;
+    }
 }
 
