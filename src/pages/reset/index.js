@@ -56,7 +56,7 @@ export default function Reset() {
                         }}
                     >
                         {
-                            (formik) => {
+                            (formik) => (
                                 <Form>
                                     <LoginInput
                                         type="text"
@@ -64,8 +64,8 @@ export default function Reset() {
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="Email address or mobile number"
                                     />
-                                </Form>;
-                            }
+                                </Form>
+                            )
 
                         }
                     </Formik>
