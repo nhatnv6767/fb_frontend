@@ -65,4 +65,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* It's defining the transition time for all the properties. */
+    transition: all 0.2s;
+}
+
+.story:hover .story_img {
+    transform: scale(1.1);
 }
