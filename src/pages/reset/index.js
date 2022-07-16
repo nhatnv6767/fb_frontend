@@ -2,6 +2,7 @@ import "./style.css";
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import Cookies from "js-cookie";
+import {Formik} from "formik";
 
 export default function Reset() {
     const {user} = useSelector((state) => ({...state}));
@@ -27,7 +28,7 @@ export default function Reset() {
                             <button
                                 className="blue_btn"
                                 onClick={() => {
-                                    logout()
+                                    logout();
                                 }}
                             >Logout
                             </button>
@@ -36,6 +37,21 @@ export default function Reset() {
                             <button className="blue_btn">Login</button>
                         </Link>
                 }
+            </div>
+            <div className="reset_wrap">
+                <div className="reset_form">
+                    <div className="reset_form_header">
+                        Find Your Account
+                    </div>
+                    <div className="reset_form_text">
+                        Please enter your email address or mobile number to search for your account.
+                    </div>
+                    <Formik
+                        initialValues={{}}
+                    >
+
+                    </Formik>
+                </div>
             </div>
         </div>
     );
