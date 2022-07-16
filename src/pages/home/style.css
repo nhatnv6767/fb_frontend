@@ -35,6 +35,10 @@
         display: none;
     }
 
+    .left_home {
+        width: 70px;
+    }
+
     .left_link {
         background: var(--bg-third);
     }
