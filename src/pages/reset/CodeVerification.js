@@ -2,7 +2,7 @@ import {Form, Formik} from "formik";
 import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 
-export default function CodeVerification({code, setCode, error}) {
+export default function CodeVerification({user, code, setCode, error}) {
     return (
         <div className="reset_form">
             <div className="reset_form_header">

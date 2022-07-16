@@ -6,12 +6,14 @@ import {useState} from "react";
 import SearchAccount from "./SearchAccount";
 import SendEmail from "./SendEmail";
 import CodeVerification from "./CodeVerification";
+import Footer from "../../components/login/Footer";
 
 export default function Reset() {
     const {user} = useSelector((state) => ({...state}));
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {email, setEmail} = useState("");
+    const {code, setCode} = useState("");
     const {error, setError} = useState("");
     const [visible, setVisible] = useState(2);
     const logout = () => {
@@ -67,10 +69,14 @@ export default function Reset() {
                     visible === 2 && (
                         <CodeVerification
                             user={user}
+                            code={code}
+                            setCode={setCode}
+                            error={error}
                         />
                     )
                 }
             </div>
+            <Footer/>
         </div>
     );
 }
