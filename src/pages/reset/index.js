@@ -7,6 +7,7 @@ import SearchAccount from "./SearchAccount";
 import SendEmail from "./SendEmail";
 import CodeVerification from "./CodeVerification";
 import Footer from "../../components/login/Footer";
+import ChangePassword from "./ChangePassword";
 
 export default function Reset() {
     const {user} = useSelector((state) => ({...state}));
@@ -14,8 +15,10 @@ export default function Reset() {
     const navigate = useNavigate();
     const {email, setEmail} = useState("");
     const {code, setCode} = useState("");
+    const {password, setPassword} = useState("");
+    const {conf_password, setConf_password} = useState("");
     const {error, setError} = useState("");
-    const [visible, setVisible] = useState(2);
+    const [visible, setVisible] = useState(3);
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
@@ -71,6 +74,19 @@ export default function Reset() {
                             user={user}
                             code={code}
                             setCode={setCode}
+                            error={error}
+                        />
+                    )
+                }
+
+                {
+                    visible === 3 && (
+                        <ChangePassword
+                            user={user}
+                            password={password}
+                            setPassword={setPassword}
+                            conf_password={conf_password}
+                            setConf_password={setConf_password}
                             error={error}
                         />
                     )

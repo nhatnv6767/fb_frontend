@@ -2,11 +2,18 @@ import {Form, Formik} from "formik";
 import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 
-export default function ChangePassword({user, code, setCode, error}) {
+export default function ChangePassword({
+                                           user,
+                                           password,
+                                           setPassword,
+                                           conf_password,
+                                           setConf_password,
+                                           error,
+                                       }) {
     return (
         <div className="reset_form">
             <div className="reset_form_header">
-                Code verification
+                Change Password
             </div>
             <div className="reset_form_text">
                 Please enter code that been sent to your email.
@@ -14,7 +21,8 @@ export default function ChangePassword({user, code, setCode, error}) {
             <Formik
                 enableReinitialize
                 initialValues={{
-                    code,
+                    password,
+                    conf_password,
                 }}
             >
                 {
@@ -23,7 +31,7 @@ export default function ChangePassword({user, code, setCode, error}) {
                             <LoginInput
                                 type="text"
                                 name="code"
-                                onChange={(e) => setCode(e.target.value)}
+                                onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Code"
                             />
                             {
