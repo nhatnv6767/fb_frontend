@@ -10,7 +10,11 @@ export default function Stories() {
         /* A media query that is being used to determine the size of the screen. */
         query: "(max-width: 1175px)",
     });
-    const max = query1175px ? 4 : stories.length;
+
+    const query1030px = useMediaQuery({
+        query: "(max-width: 1030px)",
+    });
+    const max = query1030px ? 5 : query1175px ? 4 : stories.length;
     return (
         <div className="stories">
             <div className="create_story_card">
@@ -22,7 +26,7 @@ export default function Stories() {
             </div>
             {
                 stories.slice(0, max).map((story, i) => (
-                    <Story story={story}/>
+                    <Story story={story} key={i}/>
                 ))
             }
             <div className="white_circle">
