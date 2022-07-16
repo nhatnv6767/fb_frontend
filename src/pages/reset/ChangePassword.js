@@ -29,10 +29,16 @@ export default function ChangePassword({
                     (formik) => (
                         <Form>
                             <LoginInput
-                                type="text"
-                                name="code"
+                                type="password"
+                                name="password"
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Code"
+                                placeholder="New password"
+                            />
+                            <LoginInput
+                                type="password"
+                                name="conf_password"
+                                onChange={(e) => setConf_password(e.target.value)}
+                                placeholder="Confirm new password"
                             />
                             {
                                 error && <div className="error_text">{error}</div>
