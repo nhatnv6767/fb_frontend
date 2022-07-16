@@ -79,3 +79,15 @@
     height: 100%;
     object-fit: cover;
 }
+
+.story_profile_name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    /* It's breaking the word if it's too long. */
+    word-break: break-word;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 10px;
+}
