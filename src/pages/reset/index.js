@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import {Form, Formik} from "formik";
 import {useState} from "react";
 import LoginInput from "../../components/inputs/loginInput";
+import SearchAccount from "./SearchAccount";
 
 export default function Reset() {
     const {user} = useSelector((state) => ({...state}));
@@ -12,6 +13,7 @@ export default function Reset() {
     const navigate = useNavigate();
     const {email, setEmail} = useState("");
     const {error, setError} = useState("");
+    const [visible, setVisible] = useState(0);
     const logout = () => {
         Cookies.set('user', "");
         dispatch({
@@ -43,45 +45,11 @@ export default function Reset() {
                 }
             </div>
             <div className="reset_wrap">
-                <div className="reset_form">
-                    <div className="reset_form_header">
-                        Find Your Account
-                    </div>
-                    <div className="reset_form_text">
-                        Please enter your email address or mobile number to search for your account.
-                    </div>
-                    <Formik
-                        enableReinitialize
-                        initialValues={{
-                            email,
-                        }}
-                    >
-                        {
-                            (formik) => (
-                                <Form>
-                                    <LoginInput
-                                        type="text"
-                                        name="email"
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Email address or mobile number"
-                                    />
-                                    {
-                                        error && <div className="error_text">{error}</div>
-                                    }
-                                    <div className="reset_form_btns">
-                                        <Link to="/login" className="gray_btn">
-                                            Cancel
-                                        </Link>
-                                        <button type="submit" className="blue_btn">
-                                            Search
-                                        </button>
-                                    </div>
-                                </Form>
-                            )
-
-                        }
-                    </Formik>
-                </div>
+                <SearchAccount
+                    email={email}
+                    setEmail={setEmail}
+                    error={error}
+                />
             </div>
         </div>
     );
