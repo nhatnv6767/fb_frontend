@@ -13,6 +13,14 @@ export default function SendVerification() {
             <a href="">
                 click here to resend verification link
             </a>
+
+            {
+                success && <div className="success_text">{success}</div>
+            }
+
+            {
+                error && <div className="error_text">{error}</div>
+            }
         </div>
     );
 }
