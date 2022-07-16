@@ -135,6 +135,10 @@
     transform: translateY(62px) !important;
 }
 
+.conf_password_error .error_arrow_left {
+    transform: rotate(180deg) translateY(64px);
+}
+
 /* ---------- Queries ---------- */
 /* It's a media query. It's saying that if the screen is less than 350px, then apply the following styles. */
 @media (max-width: 350px) {
