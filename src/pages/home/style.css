@@ -18,4 +18,11 @@
         width: 84%;
     }
 
+    .home_middle {
+        margin-left: 5%;
+    }
+
+    .right_home {
+        width: 18vw;
+    }
 }
