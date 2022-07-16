@@ -45,11 +45,15 @@ export default function Reset() {
                 }
             </div>
             <div className="reset_wrap">
-                <SearchAccount
-                    email={email}
-                    setEmail={setEmail}
-                    error={error}
-                />
+                {
+                    visible === 0 && (
+                        <SearchAccount
+                            email={email}
+                            setEmail={setEmail}
+                            error={error}
+                        />
+                    )
+                }
             </div>
         </div>
     );
