@@ -1,6 +1,7 @@
 import "./style.css";
 import {Plus} from "../../../svg";
 import {stories} from "../../../data/home";
+import Story from "./Story";
 
 export default function Stories() {
     return (
@@ -14,7 +15,7 @@ export default function Stories() {
             </div>
             {
                 stories.map((story, i) => (
-                    <></>
+                    <Story story={story}/>
                 ))
             }
         </div>
