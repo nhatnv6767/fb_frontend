@@ -6,6 +6,9 @@ import DisplayAccessibility from "./DisplayAccessibility";
 
 export default function UserMenu({user}) {
     const [visible, setVisible] = useState(0);
+    const logout = () => {
+
+    }
     return (
         <div className="mmenu">
             {
@@ -79,7 +82,12 @@ export default function UserMenu({user}) {
                             </div>
                         </div>
 
-                        <div className="mmenu_item hover3">
+                        <div
+                            className="mmenu_item hover3"
+                            onClick={() => {
+                                logout()
+                            }}
+                        >
                             <div className="small_circle">
                                 <i className="logout_filled_icon"></i>
                             </div>
