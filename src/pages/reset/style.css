@@ -109,7 +109,26 @@
 }
 
 .label_col {
+    display: flex;
+    flex-direction: column;
+}
 
+.reset_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset_right img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dynamic_height {
+    height: 430px;
 }
 
 /* ---------- Queries ---------- */
