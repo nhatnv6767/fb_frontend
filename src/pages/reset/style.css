@@ -159,6 +159,12 @@
     }
 }
 
+@media (max-width: 450px) {
+    .reset_form_btns {
+        padding-left: 50%;
+    }
+}
+
 /* It's a media query. It's saying that if the screen is greater than 650px, then apply the following styles. */
 @media (min-width: 650px) {
     .reset_form {
