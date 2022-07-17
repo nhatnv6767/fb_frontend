@@ -5,7 +5,7 @@ import Picker from "emoji-picker-react";
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
-    const [picker, setPicker] = useState(true);
+    const [picker, setPicker] = useState(false);
     return (
         <div className="blur">
             <div className="postBox">
@@ -54,7 +54,12 @@ export default function CreatePostPopup({user}) {
                         )
                     }
                     <img src="../../../icons/colorful.png" alt=""/>
-                    <i className="emoji_icon_large"></i>
+                    <i
+                        className="emoji_icon_large"
+                        onClick={() => {
+                            setPicker(prev => !prev);
+                        }}
+                    ></i>
                 </div>
 
             </div>
