@@ -53,6 +53,8 @@ export default function CreatePostPopup({user}) {
                             </div>
                         )
                     }
+                    <img src="../../../icons/colorful.png" alt=""/>
+                    <i className="emoji_icon_large"></i>
                 </div>
 
             </div>
