@@ -1,7 +1,7 @@
 import Picker from "emoji-picker-react";
 import {useEffect, useRef, useState} from "react";
 
-export default function EmojiPickerBackgrounds({text, setText, user}) {
+export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
     const [picker, setPicker] = useState(false);
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
