@@ -7,6 +7,10 @@ export default function CreatePostPopup({user}) {
     const [showPrev, setShowPrev] = useState(false);
     const [picker, setPicker] = useState(false);
     const textRef = useRef(null);
+
+    const handleEmoji = ({emoji}) => {
+        const ref = textRef.current;
+    }
     return (
         <div className="blur">
             <div className="postBox">
@@ -51,7 +55,9 @@ export default function CreatePostPopup({user}) {
                     {
                         picker && (
                             <div className="comment_emoji_picker rlmove">
-                                <Picker/>
+                                <Picker
+                                    onEmojiClick={handleEmoji}
+                                />
                             </div>
                         )
                     }
