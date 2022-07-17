@@ -242,4 +242,7 @@ post_emojis_wrap img {
     width: 42px;
     height: 42px;
     border-radius: 50%;
+    boder: 1px solid var(--bg-third);
+    background: var(--bg-third);
+    place-items: center;
 }
