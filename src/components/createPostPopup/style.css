@@ -258,3 +258,12 @@ post_emojis_wrap img {
     color: var(--color-secondary);
 }
 
+.add_pics_inside2 {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-secondary);
+}
+
