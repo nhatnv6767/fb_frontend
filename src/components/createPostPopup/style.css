@@ -190,3 +190,8 @@ post_emojis_wrap img {
     top: 9.7rem;
     z-index: 9999;
 }
+
+.images_input {
+    position: relative;
+    display: flex;
+}

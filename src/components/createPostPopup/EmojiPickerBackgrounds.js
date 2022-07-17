@@ -24,7 +24,7 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
         setCursorPosition(start.length + emoji.length);
     };
     return (
-        <>
+        <div className={type2 && "images_input"}>
             <div className={!type2 && "flex_center"}>
                             <textarea
                                 ref={textRef}
@@ -58,6 +58,6 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                 ></i>
             </div>
 
-        </>
+        </div>
     );
 }
