@@ -48,11 +48,11 @@ export default function ImagePreview(
                     images && images.length ? (
                             <div className="add_pics_inside1 p0">
                                 <div className="preview_actions">
-                                    <button>
+                                    <button className="hover1">
                                         <i className="edit_icon"></i>
                                         Edit
                                     </button>
-                                    <button>
+                                    <button className="hover1">
                                         <i className="addPhoto_icon"></i>
                                         Add Photos/Videos
                                     </button>
@@ -98,3 +98,5 @@ export default function ImagePreview(
  * We using the same components but the func not the same by type2 after component here
  *
  */
+
+
