@@ -367,3 +367,23 @@ post_emojis_wrap img {
     /* Making the first image span two columns. */
     grid-column: 1/3;
 }
+
+.preview4 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.preview4 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.preview4 img:nth-child(1) {
+    /* Making the first image span three columns.
+     */
+    grid-column: 1/4;
+}
