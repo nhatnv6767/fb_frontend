@@ -51,3 +51,20 @@
     font-weight: 600;
     margin-bottom: 4px;
 }
+
+.box_privacy {
+    display: flex;
+    align-items: center;
+    width: 81px;
+    gap: 4px;
+    font-size: 12px;
+    padding: 3px 8px 4px 8px;
+    border-radius: 7px;
+    background: var(--bg-third);
+    cursor: pointer;
+}
+
+.box_privacy span {
+    margin-bottom: 1px;
+}
+
