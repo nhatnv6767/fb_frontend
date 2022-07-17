@@ -14,7 +14,17 @@ export default function ImagePreview(
 
     const handleImages = (e) => {
         let files = Array.from(e.target.files);
-        console.log("handleImages", files);
+        files.forEach((img) => {
+            /* It's a JavaScript API that allows you to read the contents of a file. */
+            const reader = new FileReader();
+            reader.readAsDataURL(img);
+            // going to take everything we read from these files and add them to the img-array
+            reader.onload = (readerEvent) => {
+                /* It's a way to take an array and spread it out into its individual
+                values. */
+                setImages((images) => [...images, readerEvent.target.result]);
+            };
+        });
     };
     return (
         <div className="overflow_a">
