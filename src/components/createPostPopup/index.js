@@ -10,6 +10,9 @@ export default function CreatePostPopup() {
                     </div>
                     <span>Create Post</span>
                 </div>
+                <div className="box_profile">
+                    <img src="" alt=""/>
+                </div>
             </div>
         </div>
     );
