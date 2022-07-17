@@ -107,6 +107,10 @@ export default function Reset() {
                             conf_password={conf_password}
                             setConf_password={setConf_password}
                             error={error}
+                            loading={loading}
+                            setLoading={setLoading}
+                            setError={setError}
+                            setVisible={setVisible}
                         />
                     )
                 }
