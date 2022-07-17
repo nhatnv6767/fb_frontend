@@ -1,6 +1,6 @@
 import "./style.css";
 
-export default function CreatePostPopup() {
+export default function CreatePostPopup({user}) {
     return (
         <div className="blur">
             <div className="postBox">
@@ -11,7 +11,7 @@ export default function CreatePostPopup() {
                     <span>Create Post</span>
                 </div>
                 <div className="box_profile">
-                    <img src="" alt=""/>
+                    <img src={user?.picture} alt=""/>
                 </div>
             </div>
         </div>
