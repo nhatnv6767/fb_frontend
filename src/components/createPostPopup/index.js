@@ -33,7 +33,8 @@ export default function CreatePostPopup({user}) {
 
                 {
                     !showPrev && (
-                        <div className="flex_center">
+                        <>
+                            <div className="flex_center">
                             <textarea
                                 ref={textRef}
                                 maxLength="100"
@@ -44,14 +45,15 @@ export default function CreatePostPopup({user}) {
                             >
 
                             </textarea>
-                        </div>
+                            </div>
+                            <EmojiPickerBackgrounds
+                                text={text}
+                                textRef={textRef}
+                                setText={setText}
+                            />
+                        </>
                     )
                 }
-                <EmojiPickerBackgrounds
-                    text={text}
-                    textRef={textRef}
-                    setText={setText}
-                />
 
             </div>
         </div>
