@@ -192,6 +192,5 @@ post_emojis_wrap img {
 }
 
 .images_input {
-    position: relative;
     display: flex;
 }
