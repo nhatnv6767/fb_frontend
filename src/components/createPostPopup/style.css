@@ -247,3 +247,14 @@ post_emojis_wrap img {
     display: grid;
     place-items: center;
 }
+
+.add_col span:first-of-type {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.add_col span:last-of-type {
+    font-size: 12px;
+    color: var(--color-secondary);
+}
+
