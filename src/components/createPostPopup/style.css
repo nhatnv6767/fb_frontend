@@ -456,3 +456,7 @@ post_emojis_wrap img {
     width: 100%;
     background-size: cover;
 }
+
+.bgHandler textarea {
+    background: red;
+}
