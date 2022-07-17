@@ -89,6 +89,10 @@ export default function Reset() {
                             code={code}
                             setCode={setCode}
                             error={error}
+                            loading={loading}
+                            setLoading={setLoading}
+                            setError={setError}
+                            setVisible={setVisible}
                         />
                     )
                 }
