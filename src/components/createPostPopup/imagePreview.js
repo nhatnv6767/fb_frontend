@@ -71,7 +71,9 @@ export default function ImagePreview(
                                                     ? "preview4"
                                                     : images.length === 5
                                                         ? "preview5"
-                                                        : "preview6"
+                                                        : images.length % 2 === 0
+                                                            ? "preview6"
+                                                            : "preview6 singular_grid"
                                     }
                                 >
                                     {
