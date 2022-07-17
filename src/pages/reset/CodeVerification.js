@@ -19,12 +19,14 @@ export default function CodeVerification({userInfos, code, setCode, error, setLo
         try {
             setLoading(true);
             await axios.post(`${process.env.REACT_APP_BACKEND_URL}/validateResetCode`, {email, code});
+            setError("");
+            setVisible(3);
+            setLoading(false);
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);
         }
     };
-    console.log("Code verification Email/> ", email);
     return (
         <div className="reset_form">
             <div className="reset_form_header">
