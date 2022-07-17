@@ -8,14 +8,14 @@ export default function CreatePostPopup({user}) {
     const [picker, setPicker] = useState(false);
     const textRef = useRef(null);
 
-    const handleEmoji = ({emoji}) => {
+    const handleEmoji = (e, {emoji}) => {
         const ref = textRef.current;
         /* Focusing on the textarea. */
         ref.focus();
         /* Getting the text before the cursor. */
         const start = text.substring(0, ref.selectionStart);
         // ! <DEBUG HERE>
-        const end = text.substring(ref.selectionStart, ref.selectionEnd);
+        const end = text.substring(ref.selectionStart);
         const newText = start + emoji + end;
         setText(newText);
     };
