@@ -63,6 +63,16 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                 {
                     !type2 && (<img src="../../../icons/colorful.png" alt=""/>)
                 }
+
+                <div className="post_backgrounds">
+                    <div className="no_bg"></div>
+                    {
+                        postBackgrounds.map((bg, i) => (
+                            <img src={bg} key={i} alt=""/>
+                        ))
+                    }
+                </div>
+
                 <i
                     className={`emoji_icon_large ${type2 ? "moveleft" : ""}`}
                     onClick={() => {
