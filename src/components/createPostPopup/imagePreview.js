@@ -57,6 +57,9 @@ export default function ImagePreview(
                                         Add Photos/Videos
                                     </button>
                                 </div>
+                                <div className="small_white_circle">
+                                    <i className="exit_icon"></i>
+                                </div>
                             </div>
                         ) :
                         (

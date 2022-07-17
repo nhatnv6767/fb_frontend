@@ -285,4 +285,18 @@ post_emojis_wrap img {
     cursor: pointer;
 }
 
+.p0 {
+    padding: 0;
+    border-radius: 10px;
+    height: 100%;
+    cursor: default;
+    overflow: hidden;
+}
 
+.preview_actions {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
