@@ -42,7 +42,11 @@ export default function CreatePostPopup({user}) {
                             />
                         </>
                     ) : (
-                        <ImagePreview/>
+                        <ImagePreview
+                            text={text}
+                            setText={setText}
+                            user={user}
+                        />
                     )
                 }
                 <AddToYourPost/>

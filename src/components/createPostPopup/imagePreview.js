@@ -1,7 +1,13 @@
-export default function ImagePreview() {
+import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
+
+export default function ImagePreview({text, setText, user}) {
     return (
-        <div>
-            ImagePreview
+        <div className="overflow_a">
+            <EmojiPickerBackgrounds
+                text={text}
+                setText={setText}
+                user={user}
+            />
         </div>
     );
 }
