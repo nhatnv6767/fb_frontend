@@ -3,6 +3,7 @@ import {useState} from "react";
 import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 import {useRef} from "react";
 import AddToYourPost from "./AddToYourPost";
+import ImagePreview from "./imagePreview";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
@@ -33,7 +34,7 @@ export default function CreatePostPopup({user}) {
 
 
                 {
-                    !showPrev && (
+                    !showPrev ? (
                         <>
                             <div className="flex_center">
                             <textarea
@@ -53,6 +54,8 @@ export default function CreatePostPopup({user}) {
                                 setText={setText}
                             />
                         </>
+                    ) : (
+                        <ImagePreview/>
                     )
                 }
                 <AddToYourPost/>
