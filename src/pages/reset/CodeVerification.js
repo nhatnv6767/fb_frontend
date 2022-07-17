@@ -2,6 +2,7 @@ import {Form, Formik} from "formik";
 import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 import * as Yup from "yup";
+import axios from "axios";
 
 export default function CodeVerification({userInfos, code, setCode, error, setLoading, setError, setVisible}) {
 
