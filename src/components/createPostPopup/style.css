@@ -297,8 +297,8 @@ post_emojis_wrap img {
     position: absolute;
     left: 1rem;
     top: 1rem;
-    display: flex;
     gap: 1rem;
+    display: none;
 }
 
 .preview_actions button {
@@ -317,5 +317,11 @@ post_emojis_wrap img {
     font-family: inherit;
     color: var(--color-primary);
 }
+
+
+.p0:hover .preview_actions {
+    display: flex;
+}
+
 
 
