@@ -11,7 +11,7 @@ export default function CreatePostPopup({user}) {
                     <span>Create Post</span>
                 </div>
                 <div className="box_profile">
-                    <img src={user?.picture} alt=""/>
+                    <img src={user?.picture} alt="" className="box_profile_img"/>
                     <div className="box_col">
                         <div className="box_profile_name">
                             {user?.first_name} {user?.last_name}
