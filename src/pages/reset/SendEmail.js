@@ -7,8 +7,8 @@ export default function SendEmail({userInfos, error, setError, setVisible, setUs
         try {
             setLoading(true);
             await axios.post(`${process.env.REACT_APP_BACKEND_URL}/sendResetPasswordCode`, {email});
-            setError("")
-            setVisible(2)
+            setError("");
+            setVisible(2);
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);
@@ -42,7 +42,12 @@ export default function SendEmail({userInfos, error, setError, setVisible, setUs
             </div>
 
             {
-                error && <div className="error_text">{error}</div>
+                error && <div
+                    className="error_text"
+                    style={{padding: "10px"}}
+                >
+                    {error}
+                </div>
             }
 
             <div className="reset_form_btns">
