@@ -24,8 +24,8 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
         setCursorPosition(start.length + emoji.length);
     };
     return (
-        <div className={type2 && "images_input"}>
-            <div className={!type2 && "flex_center"}>
+        <div className={type2 ? "images_input" : ""}>
+            <div className={!type2 ? "flex_center" : ""}>
                             <textarea
                                 ref={textRef}
                                 maxLength="100"
@@ -37,7 +37,7 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
 
                             </textarea>
             </div>
-            <div className={!type2 && "post_emojis_wrap"}>
+            <div className={!type2 ? "post_emojis_wrap" : ""}>
                 {
                     picker && (
                         <div className={`comment_emoji_picker ${type2 ? "movepicker2" : "rlmove"}`}>
@@ -51,7 +51,7 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                     !type2 && (<img src="../../../icons/colorful.png" alt=""/>)
                 }
                 <i
-                    className={`emoji_icon_large ${type2 && "moveleft"}`}
+                    className={`emoji_icon_large ${type2 ? "moveleft" : ""}`}
                     onClick={() => {
                         setPicker(prev => !prev);
                     }}
