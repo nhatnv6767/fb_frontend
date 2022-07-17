@@ -62,7 +62,12 @@ export default function ImagePreview(
                                         Add Photos/Videos
                                     </button>
                                 </div>
-                                <div className="small_white_circle">
+                                <div
+                                    className="small_white_circle"
+                                    onClick={() => {
+                                        setImages([])
+                                    }}
+                                >
                                     <i className="exit_icon"></i>
                                 </div>
                                 <div
