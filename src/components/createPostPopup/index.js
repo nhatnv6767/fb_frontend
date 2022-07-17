@@ -10,7 +10,9 @@ export default function CreatePostPopup({user}) {
 
     const handleEmoji = ({emoji}) => {
         const ref = textRef.current;
-    }
+        /* Focusing on the textarea. */
+        ref.focus();
+    };
     return (
         <div className="blur">
             <div className="postBox">
