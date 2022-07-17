@@ -60,6 +60,13 @@ export default function ImagePreview(
                                 <div className="small_white_circle">
                                     <i className="exit_icon"></i>
                                 </div>
+                                <div>
+                                    {
+                                        images.map((img, i) => (
+                                            <img src={img} key={i} alt=""/>
+                                        ))
+                                    }
+                                </div>
                             </div>
                         ) :
                         (
