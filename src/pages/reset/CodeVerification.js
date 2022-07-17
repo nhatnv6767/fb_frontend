@@ -3,7 +3,7 @@ import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 import * as Yup from "yup";
 
-export default function CodeVerification({email, code, setCode, error, setLoading, setError, setVisible}) {
+export default function CodeVerification({userInfos, code, setCode, error, setLoading, setError, setVisible}) {
 
     const validateCode = Yup.object({
         code: Yup.string()
@@ -11,6 +11,8 @@ export default function CodeVerification({email, code, setCode, error, setLoadin
             .min(5, "Code must be at least 5 characters.")
             .max(5, "Code can't be more than 5 characters.")
     });
+
+    const {email} = userInfos;
 
     const verifyCode = async () => {
         try {
@@ -21,6 +23,7 @@ export default function CodeVerification({email, code, setCode, error, setLoadin
             setError(e.response.data.message);
         }
     };
+    console.log("Code verification Email/> ", email);
     return (
         <div className="reset_form">
             <div className="reset_form_header">
