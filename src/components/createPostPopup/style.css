@@ -222,3 +222,16 @@ post_emojis_wrap img {
     align-items: center;
     gap: 2px;
 }
+
+.small_white_circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    boder: 1px solid var(--bg-third);
+    background: var(--bg-primary);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
