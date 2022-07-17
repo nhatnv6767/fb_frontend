@@ -3,7 +3,7 @@ import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 import * as Yup from "yup";
 
-export default function CodeVerification({code, setCode, error, setLoading, setError, setVisible}) {
+export default function CodeVerification({email, code, setCode, error, setLoading, setError, setVisible}) {
 
     const validateCode = Yup.object({
         code: Yup.string()
@@ -12,9 +12,10 @@ export default function CodeVerification({code, setCode, error, setLoading, setE
             .max(5, "Code can't be more than 5 characters.")
     });
 
-    const verifyCode = () => {
+    const verifyCode = async () => {
         try {
             setLoading(true);
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/validateResetCode`, {email, code});
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);

@@ -85,6 +85,7 @@ export default function Reset() {
                 {
                     visible === 2 && (
                         <CodeVerification
+                            email={email}
                             user={user}
                             code={code}
                             setCode={setCode}
