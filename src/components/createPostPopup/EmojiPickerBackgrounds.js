@@ -69,9 +69,9 @@ export default function EmojiPickerBackgrounds({
                                 onChange={(e) => setText(e.target.value)}
                                 style={{
                                     /* It's a way to make the textarea smaller as the user types. */
-                                    paddingTop: `${background && showBgs
+                                    paddingTop: `${background
                                         ? Math.abs(textRef.current.value.length * 0.1 - 32)
-                                        : ""}%`
+                                        : "0"}%`
                                 }}
                             >
 
@@ -105,7 +105,7 @@ export default function EmojiPickerBackgrounds({
                             <div
                                 className="no_bg"
                                 onClick={() => {
-                                    removeBackground()
+                                    removeBackground();
                                 }}
                             >
 
