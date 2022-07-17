@@ -1,6 +1,6 @@
 import {Form, Formik} from "formik";
 import LoginInput from "../../components/inputs/loginInput";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import * as Yup from "yup";
 import axios from "axios";
 
@@ -15,6 +15,7 @@ export default function ChangePassword({
                                            userInfos,
                                            setError,
                                        }) {
+    const navigate = useNavigate();
     const validatePassword = Yup.object({
         password: Yup.string()
             .required("Enter a combination of at least six numbers, letters and punctuation marks (such as ! and &).")
@@ -32,6 +33,7 @@ export default function ChangePassword({
             setLoading(true);
             await axios.post(`${process.env.REACT_APP_BACKEND_URL}/changePassword`, {email, password});
             setError("");
+            navigate("/");
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);
