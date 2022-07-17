@@ -115,6 +115,12 @@ post_emojis_wrap img {
     cursor: pointer;
 }
 
+.post_emojis_wrap i:hover {
+    /* Inverting the color of the image. */
+    filter: invert(80%);
+}
+
+
 
 
 
