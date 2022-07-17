@@ -12,8 +12,9 @@ export default function ImagePreview(
 ) {
     const imageInputRef = useRef(null);
 
-    const handleImages = () => {
-
+    const handleImages = (e) => {
+        let files = e.target.files;
+        console.log("handleImages", files);
     };
     return (
         <div className="overflow_a">
@@ -43,7 +44,7 @@ export default function ImagePreview(
                                 <div
                                     className="add_col"
                                     onClick={() => {
-                                        imageInputRef.current.click()
+                                        imageInputRef.current.click();
                                     }}
                                 >
                                     <div className="add_circle">
