@@ -120,6 +120,15 @@ post_emojis_wrap img {
     filter: invert(80%);
 }
 
+.comment_emoji_picker {
+    position: absolute;
+    right: 0;
+    bottom: 2.5rem;
+}
+
+.rlmove {
+    right: -7rem;
+}
 
 
 

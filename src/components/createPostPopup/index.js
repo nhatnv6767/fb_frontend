@@ -5,7 +5,7 @@ import Picker from "emoji-picker-react";
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
-    const [picker, setPicker] = useState(false);
+    const [picker, setPicker] = useState(true);
     return (
         <div className="blur">
             <div className="postBox">
