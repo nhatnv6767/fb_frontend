@@ -2,9 +2,13 @@ import {Link} from "react-router-dom";
 
 export default function SendEmail({userInfos}) {
 
-    const sendEmail = () => {
+    const sendEmail = async () => {
+        try {
 
-    }
+        } catch (e) {
+
+        }
+    };
     return (
         <div className="reset_form dynamic_height">
             <div className="reset_form_header">
