@@ -14,7 +14,7 @@ export default function CodeVerification({code, setCode, error, setLoading, setE
 
     const verifyCode = () => {
         try {
-
+            setLoading(true);
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);

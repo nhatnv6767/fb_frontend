@@ -27,6 +27,7 @@ export default function SearchAccount({
             setUserInfos(data);
             setVisible(1);
             setError("");
+            setLoading(false);
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);

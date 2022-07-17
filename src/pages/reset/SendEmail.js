@@ -9,6 +9,7 @@ export default function SendEmail({userInfos, error, setError, setVisible, setUs
             await axios.post(`${process.env.REACT_APP_BACKEND_URL}/sendResetPasswordCode`, {email});
             setError("");
             setVisible(2);
+            setLoading(false);
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);
