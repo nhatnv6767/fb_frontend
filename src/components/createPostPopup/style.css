@@ -410,3 +410,17 @@ post_emojis_wrap img {
     /* Making the first and second images span three columns. */
     grid-column: auto / span 3;
 }
+
+
+.preview6 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.preview6 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
