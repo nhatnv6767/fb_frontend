@@ -3,6 +3,7 @@ import {useState} from "react";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
+    const [showPrev, setShowPrev] = useState(false);
     return (
         <div className="blur">
             <div className="postBox">
@@ -33,18 +34,24 @@ export default function CreatePostPopup({user}) {
                     onChange={(e) => setText(e.target.value)}
                 >
 
-                    </textarea>
-                <div className="flex_center">
-                    <textarea
-                        maxlength="100"
-                        value={text}
-                        placeholder={`What's on your mind, ${user?.first_name}`}
-                        className="post_input"
-                        onChange={(e) => setText(e.target.value)}
-                    >
+                </textarea>
 
-                    </textarea>
-                </div>
+                {
+                    showPrev && (
+                        <div className="flex_center">
+                            <textarea
+                                maxLength="100"
+                                value={text}
+                                placeholder={`What's on your mind, ${user?.first_name}`}
+                                className="post_input"
+                                onChange={(e) => setText(e.target.value)}
+                            >
+
+                            </textarea>
+                        </div>
+                    )
+                }
+
             </div>
         </div>
     );
