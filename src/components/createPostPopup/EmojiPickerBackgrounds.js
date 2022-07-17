@@ -35,7 +35,7 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
         "../../../images/postbackgrounds/7.jpg",
         "../../../images/postbackgrounds/8.jpg",
         "../../../images/postbackgrounds/9.jpg",
-    ]
+    ];
 
     return (
         <div className={type2 ? "images_input" : ""}>
@@ -67,20 +67,24 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                             src="../../../icons/colorful.png"
                             alt=""
                             onClick={() => {
-                                setShowBgs(prev => !prev)
+                                setShowBgs(prev => !prev);
                             }}
                         />
                     )
                 }
 
-                <div className="post_backgrounds">
-                    <div className="no_bg"></div>
-                    {
-                        postBackgrounds.map((bg, i) => (
-                            <img src={bg} key={i} alt=""/>
-                        ))
-                    }
-                </div>
+                {
+                    !type2 && showBgs && (
+                        <div className="post_backgrounds">
+                            <div className="no_bg"></div>
+                            {
+                                postBackgrounds.map((bg, i) => (
+                                    <img src={bg} key={i} alt=""/>
+                                ))
+                            }
+                        </div>
+                    )
+                }
 
                 <i
                     className={`emoji_icon_large ${type2 ? "moveleft" : ""}`}
