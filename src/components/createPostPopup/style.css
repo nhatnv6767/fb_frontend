@@ -458,5 +458,7 @@ post_emojis_wrap img {
 }
 
 .bgHandler textarea {
-    background: red;
+    text-align: center;
+    height: 360px;
+    margin-top: 10px;
 }
