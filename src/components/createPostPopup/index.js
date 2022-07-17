@@ -31,6 +31,7 @@ export default function CreatePostPopup({user}) {
                         value={text}
                         placeholder={`What's on your mind, ${user?.first_name}`}
                         className="post_input"
+                        onChange={(e) => setText(e.target.value)}
                     >
 
                     </textarea>
