@@ -99,3 +99,22 @@
     overflow-y: visible;
     position: absolute;
 }
+
+.post_emojis_wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* Adding 10px of padding to the top and bottom of the element, and 15px of padding to the left and right of the
+    element. */
+    padding: 10px 15px;
+}
+
+post_emojis_wrap img {
+    width: 39px;
+    cursor: pointer;
+}
+
+
+
+
