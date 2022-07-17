@@ -2,7 +2,7 @@ import "./style.css";
 import {useState} from "react";
 import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 import AddToYourPost from "./AddToYourPost";
-import ImagePreview from "./imagePreview";
+import ImagePreview from "./ImagePreview";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
@@ -50,8 +50,9 @@ export default function CreatePostPopup({user}) {
                     ) : (
                         <ImagePreview
                             text={text}
-                            setText={setText}
                             user={user}
+                            setText={setText}
+                            showPrev={showPrev}
                             images={images}
                             setImages={setImages}
                             setShowPrev={setShowPrev}
