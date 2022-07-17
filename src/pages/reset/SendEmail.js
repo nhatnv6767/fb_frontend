@@ -1,6 +1,10 @@
 import {Link} from "react-router-dom";
 
 export default function SendEmail({userInfos}) {
+
+    const sendEmail = () => {
+
+    }
     return (
         <div className="reset_form dynamic_height">
             <div className="reset_form_header">
@@ -30,7 +34,12 @@ export default function SendEmail({userInfos}) {
                 <Link to="/login" className="gray_btn">
                     Not You?
                 </Link>
-                <button type="submit" className="blue_btn">
+                <button
+                    onClick={() => {
+                        sendEmail();
+                    }}
+                    className="blue_btn"
+                >
                     Continue
                 </button>
             </div>
