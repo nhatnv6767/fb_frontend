@@ -9,8 +9,9 @@ export default function CreatePostPopup({user}) {
     const textRef = useRef(null);
     const [cursorPosition, setCursorPosition] = useState();
     useEffect(() => {
+        /* Setting the cursor position to the end of the text. */
         textRef.current.selectionEnd = cursorPosition;
-    }, cursorPosition);
+    }, [cursorPosition]);
 
     const handleEmoji = (e, {emoji}) => {
         const ref = textRef.current;
@@ -22,6 +23,8 @@ export default function CreatePostPopup({user}) {
         const end = text.substring(ref.selectionStart);
         const newText = start + emoji + end;
         setText(newText);
+        /* Setting the cursor position to the end of the text. */
+        setCursorPosition(start.length + emoji.length);
     };
     return (
         <div className="blur">
