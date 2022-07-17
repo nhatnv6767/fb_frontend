@@ -269,3 +269,20 @@ post_emojis_wrap img {
     border-radius: 10px;
 }
 
+.mobile_text {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.addphone_btn {
+    background: var(--bg-third);
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+

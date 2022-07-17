@@ -54,7 +54,7 @@ export default function ImagePreview(
                         <i className="phone_icon"></i>
                     </div>
                     <div className="mobile_text">Add photos from your mobile device.</div>
-                    <div className="adphone_btn">Add</div>
+                    <div className="addphone_btn">Add</div>
                 </div>
             </div>
         </div>
