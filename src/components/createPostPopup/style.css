@@ -68,3 +68,25 @@
     margin-bottom: 1px;
 }
 
+.flex_center {
+    min-height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post_input {
+    position: relative;
+    outline: none;
+    border: none;
+    resize: none;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    width: 470px;
+    margin-left: 1px;
+    font-family: inherit;
+    font-size: 24px;
+    background: var(--bg-primary);
+    color: var(--color-primary);
+}
