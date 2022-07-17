@@ -50,6 +50,12 @@ export default function EmojiPickerBackgrounds({
         setBackground(postBackgrounds[i]);
         bgRef.current.classList.add("bgHandler");
     };
+    const removeBackground = (i) => {
+        bgRef.current.style.backgroundImage = "";
+        setBackground("");
+        bgRef.current.classList.remove("bgHandler");
+    };
+
 
     return (
         <div className={type2 ? "images_input" : ""}>
@@ -62,8 +68,9 @@ export default function EmojiPickerBackgrounds({
                                 className={`post_input ${type2 ? "input2" : ""}`}
                                 onChange={(e) => setText(e.target.value)}
                                 style={{
+                                    /* It's a way to make the textarea smaller as the user types. */
                                     paddingTop: `${background && showBgs
-                                        ? Math.abs(textRef.current.value.length * 0.1 - 30)
+                                        ? Math.abs(textRef.current.value.length * 0.1 - 32)
                                         : ""}%`
                                 }}
                             >
@@ -95,7 +102,14 @@ export default function EmojiPickerBackgrounds({
                 {
                     !type2 && showBgs && (
                         <div className="post_backgrounds">
-                            <div className="no_bg"></div>
+                            <div
+                                className="no_bg"
+                                onClick={() => {
+                                    removeBackground()
+                                }}
+                            >
+
+                            </div>
                             {
                                 postBackgrounds.map((bg, i) => (
                                     <img
