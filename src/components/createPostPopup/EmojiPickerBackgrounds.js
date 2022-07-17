@@ -1,7 +1,14 @@
 import Picker from "emoji-picker-react";
 import {useEffect, useRef, useState} from "react";
 
-export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
+export default function EmojiPickerBackgrounds({
+                                                   text,
+                                                   setText,
+                                                   user,
+                                                   type2,
+                                                   background,
+                                                   setBackground,
+                                               }) {
     const [picker, setPicker] = useState(false);
     const [showBgs, setShowBgs] = useState(false);
     const [cursorPosition, setCursorPosition] = useState();
@@ -40,6 +47,8 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
 
     const backgroundHandler = (i) => {
         bgRef.current.style.backgroundImage = `url(${postBackgrounds[i]})`;
+        setBackground(postBackgrounds[i]);
+        bgRef.current.classList.add("bgHandler");
     };
 
     return (

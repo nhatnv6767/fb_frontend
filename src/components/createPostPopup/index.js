@@ -42,6 +42,9 @@ export default function CreatePostPopup({user}) {
                                 text={text}
                                 setText={setText}
                                 user={user}
+                                showPrev={showPrev}
+                                setBackground={setBackground}
+                                background={background}
                             />
                         </>
                     ) : (
