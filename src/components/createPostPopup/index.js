@@ -1,7 +1,7 @@
 import "./style.css";
 import {useState} from "react";
 import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
-import {useRef} from "@types/react";
+import {useRef} from "react";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
