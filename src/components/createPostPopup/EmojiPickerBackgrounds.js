@@ -6,6 +6,7 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
     const [showBgs, setShowBgs] = useState(false);
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
+    const bgRef = useRef(null);
     useEffect(() => {
         /* Setting the cursor position to the end of the text. */
         textRef.current.selectionEnd = cursorPosition;
@@ -38,12 +39,12 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
     ];
 
     const backgroundHandler = (i) => {
-
-    }
+        bgRef.current.style.backgroundImage = `url(${postBackgrounds[i]})`;
+    };
 
     return (
         <div className={type2 ? "images_input" : ""}>
-            <div className={!type2 ? "flex_center" : ""}>
+            <div className={!type2 ? "flex_center" : ""} ref={bgRef}>
                             <textarea
                                 ref={textRef}
                                 maxLength="100"
@@ -88,7 +89,7 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                                         key={i}
                                         alt=""
                                         onClick={() => {
-                                            backgroundHandler(i)
+                                            backgroundHandler(i);
                                         }}
                                     />
                                 ))
