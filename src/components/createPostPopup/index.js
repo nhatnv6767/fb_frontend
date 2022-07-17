@@ -1,33 +1,12 @@
 import "./style.css";
-import {useEffect, useRef, useState} from "react";
-import Picker from "emoji-picker-react";
+import {useState} from "react";
 import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
+import {useRef} from "@types/react";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
-    const [picker, setPicker] = useState(false);
     const textRef = useRef(null);
-    const [cursorPosition, setCursorPosition] = useState();
-    useEffect(() => {
-        /* Setting the cursor position to the end of the text. */
-        textRef.current.selectionEnd = cursorPosition;
-    }, [cursorPosition]);
-
-    const handleEmoji = (e, {emoji}) => {
-        const ref = textRef.current;
-        /* Focusing on the textarea. */
-        ref.focus();
-        /* Getting the text before the cursor. */
-        const start = text.substring(0, ref.selectionStart);
-        // ! <DEBUG HERE>
-        const end = text.substring(ref.selectionStart);
-        const newText = start + emoji + end;
-        setText(newText);
-        /* Setting the cursor position to the end of the text. */
-        setCursorPosition(start.length + emoji.length);
-    };
-
     return (
         <div className="blur">
             <div className="postBox">
@@ -69,9 +48,9 @@ export default function CreatePostPopup({user}) {
                     )
                 }
                 <EmojiPickerBackgrounds
-                    picker={picker}
-                    handleEmoji={handleEmoji}
-                    setPicker={setPicker}
+                    text={text}
+                    textRef={textRef}
+                    setText={setText}
                 />
 
             </div>
