@@ -51,6 +51,9 @@ export default function CreatePostPopup({user}) {
                         </div>
                     )
                 }
+                <div className="post_emojis_wrap">
+                    <div className="comment_emoji_picker rlmove"></div>
+                </div>
 
             </div>
         </div>
