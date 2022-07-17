@@ -50,6 +50,7 @@ export default function CreatePostPopup({user}) {
                             user={user}
                             images={images}
                             setImages={setImages}
+                            setShowPrev={setShowPrev}
                         />
                     )
                 }

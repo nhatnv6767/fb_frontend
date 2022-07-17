@@ -8,6 +8,7 @@ export default function ImagePreview(
         user,
         images,
         setImages,
+        setShowPrev,
     }
 ) {
     const imageInputRef = useRef(null);
@@ -65,7 +66,7 @@ export default function ImagePreview(
                                 <div
                                     className="small_white_circle"
                                     onClick={() => {
-                                        setImages([])
+                                        setImages([]);
                                     }}
                                 >
                                     <i className="exit_icon"></i>
@@ -96,7 +97,12 @@ export default function ImagePreview(
                         ) :
                         (
                             <div className="add_pics_inside1">
-                                <div className="small_white_circle">
+                                <div
+                                    className="small_white_circle"
+                                    onClick={() => {
+                                        setShowPrev(false);
+                                    }}
+                                >
                                     <i className="exit_icon"></i>
                                 </div>
                                 <div
