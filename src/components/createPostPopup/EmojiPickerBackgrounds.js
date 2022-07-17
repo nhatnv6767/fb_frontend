@@ -61,7 +61,11 @@ export default function EmojiPickerBackgrounds({
                                 placeholder={`What's on your mind, ${user?.first_name}`}
                                 className={`post_input ${type2 ? "input2" : ""}`}
                                 onChange={(e) => setText(e.target.value)}
-                                style={{paddingTop: `${background && showBgs ? "" : ""}`}}
+                                style={{
+                                    paddingTop: `${background && showBgs
+                                        ? Math.abs(textRef.current.value.length * 0.1 - 30)
+                                        : ""}%`
+                                }}
                             >
 
                             </textarea>
