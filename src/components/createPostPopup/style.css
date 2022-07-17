@@ -28,3 +28,26 @@
     right: 16px;
     top: 12px;
 }
+
+.box_profile {
+    display: flex;
+    gap: 12px;
+    padding: 17px 17px 5px 17px;
+}
+
+.box_profile img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.box_col {
+    transform: translateY(-7px);
+}
+
+.box_profile_name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
