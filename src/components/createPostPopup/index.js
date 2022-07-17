@@ -54,7 +54,9 @@ export default function CreatePostPopup({user}) {
                         />
                     )
                 }
-                <AddToYourPost/>
+                <AddToYourPost
+                    setShowPrev={setShowPrev}
+                />
                 <button className="post_submit">Post</button>
             </div>
         </div>
