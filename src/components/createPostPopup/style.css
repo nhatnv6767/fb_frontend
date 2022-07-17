@@ -244,5 +244,6 @@ post_emojis_wrap img {
     border-radius: 50%;
     boder: 1px solid var(--bg-third);
     background: var(--bg-third);
+    display: grid;
     place-items: center;
 }
