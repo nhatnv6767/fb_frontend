@@ -1,11 +1,12 @@
 import "./style.css";
-import {useState} from "react";
+import {useRef, useState} from "react";
 import Picker from "emoji-picker-react";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
     const [picker, setPicker] = useState(false);
+    const textRef = useRef(null);
     return (
         <div className="blur">
             <div className="postBox">
@@ -34,6 +35,7 @@ export default function CreatePostPopup({user}) {
                     !showPrev && (
                         <div className="flex_center">
                             <textarea
+                                ref={textRef}
                                 maxLength="100"
                                 value={text}
                                 placeholder={`What's on your mind, ${user?.first_name}`}
