@@ -26,18 +26,10 @@ export default function CreatePostPopup({user}) {
                         </div>
                     </div>
                 </div>
-                <textarea
-                    maxLength="100"
-                    value={text}
-                    placeholder={`What's on your mind, ${user?.first_name}`}
-                    className="post_input"
-                    onChange={(e) => setText(e.target.value)}
-                >
 
-                </textarea>
 
                 {
-                    showPrev && (
+                    !showPrev && (
                         <div className="flex_center">
                             <textarea
                                 maxLength="100"
