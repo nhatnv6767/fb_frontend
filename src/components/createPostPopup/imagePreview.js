@@ -13,7 +13,7 @@ export default function ImagePreview(
     const imageInputRef = useRef(null);
 
     const handleImages = (e) => {
-        let files = e.target.files;
+        let files = Array.from(e.target.files);
         console.log("handleImages", files);
     };
     return (
