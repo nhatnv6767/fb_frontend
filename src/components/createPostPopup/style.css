@@ -265,5 +265,7 @@ post_emojis_wrap img {
     align-items: center;
     gap: 10px;
     background: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 10px;
 }
 
