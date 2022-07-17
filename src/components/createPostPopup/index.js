@@ -1,6 +1,8 @@
 import "./style.css";
+import {useState} from "react";
 
 export default function CreatePostPopup({user}) {
+    const [text, setText] = useState("")
     return (
         <div className="blur">
             <div className="postBox">
@@ -22,6 +24,15 @@ export default function CreatePostPopup({user}) {
                             <i className="arrowDown_icon"></i>
                         </div>
                     </div>
+                </div>
+                <div className="flex_center">
+                    <textarea
+                        maxlength="100"
+                        value={text}
+                        className="post_input"
+                    >
+
+                    </textarea>
                 </div>
             </div>
         </div>
