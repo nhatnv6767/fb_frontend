@@ -2,6 +2,7 @@ import {Form, Formik} from "formik";
 import LoginInput from "../../components/inputs/loginInput";
 import {Link} from "react-router-dom";
 import * as Yup from "yup";
+import axios from "axios";
 
 export default function ChangePassword({
                                            password,
@@ -12,6 +13,7 @@ export default function ChangePassword({
                                            loading,
                                            setLoading,
                                            userInfos,
+                                           setError,
                                        }) {
     const validatePassword = Yup.object({
         password: Yup.string()
@@ -22,6 +24,19 @@ export default function ChangePassword({
             .oneOf([Yup.ref("password")], "Passwords must match.")
 
     });
+
+    const {email} = userInfos;
+
+    const changePassword = async () => {
+        try {
+            setLoading(true);
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/changePassword`, {email, password});
+            setError("");
+        } catch (e) {
+            setLoading(false);
+            setError(e.response.data.message);
+        }
+    };
     return (
         <div className="reset_form" style={{height: "310px"}}>
             <div className="reset_form_header">
@@ -37,6 +52,9 @@ export default function ChangePassword({
                     conf_password,
                 }}
                 validationSchema={validatePassword}
+                onSubmit={() => {
+                    changePassword();
+                }}
             >
                 {
                     (formik) => (
