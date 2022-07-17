@@ -37,6 +37,10 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
         "../../../images/postbackgrounds/9.jpg",
     ];
 
+    const backgroundHandler = (i) => {
+
+    }
+
     return (
         <div className={type2 ? "images_input" : ""}>
             <div className={!type2 ? "flex_center" : ""}>
@@ -79,7 +83,14 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                             <div className="no_bg"></div>
                             {
                                 postBackgrounds.map((bg, i) => (
-                                    <img src={bg} key={i} alt=""/>
+                                    <img
+                                        src={bg}
+                                        key={i}
+                                        alt=""
+                                        onClick={() => {
+                                            backgroundHandler(i)
+                                        }}
+                                    />
                                 ))
                             }
                         </div>
