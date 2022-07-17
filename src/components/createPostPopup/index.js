@@ -5,6 +5,7 @@ import Picker from "emoji-picker-react";
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
+    const [picker, setPicker] = useState(false);
     return (
         <div className="blur">
             <div className="postBox">
@@ -45,9 +46,13 @@ export default function CreatePostPopup({user}) {
                     )
                 }
                 <div className="post_emojis_wrap">
-                    <div className="comment_emoji_picker rlmove">
-                        <Picker/>
-                    </div>
+                    {
+                        picker && (
+                            <div className="comment_emoji_picker rlmove">
+                                <Picker/>
+                            </div>
+                        )
+                    }
                 </div>
 
             </div>
