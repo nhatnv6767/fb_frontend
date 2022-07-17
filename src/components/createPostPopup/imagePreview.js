@@ -33,21 +33,29 @@ export default function ImagePreview(
                 />
 
                 {
-                    images && images.length ? "" :
-                        <div className="add_pics_inside1">
-                            <div className="small_white_circle">
-                                <i className="exit_icon"></i>
-                            </div>
-                            <div className="add_col">
-                                <div className="add_circle">
-                                    <i className="addPhoto_icon"></i>
+                    images && images.length ? ("") :
+                        (
+                            <div className="add_pics_inside1">
+                                <div className="small_white_circle">
+                                    <i className="exit_icon"></i>
                                 </div>
-                                <span>Add Photos/Videos</span>
-                                <span>or drag and drop</span>
+                                <div className="add_col">
+                                    <div className="add_circle">
+                                        <i className="addPhoto_icon"></i>
+                                    </div>
+                                    <span>Add Photos/Videos</span>
+                                    <span>or drag and drop</span>
+                                </div>
                             </div>
-                        </div>
+                        )
                 }
-
+                <div className="add_pics_inside2">
+                    <div className="add_circle">
+                        <i className="phone_icon"></i>
+                    </div>
+                    <div className="mobile_text">Add photos from your mobile device.</div>
+                    <div className="adphone_btn">Add</div>
+                </div>
             </div>
         </div>
     );
