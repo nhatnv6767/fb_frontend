@@ -23,6 +23,19 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
         /* Setting the cursor position to the end of the text. */
         setCursorPosition(start.length + emoji.length);
     };
+
+    const postBackgrounds = [
+        "../../../images/postbackgrounds/1.jpg",
+        "../../../images/postbackgrounds/2.jpg",
+        "../../../images/postbackgrounds/3.jpg",
+        "../../../images/postbackgrounds/4.jpg",
+        "../../../images/postbackgrounds/5.jpg",
+        "../../../images/postbackgrounds/6.jpg",
+        "../../../images/postbackgrounds/7.jpg",
+        "../../../images/postbackgrounds/8.jpg",
+        "../../../images/postbackgrounds/9.jpg",
+    ]
+
     return (
         <div className={type2 ? "images_input" : ""}>
             <div className={!type2 ? "flex_center" : ""}>
