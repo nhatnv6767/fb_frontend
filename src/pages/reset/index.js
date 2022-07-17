@@ -70,8 +70,10 @@ export default function Reset() {
                 {
                     visible === 1 && userInfos && (
                         <SendEmail
+                            email={email}
                             userInfos={userInfos}
                             error={error}
+                            loading={loading}
                             setLoading={setLoading}
                             setError={setError}
                             setUserInfos={setUserInfos}
