@@ -27,7 +27,7 @@ export default function ImagePreview(
         });
     };
     return (
-        <div className="overflow_a">
+        <div className="overflow_a scrollbar">
             <EmojiPickerBackgrounds
                 text={text}
                 setText={setText}
@@ -60,7 +60,11 @@ export default function ImagePreview(
                                 <div className="small_white_circle">
                                     <i className="exit_icon"></i>
                                 </div>
-                                <div>
+                                <div
+                                    className={images.length === 1
+                                        ? "preview1" : ""
+                                    }
+                                >
                                     {
                                         images.map((img, i) => (
                                             <img src={img} key={i} alt=""/>
