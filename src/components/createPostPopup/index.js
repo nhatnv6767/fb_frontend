@@ -1,6 +1,7 @@
 import "./style.css";
 import {useEffect, useRef, useState} from "react";
 import Picker from "emoji-picker-react";
+import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
@@ -67,24 +68,11 @@ export default function CreatePostPopup({user}) {
                         </div>
                     )
                 }
-                <div className="post_emojis_wrap">
-                    {
-                        picker && (
-                            <div className="comment_emoji_picker rlmove">
-                                <Picker
-                                    onEmojiClick={handleEmoji}
-                                />
-                            </div>
-                        )
-                    }
-                    <img src="../../../icons/colorful.png" alt=""/>
-                    <i
-                        className="emoji_icon_large"
-                        onClick={() => {
-                            setPicker(prev => !prev);
-                        }}
-                    ></i>
-                </div>
+                <EmojiPickerBackgrounds
+                    picker={picker}
+                    handleEmoji={handleEmoji}
+                    setPicker={setPicker}
+                />
 
             </div>
         </div>
