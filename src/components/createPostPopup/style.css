@@ -90,3 +90,12 @@
     background: var(--bg-primary);
     color: var(--color-primary);
 }
+
+.flex_center textarea {
+    min-height: 90px;
+    /* A keyword that is used to make the background of an element transparent. */
+    background: transparent;
+    /* Making the textarea scrollable. */
+    overflow-y: visible;
+    position: absolute;
+}
