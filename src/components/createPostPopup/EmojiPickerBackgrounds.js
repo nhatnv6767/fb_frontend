@@ -3,6 +3,7 @@ import {useEffect, useRef, useState} from "react";
 
 export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
     const [picker, setPicker] = useState(false);
+    const [showBgs, setShowBgs] = useState(false);
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
     useEffect(() => {
@@ -61,7 +62,15 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                     )
                 }
                 {
-                    !type2 && (<img src="../../../icons/colorful.png" alt=""/>)
+                    !type2 && (
+                        <img
+                            src="../../../icons/colorful.png"
+                            alt=""
+                            onClick={() => {
+                                setShowBgs(prev => !prev)
+                            }}
+                        />
+                    )
                 }
 
                 <div className="post_backgrounds">
