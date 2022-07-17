@@ -1,5 +1,6 @@
 import "./style.css";
 import {useState} from "react";
+import Picker from "emoji-picker-react";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
@@ -44,7 +45,9 @@ export default function CreatePostPopup({user}) {
                     )
                 }
                 <div className="post_emojis_wrap">
-                    <div className="comment_emoji_picker rlmove"></div>
+                    <div className="comment_emoji_picker rlmove">
+                        <Picker/>
+                    </div>
                 </div>
 
             </div>
