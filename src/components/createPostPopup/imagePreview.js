@@ -45,7 +45,20 @@ export default function ImagePreview(
                 />
 
                 {
-                    images && images.length ? ("") :
+                    images && images.length ? (
+                            <div className="add_pics_inside1 p0">
+                                <div className="preview_actions">
+                                    <button>
+                                        <i className="edit_icon"></i>
+                                        Edit
+                                    </button>
+                                    <button>
+                                        <i className="addPhoto_icon"></i>
+                                        Add Photos/Videos
+                                    </button>
+                                </div>
+                            </div>
+                        ) :
                         (
                             <div className="add_pics_inside1">
                                 <div className="small_white_circle">
