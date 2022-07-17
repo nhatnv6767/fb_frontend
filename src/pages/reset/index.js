@@ -101,7 +101,7 @@ export default function Reset() {
                 {
                     visible === 3 && (
                         <ChangePassword
-                            user={user}
+                            userInfos={userInfos}
                             password={password}
                             setPassword={setPassword}
                             conf_password={conf_password}

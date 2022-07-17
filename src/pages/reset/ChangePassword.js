@@ -4,12 +4,14 @@ import {Link} from "react-router-dom";
 import * as Yup from "yup";
 
 export default function ChangePassword({
-                                           user,
                                            password,
                                            setPassword,
                                            conf_password,
                                            setConf_password,
                                            error,
+                                           loading,
+                                           setLoading,
+                                           userInfos,
                                        }) {
     const validatePassword = Yup.object({
         password: Yup.string()
