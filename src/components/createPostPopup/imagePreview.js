@@ -9,7 +9,6 @@ export default function ImagePreview({text, setText, user}) {
                 user={user}
                 type2
             />
-            ImagePreview
         </div>
     );
 }

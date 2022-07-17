@@ -168,3 +168,8 @@ post_emojis_wrap img {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.overflow_a {
+    max-height: 500px;
+    overflow-y: auto;
+}
