@@ -47,7 +47,9 @@ export default function EmojiPickerBackgrounds({text, setText, user, type2}) {
                         </div>
                     )
                 }
-                <img src="../../../icons/colorful.png" alt=""/>
+                {
+                    !type2 && (<img src="../../../icons/colorful.png" alt=""/>)
+                }
                 <i
                     className="emoji_icon_large"
                     onClick={() => {
