@@ -62,7 +62,16 @@ export default function ImagePreview(
                                 </div>
                                 <div
                                     className={images.length === 1
-                                        ? "preview1" : ""
+                                        ? "preview1"
+                                        : images.length === 2
+                                            ? "preview2"
+                                            : images.length === 3
+                                                ? "preview3"
+                                                : images.length === 4
+                                                    ? "preview4"
+                                                    : images.length === 5
+                                                        ? "preview5"
+                                                        : "preview6"
                                     }
                                 >
                                     {
