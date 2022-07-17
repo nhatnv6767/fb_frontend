@@ -6,7 +6,7 @@ import ImagePreview from "./imagePreview";
 
 export default function CreatePostPopup({user}) {
     const [text, setText] = useState("");
-    const [showPrev, setShowPrev] = useState(true);
+    const [showPrev, setShowPrev] = useState(false);
 
     return (
         <div className="blur">
