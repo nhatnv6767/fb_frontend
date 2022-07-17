@@ -9,6 +9,7 @@ export default function CreatePostPopup({user}) {
     const [showPrev, setShowPrev] = useState(false);
     // array to storage images
     const [images, setImages] = useState([]);
+    const [background, setBackground] = useState("");
     console.log("index Create Post popup:", images);
     return (
         <div className="blur">
