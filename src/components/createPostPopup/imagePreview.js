@@ -11,6 +11,7 @@ export default function ImagePreview(
     }
 ) {
     const imageInputRef = useRef(null);
+
     const handleImages = () => {
 
     };
@@ -39,7 +40,12 @@ export default function ImagePreview(
                                 <div className="small_white_circle">
                                     <i className="exit_icon"></i>
                                 </div>
-                                <div className="add_col">
+                                <div
+                                    className="add_col"
+                                    onClick={() => {
+                                        imageInputRef.current.click()
+                                    }}
+                                >
                                     <div className="add_circle">
                                         <i className="addPhoto_icon"></i>
                                     </div>
