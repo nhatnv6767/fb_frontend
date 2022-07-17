@@ -26,6 +26,7 @@ export default function CreatePostPopup({user}) {
         /* Setting the cursor position to the end of the text. */
         setCursorPosition(start.length + emoji.length);
     };
+
     return (
         <div className="blur">
             <div className="postBox">
