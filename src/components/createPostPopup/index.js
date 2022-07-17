@@ -2,7 +2,7 @@ import "./style.css";
 import {useState} from "react";
 
 export default function CreatePostPopup({user}) {
-    const [text, setText] = useState("")
+    const [text, setText] = useState("");
     return (
         <div className="blur">
             <div className="postBox">
@@ -29,6 +29,7 @@ export default function CreatePostPopup({user}) {
                     <textarea
                         maxlength="100"
                         value={text}
+                        placeholder={`What's on your mind, ${user?.first_name}`}
                         className="post_input"
                     >
 
