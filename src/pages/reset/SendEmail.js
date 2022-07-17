@@ -7,10 +7,13 @@ export default function SendEmail({userInfos, error, setError, setVisible, setUs
         try {
             setLoading(true);
             await axios.post(`${process.env.REACT_APP_BACKEND_URL}/sendResetPasswordCode`, {email});
+            setError("")
+            setVisible(2)
         } catch (e) {
             setLoading(false);
             setError(e.response.data.message);
         }
+
     };
     return (
         <div className="reset_form dynamic_height">
@@ -37,6 +40,11 @@ export default function SendEmail({userInfos, error, setError, setVisible, setUs
                     <span>{userInfos?.first_name} {userInfos?.last_name}</span>
                 </div>
             </div>
+
+            {
+                error && <div className="error_text">{error}</div>
+            }
+
             <div className="reset_form_btns">
                 <Link to="/login" className="gray_btn">
                     Not You?
