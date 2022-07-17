@@ -109,7 +109,7 @@
     padding: 10px 15px;
 }
 
-post_emojis_wrap img {
+.post_emojis_wrap img {
     width: 39px;
     cursor: pointer;
 }
