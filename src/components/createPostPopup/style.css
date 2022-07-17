@@ -234,4 +234,12 @@ post_emojis_wrap img {
     position: absolute;
     right: 10px;
     top: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.add_circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
 }
