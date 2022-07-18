@@ -32,7 +32,7 @@ export default function CreatePostPopup({user, setVisible}) {
                 setText("");
                 setVisible(false);
             } else {
-                setError(response)
+                setError(response);
             }
         }
     };
@@ -40,6 +40,9 @@ export default function CreatePostPopup({user, setVisible}) {
     return (
         <div className="blur">
             <div className="postBox" ref={popup}>
+                {
+                    error
+                }
                 <div className="box_header">
                     <div className="small_circle" onClick={() => {
                         setVisible(false);
