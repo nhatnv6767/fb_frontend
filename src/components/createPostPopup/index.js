@@ -42,6 +42,28 @@ export default function CreatePostPopup({user, setVisible}) {
             } else {
                 setError(response);
             }
+        } else if (images && images.length) {
+
+        } else if (text) {
+            const response = await createPost(
+                null,
+                null,
+                text,
+                null,
+                user.id,
+                user.token
+            );
+            setLoading(false);
+
+            if (response === "ok") {
+                setBackground("");
+                setText("");
+                setVisible(false);
+            } else {
+                setError(response);
+            }
+        } else {
+            console.log("nothing");
         }
     };
 
