@@ -39,6 +39,7 @@ export default function ImagePreview(
                 {/* It's a React feature that allows you to get a reference to a DOM element. */}
                 <input
                     type="file"
+                    accept="image/jpeg, image/png, image/webp, image/gif"
                     multiple
                     hidden
                     ref={imageInputRef}
