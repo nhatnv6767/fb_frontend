@@ -461,3 +461,19 @@
     height: 360px;
     margin-top: 10px;
 }
+
+
+/* ------- Post Error ------- */
+
+.postError {
+    position: absolute;
+    /* Making the postError div take up the entire screen. */
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--bg-primary);
+    opacity: 0.8;
+}
+
+/* ------- Post Error ------- */
