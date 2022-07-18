@@ -18,6 +18,12 @@ export default function CreatePostPopup({user, setVisible}) {
         setVisible(false);
     });
 
+    const postSubmit = async () => {
+        if (background) {
+
+        }
+    };
+
     return (
         <div className="blur">
             <div className="postBox" ref={popup}>
@@ -71,7 +77,14 @@ export default function CreatePostPopup({user, setVisible}) {
                 <AddToYourPost
                     setShowPrev={setShowPrev}
                 />
-                <button className="post_submit">Post</button>
+                <button
+                    className="post_submit"
+                    onClick={() => {
+                        postSubmit();
+                    }}
+                >
+                    Post
+                </button>
             </div>
         </div>
     );
