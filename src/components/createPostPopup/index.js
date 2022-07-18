@@ -89,6 +89,7 @@ export default function CreatePostPopup({user, setVisible}) {
                     onClick={() => {
                         postSubmit();
                     }}
+                    disabled={loading}
                 >
                     {
                         loading ? <PulseLoader color="#fff" size="5"/> : "Post"
