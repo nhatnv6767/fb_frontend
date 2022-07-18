@@ -11,7 +11,8 @@ import {useSelector} from "react-redux";
 import {useState} from "react";
 
 function App() {
-    const {visible, setVisible} = useState(false);
+
+    const [visible, setVisible] = useState(false);
     const {user} = useSelector((state) => ({...state}));
     return (
         <div>

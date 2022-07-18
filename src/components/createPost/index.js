@@ -9,7 +9,7 @@ export default function CreatePost({user, setVisible}) {
                 <div
                     className="open_post hover2"
                     onClick={() => {
-                        setVisible(true)
+                        setVisible(true);
                     }}
                 >
                     What's on your mind, {user?.first_name}
