@@ -1,19 +1,19 @@
 import "./style.css";
-import {useState} from "react";
+import {useRef, useState} from "react";
 import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 import AddToYourPost from "./AddToYourPost";
 import ImagePreview from "./ImagePreview";
 
 export default function CreatePostPopup({user, setVisible}) {
+    const popup = useRef(null);
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
     // array to storage images
     const [images, setImages] = useState([]);
     const [background, setBackground] = useState("");
-    console.log("index Create Post popup:", images);
     return (
         <div className="blur">
-            <div className="postBox">
+            <div className="postBox" ref={popup}>
                 <div className="box_header">
                     <div className="small_circle" onClick={() => {
                         setVisible(false);
