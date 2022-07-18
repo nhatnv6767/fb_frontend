@@ -50,7 +50,7 @@ export default function CreatePostPopup({user, setVisible}) {
             const postImages = images.map((img) => {
                 return DataURIToBlob(img);
             });
-            console.log(postImages);
+            const path = `${user.username}/post Images`;
 
             // Just only text
         } else if (text) {
