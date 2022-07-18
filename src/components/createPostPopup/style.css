@@ -474,6 +474,11 @@
     bottom: 0;
     background: var(--bg-primary);
     opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: #b94a48;
 }
 
 /* ------- Post Error ------- */
