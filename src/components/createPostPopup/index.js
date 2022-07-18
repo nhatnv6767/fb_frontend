@@ -8,6 +8,7 @@ import {createPost} from "../../functions/post";
 import PulseLoader from "react-spinners/PulseLoader";
 import PostError from "./PostError";
 import DataURIToBlob from "../../helpers/dataURIToBlob";
+import {uploadImages} from "../../functions/uploadImages";
 
 export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
@@ -51,7 +52,13 @@ export default function CreatePostPopup({user, setVisible}) {
                 return DataURIToBlob(img);
             });
             const path = `${user.username}/post Images`;
-
+            /* Creating a formData object and appending the path and images to it. */
+            let formData = new FormData();
+            formData.append("path", path);
+            postImages.forEach((image) => {
+                formData.append("file", image);
+            });
+            const response = await uploadImages(formData, path);
             // Just only text
         } else if (text) {
             const response = await createPost(
