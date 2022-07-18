@@ -11,11 +11,14 @@ import {useSelector} from "react-redux";
 import {useState} from "react";
 
 function App() {
-    const {visible, setVisible} = useState();
+    const {visible, setVisible} = useState(false);
     const {user} = useSelector((state) => ({...state}));
     return (
         <div>
-            <CreatePostPopup user={user}/>
+            {
+                visible && <CreatePostPopup user={user}/>
+            }
+
             <Routes>
                 <Route element={<LoggedInRoutes/>}>
                     <Route path="/profile" element={<Profile/>} exact/>
