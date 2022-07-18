@@ -9,13 +9,14 @@ export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
+    const [loading, setLoading] = useState(false);
     // array to storage images
     const [images, setImages] = useState([]);
     const [background, setBackground] = useState("");
 
     useClickOutside(popup, () => {
-        setVisible(false)
-    })
+        setVisible(false);
+    });
 
     return (
         <div className="blur">
