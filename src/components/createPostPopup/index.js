@@ -25,7 +25,14 @@ export default function CreatePostPopup({user, setVisible}) {
     const postSubmit = async () => {
         if (background) {
             setLoading(true);
-            const response = await createPost(null, background, text, null, user.id, user.token);
+            const response = await createPost(
+                null,
+                background,
+                text,
+                null,
+                user.id,
+                user.token
+            );
             setLoading(false);
 
             if (response === "ok") {
