@@ -142,6 +142,7 @@ export default function CreatePostPopup({user, setVisible}) {
                             images={images}
                             setImages={setImages}
                             setShowPrev={setShowPrev}
+                            setError={setError}
                         />
                     )
                 }

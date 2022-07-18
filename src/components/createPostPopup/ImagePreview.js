@@ -9,6 +9,7 @@ export default function ImagePreview(
         images,
         setImages,
         setShowPrev,
+        setError,
     }
 ) {
     const imageInputRef = useRef(null);
@@ -19,7 +20,9 @@ export default function ImagePreview(
             if (img.type !== "image/jpeg"
                 || img.type !== "image/png"
                 || img.type !== "image/webp"
-                || img.type !== "image/gif") {
+                || img.type !== "image/gif"
+            ) {
+                setError(`${img.name} format is unsupported ! only Jpeg, Png, Webp, Gif are allowed.`);
                 return;
             }
             /* It's a JavaScript API that allows you to read the contents of a file. */
