@@ -4,7 +4,7 @@ import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 import AddToYourPost from "./AddToYourPost";
 import ImagePreview from "./ImagePreview";
 
-export default function CreatePostPopup({user}) {
+export default function CreatePostPopup({user, setVisible}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
     // array to storage images
@@ -15,7 +15,9 @@ export default function CreatePostPopup({user}) {
         <div className="blur">
             <div className="postBox">
                 <div className="box_header">
-                    <div className="small_circle">
+                    <div className="small_circle" onClick={() => {
+                        setVisible(false);
+                    }}>
                         <i className="exit_icon"></i>
                     </div>
                     <span>Create Post</span>
