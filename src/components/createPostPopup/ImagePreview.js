@@ -24,6 +24,9 @@ export default function ImagePreview(
             ) {
                 setError(`${img.name} format is unsupported ! only Jpeg, Png, Webp, Gif are allowed.`);
                 return;
+            } else if (img.size > 1024 * 1024 * 5) {
+                setError(`${img.name} size is too large, max 5mb allowed.`);
+                return;
             }
             /* It's a JavaScript API that allows you to read the contents of a file. */
             const reader = new FileReader();
