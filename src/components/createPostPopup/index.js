@@ -24,6 +24,7 @@ export default function CreatePostPopup({user, setVisible}) {
 
     const postSubmit = async () => {
         if (background) {
+            // include background
             setLoading(true);
             const response = await createPost(
                 null,
@@ -42,8 +43,14 @@ export default function CreatePostPopup({user, setVisible}) {
             } else {
                 setError(response);
             }
+            // include images
         } else if (images && images.length) {
+            setLoading(true);
+            const postImages = images.map((img) => {
 
+            })
+
+            // Just only text
         } else if (text) {
             const response = await createPost(
                 null,
