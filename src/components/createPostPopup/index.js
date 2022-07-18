@@ -3,6 +3,7 @@ import {useRef, useState} from "react";
 import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 import AddToYourPost from "./AddToYourPost";
 import ImagePreview from "./ImagePreview";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
@@ -11,6 +12,11 @@ export default function CreatePostPopup({user, setVisible}) {
     // array to storage images
     const [images, setImages] = useState([]);
     const [background, setBackground] = useState("");
+
+    useClickOutside(popup, () => {
+        setVisible(false)
+    })
+
     return (
         <div className="blur">
             <div className="postBox" ref={popup}>
