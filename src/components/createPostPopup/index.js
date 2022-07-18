@@ -6,6 +6,7 @@ import ImagePreview from "./ImagePreview";
 import useClickOutside from "../../helpers/clickOutside";
 import {createPost} from "../../functions/post";
 import PulseLoader from "react-spinners/PulseLoader";
+import PostError from "./PostError";
 
 export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
@@ -41,7 +42,11 @@ export default function CreatePostPopup({user, setVisible}) {
         <div className="blur">
             <div className="postBox" ref={popup}>
                 {
-                    error
+                    error &&
+                    <PostError
+                        error={error}
+                        setError={setError}
+                    />
                 }
                 <div className="box_header">
                     <div className="small_circle" onClick={() => {
