@@ -480,7 +480,8 @@
     justify-content: center;
     z-index: 1;
     color: #b94a48;
-    animation: anim 0.4s;
+    animation: anim 0.3s;
+    border-radius: 5px;
 }
 
 /* ------- Post Error ------- */
