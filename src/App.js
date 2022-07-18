@@ -8,8 +8,10 @@ import Activate from "./pages/home/activate";
 import Reset from "./pages/reset";
 import CreatePostPopup from "./components/createPostPopup";
 import {useSelector} from "react-redux";
+import {useState} from "react";
 
 function App() {
+    const {visible, setVisible} = useState();
     const {user} = useSelector((state) => ({...state}));
     return (
         <div>
