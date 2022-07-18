@@ -1,6 +1,6 @@
 export default function PostError({error, setError}) {
     return (
-        <div>
+        <div className="postError">
             PostError
         </div>
     );

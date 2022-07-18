@@ -13,7 +13,7 @@ export default function CreatePostPopup({user, setVisible}) {
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    const [error, setError] = useState("fadsfasdfasd");
     // array to storage images
     const [images, setImages] = useState([]);
     const [background, setBackground] = useState("");
