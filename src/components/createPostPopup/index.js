@@ -5,6 +5,7 @@ import AddToYourPost from "./AddToYourPost";
 import ImagePreview from "./ImagePreview";
 import useClickOutside from "../../helpers/clickOutside";
 import {createPost} from "../../functions/post";
+import PulseLoader from "react-spinners/PulseLoader";
 
 export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
@@ -89,7 +90,9 @@ export default function CreatePostPopup({user, setVisible}) {
                         postSubmit();
                     }}
                 >
-                    Post
+                    {
+                        loading ? <PulseLoader color="#fff" size="5"/> : "Post"
+                    }
                 </button>
             </div>
         </div>
