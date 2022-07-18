@@ -7,6 +7,7 @@ import useClickOutside from "../../helpers/clickOutside";
 import {createPost} from "../../functions/post";
 import PulseLoader from "react-spinners/PulseLoader";
 import PostError from "./PostError";
+import DataURIToBlob from "../../helpers/dataURIToBlob";
 
 export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
@@ -47,8 +48,9 @@ export default function CreatePostPopup({user, setVisible}) {
         } else if (images && images.length) {
             setLoading(true);
             const postImages = images.map((img) => {
-
-            })
+                return DataURIToBlob(img);
+            });
+            console.log(postImages);
 
             // Just only text
         } else if (text) {
