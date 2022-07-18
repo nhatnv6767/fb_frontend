@@ -16,6 +16,12 @@ export default function ImagePreview(
     const handleImages = (e) => {
         let files = Array.from(e.target.files);
         files.forEach((img) => {
+            if (img.type !== "image/jpeg"
+                || img.type !== "image/png"
+                || img.type !== "image/webp"
+                || img.type !== "image/gif") {
+                return;
+            }
             /* It's a JavaScript API that allows you to read the contents of a file. */
             const reader = new FileReader();
             reader.readAsDataURL(img);
