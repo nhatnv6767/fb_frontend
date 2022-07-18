@@ -26,6 +26,7 @@ export default function CreatePostPopup({user, setVisible}) {
             setLoading(false);
             setBackground("");
             setText("");
+            setVisible(false);
         }
     };
 
