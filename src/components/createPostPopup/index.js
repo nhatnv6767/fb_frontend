@@ -4,6 +4,7 @@ import EmojiPickerBackgrounds from "./EmojiPickerBackgrounds";
 import AddToYourPost from "./AddToYourPost";
 import ImagePreview from "./ImagePreview";
 import useClickOutside from "../../helpers/clickOutside";
+import {createPost} from "../../functions/post";
 
 export default function CreatePostPopup({user, setVisible}) {
     const popup = useRef(null);
@@ -20,7 +21,11 @@ export default function CreatePostPopup({user, setVisible}) {
 
     const postSubmit = async () => {
         if (background) {
-
+            setLoading(true);
+            const res = await createPost(background, text, null, user.id, user.token);
+            setLoading(false);
+            setBackground("");
+            setText("");
         }
     };
 
