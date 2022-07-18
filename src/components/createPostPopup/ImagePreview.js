@@ -23,9 +23,12 @@ export default function ImagePreview(
                 && img.type !== "image/gif"
             ) {
                 setError(`${img.name} format is unsupported ! only Jpeg, Png, Webp, Gif are allowed.`);
+                /* It's a way to take an array and spread it out into its individual values. */
+                files = files.filter((item) => item.name !== img.name);
                 return;
-            } else if (img.size > 1024 * 1024 * 1) {
+            } else if (img.size > 1024 * 1024 * 5) {
                 setError(`${img.name} size is too large, max 5mb allowed.`);
+                files = files.filter((item) => item.name !== img.name);
                 return;
             }
             /* It's a JavaScript API that allows you to read the contents of a file. */
