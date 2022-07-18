@@ -18,13 +18,13 @@ export default function ImagePreview(
         let files = Array.from(e.target.files);
         files.forEach((img) => {
             if (img.type !== "image/jpeg"
-                || img.type !== "image/png"
-                || img.type !== "image/webp"
-                || img.type !== "image/gif"
+                && img.type !== "image/png"
+                && img.type !== "image/webp"
+                && img.type !== "image/gif"
             ) {
                 setError(`${img.name} format is unsupported ! only Jpeg, Png, Webp, Gif are allowed.`);
                 return;
-            } else if (img.size > 1024 * 1024 * 5) {
+            } else if (img.size > 1024 * 1024 * 1) {
                 setError(`${img.name} size is too large, max 5mb allowed.`);
                 return;
             }
@@ -37,6 +37,7 @@ export default function ImagePreview(
                 values. */
                 setImages((images) => [...images, readerEvent.target.result]);
             };
+            setError("");
         });
     };
     return (
