@@ -69,7 +69,7 @@ export default function Post({post}) {
                                 >
 
                                     {
-                                        post.images.map((image, i) => (
+                                        post.images.slice(0, 5).map((image, i) => (
                                             <img
                                                 src={image.url}
                                                 key={i}
@@ -77,6 +77,10 @@ export default function Post({post}) {
                                                 className={`img-${i}`}
                                             />
                                         ))
+                                    }
+                                    {
+                                        post.images.length > 5 &&
+                                        <div className="more-pics-shadow">+{post.images.length - 5}</div>
                                     }
                                 </div>
                             }
