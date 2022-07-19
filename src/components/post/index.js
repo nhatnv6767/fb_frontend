@@ -28,7 +28,7 @@ export default function Post({post}) {
                             <Moment fromNow interval={30}>
                                 {post.createdAt}
                             </Moment>
-                            <Public/>
+                            <Public color="#828387"/>
                         </div>
                     </div>
                 </Link>
