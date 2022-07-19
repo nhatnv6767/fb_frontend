@@ -40,13 +40,19 @@ export default function Post({post}) {
                 </div>
             </div>
             {
-                post.background &&
-                <div
-                    className="post_bg"
-                    style={{backgroundImage: `url(${post.background})`}}
-                >
-                    <div className="post_bg_text">{post.text}</div>
-                </div>
+                post.background ?
+                    (
+                        <div
+                            className="post_bg"
+                            style={{backgroundImage: `url(${post.background})`}}
+                        >
+                            <div className="post_bg_text">{post.text}</div>
+                        </div>
+                    ) : (
+                        <>
+                            <div className="post_text">{post.text}</div>
+                        </>
+                    )
             }
         </div>
     );
