@@ -1,6 +1,7 @@
 import "./style.css";
 import {Link} from "react-router-dom";
 import Moment from "react-moment";
+import {Public} from "../../svg";
 
 export default function Post({post}) {
     return (
@@ -27,6 +28,7 @@ export default function Post({post}) {
                             <Moment fromNow interval={30}>
                                 {post.createdAt}
                             </Moment>
+                            <Public/>
                         </div>
                     </div>
                 </Link>
