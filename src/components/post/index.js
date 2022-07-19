@@ -22,6 +22,9 @@ export default function Post({post}) {
                                 }
                             </div>
                         </div>
+                        <div className="post_profile_privacy_date">
+
+                        </div>
                     </div>
                 </Link>
             </div>
