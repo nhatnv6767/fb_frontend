@@ -10,6 +10,11 @@ export default function Post({post}) {
                     <div className="header_col">
                         <div className="post_profile_name">
                             {post.user.first_name} {post.user.last_name}
+                            <div className="updated_p">
+                                {post.type === "profilePicture" &&
+                                    `updated ${post.user.gender === "male" ? "his" : "her"} profile picture`
+                                }
+                            </div>
                         </div>
                     </div>
                 </Link>
