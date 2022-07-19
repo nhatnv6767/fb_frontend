@@ -9,6 +9,7 @@ import Reset from "./pages/reset";
 import CreatePostPopup from "./components/createPostPopup";
 import {useSelector} from "react-redux";
 import {useReducer, useState} from "react";
+import axios from "axios";
 
 function reducer(state, action) {
     switch (action.type) {
@@ -32,11 +33,29 @@ function App() {
 
     const [visible, setVisible] = useState(false);
     const {user} = useSelector((state) => ({...state}));
-    const [{loading, error, poadts}, dispatch] = useReducer(reducer, {
+    /* Using the `useReducer` hook to create a reducer. */
+    const [{loading, error, posts}, dispatch] = useReducer(reducer, {
         loading: false,
         posts: [],
         error: ""
     });
+    const getAllPosts = async () => {
+        try {
+            dispatch({
+                type: "POSTS_REQUEST",
+            });
+            const {data} = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getAllPosts`, {
+                headers: {
+                    Authorization: `Bearer ${user.token}`,
+                }
+            });
+        } catch (e) {
+            dispatch({
+                type: "POSTS_ERROR",
+                payload: e.response.data.message,
+            });
+        }
+    };
     return (
         <div>
             {
