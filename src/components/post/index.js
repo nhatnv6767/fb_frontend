@@ -39,6 +39,15 @@ export default function Post({post}) {
                     <Dots color="#828387"/>
                 </div>
             </div>
+            {
+                post.background &&
+                <div
+                    className="post_bg"
+                    style={{backgroundImage: `url(${post.background})`}}
+                >
+
+                </div>
+            }
         </div>
     );
 }
