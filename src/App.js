@@ -8,7 +8,7 @@ import Activate from "./pages/home/activate";
 import Reset from "./pages/reset";
 import CreatePostPopup from "./components/createPostPopup";
 import {useSelector} from "react-redux";
-import {useReducer, useState} from "react";
+import {useEffect, useReducer, useState} from "react";
 import axios from "axios";
 
 function reducer(state, action) {
@@ -39,6 +39,9 @@ function App() {
         posts: [],
         error: ""
     });
+    useEffect(() => {
+        getAllPosts();
+    }, []);
     const getAllPosts = async () => {
         try {
             dispatch({
