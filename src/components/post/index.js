@@ -87,6 +87,15 @@ export default function Post({post}) {
                         </>
                     )
             }
+            <div className="post_infos">
+                <div className="reacts_count">
+                    <div className="reacts_count_imgs"></div>
+                    <div className="reacts_count_num"></div>
+                </div>
+                <div className="to_right">
+                    <div className="comments_count"></div>
+                </div>
+            </div>
         </div>
     );
 }
