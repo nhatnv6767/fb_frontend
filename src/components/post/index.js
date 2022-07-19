@@ -1,5 +1,6 @@
 import "./style.css";
 import {Link} from "react-router-dom";
+import Moment from "react-moment";
 
 export default function Post({post}) {
     return (
@@ -23,7 +24,9 @@ export default function Post({post}) {
                             </div>
                         </div>
                         <div className="post_profile_privacy_date">
-
+                            <Moment>
+                                {post.createdAt}
+                            </Moment>
                         </div>
                     </div>
                 </Link>
