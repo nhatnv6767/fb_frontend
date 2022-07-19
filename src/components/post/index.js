@@ -45,7 +45,7 @@ export default function Post({post}) {
                     className="post_bg"
                     style={{backgroundImage: `url(${post.background})`}}
                 >
-
+                    <div className="post_bg_text">{post.text}</div>
                 </div>
             }
         </div>
