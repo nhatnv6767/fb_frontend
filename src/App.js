@@ -8,7 +8,7 @@ import Activate from "./pages/home/activate";
 import Reset from "./pages/reset";
 import CreatePostPopup from "./components/createPostPopup";
 import {useSelector} from "react-redux";
-import {useState} from "react";
+import {useReducer, useState} from "react";
 
 function reducer(state, action) {
     switch (action.type) {
@@ -20,9 +20,9 @@ function reducer(state, action) {
                 loading: false,
                 posts: action.payload,
                 error: ""
-            }
+            };
         case "POSTS_ERROR":
-            return {...state, loading: false, error: action.payload}
+            return {...state, loading: false, error: action.payload};
         default:
             return state;
     }
@@ -32,6 +32,11 @@ function App() {
 
     const [visible, setVisible] = useState(false);
     const {user} = useSelector((state) => ({...state}));
+    const [{loading, error, poadts}, dispatch] = useReducer(reducer, {
+        loading: false,
+        posts: [],
+        error: ""
+    });
     return (
         <div>
             {
