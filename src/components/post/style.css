@@ -60,4 +60,14 @@
     color: var(--color-secondary);
 }
 
+.post_bg {
+    height: 500px;
+    padding: 15px;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 22px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
