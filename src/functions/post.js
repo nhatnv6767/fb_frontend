@@ -6,7 +6,7 @@ export const createPost = async (
     text,
     images,
     user,
-    token,
+    token
 ) => {
     try {
         const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/createPost`, {
@@ -20,7 +20,7 @@ export const createPost = async (
                 Authorization: `Bearer ${token}`,
             }
         });
-        return data;
+        return "ok";
     } catch (e) {
         return e.response.data.message;
     }
