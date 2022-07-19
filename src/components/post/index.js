@@ -51,6 +51,16 @@ export default function Post({post}) {
                     ) : (
                         <>
                             <div className="post_text">{post.text}</div>
+                            {
+                                post.images && post.images.length &&
+                                <div>
+                                    {
+                                        post.images.map((image, i) => (
+                                            <img src={image.url} key={i} alt=""/>
+                                        ))
+                                    }
+                                </div>
+                            }
                         </>
                     )
             }
