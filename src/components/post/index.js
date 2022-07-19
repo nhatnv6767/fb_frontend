@@ -93,7 +93,8 @@ export default function Post({post}) {
                     <div className="reacts_count_num"></div>
                 </div>
                 <div className="to_right">
-                    <div className="comments_count"></div>
+                    <div className="comments_count">13 comments</div>
+                    <div className="share_count">1 share</div>
                 </div>
             </div>
         </div>
