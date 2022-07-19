@@ -65,7 +65,6 @@ function App() {
         }
     };
 
-    console.log(posts);
     return (
         <div>
             {
@@ -79,7 +78,7 @@ function App() {
             <Routes>
                 <Route element={<LoggedInRoutes/>}>
                     <Route path="/profile" element={<Profile/>} exact/>
-                    <Route path="/" element={<Home setVisible={setVisible}/>} exact/>
+                    <Route path="/" element={<Home setVisible={setVisible} posts={posts}/>} exact/>
                     <Route path="/activate/:token" element={<Activate/>} exact/>
                 </Route>
                 <Route element={<NotLoggedInRoutes/>}>

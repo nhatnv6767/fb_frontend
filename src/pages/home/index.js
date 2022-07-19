@@ -8,7 +8,7 @@ import "./style.css";
 import CreatePost from "../../components/createPost";
 import SendVerification from "../../components/home/sendVerification";
 
-export default function Home({setVisible}) {
+export default function Home({setVisible, posts}) {
     const {user} = useSelector((state) => ({...state}));
     return (
         <div className="home">
@@ -21,6 +21,13 @@ export default function Home({setVisible}) {
                 }
 
                 <CreatePost user={user} setVisible={setVisible}/>
+                {
+                    posts.map((post) => (
+                        <div className="post" key={post._id}>
+                            {post._id}
+                        </div>
+                    ))
+                }
             </div>
             <RightHome user={user}/>
         </div>
