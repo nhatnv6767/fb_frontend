@@ -7,6 +7,7 @@ import Stories from "../../components/home/stories";
 import "./style.css";
 import CreatePost from "../../components/createPost";
 import SendVerification from "../../components/home/sendVerification";
+import Post from "../../components/post";
 
 export default function Home({setVisible, posts}) {
     const {user} = useSelector((state) => ({...state}));
@@ -24,9 +25,7 @@ export default function Home({setVisible, posts}) {
                 <div className="posts">
                     {
                         posts.map((post) => (
-                            <div className="post" key={post._id}>
-                                {post._id}
-                            </div>
+                            <Post key={post._id} post={post}/>
                         ))
                     }
                 </div>

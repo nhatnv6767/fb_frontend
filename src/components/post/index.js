@@ -1,9 +1,9 @@
 import "./style.css";
 
-export default function Post() {
+export default function Post({post}) {
     return (
         <div>
-            Post
+            {post._id}
         </div>
     );
 }
