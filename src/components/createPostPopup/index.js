@@ -63,14 +63,14 @@ export default function CreatePostPopup({user, setVisible}) {
             setLoading(false);
             if (res === "ok") {
                 setText("");
-                setError("");
-                setImages([]);
+                setImages("");
                 setVisible(false);
             } else {
                 setError(res);
             }
             // Just only text
         } else if (text) {
+            setLoading(true);
             const response = await createPost(
                 null,
                 null,
@@ -162,7 +162,7 @@ export default function CreatePostPopup({user, setVisible}) {
                     disabled={loading}
                 >
                     {
-                        loading ? <PulseLoader color="#fff" size="5"/> : "Post"
+                        loading ? <PulseLoader color="#fff" size={5}/> : "Post"
                     }
                 </button>
             </div>
