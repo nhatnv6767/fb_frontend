@@ -10,6 +10,13 @@ import CreatePostPopup from "./components/createPostPopup";
 import {useSelector} from "react-redux";
 import {useState} from "react";
 
+function reducer(state, action) {
+    switch (action.type) {
+        case "POSTS_REQUEST":
+            return {...state, loading: true, error: ""};
+    }
+}
+
 function App() {
 
     const [visible, setVisible] = useState(false);
