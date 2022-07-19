@@ -7,6 +7,11 @@ export default function Post({post}) {
             <div className="post_header">
                 <Link to={`/profile/${post.user.username}`} className="post_header_left">
                     <img src={post.user.picture} alt=""/>
+                    <div className="header_col">
+                        <div className="post_profile_name">
+                            {post.user.first_name} {post.user.last_name}
+                        </div>
+                    </div>
                 </Link>
             </div>
         </div>
