@@ -49,6 +49,11 @@ function App() {
                     Authorization: `Bearer ${user.token}`,
                 }
             });
+
+            dispatch({
+                type: "POSTS_SUCCESS",
+                payload: data,
+            });
         } catch (e) {
             dispatch({
                 type: "POSTS_ERROR",
