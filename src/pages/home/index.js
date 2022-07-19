@@ -24,7 +24,7 @@ export default function Home({setVisible, posts}) {
             <div className="home_middle" ref={middle}>
                 <Stories/>
                 {
-                    !user.verified && <SendVerification user={user}/>
+                    user.verified === false && <SendVerification user={user}/>
                 }
 
                 <CreatePost user={user} setVisible={setVisible}/>

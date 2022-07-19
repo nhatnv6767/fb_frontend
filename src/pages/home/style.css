@@ -180,7 +180,7 @@
         height: 30vw;
     }
 
-    .createPost, .send_verification_icon {
+    .createPost_icon {
         font-size: 12px !important;
     }
 
@@ -188,7 +188,7 @@
         font-size: 16px !important;
     }
 
-    .createPost, .send_verification_icon svg {
+    .createPost_icon svg {
         width: 20px;
     }
 }
@@ -214,7 +214,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    border-radius: 1px solid var(--bg-third);
+    border-bottom: 1px solid var(--bg-third);
     padding: 15px;
 }
 
