@@ -21,13 +21,15 @@ export default function Home({setVisible, posts}) {
                 }
 
                 <CreatePost user={user} setVisible={setVisible}/>
-                {
-                    posts.map((post) => (
-                        <div className="post" key={post._id}>
-                            {post._id}
-                        </div>
-                    ))
-                }
+                <div className="posts">
+                    {
+                        posts.map((post) => (
+                            <div className="post" key={post._id}>
+                                {post._id}
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
             <RightHome user={user}/>
         </div>
