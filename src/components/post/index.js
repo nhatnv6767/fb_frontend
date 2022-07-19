@@ -1,13 +1,16 @@
 import "./style.css";
 import {Link} from "react-router-dom";
 import Moment from "react-moment";
-import {Public} from "../../svg";
+import {Dots, Public} from "../../svg";
 
 export default function Post({post}) {
     return (
         <div className="post">
             <div className="post_header">
-                <Link to={`/profile/${post.user.username}`} className="post_header_left">
+                <Link
+                    to={`/profile/${post.user.username}`}
+                    className="post_header_left"
+                >
                     <img src={post.user.picture} alt=""/>
                     <div className="header_col">
                         <div className="post_profile_name">
@@ -32,6 +35,9 @@ export default function Post({post}) {
                         </div>
                     </div>
                 </Link>
+                <div className="post_header_right hover1">
+                    <Dots color="#828387"/>
+                </div>
             </div>
         </div>
     );
