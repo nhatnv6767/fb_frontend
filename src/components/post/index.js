@@ -24,7 +24,7 @@ export default function Post({post}) {
                             </div>
                         </div>
                         <div className="post_profile_privacy_date">
-                            <Moment>
+                            <Moment fromNow>
                                 {post.createdAt}
                             </Moment>
                         </div>
