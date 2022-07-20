@@ -6,7 +6,7 @@ import ReactsPopup from "./ReactsPopup";
 import {useState} from "react";
 import CreateComment from "./CreateComment";
 
-export default function Post({post}) {
+export default function Post({post, user}) {
     const [visible, setVisible] = useState(false);
     return (
         <div className="post">
@@ -133,7 +133,7 @@ export default function Post({post}) {
             </div>
             <div className="comments_wrap">
                 <div className="comments_order"></div>
-                <CreateComment/>
+                <CreateComment user={user}/>
             </div>
         </div>
     );
