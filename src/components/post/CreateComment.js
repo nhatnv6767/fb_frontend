@@ -3,7 +3,7 @@ import Picker from "emoji-picker-react";
 
 export default function CreateComment({user}) {
     const [picker, setPicker] = useState(true);
-    const [text, setText] = useState(false);
+    const [text, setText] = useState("");
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function CreateComment({user}) {
                 <img src={user?.picture} alt=""/>
                 <div className="comment_input_wrap">
                     {
-                        picker && <Picker onEmojiClick={() => handleEmoji}/>
+                        picker && <Picker onEmojiClick={handleEmoji}/>
                     }
                     <input type="file" hidden/>
                     <input
