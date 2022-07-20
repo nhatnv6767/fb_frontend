@@ -13,6 +13,14 @@ export default function PostMenu({postUserId, userId}) {
                     />
                 )
             }
+
+
+            <MenuItem
+                icon="save_icon"
+                title="Save Post"
+                subtitle="Add this to your saved items."
+            />
+
         </ul>
     );
 }
