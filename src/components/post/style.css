@@ -448,6 +448,18 @@
     opacity: 1 !important;
 }
 
+.comment_img_preview {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.comment_img_preview img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 /* ---------- Create Comment ---------- */
 
 @media (max-width: 415px) {
