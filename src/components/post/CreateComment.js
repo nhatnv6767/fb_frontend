@@ -41,7 +41,7 @@ export default function CreateComment({user}) {
                         onChange={(e) => setText(e.target.value)}
                     />
                     <div
-                        className="comment_circle_icon hover3"
+                        className="comment_circle_icon hover2"
                         onClick={() => {
                             setPicker((prev) => !prev);
                         }}>
