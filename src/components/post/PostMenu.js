@@ -41,6 +41,24 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
                 )
             }
 
+            {
+                imagesLength && (
+                    <MenuItem
+                        icon="fullscreen_icon"
+                        title="Enter Fullscreen"
+                    />
+                )
+            }
+
+            {
+                test && (
+                    <MenuItem
+                        img="../../../icons/lock.png"
+                        title="Edit audience"
+                    />
+                )
+            }
+
         </ul>
     );
 }
