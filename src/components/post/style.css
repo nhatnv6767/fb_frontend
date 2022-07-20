@@ -445,6 +445,7 @@
 
 .comment_error {
     padding: 0 !important;
+    opacity: 1 !important;
 }
 
 /* ---------- Create Comment ---------- */
