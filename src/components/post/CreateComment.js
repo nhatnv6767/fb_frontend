@@ -37,11 +37,14 @@ export default function CreateComment({user}) {
                         type="text"
                         ref={textRef}
                         value={text}
+                        placeholder="Write a comment ..."
                         onChange={(e) => setText(e.target.value)}
                     />
-                    <div className="comment_circle_icon" onClick={() => {
-                        setPicker((prev) => !prev);
-                    }}>
+                    <div
+                        className="comment_circle_icon hover3"
+                        onClick={() => {
+                            setPicker((prev) => !prev);
+                        }}>
                         <i className="emoji_icon"></i>
                     </div>
                 </div>

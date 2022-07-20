@@ -434,6 +434,14 @@
     background: transparent;
 }
 
+.comment_circle_icon {
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
 /* ---------- Create Comment ---------- */
 
 @media (max-width: 415px) {
