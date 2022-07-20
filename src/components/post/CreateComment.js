@@ -74,7 +74,12 @@ export default function CreateComment({user}) {
                     />
                     <div className="postError comment_error">
                         <div className="postError_error">{error}</div>
-                        <button className="blue_btn">Try again</button>
+                        <button
+                            className="blue_btn"
+                            onClick={() => setError("")}
+                        >
+                            Try again
+                        </button>
                     </div>
                     <input
                         type="text"
