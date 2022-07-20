@@ -5,6 +5,7 @@ import {Dots, Public} from "../../svg";
 import ReactsPopup from "./ReactsPopup";
 import {useState} from "react";
 import CreateComment from "./CreateComment";
+import PostMenu from "./PostMenu";
 
 
 export default function Post({post, user}) {
@@ -136,6 +137,7 @@ export default function Post({post, user}) {
                 <div className="comments_order"></div>
                 <CreateComment user={user}/>
             </div>
+            <PostMenu/>
         </div>
     );
 }

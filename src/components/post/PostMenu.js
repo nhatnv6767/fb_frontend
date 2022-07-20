@@ -1,7 +1,6 @@
 export default function PostMenu() {
     return (
-        <div>
-            PostMenu
-        </div>
+        <ul className="post_menu">
+        </ul>
     );
 }
