@@ -131,6 +131,7 @@ export default function Post({post}) {
                 </div>
             </div>
             <div className="comments_wrap">
+                <div className="comments_order"></div>
             </div>
         </div>
     );
