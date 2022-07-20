@@ -28,7 +28,8 @@ export default function CreateComment({user}) {
             <div className="create_comment">
                 <img src={user?.picture} alt=""/>
                 <div className="comment_input_wrap">
-
+                    <input type="file" hidden/>
+                    <input type="text" ref={textRef}/>
                 </div>
             </div>
         </div>
