@@ -6,6 +6,8 @@ export default function CreateComment({user}) {
     const [text, setText] = useState("");
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
+    const imgInput = useRef(null);
+
     useEffect(() => {
         /* Setting the cursor position to the end of the text. */
         textRef.current.selectionEnd = cursorPosition;
@@ -36,7 +38,7 @@ export default function CreateComment({user}) {
                             </div>
                         )
                     }
-                    <input type="file" hidden/>
+                    <input type="file" hidden ref={imgInput}/>
                     <input
                         type="text"
                         ref={textRef}
@@ -53,6 +55,7 @@ export default function CreateComment({user}) {
                     </div>
                     <div
                         className="comment_circle_icon hover2"
+                        onClick={() => imgInput.current.click()}
                     >
                         <i className="camera_icon"></i>
                     </div>
