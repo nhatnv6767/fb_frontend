@@ -130,6 +130,8 @@ export default function Post({post}) {
                     <span>Share</span>
                 </div>
             </div>
+            <div className="comments_wrap">
+            </div>
         </div>
     );
 }
