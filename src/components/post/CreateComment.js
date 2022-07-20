@@ -47,6 +47,21 @@ export default function CreateComment({user}) {
                         }}>
                         <i className="emoji_icon"></i>
                     </div>
+                    <div
+                        className="comment_circle_icon hover2"
+                    >
+                        <i className="camera_icon"></i>
+                    </div>
+                    <div
+                        className="comment_circle_icon hover2"
+                    >
+                        <i className="gif_icon"></i>
+                    </div>
+                    <div
+                        className="comment_circle_icon hover2"
+                    >
+                        <i className="sticker_icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
