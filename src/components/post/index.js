@@ -4,6 +4,7 @@ import Moment from "react-moment";
 import {Dots, Public} from "../../svg";
 import ReactsPopup from "./ReactsPopup";
 import {useState} from "react";
+import CreateComment from "./CreateComment";
 
 export default function Post({post}) {
     const [visible, setVisible] = useState(false);
@@ -132,6 +133,7 @@ export default function Post({post}) {
             </div>
             <div className="comments_wrap">
                 <div className="comments_order"></div>
+                <CreateComment/>
             </div>
         </div>
     );
