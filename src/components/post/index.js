@@ -147,7 +147,7 @@ export default function Post({post, user}) {
                         userId={user.id}
                         postUserId={post.user._id}
                         imagesLength={post?.images?.length}
-                        setShowMenu={setShowMenu()}
+                        setShowMenu={setShowMenu}
                     />
                 )
             }
