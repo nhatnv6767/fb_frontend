@@ -424,6 +424,16 @@
     padding-right: 10px;
 }
 
+.comment_input_wrap input {
+    outline: none;
+    border: none;
+    flex: 1;
+    height: 35px;
+    padding: 0 10px;
+    color: var(--color-primary);
+    background: transparent;
+}
+
 /* ---------- Create Comment ---------- */
 
 @media (max-width: 415px) {
