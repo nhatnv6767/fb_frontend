@@ -40,7 +40,7 @@ export default function CreateComment({user}) {
                         onChange={(e) => setText(e.target.value)}
                     />
                     <div className="comment_circle_icon" onClick={() => {
-                        setPicker(true);
+                        setPicker((prev) => !prev);
                     }}>
                         <i className="emoji_icon"></i>
                     </div>
