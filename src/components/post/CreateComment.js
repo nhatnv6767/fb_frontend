@@ -28,6 +28,14 @@ export default function CreateComment({user}) {
         /* Setting the cursor position to the end of the text. */
         setCursorPosition(start.length + emoji.length);
     };
+
+    const handleImage = (e) => {
+        let file = e.target.files[0];
+
+        /* Reading the file as a data url. */
+        const reader = new FileReader()
+        reader.readAsDataURL(file)
+    }
     return (
         <div className="create_comment_wrap">
             <div className="create_comment">
@@ -40,7 +48,13 @@ export default function CreateComment({user}) {
                             </div>
                         )
                     }
-                    <input type="file" hidden ref={imgInput}/>
+                    <input
+                        type="file"
+                        hidden
+                        ref={imgInput}
+                        accept="image/jpeg, image/png, image/gif, image/webp"
+                        onChange={handleImage}
+                    />
                     <input
                         type="text"
                         ref={textRef}
