@@ -126,7 +126,9 @@ export default function PostMenu({postUserId, userId, imagesLength, setShowMenu}
                 )
             }
 
-            <div className="line"></div>
+            {
+                !test && <div className="line"></div>
+            }
             {
                 !test && (
                     <MenuItem
