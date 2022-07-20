@@ -30,7 +30,11 @@ export default function CreateComment({user}) {
                 <img src={user?.picture} alt=""/>
                 <div className="comment_input_wrap">
                     {
-                        picker && <Picker onEmojiClick={handleEmoji}/>
+                        picker && (
+                            <div className="comment_emoji_picker">
+                                <Picker onEmojiClick={handleEmoji}/>
+                            </div>
+                        )
                     }
                     <input type="file" hidden/>
                     <input
