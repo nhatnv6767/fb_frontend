@@ -41,6 +41,9 @@ export default function CreateComment({user}) {
         ) {
             setError(`${file.name} format is not supported.`);
             return;
+        } else if (file.size > 1024 * 1024 * 5) {
+            setError(`${file.name} is too large max, 5mb allowed.`);
+            return;
         }
 
         /* Reading the file as a data url. */
@@ -69,6 +72,10 @@ export default function CreateComment({user}) {
                         accept="image/jpeg, image/png, image/gif, image/webp"
                         onChange={handleImage}
                     />
+                    <div className="postError comment_error">
+                        <div className="postError_error">{error}</div>
+                        <button className="blue_btn">Try again</button>
+                    </div>
                     <input
                         type="text"
                         ref={textRef}
