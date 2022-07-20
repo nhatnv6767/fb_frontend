@@ -339,6 +339,10 @@
     cursor: pointer;
 }
 
+.post_actions {
+
+}
+
 
 @media (max-width: 415px) {
     .post .grid_2 img,
