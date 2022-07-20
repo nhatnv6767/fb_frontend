@@ -1,6 +1,6 @@
 import MenuItem from "./MenuItem";
 
-export default function PostMenu() {
+export default function PostMenu({postUserId, userId}) {
     return (
         <ul className="post_menu">
             <MenuItem
