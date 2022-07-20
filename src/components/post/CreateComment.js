@@ -119,6 +119,13 @@ export default function CreateComment({user}) {
                     </div>
                 </div>
             </div>
+            {
+                commentImage && (
+                    <div className="comment_img_preview">
+                        <img src={commentImage} alt=""/>
+                    </div>
+                )
+            }
         </div>
     );
 }
