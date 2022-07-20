@@ -2,6 +2,7 @@ import "./style.css";
 import {Link} from "react-router-dom";
 import Moment from "react-moment";
 import {Dots, Public} from "../../svg";
+import ReactsPopup from "./ReactsPopup";
 
 export default function Post({post}) {
     return (
@@ -99,6 +100,7 @@ export default function Post({post}) {
             </div>
 
             <div className="post_actions">
+                <ReactsPopup/>
                 <div className="post_action hover1">
                     <i className="like_icon"></i>
                     <span>Like</span>
