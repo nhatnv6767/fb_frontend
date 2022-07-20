@@ -86,6 +86,34 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
                 )
             }
 
+            {
+                test && (
+                    <MenuItem
+                        icon="refresh_icon"
+                        title="Refresh share attachment"
+                    />
+                )
+            }
+
+            {
+                test && (
+                    <MenuItem
+                        icon="archive_icon"
+                        title="Move to archive"
+                    />
+                )
+            }
+
+            {
+                test && (
+                    <MenuItem
+                        icon="trash_icon"
+                        title="Move to trash"
+                        subtitle="Items in your trash are deleted after 30 days"
+                    />
+                )
+            }
+
         </ul>
     );
 }
