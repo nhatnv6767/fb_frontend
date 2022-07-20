@@ -77,6 +77,15 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
                 )
             }
 
+            {
+                test && (
+                    <MenuItem
+                        icon="date_icon"
+                        title="Edit Date"
+                    />
+                )
+            }
+
         </ul>
     );
 }
