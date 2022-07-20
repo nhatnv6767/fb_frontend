@@ -33,10 +33,10 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
             }
 
             {
-                test && (
+                imagesLength && (
                     <MenuItem
-                        icon="edit_icon"
-                        title="Edit Post"
+                        icon="download_icon"
+                        title="Download"
                     />
                 )
             }
