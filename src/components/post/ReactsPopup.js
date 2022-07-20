@@ -26,13 +26,25 @@ const reactsArray = [
         image: "../../../reacts/angry.gif",
     },
 ];
-export default function ReactsPopup({visible}) {
+export default function ReactsPopup({visible, setVisible}) {
 
     return (
         <>
             {
                 visible && (
-                    <div className="reacts_popup">
+                    <div
+                        className="reacts_popup"
+                        onMouseOver={() => {
+                            setTimeout(() => {
+                                setVisible(true);
+                            }, 500);
+                        }}
+                        onMouseLeave={() => {
+                            setTimeout(() => {
+                                setVisible(false);
+                            }, 500);
+                        }}
+                    >
                         {
                             reactsArray.map((react, i) => (
                                 <div className="react" key={i}>
