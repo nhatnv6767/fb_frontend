@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import Picker from "emoji-picker-react";
 
 export default function CreateComment({user}) {
@@ -8,10 +8,12 @@ export default function CreateComment({user}) {
     const textRef = useRef(null);
     const imgInput = useRef(null);
 
+
     useEffect(() => {
         /* Setting the cursor position to the end of the text. */
         textRef.current.selectionEnd = cursorPosition;
     }, [cursorPosition]);
+
 
     const handleEmoji = (e, {emoji}) => {
         const ref = textRef.current;

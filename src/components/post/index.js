@@ -6,6 +6,7 @@ import ReactsPopup from "./ReactsPopup";
 import {useState} from "react";
 import CreateComment from "./CreateComment";
 
+
 export default function Post({post, user}) {
     const [visible, setVisible] = useState(false);
     return (
