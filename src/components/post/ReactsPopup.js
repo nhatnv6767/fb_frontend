@@ -26,8 +26,14 @@ export default function ReactsPopup() {
         },
     ];
     return (
-        <div>
-            ReactsPopup
+        <div className="reacts_popup">
+            {
+                reactsArray.map((react, i) => (
+                    <div className="react" key={i}>
+                        <img src={react.image} alt=""/>
+                    </div>
+                ))
+            }
         </div>
     );
 }
