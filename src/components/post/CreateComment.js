@@ -2,7 +2,7 @@ import {useState, useEffect, useRef} from "react";
 import Picker from "emoji-picker-react";
 
 export default function CreateComment({user}) {
-    const [picker, setPicker] = useState(true);
+    const [picker, setPicker] = useState(false);
     const [text, setText] = useState("");
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
@@ -39,6 +39,11 @@ export default function CreateComment({user}) {
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                     />
+                    <div className="comment_circle_icon" onClick={() => {
+                        setPicker(true);
+                    }}>
+                        <i className="emoji_icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
