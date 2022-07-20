@@ -33,6 +33,15 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
             }
 
             {
+                !test && (
+                    <MenuItem
+                        icon="turnOnNotification_icon"
+                        title="Turn on notification for this post"
+                    />
+                )
+            }
+
+            {
                 imagesLength && (
                     <MenuItem
                         icon="download_icon"
@@ -110,6 +119,17 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
                         icon="trash_icon"
                         title="Move to trash"
                         subtitle="Items in your trash are deleted after 30 days"
+                    />
+                )
+            }
+
+            <div className="line"></div>
+            {
+                !test && (
+                    <MenuItem
+                        img="../../../icons/report.png"
+                        title="Report post"
+                        subtitle="I'm concerned about this post"
                     />
                 )
             }
