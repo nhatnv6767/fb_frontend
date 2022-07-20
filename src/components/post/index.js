@@ -3,8 +3,10 @@ import {Link} from "react-router-dom";
 import Moment from "react-moment";
 import {Dots, Public} from "../../svg";
 import ReactsPopup from "./ReactsPopup";
+import {useState} from "react";
 
 export default function Post({post}) {
+    const [visible, setVisible] = useState(false);
     return (
         <div className="post">
             <div className="post_header">
@@ -100,7 +102,7 @@ export default function Post({post}) {
             </div>
 
             <div className="post_actions">
-                <ReactsPopup/>
+                <ReactsPopup visible={visible}/>
                 <div className="post_action hover1">
                     <i className="like_icon"></i>
                     <span>Like</span>

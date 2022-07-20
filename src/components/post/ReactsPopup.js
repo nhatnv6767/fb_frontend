@@ -26,8 +26,8 @@ const reactsArray = [
         image: "../../../reacts/angry.gif",
     },
 ];
-export default function ReactsPopup() {
-    const [visible, setVisible] = useState(false);
+export default function ReactsPopup({visible}) {
+
     return (
         <>
             {
