@@ -1,7 +1,11 @@
-export default function MenuItem({icon, title, subtitle}) {
+export default function MenuItem({icon, title, subtitle, img}) {
     return (
         <li className="hover1">
-            <i className={icon}></i>
+            {
+                img ?
+                    <img src={img} alt=""/>
+                    : <i className={icon}></i>
+            }
             <div className="post_menu_text">
                 <span>{title}</span>
                 {
