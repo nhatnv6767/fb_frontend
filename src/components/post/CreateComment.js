@@ -123,6 +123,9 @@ export default function CreateComment({user}) {
                 commentImage && (
                     <div className="comment_img_preview">
                         <img src={commentImage} alt=""/>
+                        <div className="small_whote_circle">
+                            <i className="exit_icon"></i>
+                        </div>
                     </div>
                 )
             }
