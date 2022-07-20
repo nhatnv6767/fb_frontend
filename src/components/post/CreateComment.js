@@ -4,6 +4,7 @@ import Picker from "emoji-picker-react";
 export default function CreateComment({user}) {
     const [picker, setPicker] = useState(false);
     const [text, setText] = useState("");
+    const [commentImage, setCommentImage] = useState("");
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
     const imgInput = useRef(null);
@@ -33,9 +34,12 @@ export default function CreateComment({user}) {
         let file = e.target.files[0];
 
         /* Reading the file as a data url. */
-        const reader = new FileReader()
-        reader.readAsDataURL(file)
-    }
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (event) => {
+            setCommentImage(event.target.result);
+        };
+    };
     return (
         <div className="create_comment_wrap">
             <div className="create_comment">
