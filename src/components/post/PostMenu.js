@@ -59,6 +59,24 @@ export default function PostMenu({postUserId, userId, imagesLength}) {
                 )
             }
 
+            {
+                test && (
+                    <MenuItem
+                        icon="turnOffNotifications_icon"
+                        title="Turn off notifications for this post"
+                    />
+                )
+            }
+
+            {
+                test && (
+                    <MenuItem
+                        icon="delete_icon"
+                        title="Turn off translations"
+                    />
+                )
+            }
+
         </ul>
     );
 }
