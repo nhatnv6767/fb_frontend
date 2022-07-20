@@ -2,7 +2,7 @@ import {useState, useEffect, useRef} from "react";
 import Picker from "emoji-picker-react";
 
 export default function CreateComment({user}) {
-    const [picker, setPicker] = useState(false);
+    const [picker, setPicker] = useState(true);
     const [text, setText] = useState(false);
     const [cursorPosition, setCursorPosition] = useState();
     const textRef = useRef(null);
@@ -33,7 +33,12 @@ export default function CreateComment({user}) {
                         picker && <Picker onEmojiClick={() => handleEmoji}/>
                     }
                     <input type="file" hidden/>
-                    <input type="text" ref={textRef}/>
+                    <input
+                        type="text"
+                        ref={textRef}
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                    />
                 </div>
             </div>
         </div>
