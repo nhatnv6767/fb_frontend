@@ -1,7 +1,7 @@
 import MenuItem from "./MenuItem";
 import {useState} from "react";
 
-export default function PostMenu({postUserId, userId}) {
+export default function PostMenu({postUserId, userId, imagesLength}) {
     const [test, setTest] = useState(postUserId === userId ? true : false);
     return (
         <ul className="post_menu">
@@ -22,6 +22,24 @@ export default function PostMenu({postUserId, userId}) {
             />
 
             <div className="line"></div>
+
+            {
+                test && (
+                    <MenuItem
+                        icon="edit_icon"
+                        title="Edit Post"
+                    />
+                )
+            }
+
+            {
+                test && (
+                    <MenuItem
+                        icon="edit_icon"
+                        title="Edit Post"
+                    />
+                )
+            }
 
         </ul>
     );

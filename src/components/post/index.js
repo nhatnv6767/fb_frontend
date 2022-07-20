@@ -140,6 +140,7 @@ export default function Post({post, user}) {
             <PostMenu
                 userId={user.id}
                 postUserId={post.user._id}
+                imagesLength={post?.images?.length}
             />
         </div>
     );
