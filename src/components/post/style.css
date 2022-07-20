@@ -470,6 +470,20 @@
 
 /* ---------- Create Comment ---------- */
 
+
+/* ---------- Post menu ---------- */
+.post_menu {
+    background: var(--bg-primary);
+    width: 300px;
+    box-shadow: 1px 0 2px var(--shadow-1);
+    border-radius: 10px;
+    position: absolute;
+    top: 3.5rem;
+    right: 10px;
+}
+
+/* ---------- Post menu ---------- */
+
 @media (max-width: 415px) {
     .post .grid_2 img,
     .post .grid_3 img,
