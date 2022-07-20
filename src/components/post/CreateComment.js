@@ -1,4 +1,5 @@
 import {useState, useEffect, useRef} from "react";
+import Picker from "emoji-picker-react";
 
 export default function CreateComment({user}) {
     const [picker, setPicker] = useState(false);
@@ -28,6 +29,9 @@ export default function CreateComment({user}) {
             <div className="create_comment">
                 <img src={user?.picture} alt=""/>
                 <div className="comment_input_wrap">
+                    {
+                        picker && <Picker onEmojiClick={() => handleEmoji}/>
+                    }
                     <input type="file" hidden/>
                     <input type="text" ref={textRef}/>
                 </div>
