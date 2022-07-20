@@ -21,6 +21,8 @@ export default function PostMenu({postUserId, userId}) {
                 subtitle="Add this to your saved items."
             />
 
+            <div className="line"></div>
+
         </ul>
     );
 }
