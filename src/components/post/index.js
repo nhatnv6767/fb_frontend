@@ -138,7 +138,7 @@ export default function Post({post, user}) {
                 <CreateComment user={user}/>
             </div>
             <PostMenu
-                userId={user._id}
+                userId={user.id}
                 postUserId={post.user._id}
             />
         </div>
