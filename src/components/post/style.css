@@ -443,6 +443,10 @@
     cursor: pointer;
 }
 
+.comment_error {
+    padding: 0 !important;
+}
+
 /* ---------- Create Comment ---------- */
 
 @media (max-width: 415px) {
