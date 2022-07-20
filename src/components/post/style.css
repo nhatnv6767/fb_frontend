@@ -340,7 +340,9 @@
 }
 
 .post_actions {
-
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
