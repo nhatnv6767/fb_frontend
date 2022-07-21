@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {useReducer} from "react";
+import {useEffect, useReducer} from "react";
 import {profileReducer} from "../../functions/reducers";
 
 export default function Profile() {
@@ -12,6 +12,10 @@ export default function Profile() {
         profile: {},
         error: ""
     });
+
+    useEffect(() => {
+
+    }, [userName])
     return (
         <div>
             Profile
