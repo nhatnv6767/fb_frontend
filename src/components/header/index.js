@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {
     ArrowDown,
     Friends,
-    Gaming,
+    Gaming, Home,
     HomeActive,
     Logo,
     Market,
@@ -20,7 +20,7 @@ import AllMenu from "./AllMenu";
 import useClickOutside from "../../helpers/clickOutside";
 import UserMenu from "./userMenu";
 
-export default function Header() {
+export default function Header({page}) {
     const {user} = useSelector((user) => ({...user}));
     const color = "#65676b";
     const [showSearchMenu, setShowSearchMenu] = useState(false);
@@ -68,6 +68,7 @@ export default function Header() {
             <div className="header_middle">
                 <Link to="/" className="middle_icon active">
                     <HomeActive color={color}/>
+                    <Home color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon hover1">
                     <Friends color={color}/>
