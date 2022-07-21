@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 import {useEffect, useReducer} from "react";
 import {profileReducer} from "../../functions/reducers";
 import axios from "axios";
+import Header from "../../components/header";
 
 export default function Profile() {
     const {username} = useParams();
@@ -44,10 +45,9 @@ export default function Profile() {
             });
         }
     };
-    console.log(profile);
     return (
         <div>
-            Profile
+            <Header/>
         </div>
     );
 }
