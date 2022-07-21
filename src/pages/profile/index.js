@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {useEffect, useReducer} from "react";
 import {profileReducer} from "../../functions/reducers";
@@ -7,6 +7,7 @@ import axios from "axios";
 export default function Profile() {
     const {username} = useParams();
     const {user} = useSelector((state) => ({...state}));
+    const navigate = useNavigate();
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
         loading: false,
@@ -28,7 +29,7 @@ export default function Profile() {
                 }
             });
             if (data.ok === false) {
-
+                navigate("/profile");
             } else {
                 dispatch({
                     type: "PROFILE_SUCCESS",
