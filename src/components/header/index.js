@@ -90,7 +90,7 @@ export default function Header({page}) {
                 </Link>
             </div>
             <div className="header_right">
-                <Link to="/profile" className="profile_link hover1">
+                <Link to="/profile" className={`profile_link hover1 ${page === "profile" ? "active_link" : ""}`}>
                     {/* A nullish coalescing operator. It is a new operator in ES2020. It is used to check if the value is
                     null or undefined. */}
                     <img src={user?.picture} alt=""/>
