@@ -15,7 +15,7 @@ export default function Profile() {
     });
 
     useEffect(() => {
-
+        getProfile();
     }, [userName]);
     const getProfile = async () => {
         try {
@@ -39,6 +39,7 @@ export default function Profile() {
             });
         }
     };
+    console.log(profile);
     return (
         <div>
             Profile
