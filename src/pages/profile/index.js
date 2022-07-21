@@ -9,7 +9,7 @@ export default function Profile() {
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
         loading: false,
-        posts: [],
+        profile: {},
         error: ""
     });
     return (
