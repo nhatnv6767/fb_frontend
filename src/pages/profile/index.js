@@ -46,7 +46,7 @@ export default function Profile() {
         }
     };
     return (
-        <div>
+        <div className="profile">
             <Header page="profile"/>
         </div>
     );
