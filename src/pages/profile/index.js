@@ -27,11 +27,15 @@ export default function Profile() {
                     Authorization: `Bearer ${user.token}`,
                 }
             });
+            if (data.ok === false) {
 
-            dispatch({
-                type: "PROFILE_SUCCESS",
-                payload: data,
-            });
+            } else {
+                dispatch({
+                    type: "PROFILE_SUCCESS",
+                    payload: data,
+                });
+            }
+
         } catch (e) {
             dispatch({
                 type: "PROFILE_ERROR",
