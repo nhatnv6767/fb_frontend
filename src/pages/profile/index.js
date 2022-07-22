@@ -48,6 +48,13 @@ export default function Profile() {
     return (
         <div className="profile">
             <Header page="profile"/>
+            <div className="profile_top">
+                <div className="profile_container">
+                    <div className="profile_cover">
+
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
