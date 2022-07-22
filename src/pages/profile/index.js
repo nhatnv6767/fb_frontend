@@ -53,7 +53,7 @@ export default function Profile() {
                     <div className="profile_cover">
                         {
                             profile.cover &&
-                            <img src={profile.cover} alt=""/>
+                            <img src={profile.cover} className="cover" alt=""/>
                         }
                     </div>
                 </div>
