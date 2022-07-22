@@ -51,7 +51,10 @@ export default function Profile() {
             <div className="profile_top">
                 <div className="profile_container">
                     <div className="profile_cover">
-
+                        {
+                            profile.cover &&
+                            <img src={profile.cover} alt=""/>
+                        }
                     </div>
                 </div>
             </div>
