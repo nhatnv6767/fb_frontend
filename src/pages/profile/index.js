@@ -94,14 +94,16 @@ export default function Profile({setVisible}) {
                                 <div className="posts">
                                     {
                                         profile.posts &&
-                                        profile.posts.length &&
-                                        profile.posts.map((post) => (
-                                            <Post
-                                                post={post}
-                                                user={user}
-                                                key={post._id}
-                                            />
-                                        ))
+                                        profile.posts.length ?
+                                            profile.posts.map((post) => (
+                                                <Post
+                                                    post={post}
+                                                    user={user}
+                                                    key={post._id}
+                                                />
+                                            ))
+                                            :
+                                            <div className="no_posts">No posts available</div>
                                     }
                                 </div>
                             </div>
