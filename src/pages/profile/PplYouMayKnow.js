@@ -7,7 +7,7 @@ export default function PplYouMayKnow() {
         <div className="pplumayknow">
             <div className="pplumayknow_header">
                 People You May Know
-                <div className="post_header_right ppl_circle">
+                <div className="post_header_right ppl_circle hover1">
                     <Dots/>
                 </div>
             </div>
