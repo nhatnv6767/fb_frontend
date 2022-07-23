@@ -1,6 +1,6 @@
 import {useNavigate, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {useEffect, useReducer} from "react";
+import {useEffect, useReducer, useState} from "react";
 import {profileReducer} from "../../functions/reducers";
 import axios from "axios";
 import Header from "../../components/header";
@@ -9,6 +9,7 @@ import "./style.css";
 export default function Profile() {
     const {username} = useParams();
     const {user} = useSelector((state) => ({...state}));
+    const [showCoverMenu, setShowCoverMenu] = useState(true)
     const navigate = useNavigate();
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
@@ -56,6 +57,13 @@ export default function Profile() {
                             profile.cover &&
                             <img src={profile.cover} className="cover" alt=""/>
                         }
+                        <div className="update_cover_wrapper">
+                            <div className="open_cover_update">
+                                <i className="camera_filled_icon"></i>
+                                Add Cover Photo
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
