@@ -6,7 +6,12 @@ export default function ProfilePictureInfos({profile}) {
                     <div className="profile_w_bg" style={{
                         backgroundSize: "cover",
                         backgroundImage: `url(${profile.picture})`
-                    }}></div>
+                    }}>
+                    </div>
+                    <div className="profile_circle">
+                        <i className="camera_filled_icon"></i>
+                    </div>
+
                 </div>
             </div>
         </div>
