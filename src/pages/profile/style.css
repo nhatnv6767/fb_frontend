@@ -23,9 +23,17 @@
 }
 
 .update_cover_wrapper {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.open_cover_update {
     background: #fff;
     padding: 7px 15px;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 600;
 }
+
