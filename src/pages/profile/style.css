@@ -114,3 +114,11 @@
     place-items: center;
     cursor: pointer;
 }
+
+.profile_name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 32px;
+}
