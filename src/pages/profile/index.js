@@ -52,35 +52,7 @@ export default function Profile() {
             <Header page="profile"/>
             <div className="profile_top">
                 <div className="profile_container">
-                    <div className="profile_cover">
-                        {
-                            profile.cover &&
-                            <img src={profile.cover} className="cover" alt=""/>
-                        }
-                        <div className="update_cover_wrapper">
-                            <div
-                                className="open_cover_update"
-                                onClick={() => setShowCoverMenu((prev) => !prev)}
-                            >
-                                <i className="camera_filled_icon"></i>
-                                Add Cover Photo
-                            </div>
-                            {
-                                showCoverMenu && (
-                                    <div className="open_cover_menu">
-                                        <div className="open_cover_menu_item hover1">
-                                            <i className="photo_icon"></i>
-                                            Select Photo
-                                        </div>
-                                        <div className="open_cover_menu_item hover1">
-                                            <i className="upload_icon"></i>
-                                            Upload Photo
-                                        </div>
-                                    </div>
-                                )
-                            }
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
