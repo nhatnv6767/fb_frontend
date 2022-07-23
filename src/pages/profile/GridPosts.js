@@ -1,7 +1,5 @@
 export default function GridPosts() {
     return (
-        <div>
-            GridPosts
-        </div>
+        <div>GridPosts</div>
     );
 }

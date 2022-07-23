@@ -10,6 +10,7 @@ import ProfilePictureInfos from "./ProfilePictureInfos";
 import ProfileMenu from "./ProfileMenu";
 import PplYouMayKnow from "./PplYouMayKnow";
 import CreatePost from "../../components/createPost";
+import GridPosts from "./GridPosts";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
@@ -78,6 +79,7 @@ export default function Profile({setVisible}) {
                                     profile
                                     setVisible={setVisible}
                                 />
+                                <GridPosts/>
                             </div>
                         </div>
                     </div>
