@@ -275,6 +275,12 @@
     font-weight: 600;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
