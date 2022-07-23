@@ -65,6 +65,7 @@ export default function Profile({setVisible}) {
                 <div className="profile_container">
                     <Cover
                         cover={profile.cover}
+                        visitor={visitor}
                     />
                     <ProfilePictureInfos
                         profile={profile}
