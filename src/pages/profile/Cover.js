@@ -1,9 +1,12 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function Cover({cover}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
+    const menuRef = useRef(null);
+    useClickOutside(menuRef, () => setShowCoverMenu(false));
     return (
-        <div className="profile_cover">
+        <div className="profile_cover" ref={menuRef}>
             {
                 cover &&
                 <img src={cover} className="cover" alt=""/>
