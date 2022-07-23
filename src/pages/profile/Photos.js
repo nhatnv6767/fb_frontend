@@ -21,11 +21,13 @@ export default function Photos({username, token}) {
             dispatch({
                 type: "PHOTOS_REQUEST",
             });
-            const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`, {}, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            });
+            const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`,
+                {path, sort, max},
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    }
+                });
             dispatch({
                 type: "PHOTOS_SUCCESS",
                 payload: data,
