@@ -21,6 +21,12 @@ export default function ProfilePictureInfos({profile}) {
                     <div className="profile_friend_imgs"></div>
                 </div>
             </div>
+            <div className="profile_w_right">
+                <div className="blue_btn">
+                    <img src="../../../icons/plus.png" alt=""/>
+                    <span>Add to story</span>
+                </div>
+            </div>
         </div>
     );
 }
