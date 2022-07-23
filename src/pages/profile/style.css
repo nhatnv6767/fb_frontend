@@ -317,6 +317,38 @@
 
 /* -------- Menu -------- */
 
+
+/* ------- Profile card -------- */
+.profile_card {
+    background: var(--bg-primary);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px var(--shadow-1);
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+.profile_card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.profile_header_link {
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--blue-color);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.profile_header_link:hover {
+    background: var(--bg-secondary);
+}
+
+/* ------- Profile card -------- */
+
 @media (max-width: 900px) {
     .profile_w_left {
         flex-direction: column;
