@@ -1,7 +1,7 @@
 import "./style.css";
 import {Feeling, LiveVideo, Photo} from "../../svg";
 
-export default function CreatePost({user, setVisible}) {
+export default function CreatePost({user, setVisible, profile}) {
     return (
         <div className="createPost">
             <div className="createPost_header">
@@ -25,10 +25,20 @@ export default function CreatePost({user, setVisible}) {
                     <Photo color="#4bbf67"/>
                     Photo/Video
                 </div>
-                <div className="createPost_icon hover1">
-                    <Feeling color="#f7b928"/>
-                    Feeling/Activity
-                </div>
+                {
+                    profile ? (
+                        <div className="createPost_icon hover1">
+                            <i className="lifeEvent_icon"></i>
+                            Life Event
+                        </div>
+                    ) : (
+                        <div className="createPost_icon hover1">
+                            <Feeling color="#f7b928"/>
+                            Feeling/Activity
+                        </div>
+                    )
+
+                }
             </div>
         </div>
     );

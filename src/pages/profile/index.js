@@ -9,6 +9,7 @@ import Cover from "./Cover";
 import ProfilePictureInfos from "./ProfilePictureInfos";
 import ProfileMenu from "./ProfileMenu";
 import PplYouMayKnow from "./PplYouMayKnow";
+import CreatePost from "../../components/createPost";
 
 export default function Profile() {
     const {username} = useParams();
@@ -71,7 +72,9 @@ export default function Profile() {
                         <PplYouMayKnow/>
                         <div className="profile_grid">
                             <div className="profile_left"></div>
-                            <div className="profile_right"></div>
+                            <div className="profile_right">
+                                <CreatePost user={user} profile/>
+                            </div>
                         </div>
                     </div>
                 </div>
