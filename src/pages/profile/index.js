@@ -100,6 +100,7 @@ export default function Profile({setVisible}) {
                                                     post={post}
                                                     user={user}
                                                     key={post._id}
+                                                    profile
                                                 />
                                             ))
                                             :

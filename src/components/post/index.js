@@ -8,7 +8,7 @@ import CreateComment from "./CreateComment";
 import PostMenu from "./PostMenu";
 
 
-export default function Post({post, user}) {
+export default function Post({post, user, profile}) {
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     return (
