@@ -28,6 +28,9 @@ export default function Profile({setVisible}) {
     useEffect(() => {
         getProfile();
     }, [userName]);
+    // var visitor = userName === user.username ? false : true;
+    var visitor = userName !== user.username;
+    console.log(visitor);
     const getProfile = async () => {
         try {
             dispatch({
@@ -54,7 +57,7 @@ export default function Profile({setVisible}) {
             });
         }
     };
-    console.log(profile);
+    // console.log(profile);
     return (
         <div className="profile">
             <Header page="profile"/>
