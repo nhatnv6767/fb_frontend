@@ -21,3 +21,11 @@
     border-bottom-right-radius: 8px;
     background: var(--bg-secondary);
 }
+
+.update_cover_wrapper {
+    background: #fff;
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
