@@ -81,11 +81,15 @@ export default function Profile({setVisible}) {
                         <div className="profile_grid">
                             <div className="profile_left"></div>
                             <div className="profile_right">
-                                <CreatePost
-                                    user={user}
-                                    profile
-                                    setVisible={setVisible}
-                                />
+                                {
+                                    !visitor && (
+                                        <CreatePost
+                                            user={user}
+                                            profile
+                                            setVisible={setVisible}
+                                        />
+                                    )
+                                }
                                 <GridPosts/>
                                 <div className="posts">
                                     {
