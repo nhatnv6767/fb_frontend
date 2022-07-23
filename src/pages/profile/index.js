@@ -57,7 +57,9 @@ export default function Profile() {
                     <Cover
                         cover={profile.cover}
                     />
-                    <ProfilePictureInfos/>
+                    <ProfilePictureInfos
+                        profile={profile}
+                    />
                 </div>
             </div>
         </div>
