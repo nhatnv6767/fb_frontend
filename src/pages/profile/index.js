@@ -53,6 +53,7 @@ export default function Profile({setVisible}) {
             });
         }
     };
+    console.log(profile);
     return (
         <div className="profile">
             <Header page="profile"/>
