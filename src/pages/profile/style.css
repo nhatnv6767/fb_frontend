@@ -292,6 +292,10 @@
     .profile_name {
         padding-bottom: 10px;
     }
+
+    .pplumayknow {
+        display: none;
+    }
 }
 
 
