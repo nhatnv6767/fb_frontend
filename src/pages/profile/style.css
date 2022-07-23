@@ -162,6 +162,14 @@
     color: var(--color-secondary);
 }
 
+.profile_menu_active {
+    height: 60px !important;
+    width: 65px !important;
+    color: var(--blue-color) !important;
+    border-bottom: 3px solid var(--blue-color);
+    border-radius: 0 !important;
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
