@@ -170,6 +170,24 @@
     border-radius: 0 !important;
 }
 
+.p10_dots {
+    background: var(--bg-third);
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    padding: 8px 14px;
+}
+
+.p10_dots svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
