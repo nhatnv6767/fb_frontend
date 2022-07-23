@@ -262,6 +262,12 @@
     color: var(--blue-color);
 }
 
+.profile_grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 10px;
+}
+
 /* ----------- ppl u may know ----------- */
 
 /* -------- Menu -------- */
@@ -295,6 +301,11 @@
 
     .pplumayknow {
         display: none;
+    }
+
+    .profile_grid {
+        grid-template-columns: 1fr;
+        width: 95%;
     }
 }
 
