@@ -17,6 +17,11 @@ export default function GridPosts() {
             <div className="createPost_body grid_2">
                 <div className="view_type active_grid">
                     <i className="list_icon filter_blue"></i>
+                    List view
+                </div>
+                <div className="view_type">
+                    <i className="grid_icon"></i>
+                    Grid view
                 </div>
             </div>
         </div>
