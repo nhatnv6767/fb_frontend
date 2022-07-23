@@ -6,7 +6,7 @@ export default function Cover({cover}) {
     const menuRef = useRef(null);
     useClickOutside(menuRef, () => setShowCoverMenu(false));
     return (
-        <div className="profile_cover" ref={menuRef}>
+        <div className="profile_cover">
             {
                 cover &&
                 <img src={cover} className="cover" alt=""/>
@@ -21,7 +21,7 @@ export default function Cover({cover}) {
                 </div>
                 {
                     showCoverMenu && (
-                        <div className="open_cover_menu">
+                        <div className="open_cover_menu" ref={menuRef}>
                             <div className="open_cover_menu_item hover1">
                                 <i className="photo_icon"></i>
                                 Select Photo
