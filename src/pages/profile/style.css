@@ -238,6 +238,19 @@
     object-fit: cover;
 }
 
+.addfriend_infos {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.addfriend_name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 /* ----------- ppl u may know ----------- */
 
 /* -------- Menu -------- */
