@@ -6,7 +6,7 @@ export default function AddFriendSmallCard({item}) {
                 <div className="addfriend_infos">
                     <div
                         className="addfriend_name">{item.profile_name.length > 11
-                        ? item.profile_name.substring(0, 11)
+                        ? `${item.profile_name.substring(0, 11)}...`
                         : item.profile_name}
                     </div>
                     <div className="light_blue_btn">
