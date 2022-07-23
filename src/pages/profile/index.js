@@ -4,6 +4,7 @@ import {useEffect, useReducer} from "react";
 import {profileReducer} from "../../functions/reducers";
 import axios from "axios";
 import Header from "../../components/header";
+import "./style.css";
 
 export default function Profile() {
     const {username} = useParams();
