@@ -306,6 +306,15 @@
     font-size: 20px;
 }
 
+.no_posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--color-secondary);
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
