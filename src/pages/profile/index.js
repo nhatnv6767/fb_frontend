@@ -64,6 +64,8 @@ export default function Profile() {
                     <ProfileMenu/>
                 </div>
             </div>
+            <div className="profile_bottom">
+            </div>
         </div>
     );
 }
