@@ -69,6 +69,10 @@ export default function Profile() {
                 <div className="profile_container">
                     <div className="bottom_container">
                         <PplYouMayKnow/>
+                        <div className="profile_grid">
+                            <div className="profile_left"></div>
+                            <div className="profile_right"></div>
+                        </div>
                     </div>
                 </div>
             </div>
