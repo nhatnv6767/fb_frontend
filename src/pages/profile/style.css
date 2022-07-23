@@ -59,5 +59,12 @@
 
 .open_cover_menu_item {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
 }
 
