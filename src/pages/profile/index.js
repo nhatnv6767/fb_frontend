@@ -9,7 +9,7 @@ import "./style.css";
 export default function Profile() {
     const {username} = useParams();
     const {user} = useSelector((state) => ({...state}));
-    const [showCoverMenu, setShowCoverMenu] = useState(true)
+    const [showCoverMenu, setShowCoverMenu] = useState(true);
     const navigate = useNavigate();
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
@@ -62,7 +62,9 @@ export default function Profile() {
                                 <i className="camera_filled_icon"></i>
                                 Add Cover Photo
                             </div>
-
+                            {
+                                showCoverMenu && <div className="open_cover_menu"></div>
+                            }
                         </div>
                     </div>
                 </div>
