@@ -8,9 +8,13 @@ export default function ProfilePictureInfos({profile, visitor}) {
                         backgroundImage: `url(${profile.picture})`
                     }}>
                     </div>
-                    <div className="profile_circle hover1">
-                        <i className="camera_filled_icon"></i>
-                    </div>
+                    {
+                        !visitor && (
+                            <div className="profile_circle hover1">
+                                <i className="camera_filled_icon"></i>
+                            </div>
+                        )
+                    }
                 </div>
                 <div className="profile_w_col">
                     <div className="profile_name">
