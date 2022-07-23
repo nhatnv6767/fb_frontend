@@ -297,6 +297,10 @@
     color: var(--color-secondary);
 }
 
+.grid2 .active {
+    color: var(--blue-color);
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
