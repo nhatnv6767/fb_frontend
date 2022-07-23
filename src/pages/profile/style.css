@@ -270,6 +270,11 @@
 
 /* ----------- ppl u may know ----------- */
 
+.left_header_grid {
+    font-size: 22px;
+    font-weight: 600;
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
