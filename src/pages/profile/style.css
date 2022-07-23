@@ -202,7 +202,7 @@
     display: flex;
     gap: 5px;
     align-items: center;
-    height: 300px;
+    height: 240px;
 }
 
 .pplumayknow {
@@ -252,6 +252,14 @@
 .addfriend_name {
     font-size: 16px;
     font-weight: 600;
+}
+
+.light_blue_btn img {
+    width: 20px;
+}
+
+.pplumayknow_list .light_blue_btn {
+    color: var(--blue-color);
 }
 
 /* ----------- ppl u may know ----------- */

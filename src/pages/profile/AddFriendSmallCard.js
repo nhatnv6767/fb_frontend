@@ -6,7 +6,7 @@ export default function AddFriendSmallCard({item}) {
                 <div className="addfriend_infos">
                     <div className="addfriend_name">{item.profile_name}</div>
                     <div className="light_blue_btn">
-                        <img src="../../../icons/addFriend.png" alt=""/>
+                        <img src="../../../icons/addFriend.png" alt="" className="filter_blue"/>
                         Add Friend
                     </div>
                 </div>
