@@ -1,5 +1,6 @@
 import {Dots} from "../../svg";
 import {stories} from "../../data/home";
+import AddFriendSmallCard from "./AddFriendSmallCard";
 
 export default function PplYouMayKnow() {
     return (
@@ -13,7 +14,9 @@ export default function PplYouMayKnow() {
             <div className="pplumayknow_list">
                 {
                     stories.map((item, i) => (
-                        console.log("<nothing>")
+                        <AddFriendSmallCard
+                            item={item}
+                        />
                     ))
                 }
             </div>
