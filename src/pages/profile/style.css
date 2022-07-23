@@ -200,7 +200,9 @@
 
 .pplumayknow_list {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    align-items: center;
+    height: 300px;
 }
 
 .pplumayknow {
