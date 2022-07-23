@@ -60,10 +60,10 @@ export default function Profile({setVisible}) {
             <div className="profile_top">
                 <div className="profile_container">
                     <Cover
-                        cover={profile.profile.cover}
+                        cover={profile.cover}
                     />
                     <ProfilePictureInfos
-                        profile={profile.profile}
+                        profile={profile}
                     />
                     <ProfileMenu/>
                 </div>
