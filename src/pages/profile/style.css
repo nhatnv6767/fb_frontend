@@ -12,3 +12,11 @@
     max-width: 945px;
     margin: 0 auto;
 }
+
+.profile_cover {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
