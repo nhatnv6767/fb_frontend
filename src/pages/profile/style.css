@@ -68,3 +68,18 @@
     border-radius: 10px;
 }
 
+.profile_img_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: -2.8rem;
+}
+
+.profile_w_left {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 13px 0 13px;
+}
+
