@@ -54,7 +54,7 @@ export default function Profile({setVisible}) {
             });
         }
     };
-    // console.log(profile);
+    console.log(profile);
     return (
         <div className="profile">
             <Header page="profile"/>
@@ -84,10 +84,11 @@ export default function Profile({setVisible}) {
                                 <GridPosts/>
                                 <div className="posts">
                                     {
-                                        profile && profile.length > 0 && profile.posts.map((post) => (
+                                        profile.posts.map((post) => (
                                             <Post
                                                 post={post}
                                                 user={user}
+                                                key={i}
                                             />
                                         ))
                                     }
