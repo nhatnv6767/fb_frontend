@@ -26,6 +26,10 @@ export default function ProfilePictureInfos({profile}) {
                     <img src="../../../icons/plus.png" alt=""/>
                     <span>Add to story</span>
                 </div>
+                <div className="gray_btn">
+                    <i className="edit_icon"></i>
+                    <span>Edit profile</span>
+                </div>
             </div>
         </div>
     );
