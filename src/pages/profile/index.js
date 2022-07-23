@@ -12,7 +12,7 @@ import PplYouMayKnow from "./PplYouMayKnow";
 import CreatePost from "../../components/createPost";
 import GridPosts from "./GridPosts";
 import Post from "../../components/post";
-import Photos from "../../components/post/Photos";
+import Photos from "./Photos";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
