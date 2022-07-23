@@ -11,7 +11,11 @@ export default function ProfilePictureInfos({profile}) {
                     <div className="profile_circle hover1">
                         <i className="camera_filled_icon"></i>
                     </div>
-
+                </div>
+                <div className="profile_w_col">
+                    <div className="profile_name">
+                        {profile.first_name} {profile.last_name}
+                    </div>
                 </div>
             </div>
         </div>
