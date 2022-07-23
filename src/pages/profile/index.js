@@ -7,6 +7,7 @@ import Header from "../../components/header";
 import "./style.css";
 import Cover from "./Cover";
 import ProfilePictureInfos from "./ProfilePictureInfos";
+import ProfileMenu from "./ProfileMenu";
 
 export default function Profile() {
     const {username} = useParams();
@@ -60,6 +61,7 @@ export default function Profile() {
                     <ProfilePictureInfos
                         profile={profile}
                     />
+                    <ProfileMenu/>
                 </div>
             </div>
         </div>
