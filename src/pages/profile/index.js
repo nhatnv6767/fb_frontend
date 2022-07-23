@@ -58,7 +58,10 @@ export default function Profile() {
                             <img src={profile.cover} className="cover" alt=""/>
                         }
                         <div className="update_cover_wrapper">
-                            <div className="open_cover_update">
+                            <div
+                                className="open_cover_update"
+                                onClick={() => setShowCoverMenu((prev) => !prev)}
+                            >
                                 <i className="camera_filled_icon"></i>
                                 Add Cover Photo
                             </div>
