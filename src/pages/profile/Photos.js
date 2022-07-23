@@ -1,5 +1,5 @@
 import {useEffect, useReducer} from "react";
-import {profileReducer} from "../../functions/reducers";
+import {photosReducer} from "../../functions/reducers";
 import axios from "axios";
 
 export default function Photos({username, token}) {
@@ -18,7 +18,7 @@ export default function Photos({username, token}) {
             dispatch({
                 type: "PHOTOS_REQUEST",
             });
-            const {data} = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getProfile/${userName}`, {
+            const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`, {}, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }
