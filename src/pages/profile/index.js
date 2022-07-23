@@ -12,6 +12,7 @@ import PplYouMayKnow from "./PplYouMayKnow";
 import CreatePost from "../../components/createPost";
 import GridPosts from "./GridPosts";
 import Post from "../../components/post";
+import Photos from "../../components/post/Photos";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
@@ -79,7 +80,9 @@ export default function Profile({setVisible}) {
                     <div className="bottom_container">
                         <PplYouMayKnow/>
                         <div className="profile_grid">
-                            <div className="profile_left"></div>
+                            <div className="profile_left">
+                                <Photos/>
+                            </div>
                             <div className="profile_right">
                                 {
                                     !visitor && (
