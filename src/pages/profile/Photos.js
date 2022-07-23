@@ -12,6 +12,9 @@ export default function Photos({username, token}) {
     useEffect(() => {
         getPhotos();
     }, [username]);
+    const path = `${username}/*`;
+    const max = 30;
+    const sort = "desc";
 
     const getPhotos = async () => {
         try {
@@ -35,6 +38,7 @@ export default function Photos({username, token}) {
             });
         }
     };
+    console.log(photos);
     return (
         <div className="profile_card">
             <div className="profile_card_header">
