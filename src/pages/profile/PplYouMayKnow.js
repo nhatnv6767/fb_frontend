@@ -16,6 +16,7 @@ export default function PplYouMayKnow() {
                     stories.map((item, i) => (
                         <AddFriendSmallCard
                             item={item}
+                            key={i}
                         />
                     ))
                 }
