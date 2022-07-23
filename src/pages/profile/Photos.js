@@ -2,41 +2,35 @@ import {useEffect, useReducer} from "react";
 import {profileReducer} from "../../functions/reducers";
 import axios from "axios";
 
-export default function Photos() {
-    const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
+export default function Photos({username, token}) {
+    const [{loading, error, photos}, dispatch] = useReducer(photosReducer, {
         loading: false,
-        profile: {},
+        photos: {},
         error: ""
     });
 
     useEffect(() => {
-        getProfile();
-    }, [userName]);
-    // var visitor = userName === user.username ? false : true;
-    var visitor = userName !== user.username;
-    console.log(visitor);
-    const getProfile = async () => {
+        getPhotos();
+    }, [username]);
+
+    const getPhotos = async () => {
         try {
             dispatch({
-                type: "PROFILE_REQUEST",
+                type: "PHOTOS_REQUEST",
             });
             const {data} = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getProfile/${userName}`, {
                 headers: {
-                    Authorization: `Bearer ${user.token}`,
+                    Authorization: `Bearer ${token}`,
                 }
             });
-            if (data.ok === false) {
-                navigate("/profile");
-            } else {
-                dispatch({
-                    type: "PROFILE_SUCCESS",
-                    payload: data,
-                });
-            }
+            dispatch({
+                type: "PHOTOS_SUCCESS",
+                payload: data,
+            });
 
         } catch (e) {
             dispatch({
-                type: "PROFILE_ERROR",
+                type: "PHOTOS_ERROR",
                 payload: e.response.data.message,
             });
         }

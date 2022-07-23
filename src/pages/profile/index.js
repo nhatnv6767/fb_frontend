@@ -81,7 +81,10 @@ export default function Profile({setVisible}) {
                         <PplYouMayKnow/>
                         <div className="profile_grid">
                             <div className="profile_left">
-                                <Photos/>
+                                <Photos
+                                    username={userName}
+                                    token={user.token}
+                                />
                             </div>
                             <div className="profile_right">
                                 {
