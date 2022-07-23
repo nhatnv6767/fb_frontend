@@ -35,5 +35,11 @@
     align-items: center;
     gap: 10px;
     font-weight: 600;
+    font-size: 14px;
+    color: #111;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+
 
