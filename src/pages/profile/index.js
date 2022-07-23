@@ -84,11 +84,11 @@ export default function Profile({setVisible}) {
                                 <GridPosts/>
                                 <div className="posts">
                                     {
-                                        profile.posts.map((post) => (
+                                        profile.posts && profile.posts.map((post) => (
                                             <Post
                                                 post={post}
                                                 user={user}
-                                                key={i}
+                                                key={post._id}
                                             />
                                         ))
                                     }
