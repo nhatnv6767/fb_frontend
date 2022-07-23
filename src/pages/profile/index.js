@@ -65,6 +65,10 @@ export default function Profile() {
                 </div>
             </div>
             <div className="profile_bottom">
+                <div className="profile_container">
+                    <div className="bottom_container">
+                    </div>
+                </div>
             </div>
         </div>
     );
