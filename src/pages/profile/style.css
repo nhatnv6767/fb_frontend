@@ -301,6 +301,11 @@
     color: var(--blue-color);
 }
 
+.othername {
+    color: var(--color-secondary);
+    font-size: 20px;
+}
+
 /* -------- Menu -------- */
 
 @media (max-width: 900px) {
@@ -328,6 +333,7 @@
 
     .profile_name {
         padding-bottom: 10px;
+        flex-direction: column;
     }
 
     .pplumayknow {
