@@ -9,7 +9,7 @@ import "./style.css";
 export default function Profile() {
     const {username} = useParams();
     const {user} = useSelector((state) => ({...state}));
-    const [showCoverMenu, setShowCoverMenu] = useState(true);
+    const [showCoverMenu, setShowCoverMenu] = useState(false);
     const navigate = useNavigate();
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
@@ -68,11 +68,11 @@ export default function Profile() {
                             {
                                 showCoverMenu && (
                                     <div className="open_cover_menu">
-                                        <div className="open_cover_menu_item">
+                                        <div className="open_cover_menu_item hover1">
                                             <i className="photo_icon"></i>
                                             Select Photo
                                         </div>
-                                        <div className="open_cover_menu_item">
+                                        <div className="open_cover_menu_item hover1">
                                             <i className="upload_icon"></i>
                                             Upload Photo
                                         </div>
