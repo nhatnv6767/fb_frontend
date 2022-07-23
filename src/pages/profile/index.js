@@ -5,6 +5,7 @@ import {profileReducer} from "../../functions/reducers";
 import axios from "axios";
 import Header from "../../components/header";
 import "./style.css";
+import Cover from "./Cover";
 
 export default function Profile() {
     const {username} = useParams();
@@ -52,7 +53,11 @@ export default function Profile() {
             <Header page="profile"/>
             <div className="profile_top">
                 <div className="profile_container">
-
+                    <Cover
+                        cover={profile.cover}
+                        showCoverMenu={showCoverMenu}
+                        setShowCoverMenu={setShowCoverMenu}
+                    />
                 </div>
             </div>
         </div>
