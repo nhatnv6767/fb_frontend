@@ -1,4 +1,7 @@
-export default function Cover({cover, setShowCoverMenu, showCoverMenu}) {
+import {useState} from "react";
+
+export default function Cover({cover}) {
+    const [showCoverMenu, setShowCoverMenu] = useState(false);
     return (
         <div className="profile_cover">
             {

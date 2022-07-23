@@ -10,7 +10,7 @@ import Cover from "./Cover";
 export default function Profile() {
     const {username} = useParams();
     const {user} = useSelector((state) => ({...state}));
-    const [showCoverMenu, setShowCoverMenu] = useState(false);
+
     const navigate = useNavigate();
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
@@ -55,8 +55,6 @@ export default function Profile() {
                 <div className="profile_container">
                     <Cover
                         cover={profile.cover}
-                        showCoverMenu={showCoverMenu}
-                        setShowCoverMenu={setShowCoverMenu}
                     />
                 </div>
             </div>
