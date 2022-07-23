@@ -66,7 +66,12 @@ export default function Profile() {
                                 Add Cover Photo
                             </div>
                             {
-                                showCoverMenu && <div className="open_cover_menu"></div>
+                                showCoverMenu && <div className="open_cover_menu">
+                                    <div className="open_cover_menu_item">
+                                        <i className="photo_icon"></i>
+                                        Select Photo
+                                    </div>
+                                </div>
                             }
                         </div>
                     </div>
