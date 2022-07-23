@@ -122,3 +122,17 @@
     font-weight: 600;
     font-size: 32px;
 }
+
+.profile_w_right {
+    display: flex;
+    gap: 8px;
+    padding: 0 18px;
+    margin-bottom: 7px;
+}
+
+.invert {
+    /* It's inverting the colors of the icon. */
+    filter: invert(100%);
+}
+
+

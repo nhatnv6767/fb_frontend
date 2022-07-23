@@ -23,7 +23,7 @@ export default function ProfilePictureInfos({profile}) {
             </div>
             <div className="profile_w_right">
                 <div className="blue_btn">
-                    <img src="../../../icons/plus.png" alt=""/>
+                    <img src="../../../icons/plus.png" alt="" className="invert"/>
                     <span>Add to story</span>
                 </div>
                 <div className="gray_btn">
