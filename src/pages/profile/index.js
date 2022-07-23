@@ -6,6 +6,7 @@ import axios from "axios";
 import Header from "../../components/header";
 import "./style.css";
 import Cover from "./Cover";
+import ProfilePictureInfos from "./ProfilePictureInfos";
 
 export default function Profile() {
     const {username} = useParams();
@@ -56,6 +57,7 @@ export default function Profile() {
                     <Cover
                         cover={profile.cover}
                     />
+                    <ProfilePictureInfos/>
                 </div>
             </div>
         </div>
