@@ -85,7 +85,11 @@ export default function Profile({setVisible}) {
                                 <div className="posts">
                                     {
                                         profile?.posts.map((post, i) => (
-                                            <Post/>
+                                            <Post
+                                                post={post}
+                                                user={user}
+                                                key={i}
+                                            />
                                         ))
                                     }
                                 </div>
