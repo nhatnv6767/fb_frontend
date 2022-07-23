@@ -1,4 +1,5 @@
 import {Dots} from "../../svg";
+import {stories} from "../../data/home";
 
 export default function PplYouMayKnow() {
     return (
@@ -10,6 +11,11 @@ export default function PplYouMayKnow() {
                 </div>
             </div>
             <div className="pplumayknow_list">
+                {
+                    stories.map((item, i) => (
+                        console.log("<nothing>")
+                    ))
+                }
             </div>
         </div>
     );
