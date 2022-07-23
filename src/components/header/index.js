@@ -68,7 +68,7 @@ export default function Header({page}) {
             <div className="header_middle">
                 {/* A ternary operator. It is used to check if the page is home or not. If it is home then it will add the
                 class active to the element. */}
-                <Link to="/" className={`middle_icon ${page === "home" ? "active" : ""} `}>
+                <Link to="/" className={`middle_icon ${page === "home" ? "active" : "hover1"} `}>
                     {
                         page === "home" ? <HomeActive color={color}/> : <Home color={color}/>
                     }
