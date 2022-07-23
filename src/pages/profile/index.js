@@ -69,6 +69,7 @@ export default function Profile({setVisible}) {
                     />
                     <ProfilePictureInfos
                         profile={profile}
+                        visitor={visitor}
                     />
                     <ProfileMenu/>
                 </div>
