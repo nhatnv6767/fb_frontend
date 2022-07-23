@@ -8,7 +8,7 @@ export default function ProfilePictureInfos({profile}) {
                         backgroundImage: `url(${profile.picture})`
                     }}>
                     </div>
-                    <div className="profile_circle">
+                    <div className="profile_circle hover1">
                         <i className="camera_filled_icon"></i>
                     </div>
 
