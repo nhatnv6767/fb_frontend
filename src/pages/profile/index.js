@@ -11,6 +11,7 @@ import ProfileMenu from "./ProfileMenu";
 import PplYouMayKnow from "./PplYouMayKnow";
 import CreatePost from "../../components/createPost";
 import GridPosts from "./GridPosts";
+import Post from "../../components/post";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
@@ -81,6 +82,13 @@ export default function Profile({setVisible}) {
                                     setVisible={setVisible}
                                 />
                                 <GridPosts/>
+                                <div className="posts">
+                                    {
+                                        profile?.posts.map((post, i) => (
+                                            <Post/>
+                                        ))
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>
