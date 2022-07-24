@@ -20,6 +20,13 @@ export default function ProfilePicture() {
                     </div>
                     <span>Update profile picture</span>
                 </div>
+                <div className="update_picture_wrap">
+                    <div className="update_picture_buttons">
+                        <button className="light_blue_btn">
+                            <i className="plus_icon"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
