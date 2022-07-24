@@ -23,7 +23,7 @@ export default function ProfilePicture() {
                 <div className="update_picture_wrap">
                     <div className="update_picture_buttons">
                         <button className="light_blue_btn">
-                            <i className="plus_icon"></i>
+                            <i className="plus_icon filter_blue"></i>
                             Upload photo
                         </button>
                         <button className="gray_btn">
