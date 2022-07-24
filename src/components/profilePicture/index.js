@@ -4,7 +4,28 @@ import {useRef, useState} from "react";
 export default function ProfilePicture() {
     const refInput = useRef(null);
     const [image, setImage] = useState("");
-    const handleImage = () => {
+    const [error, setError] = useState("");
+    const handleImage = (e) => {
+        let file = e.target.files[0];
+        if (
+            file.type !== "image/jpeg"
+            && file.type !== "image/png"
+            && file.type !== "image/gif"
+            && file.type !== "image/webp"
+        ) {
+            setError(`${file.name} format is not supported.`);
+            return;
+        } else if (file.size > 1024 * 1024 * 5) {
+            setError(`${file.name} is too large max, 5mb allowed.`);
+            return;
+        }
+
+        /* Reading the file as a data url. */
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (event) => {
+            setImage(event.target.result);
+        };
     };
     return (
         <div className="blur">
