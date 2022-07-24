@@ -62,7 +62,7 @@ export default function Photos({username, token}) {
             }
             <div className="profile_card_grid">
                 {
-                    photos.resources && photos.resources.length && photos.resources.slice(0, 9).map((img) => (
+                    photos.resources && photos.resources.slice(0, 9).map((img) => (
                         <div className="profile_photo_card" key={img.public_id}>
                             <img src={img.secure_url} alt=""/>
                         </div>
