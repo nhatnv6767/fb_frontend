@@ -7,6 +7,13 @@ export default function UpdateProfilePicture({setImage}) {
                 </div>
                 <span>Update profile picture</span>
             </div>
+            <div className="update_image_desc">
+                <textarea
+                    placeholder="Description"
+                    className="textarea_blue details_input"
+                >
+                </textarea>
+            </div>
         </div>
     );
 }
