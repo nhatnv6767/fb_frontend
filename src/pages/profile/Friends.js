@@ -10,9 +10,9 @@ export default function Friends({friends}) {
             </div>
             <div className="profile_card_count">
                 {
-                    friends.total_count === 0 ? ""
-                        : friends.total_count === 1 ? "1 Photo"
-                            : `${friends.total_count} photos`
+                    friends.length === 0 ? ""
+                        : friends.length === 1 ? "1 friend"
+                            : `${friends.length} friends`
                 }
             </div>
             <div className="profile_card_grid">
