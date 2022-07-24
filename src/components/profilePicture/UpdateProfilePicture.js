@@ -32,12 +32,21 @@ export default function UpdateProfilePicture({image, setImage}) {
                         image={image}
                         crop={crop}
                         zoom={zoom}
-                        aspect={1 / 1}
+                        aspect={1}
                         cropShape="round"
                         onCropChange={setCrop}
                         onCropComplete={onCropComplete}
                         onZoomChange={setZoom}
+                        showGrid={false}
                     />
+                </div>
+                <div className="slider">
+                    <div className="slider_circle">
+                        <i className="minus_icon"></i>
+                    </div>
+                    <div className="slider_circle">
+                        <i className="plus_icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
