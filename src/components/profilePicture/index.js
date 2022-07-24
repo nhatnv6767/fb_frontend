@@ -44,7 +44,10 @@ export default function ProfilePicture() {
                 </div>
                 <div className="update_picture_wrap">
                     <div className="update_picture_buttons">
-                        <button className="light_blue_btn">
+                        <button
+                            className="light_blue_btn"
+                            onClick={() => refInput.current.click()}
+                        >
                             <i className="plus_icon filter_blue"></i>
                             Upload photo
                         </button>
