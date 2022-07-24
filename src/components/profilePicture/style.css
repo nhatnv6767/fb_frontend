@@ -19,3 +19,8 @@
 .update_picture_buttons .light_blue_btn {
     color: var(--blue-color);
 }
+
+.update_img {
+    width: 700px;
+    height: 800px;
+}
