@@ -21,6 +21,7 @@ export default function UpdateProfilePicture({image, setImage}) {
             setZoom((prev) => prev - 0.2);
         }
     };
+    console.log(zoom);
     return (
         <div className="postBox update_img">
             <div className="box_header">
