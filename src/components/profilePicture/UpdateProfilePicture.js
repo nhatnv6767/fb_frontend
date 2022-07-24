@@ -1,4 +1,4 @@
-export default function UpdateProfilePicture() {
+export default function UpdateProfilePicture({setImage}) {
     return (
         <div className="postBox update_img">
             <div className="box_header">

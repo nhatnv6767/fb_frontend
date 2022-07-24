@@ -76,7 +76,7 @@ export default function ProfilePicture() {
             </div>
             {
                 image && (
-                    <UpdateProfilePicture/>
+                    <UpdateProfilePicture setImage={setImage()}/>
                 )
             }
         </div>
