@@ -1,8 +1,9 @@
 import "./style.css";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 
 export default function ProfilePicture() {
     const refInput = useRef(null);
+    const [image, setImage] = useState("");
     const handleImage = () => {
     };
     return (
