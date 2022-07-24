@@ -32,7 +32,8 @@ export default function UpdateProfilePicture({image, setImage}) {
                         image={image}
                         crop={crop}
                         zoom={zoom}
-                        aspect={4 / 3}
+                        aspect={1 / 1}
+                        cropShape="round"
                         onCropChange={setCrop}
                         onCropComplete={onCropComplete}
                         onZoomChange={setZoom}
