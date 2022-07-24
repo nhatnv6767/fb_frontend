@@ -32,6 +32,7 @@ export default function ProfilePicture() {
             <input
                 type="file"
                 ref={refInput}
+                accept="image/jpeg, image/png, image/gif, image/webp"
                 hidden
                 onChange={handleImage}
             />
