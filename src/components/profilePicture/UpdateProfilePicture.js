@@ -20,7 +20,7 @@ export default function UpdateProfilePicture({image, setImage}) {
         slider.current.stepDown();
         setZoom(slider.current.value);
     };
-    console.log(zoom);
+    // console.log(zoom);
     return (
         <div className="postBox update_img">
             <div className="box_header">
@@ -75,22 +75,23 @@ export default function UpdateProfilePicture({image, setImage}) {
                         <i className="plus_icon"></i>
                     </div>
                 </div>
-                <div className="flex_up">
-                    <div className="gray_btn">
-                        <i className="crop_icon"></i>Crop photo
-                    </div>
-                    <div className="gray_btn">
-                        <i className="temp_icon"></i>Make Temporary
-                    </div>
+
+            </div>
+            <div className="flex_up">
+                <div className="gray_btn">
+                    <i className="crop_icon"></i>Crop photo
                 </div>
-                <div className="flex_p_t">
-                    <i className="public_icon"></i>
-                    Your profile picture is public
+                <div className="gray_btn">
+                    <i className="temp_icon"></i>Make Temporary
                 </div>
-                <div className="update_submit_wrap">
-                    <div className="blue_link">Cancel</div>
-                    <button className="blue_btn">Save</button>
-                </div>
+            </div>
+            <div className="flex_p_t">
+                <i className="public_icon"></i>
+                Your profile picture is public
+            </div>
+            <div className="update_submit_wrap">
+                <div className="blue_link">Cancel</div>
+                <button className="blue_btn">Save</button>
             </div>
         </div>
     );
