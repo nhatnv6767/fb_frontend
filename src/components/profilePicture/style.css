@@ -146,3 +146,14 @@
     align-items: center;
     gap: 1rem;
 }
+
+.blue_link {
+    color: var(--blue-color);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.update_submit_wrap button {
+    width: 110px !important;
+}
