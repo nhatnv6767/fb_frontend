@@ -27,7 +27,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                 </textarea>
             </div>
             <div className="update_center">
-                <div className="crooper">
+                <div className="cropper">
                     <Cropper
                         image={image}
                         crop={crop}
