@@ -5,18 +5,20 @@ export default function UpdateProfilePicture({image, setImage}) {
     const [description, setDescription] = useState("");
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
-    const slider = useRef(null)
+    const slider = useRef(null);
 
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
         console.log(croppedArea, croppedAreaPixels);
     }, []);
 
     const zoomIn = () => {
-
+        slider.current.stepUp();
+        setZoom(slider.current.value);
     };
 
     const zoomOut = () => {
-
+        slider.current.stepDown();
+        setZoom(slider.current.value);
     };
     console.log(zoom);
     return (
@@ -62,6 +64,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                         min={1}
                         max={3}
                         step={0.2}
+                        ref={slider}
                         value={zoom}
                         onChange={(e) => setZoom(e.target.value)}
                     />
