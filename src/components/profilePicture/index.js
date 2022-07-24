@@ -54,6 +54,19 @@ export default function ProfilePicture() {
                         </button>
                     </div>
                 </div>
+                {
+                    error && (
+                        <div className="postError comment_error">
+                            <div className="postError_error">{error}</div>
+                            <button
+                                className="blue_btn"
+                                onClick={() => setError("")}
+                            >
+                                Try again
+                            </button>
+                        </div>
+                    )
+                }
                 <div className="old_picture_wrap"></div>
             </div>
         </div>
