@@ -24,6 +24,11 @@ export default function ProfilePicture() {
                     <div className="update_picture_buttons">
                         <button className="light_blue_btn">
                             <i className="plus_icon"></i>
+                            Upload photo
+                        </button>
+                        <button className="gray_btn">
+                            <i className="frame_icon"></i>
+                            Add frame
                         </button>
                     </div>
                 </div>
