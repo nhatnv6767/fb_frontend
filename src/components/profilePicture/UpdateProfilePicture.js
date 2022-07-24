@@ -1,25 +1,22 @@
-import {useCallback, useState} from "react";
+import {useCallback, useRef, useState} from "react";
 import Cropper from "react-easy-crop";
 
 export default function UpdateProfilePicture({image, setImage}) {
     const [description, setDescription] = useState("");
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
+    const slider = useRef(null)
 
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
         console.log(croppedArea, croppedAreaPixels);
     }, []);
 
     const zoomIn = () => {
-        if (zoom < 3) {
-            setZoom((prev) => prev + 0.2);
-        }
+
     };
 
     const zoomOut = () => {
-        if (zoom > 1) {
-            setZoom((prev) => prev - 0.2);
-        }
+
     };
     console.log(zoom);
     return (
