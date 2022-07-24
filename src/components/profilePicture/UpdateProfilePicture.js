@@ -44,6 +44,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                     <div className="slider_circle">
                         <i className="minus_icon"></i>
                     </div>
+                    <input type="range" name="" id=""/>
                     <div className="slider_circle">
                         <i className="plus_icon"></i>
                     </div>
