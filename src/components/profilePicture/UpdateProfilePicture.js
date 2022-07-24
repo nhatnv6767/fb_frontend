@@ -54,7 +54,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                 </div>
                 <div className="slider">
                     <div
-                        className="slider_circle"
+                        className="slider_circle hover1"
                         onClick={() => zoomOut()}
                     >
                         <i className="minus_icon"></i>
@@ -69,7 +69,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                         onChange={(e) => setZoom(e.target.value)}
                     />
                     <div
-                        className="slider_circle"
+                        className="slider_circle hover1"
                         onClick={() => zoomIn()}
                     >
                         <i className="plus_icon"></i>
