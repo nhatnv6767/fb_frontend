@@ -137,3 +137,12 @@
     font-size: 17px;
     border-bottom: 1px solid var(--bg-third);
 }
+
+.update_submit_wrap {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
