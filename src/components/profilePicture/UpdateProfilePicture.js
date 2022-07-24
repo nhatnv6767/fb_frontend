@@ -48,6 +48,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                         type="range"
                         min={1}
                         max={3}
+                        step={0.2}
                         value={zoom}
                         onChange={(e) => setZoom(e.target.value)}
                     />
