@@ -85,6 +85,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                 </div>
                 <div className="flex_p_t">
                     <i className="public_icon"></i>
+                    Your profile picture is public
                 </div>
             </div>
         </div>
