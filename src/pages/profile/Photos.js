@@ -40,7 +40,7 @@ export default function Photos({username, token}) {
             });
         }
     };
-    console.log(photos);
+    // console.log(photos);
     return (
         <div className="profile_card">
             <div className="profile_card_header">

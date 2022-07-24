@@ -13,6 +13,7 @@ import CreatePost from "../../components/createPost";
 import GridPosts from "./GridPosts";
 import Post from "../../components/post";
 import Photos from "./Photos";
+import Friends from "./Friends";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
@@ -85,6 +86,7 @@ export default function Profile({setVisible}) {
                                     username={userName}
                                     token={user.token}
                                 />
+                                <Friends friends={profile.friends}/>
                             </div>
                             <div className="profile_right">
                                 {
