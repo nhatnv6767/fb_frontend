@@ -19,6 +19,9 @@ export default function UpdateProfilePicture({setImage}) {
                 >
                 </textarea>
             </div>
+            <div className="update_center">
+                <div className="crooper"></div>
+            </div>
         </div>
     );
 }
