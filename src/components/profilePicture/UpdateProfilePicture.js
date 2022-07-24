@@ -44,7 +44,13 @@ export default function UpdateProfilePicture({image, setImage}) {
                     <div className="slider_circle">
                         <i className="minus_icon"></i>
                     </div>
-                    <input type="range" name="" id=""/>
+                    <input
+                        type="range"
+                        min={1}
+                        max={3}
+                        value={zoom}
+                        onChange={(e) => setZoom(e.target.value)}
+                    />
                     <div className="slider_circle">
                         <i className="plus_icon"></i>
                     </div>
