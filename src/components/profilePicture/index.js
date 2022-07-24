@@ -32,6 +32,7 @@ export default function ProfilePicture() {
                         </button>
                     </div>
                 </div>
+                <div className="old_picture_wrap"></div>
             </div>
         </div>
     );
