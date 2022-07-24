@@ -49,6 +49,13 @@ export default function Photos({username, token}) {
                     See all photos
                 </div>
             </div>
+            <div className="profile_card_count">
+                {
+                    photos.total_count === 0 ? ""
+                        : photos.total_count === 1 ? "1 Photo"
+                            : `${photos.total_count} photos`
+                }
+            </div>
         </div>
     );
 }
