@@ -77,15 +77,19 @@ export default function UpdateProfilePicture({image, setImage}) {
                 </div>
                 <div className="flex_up">
                     <div className="gray_btn">
-                        <i className="crop_icon">Crop photo</i>
+                        <i className="crop_icon"></i>Crop photo
                     </div>
                     <div className="gray_btn">
-                        <i className="temp_icon">Make Temporary</i>
+                        <i className="temp_icon"></i>Make Temporary
                     </div>
                 </div>
                 <div className="flex_p_t">
                     <i className="public_icon"></i>
                     Your profile picture is public
+                </div>
+                <div className="update_submit_wrap">
+                    <div className="blue_link">Cancel</div>
+                    <button className="blue_btn">Save</button>
                 </div>
             </div>
         </div>
