@@ -1,15 +1,11 @@
-import {useEffect, useReducer} from "react";
-import {photosReducer} from "../../functions/reducers";
-import axios from "axios";
-
 export default function Friends({friends}) {
 
     return (
         <div className="profile_card">
             <div className="profile_card_header">
-                Photos
+                Friends
                 <div className="profile_header_link">
-                    See all photos
+                    See all friends
                 </div>
             </div>
             <div className="profile_card_count">
@@ -21,9 +17,8 @@ export default function Friends({friends}) {
             </div>
             <div className="profile_card_grid">
                 {
-                    friends && friends.length && friends.slice(0, 9).map((img) => (
-                        <div className="profile_photo_card" key={img.public_id}>
-                            <img src={img.secure_url} alt=""/>
+                    friends && friends.length && friends.slice(0, 9).map((friend) => (
+                        <div className="profile_photo_card">
                         </div>
                     ))
                 }
