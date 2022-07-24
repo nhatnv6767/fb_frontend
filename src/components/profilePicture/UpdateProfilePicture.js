@@ -75,6 +75,17 @@ export default function UpdateProfilePicture({image, setImage}) {
                         <i className="plus_icon"></i>
                     </div>
                 </div>
+                <div className="flex_up">
+                    <div className="gray_btn">
+                        <i className="crop_icon">Crop photo</i>
+                    </div>
+                    <div className="gray_btn">
+                        <i className="temp_icon">Make Temporary</i>
+                    </div>
+                </div>
+                <div className="flex_p_t">
+                    <i className="public_icon"></i>
+                </div>
             </div>
         </div>
     );
