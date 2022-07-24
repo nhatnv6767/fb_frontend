@@ -10,11 +10,17 @@ export default function UpdateProfilePicture({image, setImage}) {
         console.log(croppedArea, croppedAreaPixels);
     }, []);
 
-    const zoomOut = () => {
-    }
-
     const zoomIn = () => {
-    }
+        if (zoom < 3) {
+            setZoom((prev) => prev + 0.2);
+        }
+    };
+
+    const zoomOut = () => {
+        if (zoom > 1) {
+            setZoom((prev) => prev - 0.2);
+        }
+    };
     return (
         <div className="postBox update_img">
             <div className="box_header">
