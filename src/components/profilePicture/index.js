@@ -15,7 +15,7 @@ export default function ProfilePicture() {
             />
             <div className="postBox pictureBox">
                 <div className="box_header">
-                    <div className="box_circle">
+                    <div className="small_circle">
                         <i className="exit_icon"></i>
                     </div>
                     <span>Update profile picture</span>
