@@ -28,6 +28,7 @@ export default function ProfilePicture() {
             setImage(event.target.result);
         };
     };
+    // console.log(image);
     return (
         <div className="blur">
             <input
@@ -76,7 +77,7 @@ export default function ProfilePicture() {
             </div>
             {
                 image && (
-                    <UpdateProfilePicture setImage={setImage()}/>
+                    <UpdateProfilePicture setImage={setImage}/>
                 )
             }
         </div>
