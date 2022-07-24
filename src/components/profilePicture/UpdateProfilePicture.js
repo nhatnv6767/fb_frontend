@@ -9,6 +9,12 @@ export default function UpdateProfilePicture({image, setImage}) {
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
         console.log(croppedArea, croppedAreaPixels);
     }, []);
+
+    const zoomOut = () => {
+    }
+
+    const zoomIn = () => {
+    }
     return (
         <div className="postBox update_img">
             <div className="box_header">
@@ -41,7 +47,10 @@ export default function UpdateProfilePicture({image, setImage}) {
                     />
                 </div>
                 <div className="slider">
-                    <div className="slider_circle">
+                    <div
+                        className="slider_circle"
+                        onClick={() => zoomOut()}
+                    >
                         <i className="minus_icon"></i>
                     </div>
                     <input
@@ -52,7 +61,10 @@ export default function UpdateProfilePicture({image, setImage}) {
                         value={zoom}
                         onChange={(e) => setZoom(e.target.value)}
                     />
-                    <div className="slider_circle">
+                    <div
+                        className="slider_circle"
+                        onClick={() => zoomIn()}
+                    >
                         <i className="plus_icon"></i>
                     </div>
                 </div>
