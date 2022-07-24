@@ -49,13 +49,17 @@ export default function Photos({username, token}) {
                     See all photos
                 </div>
             </div>
-            <div className="profile_card_count">
-                {
-                    photos.total_count === 0 ? ""
-                        : photos.total_count === 1 ? "1 Photo"
-                            : `${photos.total_count} photos`
-                }
-            </div>
+            {
+                photos.resources && (
+                    <div className="profile_card_count">
+                        {
+                            photos.total_count === 0 ? ""
+                                : photos.total_count === 1 ? "1 Photo"
+                                    : `${photos.total_count} photos`
+                        }
+                    </div>
+                )
+            }
             <div className="profile_card_grid">
                 {
                     photos.resources && photos.resources.length && photos.resources.slice(0, 9).map((img) => (
