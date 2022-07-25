@@ -61,7 +61,7 @@ export default function UpdateProfilePicture({image, setImage, setError, setShow
 
             const res = await uploadImages(formData, path, user.token);
             const updated_picture = await updateprofilePicture(res[0].url, user.token);
-            console.log(updated_picture);
+            // console.log(updated_picture);
             if (updated_picture === "ok") {
                 const new_post = await createPost(
                     "profilePicture",
