@@ -9,7 +9,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
     const [zoom, setZoom] = useState(1);
     const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
     const slider = useRef(null);
-    const {user} = useSelector((state) => ({...state}))
+    const {user} = useSelector((state) => ({...state}));
 
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
         setCroppedAreaPixels(croppedAreaPixels);
@@ -47,7 +47,10 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
         try {
             let img = await getCroppedImage();
             let blob = await fetch(img).then((b) => b.blob());
-
+            const path = `${user.username}/profile_pictures`;
+            let formData = new FormData();
+            formData.append("file", blob);
+            formData.append("path", path);
         } catch (e) {
             setError(e.response.data.error);
         }
