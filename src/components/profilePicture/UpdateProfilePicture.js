@@ -23,13 +23,14 @@ export default function UpdateProfilePicture({image, setImage}) {
         setZoom(slider.current.value);
     };
 
-    const getCroppedImage = useCallback(async () => {
+    const getCroppedImage = useCallback(async (show) => {
         try {
             const img = await getCroppedImg(image, croppedAreaPixels);
-            setZoom(1);
-            setCrop({x: 0, y: 0});
-            console.log(img);
-            setImage(img);
+            if (show) {
+                setZoom(1);
+                setCrop({x: 0, y: 0});
+                setImage(img);
+            }
             return img;
         } catch (e) {
             console.log(e);
@@ -53,7 +54,6 @@ export default function UpdateProfilePicture({image, setImage}) {
                 >
                 </textarea>
             </div>
-            <img src="blob:http://localhost:3000/4a83acc7-b3a5-4271-84be-f12a2dda183d" alt=""/>
             <div className="update_center">
                 <div className="cropper">
                     <Cropper
