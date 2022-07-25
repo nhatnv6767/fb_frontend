@@ -53,6 +53,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                 >
                 </textarea>
             </div>
+            <img src="blob:http://localhost:3000/4a83acc7-b3a5-4271-84be-f12a2dda183d" alt=""/>
             <div className="update_center">
                 <div className="cropper">
                     <Cropper
