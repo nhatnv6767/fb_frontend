@@ -181,3 +181,11 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.old_pictures img:hover {
+    filter: brightness(110%);
+}
+
+.old_pictures:first-of-type {
+    border-bottom: 1px solid var(--bg-third);
+}
