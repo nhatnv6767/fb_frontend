@@ -11,7 +11,7 @@ export default function ProfilePicture({setShow, pRef, photos}) {
     const refInput = useRef(null);
     const [image, setImage] = useState("");
     const [error, setError] = useState("");
-    useClickOutside(popup, () => setShow(false));
+    // useClickOutside(popup, () => setShow(false));
     const handleImage = (e) => {
         let file = e.target.files[0];
         if (
