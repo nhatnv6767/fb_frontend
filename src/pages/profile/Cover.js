@@ -14,6 +14,7 @@ export default function Cover({cover, visitor}) {
                 ref={refInput}
                 hidden
                 accept="image/jpeg, image/png, image/webp, image/gif"
+                onChange={handleImage}
             />
             {
                 cover &&
