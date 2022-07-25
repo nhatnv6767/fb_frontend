@@ -33,7 +33,7 @@ export default function Profile({setVisible}) {
     }, [userName]);
     // var visitor = userName === user.username ? false : true;
     var visitor = userName !== user.username;
-    const path = `${username}/*`;
+    const path = `${userName}/*`;
     const max = 30;
     const sort = "desc";
     const getProfile = async () => {
