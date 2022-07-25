@@ -167,3 +167,8 @@
 .old_picture_wrap h4 {
     padding: 10px 0;
 }
+
+.old_pictures {
+    display: flex;
+    flex-wrap: wrap;
+}
