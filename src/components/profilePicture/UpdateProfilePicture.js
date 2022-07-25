@@ -1,14 +1,16 @@
 import {useCallback, useRef, useState} from "react";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {uploadImages} from "../../functions/uploadImages";
 import {updateprofilePicture} from "../../functions/user";
 import {createPost} from "../../functions/post";
 import PulseLoader from "react-spinners/PulseLoader";
+import Cookies from "js-cookie";
 
 export default function UpdateProfilePicture({image, setImage, setError, setShow, pRef}) {
+    const dispatch = useDispatch();
     const [description, setDescription] = useState("");
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
