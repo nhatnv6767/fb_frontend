@@ -2,7 +2,7 @@ import "./style.css";
 import {useRef, useState} from "react";
 import UpdateProfilePicture from "./UpdateProfilePicture";
 
-export default function ProfilePicture() {
+export default function ProfilePicture({setShow}) {
     const refInput = useRef(null);
     const [image, setImage] = useState("");
     const [error, setError] = useState("");
@@ -40,7 +40,10 @@ export default function ProfilePicture() {
             />
             <div className="postBox pictureBox">
                 <div className="box_header">
-                    <div className="small_circle">
+                    <div
+                        className="small_circle"
+                        onClick={() => setShow(false)}
+                    >
                         <i className="exit_icon"></i>
                     </div>
                     <span>Update profile picture</span>
