@@ -51,6 +51,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
 
     const updateProfilePicture = async () => {
         try {
+            setLoading(true);
             let img = await getCroppedImage();
             let blob = await fetch(img).then((b) => b.blob());
             const path = `${user.username}/profile_pictures`;
@@ -72,12 +73,16 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                 );
                 if (new_post === "ok") {
                 } else {
+                    setLoading(false);
                     setError(new_post);
                 }
             } else {
+                setLoading(false);
                 setError(updated_picture);
             }
+            setLoading(false);
         } catch (e) {
+            setLoading(false);
             setError(e.response.data.error);
         }
     };
