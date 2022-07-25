@@ -5,7 +5,7 @@ import useClickOutside from "../../helpers/clickOutside";
 import {photosReducer} from "../../functions/reducers";
 import {useSelector} from "react-redux";
 
-export default function ProfilePicture({setShow, pRef}) {
+export default function ProfilePicture({setShow, pRef, photos}) {
     const popup = useRef(null);
     const {user} = useSelector((state) => ({...state}));
     const refInput = useRef(null);
@@ -87,7 +87,7 @@ export default function ProfilePicture({setShow, pRef}) {
                 }
                 <div className="old_picture_wrap">
                     {
-                        photosReducer.filter((img) =>
+                        photos.filter((img) =>
                             img.folder === `${user.username}/profile_pictures`)
                             .map((photo) => (
                                 <img src={photo.secure_url} key={photo.public_id} alt=""/>

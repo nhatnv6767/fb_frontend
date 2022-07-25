@@ -10,7 +10,7 @@ export default function ProfilePictureInfos({profile, visitor, photos}) {
                 show && <ProfilePicture
                     setShow={setShow}
                     pRef={pRef}
-                    photo={photos}
+                    photos={photos}
                 />
             }
             <div className="profile_w_left">
