@@ -90,7 +90,12 @@ export default function ProfilePicture({setShow, pRef, photos}) {
                         photos.filter((img) =>
                             img.folder === `${user.username}/profile_pictures`)
                             .map((photo) => (
-                                <img src={photo.secure_url} key={photo.public_id} alt=""/>
+                                <img
+                                    src={photo.secure_url}
+                                    key={photo.public_id}
+                                    alt=""
+                                    style={{width: "100px"}}
+                                />
                             ))
                     }
                 </div>
