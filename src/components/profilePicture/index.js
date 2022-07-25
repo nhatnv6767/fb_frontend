@@ -86,6 +86,7 @@ export default function ProfilePicture({setShow, pRef, photos}) {
                     )
                 }
                 <div className="old_picture_wrap">
+                    <h4>Your profile pictures</h4>
                     {
                         photos.filter((img) =>
                             img.folder === `${user.username}/profile_pictures`)
