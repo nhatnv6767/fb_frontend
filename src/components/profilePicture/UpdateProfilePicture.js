@@ -152,7 +152,12 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                 Your profile picture is public
             </div>
             <div className="update_submit_wrap">
-                <div className="blue_link">Cancel</div>
+                <div
+                    className="blue_link"
+                    onClick={() => setImage("")}
+                >
+                    Cancel
+                </div>
                 <button
                     className="blue_btn"
                     onClick={() => updateProfilePicture()}
