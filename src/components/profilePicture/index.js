@@ -84,6 +84,7 @@ export default function ProfilePicture({setShow}) {
                         setImage={setImage}
                         image={image}
                         setError={setError}
+                        setShow={setShow}
                     />
                 )
             }
