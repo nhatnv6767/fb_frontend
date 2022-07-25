@@ -55,6 +55,9 @@ export default function Cover({cover, visitor}) {
                     </div>
                 )
             }
+            <div className="cover_copper">
+
+            </div>
             {
                 cover &&
                 <img src={cover} className="cover" alt=""/>
