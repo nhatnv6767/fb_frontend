@@ -17,7 +17,10 @@ export default function ProfilePictureInfos({profile, visitor}) {
                     </div>
                     {
                         !visitor && (
-                            <div className="profile_circle hover1">
+                            <div
+                                className="profile_circle hover1"
+                                onClick={() => setShow(true)}
+                            >
                                 <i className="camera_filled_icon"></i>
                             </div>
                         )
