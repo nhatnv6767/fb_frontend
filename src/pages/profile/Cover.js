@@ -43,6 +43,19 @@ export default function Cover({cover, visitor}) {
                 onChange={handleImage}
             />
             {
+                error && (
+                    <div className="postError comment_error">
+                        <div className="postError_error">{error}</div>
+                        <button
+                            className="blue_btn"
+                            onClick={() => setError("")}
+                        >
+                            Try again
+                        </button>
+                    </div>
+                )
+            }
+            {
                 cover &&
                 <img src={cover} className="cover" alt=""/>
             }
