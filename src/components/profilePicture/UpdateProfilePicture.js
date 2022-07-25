@@ -26,6 +26,8 @@ export default function UpdateProfilePicture({image, setImage}) {
     const getCroppedImage = useCallback(async () => {
         try {
             const img = await getCroppedImg(image, croppedAreaPixels);
+            setZoom(1);
+            setCrop({x: 0, y: 0});
             console.log(img);
             setImage(img);
             return img;
