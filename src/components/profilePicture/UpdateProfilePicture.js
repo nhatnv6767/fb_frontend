@@ -98,7 +98,10 @@ export default function UpdateProfilePicture({image, setImage}) {
 
             </div>
             <div className="flex_up">
-                <div className="gray_btn">
+                <div
+                    className="gray_btn"
+                    onClick={() => getCroppedImage("show")}
+                >
                     <i className="crop_icon"></i>Crop photo
                 </div>
                 <div className="gray_btn">
