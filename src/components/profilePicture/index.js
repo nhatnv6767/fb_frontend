@@ -85,7 +85,7 @@ export default function ProfilePicture({setShow, pRef, photos}) {
                         </div>
                     )
                 }
-                <div className="old_picture_wrap">
+                <div className="old_picture_wrap scrollbar">
                     <h4>Your profile pictures</h4>
                     <div className="old_pictures">
                         {
