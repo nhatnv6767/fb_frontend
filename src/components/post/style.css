@@ -514,6 +514,22 @@
     margin: 5px 0;
 }
 
+.post_profile_wrap {
+    position: relative;
+    height: 500px;
+    display: grid;
+    place-items: center;
+}
+
+.post_updated_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    background: var(--bg-third);
+}
+
 /* ---------- Post menu ---------- */
 
 @media (max-width: 415px) {
