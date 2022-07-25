@@ -87,18 +87,20 @@ export default function ProfilePicture({setShow, pRef, photos}) {
                 }
                 <div className="old_picture_wrap">
                     <h4>Your profile pictures</h4>
-                    {
-                        photos.filter((img) =>
-                            img.folder === `${user.username}/profile_pictures`)
-                            .map((photo) => (
-                                <img
-                                    src={photo.secure_url}
-                                    key={photo.public_id}
-                                    alt=""
-                                    style={{width: "100px"}}
-                                />
-                            ))
-                    }
+                    <div className="old_pictures">
+                        {
+                            photos.filter((img) =>
+                                img.folder === `${user.username}/profile_pictures`)
+                                .map((photo) => (
+                                    <img
+                                        src={photo.secure_url}
+                                        key={photo.public_id}
+                                        alt=""
+                                        style={{width: "100px"}}
+                                    />
+                                ))
+                        }
+                    </div>
                 </div>
             </div>
             {
