@@ -96,7 +96,7 @@ export default function ProfilePicture({setShow, pRef, photos}) {
                                         src={photo.secure_url}
                                         key={photo.public_id}
                                         alt=""
-                                        style={{width: "100px"}}
+                                        onClick={() => setImage(photo.secure_url)}
                                     />
                                 ))
                         }
@@ -112,7 +112,7 @@ export default function ProfilePicture({setShow, pRef, photos}) {
                                         src={photo.secure_url}
                                         key={photo.public_id}
                                         alt=""
-                                        style={{width: "100px"}}
+                                        onClick={() => setImage(photo.secure_url)}
                                     />
                                 ))
                         }
