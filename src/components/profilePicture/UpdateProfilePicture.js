@@ -116,7 +116,6 @@ export default function UpdateProfilePicture({image, setImage}) {
                 <div className="blue_link">Cancel</div>
                 <button
                     className="blue_btn"
-                    onClick={() => getCroppedImage()}
                 >
                     Save
                 </button>
