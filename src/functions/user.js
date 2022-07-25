@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const createPost = async (
+export const updateprofilePicture = async (
     url,
     token
 ) => {
