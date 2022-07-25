@@ -8,7 +8,7 @@ import {updateprofilePicture} from "../../functions/user";
 import {createPost} from "../../functions/post";
 import PulseLoader from "react-spinners/PulseLoader";
 
-export default function UpdateProfilePicture({image, setImage, setError}) {
+export default function UpdateProfilePicture({image, setImage, setError, setShow}) {
     const [description, setDescription] = useState("");
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
@@ -73,7 +73,8 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                 );
                 if (new_post === "ok") {
                     setLoading(false);
-                    setImage("")
+                    setImage("");
+                    setShow(false);
                 } else {
                     setLoading(false);
                     setError(new_post);
