@@ -59,7 +59,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
             const res = await uploadImages(formData, path, user.token);
             const updated_picture = await updateprofilePicture(res[0].url, user.token);
             if (updated_picture === "ok") {
-                await createPost(
+                const new_post = await createPost(
                     "profilePicture",
                     null,
                     description,
@@ -67,6 +67,10 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                     user.id,
                     user.token
                 );
+                if (new_post === "ok") {
+                } else {
+                    setError(new_post);
+                }
             } else {
                 setError(updated_picture);
             }
