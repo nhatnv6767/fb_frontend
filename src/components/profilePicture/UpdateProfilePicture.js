@@ -2,6 +2,8 @@ import {useCallback, useRef, useState} from "react";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
 import {useSelector} from "react-redux";
+import axios from "axios";
+import {uploadImages} from "../../functions/uploadImages";
 
 export default function UpdateProfilePicture({image, setImage, setError}) {
     const [description, setDescription] = useState("");
@@ -51,6 +53,9 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
             let formData = new FormData();
             formData.append("file", blob);
             formData.append("path", path);
+
+            const res = await uploadImages(formData, path, user.token);
+
         } catch (e) {
             setError(e.response.data.error);
         }
