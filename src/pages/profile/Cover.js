@@ -3,6 +3,7 @@ import useClickOutside from "../../helpers/clickOutside";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
+    const [coverPicture, setCoverPicture] = useState("");
     const menuRef = useRef(null);
     const refInput = useRef(null);
     useClickOutside(menuRef, () => setShowCoverMenu(false));
