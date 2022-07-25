@@ -44,6 +44,8 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
     const updateProfilePicture = async () => {
         try {
             let img = await getCroppedImage();
+            let blob = await fetch(img).then((b) => b.blob());
+            console.log(blob);
             console.log(img);
         } catch (e) {
             setError(e.response.data.error);
