@@ -1,11 +1,14 @@
 import "./style.css";
 import {useRef, useState} from "react";
 import UpdateProfilePicture from "./UpdateProfilePicture";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function ProfilePicture({setShow, pRef}) {
+    const popup = useRef(null)
     const refInput = useRef(null);
     const [image, setImage] = useState("");
     const [error, setError] = useState("");
+    useClickOutside(popup, () => setShow(false))
     const handleImage = (e) => {
         let file = e.target.files[0];
         if (
@@ -38,7 +41,10 @@ export default function ProfilePicture({setShow, pRef}) {
                 hidden
                 onChange={handleImage}
             />
-            <div className="postBox pictureBox">
+            <div
+                className="postBox pictureBox"
+                ref={popup}
+            >
                 <div className="box_header">
                     <div
                         className="small_circle"
