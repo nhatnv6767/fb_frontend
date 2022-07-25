@@ -158,13 +158,13 @@
     width: 110px !important;
 }
 
-.old_picture_wrap {
+.old_pictures_wrap {
     padding: 15px;
     overflow-y: auto;
     height: 450px;
 }
 
-.old_picture_wrap h4 {
+.old_pictures_wrap h4 {
     padding: 10px 0;
 }
 
