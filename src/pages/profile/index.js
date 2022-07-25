@@ -50,17 +50,14 @@ export default function Profile({setVisible}) {
                 navigate("/profile");
             } else {
                 try {
-                    const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`,
+                    const images = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`,
                         {path, sort, max},
                         {
                             headers: {
                                 Authorization: `Bearer ${user.token}`,
                             }
                         });
-                    dispatch({
-                        type: "PHOTOS_SUCCESS",
-                        payload: data,
-                    });
+                    setPhotos(images.data);
                 } catch (e) {
                     console.log(e);
                 }
