@@ -74,7 +74,6 @@ export default function Profile({setVisible}) {
             });
         }
     };
-    console.log(photos);
     return (
         <div className="profile">
             <Header page="profile"/>
@@ -87,6 +86,7 @@ export default function Profile({setVisible}) {
                     <ProfilePictureInfos
                         profile={profile}
                         visitor={visitor}
+                        photos={photos.resources}
                     />
                     <ProfileMenu/>
                 </div>
