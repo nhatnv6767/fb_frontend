@@ -28,9 +28,11 @@ export default function Cover({cover, visitor}) {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = (event) => {
-            setImage(event.target.result);
+            setCoverPicture(event.target.result);
         };
     };
+
+    console.log(cover);
     return (
         <div className="profile_cover">
             <input
