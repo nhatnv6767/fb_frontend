@@ -1,6 +1,7 @@
 import {useCallback, useRef, useState} from "react";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
+import {useSelector} from "react-redux";
 
 export default function UpdateProfilePicture({image, setImage, setError}) {
     const [description, setDescription] = useState("");
@@ -8,6 +9,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
     const [zoom, setZoom] = useState(1);
     const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
     const slider = useRef(null);
+    const {user} = useSelector((state) => ({...state}))
 
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
         setCroppedAreaPixels(croppedAreaPixels);
@@ -45,8 +47,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
         try {
             let img = await getCroppedImage();
             let blob = await fetch(img).then((b) => b.blob());
-            console.log(blob);
-            console.log(img);
+
         } catch (e) {
             setError(e.response.data.error);
         }
