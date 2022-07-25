@@ -2,13 +2,16 @@ import "./style.css";
 import {useRef, useState} from "react";
 import UpdateProfilePicture from "./UpdateProfilePicture";
 import useClickOutside from "../../helpers/clickOutside";
+import {photosReducer} from "../../functions/reducers";
+import {useSelector} from "react-redux";
 
 export default function ProfilePicture({setShow, pRef}) {
-    const popup = useRef(null)
+    const popup = useRef(null);
+    const {user} = useSelector((state) => ({...state}));
     const refInput = useRef(null);
     const [image, setImage] = useState("");
     const [error, setError] = useState("");
-    useClickOutside(popup, () => setShow(false))
+    useClickOutside(popup, () => setShow(false));
     const handleImage = (e) => {
         let file = e.target.files[0];
         if (
@@ -82,7 +85,11 @@ export default function ProfilePicture({setShow, pRef}) {
                         </div>
                     )
                 }
-                <div className="old_picture_wrap"></div>
+                <div className="old_picture_wrap">
+                    {
+                        photosReducer.filter(img => img.folder === `${user.username}`)
+                    }
+                </div>
             </div>
             {
                 image && (
