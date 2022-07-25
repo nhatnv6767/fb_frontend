@@ -74,7 +74,7 @@ export default function Profile({setVisible}) {
             });
         }
     };
-    // console.log(profile);
+    console.log(photos);
     return (
         <div className="profile">
             <Header page="profile"/>
@@ -100,6 +100,7 @@ export default function Profile({setVisible}) {
                                 <Photos
                                     username={userName}
                                     token={user.token}
+                                    photos={photos}
                                 />
                                 <Friends friends={profile.friends}/>
                                 <div className="relative_fb_copyright">
