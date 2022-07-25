@@ -2,7 +2,7 @@ import "./style.css";
 import {useRef, useState} from "react";
 import UpdateProfilePicture from "./UpdateProfilePicture";
 
-export default function ProfilePicture({setShow}) {
+export default function ProfilePicture({setShow, pRef}) {
     const refInput = useRef(null);
     const [image, setImage] = useState("");
     const [error, setError] = useState("");
@@ -85,6 +85,7 @@ export default function ProfilePicture({setShow}) {
                         image={image}
                         setError={setError}
                         setShow={setShow}
+                        pRef={pRef}
                     />
                 )
             }
