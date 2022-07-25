@@ -104,7 +104,12 @@ export default function UpdateProfilePicture({image, setImage}) {
             </div>
             <div className="update_submit_wrap">
                 <div className="blue_link">Cancel</div>
-                <button className="blue_btn">Save</button>
+                <button
+                    className="blue_btn"
+                    onClick={() => getCroppedImage()}
+                >
+                    Save
+                </button>
             </div>
         </div>
     );
