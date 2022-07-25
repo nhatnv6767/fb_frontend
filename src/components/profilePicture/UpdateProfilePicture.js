@@ -20,6 +20,9 @@ export default function UpdateProfilePicture({image, setImage}) {
         slider.current.stepDown();
         setZoom(slider.current.value);
     };
+
+    const getCroppedImage = useCallback(async () => {
+    });
     // console.log(zoom);
     return (
         <div className="postBox update_img">
