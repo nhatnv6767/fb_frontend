@@ -6,6 +6,7 @@ import axios from "axios";
 import {uploadImages} from "../../functions/uploadImages";
 import {updateprofilePicture} from "../../functions/user";
 import {createPost} from "../../functions/post";
+import PulseLoader from "react-spinners/PulseLoader";
 
 export default function UpdateProfilePicture({image, setImage, setError}) {
     const [description, setDescription] = useState("");
@@ -163,7 +164,9 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                     className="blue_btn"
                     onClick={() => updateProfilePicture()}
                 >
-                    Save
+                    {
+                        loading ? <PulseLoader color="#fff" size={5}/> : "Save"
+                    }
                 </button>
             </div>
         </div>
