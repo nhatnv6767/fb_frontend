@@ -1,7 +1,7 @@
 import {useRef, useState} from "react";
 import ProfilePicture from "../../components/profilePicture";
 
-export default function ProfilePictureInfos({profile, visitor}) {
+export default function ProfilePictureInfos({profile, visitor, photos}) {
     const [show, setShow] = useState(false);
     const pRef = useRef(null);
     return (
@@ -10,6 +10,7 @@ export default function ProfilePictureInfos({profile, visitor}) {
                 show && <ProfilePicture
                     setShow={setShow}
                     pRef={pRef}
+                    photo={photos}
                 />
             }
             <div className="profile_w_left">
