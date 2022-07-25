@@ -6,7 +6,7 @@ export default function ProfilePictureInfos({profile, visitor}) {
     return (
         <div className="profile_img_wrap">
             {
-                show && <ProfilePicture/>
+                show && <ProfilePicture setShow={setShow()}/>
             }
             <div className="profile_w_left">
                 <div className="profile_w_img">
