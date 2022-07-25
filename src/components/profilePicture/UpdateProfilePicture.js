@@ -1,5 +1,6 @@
 import {useCallback, useRef, useState} from "react";
 import Cropper from "react-easy-crop";
+import getCroppedImg from "../../helpers/getCroppedImg";
 
 export default function UpdateProfilePicture({image, setImage}) {
     const [description, setDescription] = useState("");
@@ -24,7 +25,10 @@ export default function UpdateProfilePicture({image, setImage}) {
 
     const getCroppedImage = useCallback(async () => {
         try {
-            console.log();
+            const img = await getCroppedImg(image, croppedAreaPixels);
+            console.log(img);
+            setImage(img);
+            return img;
         } catch (e) {
             console.log(e);
         }
