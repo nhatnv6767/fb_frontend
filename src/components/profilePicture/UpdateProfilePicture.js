@@ -40,7 +40,14 @@ export default function UpdateProfilePicture({image, setImage}) {
             console.log(e);
         }
     }, [croppedAreaPixels]);
-    // console.log(zoom);
+
+    const updateProfilePicture = async () => {
+        try {
+            console.log();
+        } catch (e) {
+        }
+    }
+
     return (
         <div className="postBox update_img">
             <div className="box_header">
@@ -116,6 +123,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                 <div className="blue_link">Cancel</div>
                 <button
                     className="blue_btn"
+                    onClick={() => updateProfilePicture()}
                 >
                     Save
                 </button>
