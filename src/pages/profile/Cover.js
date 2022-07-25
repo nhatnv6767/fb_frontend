@@ -32,7 +32,7 @@ export default function Cover({cover, visitor}) {
         };
     };
 
-    console.log(cover);
+    console.log(coverPicture);
     return (
         <div className="profile_cover">
             <input
