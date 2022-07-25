@@ -19,7 +19,7 @@ export default function Profile({setVisible}) {
     const {username} = useParams();
     const navigate = useNavigate();
     const {user} = useSelector((state) => ({...state}));
-    const [photos, setPhotos] = useState({})
+    const [photos, setPhotos] = useState({});
 
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
@@ -47,6 +47,21 @@ export default function Profile({setVisible}) {
             if (data.ok === false) {
                 navigate("/profile");
             } else {
+                try {
+                    const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`,
+                        {path, sort, max},
+                        {
+                            headers: {
+                                Authorization: `Bearer ${token}`,
+                            }
+                        });
+                    dispatch({
+                        type: "PHOTOS_SUCCESS",
+                        payload: data,
+                    });
+                } catch (e) {
+                    console.log(e);
+                }
                 dispatch({
                     type: "PROFILE_SUCCESS",
                     payload: data,

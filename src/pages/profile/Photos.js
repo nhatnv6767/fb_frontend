@@ -8,18 +8,6 @@ export default function Photos({username, token, photos}) {
     const max = 30;
     const sort = "desc";
 
-    const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/listImages`,
-        {path, sort, max},
-        {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            }
-        });
-    dispatch({
-        type: "PHOTOS_SUCCESS",
-        payload: data,
-    });
-
     // console.log(photos);
     return (
         <div className="profile_card">
