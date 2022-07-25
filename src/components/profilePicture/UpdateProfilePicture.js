@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 import axios from "axios";
 import {uploadImages} from "../../functions/uploadImages";
 import {updateprofilePicture} from "../../functions/user";
+import {createPost} from "../../functions/post";
 
 export default function UpdateProfilePicture({image, setImage, setError}) {
     const [description, setDescription] = useState("");
@@ -57,6 +58,18 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
 
             const res = await uploadImages(formData, path, user.token);
             const updated_picture = await updateprofilePicture(res[0].url, user.token);
+            if (updated_picture === "ok") {
+                await createPost(
+                    "profilePicture",
+                    null,
+                    description,
+                    res[0].url,
+                    user.id,
+                    user.token
+                );
+            } else {
+                setError(updated_picture);
+            }
         } catch (e) {
             setError(e.response.data.error);
         }
