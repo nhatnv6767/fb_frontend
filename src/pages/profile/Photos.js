@@ -3,11 +3,6 @@ import {photosReducer} from "../../functions/reducers";
 import axios from "axios";
 
 export default function Photos({username, token, photos}) {
-
-    const path = `${username}/*`;
-    const max = 30;
-    const sort = "desc";
-
     // console.log(photos);
     return (
         <div className="profile_card">

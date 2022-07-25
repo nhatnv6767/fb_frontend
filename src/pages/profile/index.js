@@ -33,7 +33,9 @@ export default function Profile({setVisible}) {
     }, [userName]);
     // var visitor = userName === user.username ? false : true;
     var visitor = userName !== user.username;
-    // console.log(visitor);
+    const path = `${username}/*`;
+    const max = 30;
+    const sort = "desc";
     const getProfile = async () => {
         try {
             dispatch({
@@ -52,7 +54,7 @@ export default function Profile({setVisible}) {
                         {path, sort, max},
                         {
                             headers: {
-                                Authorization: `Bearer ${token}`,
+                                Authorization: `Bearer ${user.token}`,
                             }
                         });
                     dispatch({
