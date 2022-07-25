@@ -36,7 +36,10 @@ export default function Cover({cover, visitor}) {
                                         <i className="photo_icon"></i>
                                         Select Photo
                                     </div>
-                                    <div className="open_cover_menu_item hover1">
+                                    <div
+                                        className="open_cover_menu_item hover1"
+                                        onClick={() => refInput.current.click()}
+                                    >
                                         <i className="upload_icon"></i>
                                         Upload Photo
                                     </div>
