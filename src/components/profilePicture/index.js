@@ -87,7 +87,11 @@ export default function ProfilePicture({setShow, pRef}) {
                 }
                 <div className="old_picture_wrap">
                     {
-                        photosReducer.filter(img => img.folder === `${user.username}`)
+                        photosReducer.filter((img) =>
+                            img.folder === `${user.username}/profile_pictures`)
+                            .map((photo) => (
+                                <img src={photo.secure_url} key={photo.public_id} alt=""/>
+                            ))
                     }
                 </div>
             </div>
