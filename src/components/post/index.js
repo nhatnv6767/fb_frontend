@@ -97,8 +97,13 @@ export default function Post({post, user, profile}) {
                             </>
                         )
                         : post.type === "profilePicture"
-                            ? <div className="post_profile_wrap">profile picture</div>
-                            : <div className="post_cover_wrap">profile picture cover</div>
+                            ? (
+                                <div className="post_profile_wrap">
+                                    <div className="post_updated_bg">
+                                        <img src={post.user.cover} alt=""/>
+                                    </div>
+                                </div>
+                            ) : <div className="post_cover_wrap">profile picture cover</div>
             }
             <div className="post_infos">
                 <div className="reacts_count">
