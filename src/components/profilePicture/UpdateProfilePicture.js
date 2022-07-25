@@ -22,6 +22,11 @@ export default function UpdateProfilePicture({image, setImage}) {
     };
 
     const getCroppedImage = useCallback(async () => {
+        try {
+            console.log();
+        } catch (e) {
+            console.log(e);
+        }
     });
     // console.log(zoom);
     return (
