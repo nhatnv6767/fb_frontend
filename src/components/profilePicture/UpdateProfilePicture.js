@@ -10,7 +10,7 @@ export default function UpdateProfilePicture({image, setImage}) {
     const slider = useRef(null);
 
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
-        console.log(croppedArea, croppedAreaPixels);
+        setCroppedAreaPixels(croppedAreaPixels);
     }, []);
 
     const zoomIn = () => {
