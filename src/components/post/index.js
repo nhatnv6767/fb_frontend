@@ -102,6 +102,10 @@ export default function Post({post, user, profile}) {
                                     <div className="post_updated_bg">
                                         <img src={post.user.cover} alt=""/>
                                     </div>
+                                    <img src={post.images[0].url}
+                                         alt=""
+                                         className="post_updated_picture"
+                                    />
                                 </div>
                             ) : <div className="post_cover_wrap">profile picture cover</div>
             }
