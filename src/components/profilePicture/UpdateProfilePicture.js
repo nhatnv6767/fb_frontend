@@ -94,7 +94,7 @@ export default function UpdateProfilePicture({image, setImage, setError, setShow
 
         } catch (e) {
             setLoading(false);
-            setError(e.response.data.error);
+            setError(e.response.data.message);
         }
     };
 
