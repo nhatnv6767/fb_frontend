@@ -4,9 +4,16 @@ import useClickOutside from "../../helpers/clickOutside";
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const menuRef = useRef(null);
+    const refInput = useRef(null);
     useClickOutside(menuRef, () => setShowCoverMenu(false));
     return (
         <div className="profile_cover">
+            <input
+                type="file"
+                ref={refInput}
+                hidden
+                accept="image/jpeg, image/png, image/webp, image/gif"
+            />
             {
                 cover &&
                 <img src={cover} className="cover" alt=""/>
