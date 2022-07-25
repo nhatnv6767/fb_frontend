@@ -8,7 +8,7 @@ import {updateprofilePicture} from "../../functions/user";
 import {createPost} from "../../functions/post";
 import PulseLoader from "react-spinners/PulseLoader";
 
-export default function UpdateProfilePicture({image, setImage, setError, setShow}) {
+export default function UpdateProfilePicture({image, setImage, setError, setShow, pRef}) {
     const [description, setDescription] = useState("");
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
@@ -38,10 +38,7 @@ export default function UpdateProfilePicture({image, setImage, setError, setShow
                 setZoom(1);
                 setCrop({x: 0, y: 0});
                 setImage(img);
-                console.log("just show");
             } else {
-                console.log("not show");
-                console.log("----------", img);
                 return img;
             }
         } catch (e) {
@@ -74,6 +71,7 @@ export default function UpdateProfilePicture({image, setImage, setError, setShow
                 if (new_post === "ok") {
                     setLoading(false);
                     setImage("");
+                    pRef.current.style.backgroundImage = `url(${res[0].url})`;
                     setShow(false);
                 } else {
                     setLoading(false);
