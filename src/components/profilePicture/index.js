@@ -80,6 +80,7 @@ export default function ProfilePicture() {
                     <UpdateProfilePicture
                         setImage={setImage}
                         image={image}
+                        setError={setError}
                     />
                 )
             }

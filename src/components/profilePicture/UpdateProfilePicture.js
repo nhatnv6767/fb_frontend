@@ -2,7 +2,7 @@ import {useCallback, useRef, useState} from "react";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
 
-export default function UpdateProfilePicture({image, setImage}) {
+export default function UpdateProfilePicture({image, setImage, setError}) {
     const [description, setDescription] = useState("");
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
@@ -33,7 +33,7 @@ export default function UpdateProfilePicture({image, setImage}) {
                 console.log("just show");
             } else {
                 console.log("not show");
-                console.log(img);
+                console.log("----------", img);
                 return img;
             }
         } catch (e) {
@@ -43,10 +43,12 @@ export default function UpdateProfilePicture({image, setImage}) {
 
     const updateProfilePicture = async () => {
         try {
-            console.log();
+            let img = await getCroppedImage();
+            console.log(img);
         } catch (e) {
+            setError(e.response.data.error);
         }
-    }
+    };
 
     return (
         <div className="postBox update_img">
