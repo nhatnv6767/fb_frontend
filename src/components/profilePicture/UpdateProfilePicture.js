@@ -15,7 +15,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
     const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
     const slider = useRef(null);
     const {user} = useSelector((state) => ({...state}));
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
         setCroppedAreaPixels(croppedAreaPixels);
@@ -163,6 +163,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                 <button
                     className="blue_btn"
                     onClick={() => updateProfilePicture()}
+                    disabled={loading}
                 >
                     {
                         loading ? <PulseLoader color="#fff" size={5}/> : "Save"
