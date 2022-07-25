@@ -530,6 +530,15 @@
     background: var(--bg-third);
 }
 
+.post_updated_picture {
+    z-index: 1;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-primary);
+}
+
 /* ---------- Post menu ---------- */
 
 @media (max-width: 415px) {
