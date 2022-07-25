@@ -30,8 +30,12 @@ export default function UpdateProfilePicture({image, setImage}) {
                 setZoom(1);
                 setCrop({x: 0, y: 0});
                 setImage(img);
+                console.log("just show");
+            } else {
+                console.log("not show");
+                console.log(img);
+                return img;
             }
-            return img;
         } catch (e) {
             console.log(e);
         }
