@@ -17,9 +17,10 @@ import Friends from "./Friends";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
-    const {user} = useSelector((state) => ({...state}));
-
     const navigate = useNavigate();
+    const {user} = useSelector((state) => ({...state}));
+    const [photos, setPhotos] = useState({})
+
     var userName = username === undefined ? user.username : username;
     const [{loading, error, profile}, dispatch] = useReducer(profileReducer, {
         loading: false,
