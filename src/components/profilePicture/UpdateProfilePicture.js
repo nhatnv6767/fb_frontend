@@ -74,10 +74,10 @@ export default function UpdateProfilePicture({image, setImage, setError, setShow
                     setLoading(false);
                     setImage("");
                     pRef.current.style.backgroundImage = `url(${res[0].url})`;
-                    Cookies.set("user", {
+                    Cookies.set("user", JSON.stringify({
                         ...user,
                         picture: res[0].url,
-                    });
+                    }));
                     dispatch({
                         type: "UPDATEPICTURE",
                         payload: res[0].url,
