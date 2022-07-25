@@ -72,6 +72,8 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                     user.token
                 );
                 if (new_post === "ok") {
+                    setLoading(false);
+                    setImage("")
                 } else {
                     setLoading(false);
                     setError(new_post);
@@ -80,7 +82,7 @@ export default function UpdateProfilePicture({image, setImage, setError}) {
                 setLoading(false);
                 setError(updated_picture);
             }
-            setLoading(false);
+
         } catch (e) {
             setLoading(false);
             setError(e.response.data.error);
