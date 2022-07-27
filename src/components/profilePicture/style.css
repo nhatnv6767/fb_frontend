@@ -180,6 +180,7 @@
     height: 100px;
     border-radius: 10px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .old_pictures img:hover {
