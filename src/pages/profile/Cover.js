@@ -2,6 +2,10 @@ import {useRef, useState, useCallback, useEffect} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
+import {uploadImages} from "../../functions/uploadImages";
+import {updateprofilePicture} from "../../functions/user";
+import {createPost} from "../../functions/post";
+import Cookies from "js-cookie";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
@@ -62,6 +66,56 @@ export default function Cover({cover, visitor}) {
         setWidth(coverRef.current.clientWidth);
         /* Used to get the width of the browser window. */
     }, [window.innerWidth]);
+
+    const updateProfilePicture = async () => {
+        try {
+            setLoading(true);
+            let img = await getCroppedImage();
+            let blob = await fetch(img).then((b) => b.blob());
+            const path = `${user.username}/profile_pictures`;
+            let formData = new FormData();
+            formData.append("file", blob);
+            formData.append("path", path);
+
+            const res = await uploadImages(formData, path, user.token);
+            const updated_picture = await updateprofilePicture(res[0].url, user.token);
+            // console.log(updated_picture);
+            if (updated_picture === "ok") {
+                const new_post = await createPost(
+                    "profilePicture",
+                    null,
+                    description,
+                    res,
+                    user.id,
+                    user.token
+                );
+                if (new_post === "ok") {
+                    setLoading(false);
+                    setImage("");
+                    pRef.current.style.backgroundImage = `url(${res[0].url})`;
+                    Cookies.set("user", JSON.stringify({
+                        ...user,
+                        picture: res[0].url,
+                    }));
+                    dispatch({
+                        type: "UPDATEPICTURE",
+                        payload: res[0].url,
+                    });
+                    setShow(false);
+                } else {
+                    setLoading(false);
+                    setError(new_post);
+                }
+            } else {
+                setLoading(false);
+                setError(updated_picture);
+            }
+
+        } catch (e) {
+            setLoading(false);
+            setError(e.response.data.message);
+        }
+    };
     return (
         <div className="profile_cover" ref={coverRef}>
             {
