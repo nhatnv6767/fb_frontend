@@ -11,7 +11,7 @@ export default function Intro({details}) {
         college: details?.college ? details.college : "Nothing college",
         currentCity: details?.currentCity ? details.currentCity : "Japan",
         hometown: details?.hometown ? details.hometown : "Viet Nam",
-        relationship: details?.relationship ? details.relationship : "",
+        relationship: details?.relationship ? details.relationship : "Single",
         instagram: details?.instagram ? details.instagram : "bbnet0",
     };
     const [infos, setInfos] = useState(initial);
@@ -36,6 +36,14 @@ export default function Intro({details}) {
                             works at {infos.workplace}
                         </div>
                     )
+            }
+
+            {
+                infos?.relationship &&
+                <div className="info_profile">
+                    <img src="../../../icons/relationship.png" alt=""/>
+                    {infos.relationship}
+                </div>
             }
 
             {
