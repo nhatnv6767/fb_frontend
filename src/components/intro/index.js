@@ -5,7 +5,7 @@ export default function Intro({details}) {
     const initial = {
         bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
-        job: details?.job ? details.job : "",
+        job: details?.job ? details.job : "Web developer",
         workplace: details?.workplace ? details.workplace : "",
         highSchool: details?.highSchool ? details.highSchool : "",
         college: details?.college ? details.college : "",
@@ -18,6 +18,14 @@ export default function Intro({details}) {
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
+            {
+                infos.job && !infos.workplace && (
+                    <div className="info_profile">
+                        <img src="../../../icons/job.png" alt=""/>
+                        {infos.job}
+                    </div>
+                )
+            }
         </div>
     );
 }
