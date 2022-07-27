@@ -130,7 +130,7 @@ export default function Cover({cover, visitor}) {
                                 onClick={() => updateCoverPicture()}
                             >
                                 {
-                                    loading ? <PulseLoader color="#fff" size={5}/> : "Save changes"
+                                    loading ? <PulseLoader color="#fff" size={10}/> : "Save changes"
                                 }
                             </button>
                         </div>

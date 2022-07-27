@@ -182,7 +182,7 @@ export default function UpdateProfilePicture({image, setImage, setError, setShow
                     disabled={loading}
                 >
                     {
-                        loading ? <PulseLoader color="#fff" size={5}/> : "Save"
+                        loading ? <PulseLoader color="#fff" size={10}/> : "Save"
                     }
                 </button>
             </div>
