@@ -20,6 +20,7 @@ export default function OldCovers({photos, setCoverPicture}) {
                     <h4>Your cover pictures</h4>
                     <div className="old_pictures">
                         {
+                            photos &&
                             photos.filter((img) =>
                                 img.folder === `${user.username}/cover_pictures`)
                                 .map((photo) => (
@@ -36,6 +37,7 @@ export default function OldCovers({photos, setCoverPicture}) {
                     <h4>Other pictures</h4>
                     <div className="old_pictures">
                         {
+                            photos &&
                             photos.filter((img) =>
                                 img.folder !== `${user.username}/post_images`)
                                 .map((photo) => (
