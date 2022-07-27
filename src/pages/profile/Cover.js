@@ -78,19 +78,23 @@ export default function Cover({cover, visitor}) {
                     </div>
                 )
             }
-            <div className="cover_copper">
-                <Cropper
-                    image={coverPicture}
-                    crop={crop}
-                    zoom={zoom}
-                    aspect={1}
-                    cropShape="round"
-                    onCropChange={setCrop}
-                    onCropComplete={onCropComplete}
-                    onZoomChange={setZoom}
-                    showGrid={false}
-                />
-            </div>
+            {
+                coverPicture && (
+                    <div className="cover_copper">
+                        <Cropper
+                            image={coverPicture}
+                            crop={crop}
+                            zoom={zoom}
+                            aspect={1}
+                            cropShape="round"
+                            onCropChange={setCrop}
+                            onCropComplete={onCropComplete}
+                            onZoomChange={setZoom}
+                            showGrid={false}
+                        />
+                    </div>
+                )
+            }
             {
                 cover &&
                 <img src={cover} className="cover" alt=""/>
