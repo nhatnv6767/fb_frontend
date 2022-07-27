@@ -54,7 +54,7 @@
     width: 300px;
     border-radius: 10px;
     box-shadow: 0 12px 28px 0 var(--shadow-1), 0 2px 4px 0 var(--shadow-2), inset 0 0 0 0 var(--shadow-inset);
-    z-index: 99;
+    z-index: 99999;
 }
 
 .open_cover_menu_item {
