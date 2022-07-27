@@ -1,7 +1,7 @@
 import "./style.css";
 import {useState} from "react";
 
-export default function Intro() {
+export default function Intro({details}) {
     const initial = {};
     const [infos, setInfos] = useState(initial);
     return (
