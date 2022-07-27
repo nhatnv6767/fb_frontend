@@ -55,7 +55,7 @@ export default function Cover({cover, visitor}) {
         }
     }, [croppedAreaPixels]);
 
-    console.log(coverPicture);
+    // console.log(coverPicture);
     return (
         <div className="profile_cover">
             <input
@@ -86,11 +86,11 @@ export default function Cover({cover, visitor}) {
                             crop={crop}
                             zoom={zoom}
                             aspect={1}
-                            cropShape="round"
                             onCropChange={setCrop}
                             onCropComplete={onCropComplete}
                             onZoomChange={setZoom}
-                            showGrid={false}
+                            showGrid={true}
+                            objectFit="horizontal-cover"
                         />
                     </div>
                 )
