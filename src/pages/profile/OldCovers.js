@@ -17,11 +17,11 @@ export default function OldCovers({photos, setCoverPicture}) {
                 </div>
 
                 <div className="old_pictures_wrap scrollbar">
-                    <h4>Your profile pictures</h4>
+                    <h4>Your cover pictures</h4>
                     <div className="old_pictures">
                         {
                             photos.filter((img) =>
-                                img.folder === `${user.username}/profile_pictures`)
+                                img.folder === `${user.username}/cover_pictures`)
                                 .map((photo) => (
                                     <img
                                         src={photo.secure_url}
@@ -37,7 +37,7 @@ export default function OldCovers({photos, setCoverPicture}) {
                     <div className="old_pictures">
                         {
                             photos.filter((img) =>
-                                img.folder !== `${user.username}/profile_pictures`)
+                                img.folder !== `${user.username}/post_images`)
                                 .map((photo) => (
                                     <img
                                         src={photo.secure_url}
