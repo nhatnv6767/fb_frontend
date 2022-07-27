@@ -1,5 +1,6 @@
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
+import Cropper from "react-easy-crop";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
@@ -56,7 +57,17 @@ export default function Cover({cover, visitor}) {
                 )
             }
             <div className="cover_copper">
-
+                <Cropper
+                    image={image}
+                    crop={crop}
+                    zoom={zoom}
+                    aspect={1}
+                    cropShape="round"
+                    onCropChange={setCrop}
+                    onCropComplete={onCropComplete}
+                    onZoomChange={setZoom}
+                    showGrid={false}
+                />
             </div>
             {
                 cover &&
