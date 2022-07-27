@@ -1,5 +1,6 @@
 import "./style.css";
 import {useState} from "react";
+import Bio from "./Bio";
 
 export default function Intro({details, visitor}) {
     const initial = {
@@ -15,6 +16,7 @@ export default function Intro({details, visitor}) {
         instagram: details?.instagram ? details.instagram : "bbnet0",
     };
     const [infos, setInfos] = useState(initial);
+    const [showBio, setShowBio] = useState(true);
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
@@ -29,6 +31,7 @@ export default function Intro({details, visitor}) {
                     }
                 </div>
             }
+            {showBio && <Bio/>}
             {
                 infos.job && infos.workplace ? (
                         <div className="info_profile">
