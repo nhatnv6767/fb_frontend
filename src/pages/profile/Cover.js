@@ -38,13 +38,16 @@ export default function Cover({cover, visitor}) {
     const [crop, setCrop] = useState({x: 0, y: 0});
     const [zoom, setZoom] = useState(1);
     const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
+    const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
+        setCroppedAreaPixels(croppedAreaPixels);
+    }, []);
     const getCroppedImage = useCallback(async (show) => {
         try {
-            const img = await getCroppedImg(image, croppedAreaPixels);
+            const img = await getCroppedImg(coverPicture, croppedAreaPixels);
             if (show) {
                 setZoom(1);
                 setCrop({x: 0, y: 0});
-                setImage(img);
+                setCoverPicture(img);
             } else {
                 return img;
             }
