@@ -21,8 +21,8 @@ export default function Intro({details}) {
             {
                 infos.job && !infos.workplace && (
                     <div className="info_profile">
-                        <img src="../../../icons/job.png" alt=""/>
-                        {infos.job}
+                        <img src="../../../icons/jpb.png" alt=""/>
+                        works as {infos.job}
                     </div>
                 )
             }
