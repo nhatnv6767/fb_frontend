@@ -94,17 +94,9 @@ export default function Cover({cover, visitor}) {
                 );
                 if (new_post === "ok") {
                     setLoading(false);
-                    setImage("");
+                    setCoverPicture("");
                     pRef.current.style.backgroundImage = `url(${res[0].url})`;
-                    Cookies.set("user", JSON.stringify({
-                        ...user,
-                        picture: res[0].url,
-                    }));
-                    dispatch({
-                        type: "UPDATEPICTURE",
-                        payload: res[0].url,
-                    });
-                    setShow(false);
+
                 } else {
                     setLoading(false);
                     setError(new_post);
