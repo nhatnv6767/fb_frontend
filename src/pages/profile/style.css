@@ -401,6 +401,36 @@
     color: var(--color-primary);
 }
 
+.save_changes_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.save_changes_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.save_changes_right button {
+    padding: 10px;
+}
+
+.save_changes_right button:first-of-type {
+    width: 100px;
+    background: #39393f;
+}
+
+.save_changes_right button:last-of-type {
+    width: 160px;
+}
+
+.save_changes_left i {
+    filter: invert(100%);
+}
+
 /* ------- Profile card -------- */
 
 @media (max-width: 900px) {
