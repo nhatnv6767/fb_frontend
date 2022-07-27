@@ -3,9 +3,9 @@ import {useState} from "react";
 
 export default function Intro({details}) {
     const initial = {
-        bio: details?.bio ? details.bio : "",
+        bio: details?.bio ? details.bio : "Welcome to my profile",
         otherName: details?.otherName ? details.otherName : "",
-        job: details?.job ? details.job : "",
+        job: details?.job ? details.job : "Web developer",
         workplace: details?.workplace ? details.workplace : "Google",
         highSchool: details?.highSchool ? details.highSchool : "BMW high school",
         college: details?.college ? details.college : "Nothing college",
@@ -18,6 +18,12 @@ export default function Intro({details}) {
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
+            {
+                infos?.bio &&
+                <div className="info_col">
+                    <span className="info_text">{infos.bio}</span>
+                </div>
+            }
             {
                 infos.job && infos.workplace ? (
                         <div className="info_profile">
