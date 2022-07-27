@@ -1,4 +1,7 @@
+import {useSelector} from "react-redux";
+
 export default function OldCovers({photos, setCoverPicture}) {
+    const {user} = useSelector((state) => ({...state}));
     return (
         <div className="blur">
             <div className="postBox selectCoverBox">

@@ -221,7 +221,7 @@ export default function Cover({cover, visitor, photos}) {
                 show && (
                     <OldCovers
                         photos={photos}
-                        setCoverPicture={setCoverPicture()}
+                        setCoverPicture={setCoverPicture}
                     />
                 )
             }
