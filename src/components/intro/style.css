@@ -14,3 +14,7 @@
 .info_text {
     word-break: break-word;
 }
+
+.info_col {
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 import "./style.css";
 import {useState} from "react";
 
-export default function Intro({details}) {
+export default function Intro({details, visitor}) {
     const initial = {
         bio: details?.bio ? details.bio : "Welcome to my profile Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dignissimos ex excepturi harum quaerat totam veritatis. Aliquid amet excepturi in inventore laudantium maiores, nobis non odit omnis quos soluta sunt.",
         otherName: details?.otherName ? details.otherName : "",
@@ -22,6 +22,11 @@ export default function Intro({details}) {
                 infos?.bio &&
                 <div className="info_col">
                     <span className="info_text">{infos.bio}</span>
+                    {
+                        !visitor && (
+                            <button className="gray_btn hover1">Edit Bio</button>
+                        )
+                    }
                 </div>
             }
             {

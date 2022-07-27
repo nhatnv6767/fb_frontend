@@ -101,6 +101,7 @@ export default function Profile({setVisible}) {
                             <div className="profile_left">
                                 <Intro
                                     details={profile.details}
+                                    visitor={visitor}
                                 />
                                 <Photos
                                     username={userName}
