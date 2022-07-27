@@ -29,7 +29,7 @@ export default function Post({post, user, profile}) {
                                 }
 
                                 {
-                                    post.type === "cover" &&
+                                    post.type === "coverPicture" &&
                                     `updated ${post.user.gender === "male" ? "his" : "her"} cover picture`
                                 }
                             </div>
@@ -38,7 +38,7 @@ export default function Post({post, user, profile}) {
                             <Moment fromNow interval={30}>
                                 {post.createdAt}
                             </Moment>
-                            <Public color="#828387"/>
+                            . <Public color="#828387"/>
                         </div>
                     </div>
                 </Link>
