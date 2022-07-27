@@ -2,7 +2,18 @@ import "./style.css";
 import {useState} from "react";
 
 export default function Intro({details}) {
-    const initial = {};
+    const initial = {
+        bio: details?.bio ? details.bio : "",
+        otherName: details?.otherName ? details.otherName : "",
+        job: details?.job ? details.job : "",
+        workplace: details?.workplace ? details.workplace : "",
+        highSchool: details?.highSchool ? details.highSchool : "",
+        college: details?.college ? details.college : "",
+        currentCity: details?.currentCity ? details.currentCity : "",
+        hometown: details?.hometown ? details.hometown : "",
+        relationship: details?.relationship ? details.relationship : "",
+        instagram: details?.instagram ? details.instagram : "",
+    };
     const [infos, setInfos] = useState(initial);
     return (
         <div className="profile_card">
