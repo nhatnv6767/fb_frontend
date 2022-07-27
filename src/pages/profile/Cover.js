@@ -15,6 +15,7 @@ export default function Cover({cover, visitor}) {
     const {user} = useSelector((state) => ({...state}));
     const menuRef = useRef(null);
     const refInput = useRef(null);
+    const cRef = useRef(null);
     useClickOutside(menuRef, () => setShowCoverMenu(false));
     const [error, setError] = useState("");
     // useClickOutside(popup, () => setShow(false));
@@ -171,7 +172,7 @@ export default function Cover({cover, visitor}) {
             }
             {
                 cover &&
-                <img src={cover} className="cover" alt="" ref={coverRef}/>
+                <img src={cover} className="cover" alt="" ref={cRef}/>
             }
             {
                 !visitor && (
