@@ -12,7 +12,7 @@ export default function Intro({details}) {
         currentCity: details?.currentCity ? details.currentCity : "Japan",
         hometown: details?.hometown ? details.hometown : "Viet Nam",
         relationship: details?.relationship ? details.relationship : "",
-        instagram: details?.instagram ? details.instagram : "",
+        instagram: details?.instagram ? details.instagram : "bbnet0",
     };
     const [infos, setInfos] = useState(initial);
     return (
@@ -67,6 +67,16 @@ export default function Intro({details}) {
                 <div className="info_profile">
                     <img src="../../../icons/home.png" alt=""/>
                     From {infos.hometown}
+                </div>
+            }
+
+            {
+                infos?.instagram &&
+                <div className="info_profile">
+                    <img src="../../../icons/instagram.png" alt=""/>
+                    <a href={`https://www.instagram.com/${infos.instagram}`} target="_blank">
+                        {infos.instagram}
+                    </a>
                 </div>
             }
         </div>
