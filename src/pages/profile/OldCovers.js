@@ -1,4 +1,4 @@
-export default function OldCovers({photos}) {
+export default function OldCovers({photos, setCoverPicture}) {
     return (
         <div className="blur">
             <div className="postBox selectCoverBox">
@@ -24,7 +24,7 @@ export default function OldCovers({photos}) {
                                         src={photo.secure_url}
                                         key={photo.public_id}
                                         alt=""
-                                        onClick={() => setImage(photo.secure_url)}
+                                        onClick={() => setCoverPicture(photo.secure_url)}
                                     />
                                 ))
                         }
@@ -40,7 +40,7 @@ export default function OldCovers({photos}) {
                                         src={photo.secure_url}
                                         key={photo.public_id}
                                         alt=""
-                                        onClick={() => setImage(photo.secure_url)}
+                                        onClick={() => setCoverPicture(photo.secure_url)}
                                     />
                                 ))
                         }
