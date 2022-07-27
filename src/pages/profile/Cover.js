@@ -124,7 +124,12 @@ export default function Cover({cover, visitor}) {
                             Your cover photo is public
                         </div>
                         <div className="save_changes_right">
-                            <button className="blue_btn opacity_btn">Cancel</button>
+                            <button
+                                className="blue_btn opacity_btn"
+                                onClick={() => setCoverPicture("")}
+                            >
+                                Cancel
+                            </button>
                             <button
                                 className="blue_btn"
                                 onClick={() => updateCoverPicture()}
