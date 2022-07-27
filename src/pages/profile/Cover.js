@@ -14,7 +14,7 @@ export default function Cover({cover, visitor, photos}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const [coverPicture, setCoverPicture] = useState("");
     const [loading, setLoading] = useState(false);
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     const {user} = useSelector((state) => ({...state}));
     const menuRef = useRef(null);
     const refInput = useRef(null);
@@ -199,7 +199,10 @@ export default function Cover({cover, visitor, photos}) {
                         {
                             showCoverMenu && (
                                 <div className="open_cover_menu" ref={menuRef}>
-                                    <div className="open_cover_menu_item hover1">
+                                    <div
+                                        className="open_cover_menu_item hover1"
+                                        onClick={() => setShow(true)}
+                                    >
                                         <i className="photo_icon"></i>
                                         Select Photo
                                     </div>
