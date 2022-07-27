@@ -1,4 +1,4 @@
-import {useRef, useState, useCallback} from "react";
+import {useRef, useState, useCallback, useEffect} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
@@ -56,6 +56,11 @@ export default function Cover({cover, visitor}) {
     }, [croppedAreaPixels]);
 
     const coverRef = useRef(null);
+    const [width, setWidth] = useState();
+
+    useEffect(() => {
+        setWidth(coverRef.current.clientWidth);
+    }, []);
     return (
         <div className="profile_cover" ref={coverRef}>
             <input
@@ -85,7 +90,7 @@ export default function Cover({cover, visitor}) {
                             image={coverPicture}
                             crop={crop}
                             zoom={zoom}
-                            aspect={1}
+                            aspect={width / 350}
                             onCropChange={setCrop}
                             onCropComplete={onCropComplete}
                             onZoomChange={setZoom}
