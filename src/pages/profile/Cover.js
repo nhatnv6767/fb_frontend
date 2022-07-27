@@ -1,6 +1,8 @@
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import Cropper from "react-easy-crop";
+import {useCallback} from "@types/react";
+import getCroppedImg from "../../helpers/getCroppedImg";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
@@ -33,6 +35,24 @@ export default function Cover({cover, visitor}) {
         };
     };
 
+    const [crop, setCrop] = useState({x: 0, y: 0});
+    const [zoom, setZoom] = useState(1);
+    const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
+    const getCroppedImage = useCallback(async (show) => {
+        try {
+            const img = await getCroppedImg(image, croppedAreaPixels);
+            if (show) {
+                setZoom(1);
+                setCrop({x: 0, y: 0});
+                setImage(img);
+            } else {
+                return img;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }, [croppedAreaPixels]);
+
     console.log(coverPicture);
     return (
         <div className="profile_cover">
@@ -58,7 +78,7 @@ export default function Cover({cover, visitor}) {
             }
             <div className="cover_copper">
                 <Cropper
-                    image={image}
+                    image={coverPicture}
                     crop={crop}
                     zoom={zoom}
                     aspect={1}
