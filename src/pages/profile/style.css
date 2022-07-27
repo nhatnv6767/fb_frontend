@@ -390,6 +390,7 @@
 .save_changes_cover {
     z-index: 999999999;
     position: fixed;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
