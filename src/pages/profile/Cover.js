@@ -12,7 +12,7 @@ export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const [coverPicture, setCoverPicture] = useState("");
     const [loading, setLoading] = useState(false);
-    const {user} = useSelector(() => ({...state}));
+    const {user} = useSelector((state) => ({...state}));
     const menuRef = useRef(null);
     const refInput = useRef(null);
     useClickOutside(menuRef, () => setShowCoverMenu(false));
@@ -95,7 +95,7 @@ export default function Cover({cover, visitor}) {
                 if (new_post === "ok") {
                     setLoading(false);
                     setCoverPicture("");
-                    pRef.current.style.backgroundImage = `url(${res[0].url})`;
+                    coverRef.current.src = `${res[0].url}`;
 
                 } else {
                     setLoading(false);
@@ -171,7 +171,7 @@ export default function Cover({cover, visitor}) {
             }
             {
                 cover &&
-                <img src={cover} className="cover" alt=""/>
+                <img src={cover} className="cover" alt="" ref={coverRef}/>
             }
             {
                 !visitor && (
