@@ -87,7 +87,7 @@ export default function Cover({cover, visitor}) {
             // console.log(updated_picture);
             if (updated_picture === "ok") {
                 const new_post = await createPost(
-                    "profilePicture",
+                    "coverPicture",
                     null,
                     null,
                     res,
