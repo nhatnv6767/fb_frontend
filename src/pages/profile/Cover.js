@@ -69,7 +69,10 @@ export default function Cover({cover, visitor}) {
                     <i className="public_icon"></i>
                     Your cover photo is public
                 </div>
-                <div className="save_changes_right"></div>
+                <div className="save_changes_right">
+                    <button className="blue_btn opacity_btn">Cancel</button>
+                    <button className="blue_btn">Save changes</button>
+                </div>
             </div>
             <input
                 type="file"
