@@ -10,7 +10,12 @@ export default function OldCovers({photos, setCoverPicture, setShow}) {
         <div className="blur">
             <div className="postBox selectCoverBox" ref={Ref}>
                 <div className="box_header">
-                    <div className="small_circle">
+                    <div
+                        className="small_circle"
+                        onClick={() => {
+                            setShow(false);
+                        }}
+                    >
                         <i className="exit_icon"></i>
                     </div>
                     <span>Select photo</span>
