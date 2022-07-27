@@ -12,6 +12,41 @@ export default function OldCovers({photos}) {
                     <div className="selectCoverBox_link">Recent Photos</div>
                     <div className="selectCoverBox_link">Photo Albums</div>
                 </div>
+
+                <div className="old_pictures_wrap scrollbar">
+                    <h4>Your profile pictures</h4>
+                    <div className="old_pictures">
+                        {
+                            photos.filter((img) =>
+                                img.folder === `${user.username}/profile_pictures`)
+                                .map((photo) => (
+                                    <img
+                                        src={photo.secure_url}
+                                        key={photo.public_id}
+                                        alt=""
+                                        onClick={() => setImage(photo.secure_url)}
+                                    />
+                                ))
+                        }
+                    </div>
+
+                    <h4>Other pictures</h4>
+                    <div className="old_pictures">
+                        {
+                            photos.filter((img) =>
+                                img.folder !== `${user.username}/profile_pictures`)
+                                .map((photo) => (
+                                    <img
+                                        src={photo.secure_url}
+                                        key={photo.public_id}
+                                        alt=""
+                                        onClick={() => setImage(photo.secure_url)}
+                                    />
+                                ))
+                        }
+                    </div>
+                </div>
+
             </div>
         </div>
     );
