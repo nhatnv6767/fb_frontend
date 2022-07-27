@@ -6,6 +6,11 @@ export default function OldCovers() {
                     <div className="small_circle">
                         <i className="exit_icon"></i>
                     </div>
+                    <span>Select photo</span>
+                </div>
+                <div className="selectCoverBox_links">
+                    <div className="selectCoverBox_link">Recent Photos</div>
+                    <div className="selectCoverBox_link">Photo Albums</div>
                 </div>
             </div>
         </div>
