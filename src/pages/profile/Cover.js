@@ -3,13 +3,16 @@ import useClickOutside from "../../helpers/clickOutside";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "../../helpers/getCroppedImg";
 import {uploadImages} from "../../functions/uploadImages";
-import {updateprofilePicture} from "../../functions/user";
+import {updateCover} from "../../functions/user";
 import {createPost} from "../../functions/post";
 import Cookies from "js-cookie";
+import {useSelector} from "react-redux";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const [coverPicture, setCoverPicture] = useState("");
+    const [loading, setLoading] = useState(false);
+    const {user} = useSelector(() => ({...state}));
     const menuRef = useRef(null);
     const refInput = useRef(null);
     useClickOutside(menuRef, () => setShowCoverMenu(false));
@@ -72,19 +75,19 @@ export default function Cover({cover, visitor}) {
             setLoading(true);
             let img = await getCroppedImage();
             let blob = await fetch(img).then((b) => b.blob());
-            const path = `${user.username}/profile_pictures`;
+            const path = `${user.username}/cover_pictures`;
             let formData = new FormData();
             formData.append("file", blob);
             formData.append("path", path);
 
             const res = await uploadImages(formData, path, user.token);
-            const updated_picture = await updateprofilePicture(res[0].url, user.token);
+            const updated_picture = await updateCover(res[0].url, user.token);
             // console.log(updated_picture);
             if (updated_picture === "ok") {
                 const new_post = await createPost(
                     "profilePicture",
                     null,
-                    description,
+                    null,
                     res,
                     user.id,
                     user.token
