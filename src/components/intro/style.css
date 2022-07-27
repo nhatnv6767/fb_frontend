@@ -10,3 +10,7 @@
 .info_profile img {
     filter: invert(40%);
 }
+
+.info_text {
+    word-break: break-word;
+}
