@@ -60,9 +60,17 @@ export default function Cover({cover, visitor}) {
 
     useEffect(() => {
         setWidth(coverRef.current.clientWidth);
+        /* Used to get the width of the browser window. */
     }, [window.innerWidth]);
     return (
         <div className="profile_cover" ref={coverRef}>
+            <div className="save_changes_cover">
+                <div className="save_changes_left">
+                    <i className="public_icon"></i>
+                    Your cover photo is public
+                </div>
+                <div className="save_changes_right"></div>
+            </div>
             <input
                 type="file"
                 ref={refInput}
