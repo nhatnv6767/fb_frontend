@@ -67,7 +67,7 @@ export default function Cover({cover, visitor}) {
         /* Used to get the width of the browser window. */
     }, [window.innerWidth]);
 
-    const updateProfilePicture = async () => {
+    const updateCoverPicture = async () => {
         try {
             setLoading(true);
             let img = await getCroppedImage();
@@ -127,7 +127,12 @@ export default function Cover({cover, visitor}) {
                         </div>
                         <div className="save_changes_right">
                             <button className="blue_btn opacity_btn">Cancel</button>
-                            <button className="blue_btn">Save changes</button>
+                            <button
+                                className="blue_btn"
+                                onClick={() => updateCoverPicture()}
+                            >
+                                Save changes
+                            </button>
                         </div>
                     </div>
                 )
