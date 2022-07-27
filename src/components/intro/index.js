@@ -98,6 +98,28 @@ export default function Intro({details, visitor}) {
                     </a>
                 </div>
             }
+
+            {
+                !visitor && (
+                    <button className="gray_btn hover1 w100">Edit Details</button>
+
+                )
+            }
+
+            {
+                !visitor && (
+
+                    <button className="gray_btn hover1 w100">Add Houbles</button>
+
+                )
+            }
+
+            {
+                !visitor && (
+
+                    <button className="gray_btn hover1 w100">Add featured</button>
+                )
+            }
         </div>
     );
 }

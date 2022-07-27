@@ -25,3 +25,8 @@
 .info_col button {
     width: 100%;
 }
+
+.w100 {
+    width: 100%;
+    margin: 10px 0;
+}
