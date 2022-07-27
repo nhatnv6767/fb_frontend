@@ -55,9 +55,9 @@ export default function Cover({cover, visitor}) {
         }
     }, [croppedAreaPixels]);
 
-    // console.log(coverPicture);
+    const coverRef = useRef(null);
     return (
-        <div className="profile_cover">
+        <div className="profile_cover" ref={coverRef}>
             <input
                 type="file"
                 ref={refInput}
