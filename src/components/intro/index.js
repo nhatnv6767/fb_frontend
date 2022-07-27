@@ -5,7 +5,7 @@ export default function Intro({details}) {
     const initial = {
         bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
-        job: details?.job ? details.job : "Web developer",
+        job: details?.job ? details.job : "",
         workplace: details?.workplace ? details.workplace : "Google",
         highSchool: details?.highSchool ? details.highSchool : "",
         college: details?.college ? details.college : "",
@@ -19,12 +19,23 @@ export default function Intro({details}) {
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
             {
-                infos.job && infos.workplace && (
-                    <div className="info_profile">
-                        <img src="../../../icons/job.png" alt=""/>
-                        works as {infos.job} at <b>{infos.workplace}</b>
-                    </div>
-                )
+                infos.job && infos.workplace ? (
+                        <div className="info_profile">
+                            <img src="../../../icons/job.png" alt=""/>
+                            works as {infos.job} at<b>{infos.workplace}</b>
+                        </div>
+                    )
+                    : infos.job && !infos.workplace ? (
+                        <div className="info_profile">
+                            <img src="../../../icons/job.png" alt=""/>
+                            works as {infos.job}
+                        </div>
+                    ) : infos.workplace && !infos.job && (
+                        <div className="info_profile">
+                            <img src="../../../icons/job.png" alt=""/>
+                            works at {infos.workplace}
+                        </div>
+                    )
             }
         </div>
     );
