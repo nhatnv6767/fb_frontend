@@ -7,6 +7,7 @@ import {updateCover} from "../../functions/user";
 import {createPost} from "../../functions/post";
 import Cookies from "js-cookie";
 import {useSelector} from "react-redux";
+import PulseLoader from "react-spinners/PulseLoader";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
@@ -127,7 +128,9 @@ export default function Cover({cover, visitor}) {
                                 className="blue_btn"
                                 onClick={() => updateCoverPicture()}
                             >
-                                Save changes
+                                {
+                                    loading ? <PulseLoader color="#fff" size={5}/> : "Save changes"
+                                }
                             </button>
                         </div>
                     </div>
