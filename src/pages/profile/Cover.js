@@ -14,7 +14,7 @@ export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const [coverPicture, setCoverPicture] = useState("");
     const [loading, setLoading] = useState(false);
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
     const {user} = useSelector((state) => ({...state}));
     const menuRef = useRef(null);
     const refInput = useRef(null);
