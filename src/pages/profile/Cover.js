@@ -8,11 +8,13 @@ import {createPost} from "../../functions/post";
 import Cookies from "js-cookie";
 import {useSelector} from "react-redux";
 import PulseLoader from "react-spinners/PulseLoader";
+import OldCovers from "./OldCovers";
 
 export default function Cover({cover, visitor}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const [coverPicture, setCoverPicture] = useState("");
     const [loading, setLoading] = useState(false);
+    const [show, setShow] = useState(false);
     const {user} = useSelector((state) => ({...state}));
     const menuRef = useRef(null);
     const refInput = useRef(null);
@@ -212,6 +214,12 @@ export default function Cover({cover, visitor}) {
                             )
                         }
                     </div>
+                )
+            }
+
+            {
+                show && (
+                    <OldCovers/>
                 )
             }
         </div>
