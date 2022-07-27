@@ -174,8 +174,9 @@ export default function Cover({cover, visitor}) {
                 )
             }
             {
-                cover &&
-                <img src={cover} className="cover" alt="" ref={cRef}/>
+                cover && !coverPicture && (
+                    <img src={cover} className="cover" alt="" ref={cRef}/>
+                )
             }
             {
                 !visitor && (
