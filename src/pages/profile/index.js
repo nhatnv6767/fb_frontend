@@ -82,6 +82,7 @@ export default function Profile({setVisible}) {
                     <Cover
                         cover={profile.cover}
                         visitor={visitor}
+                        photos={photos.resources}
                     />
                     <ProfilePictureInfos
                         profile={profile}

@@ -10,7 +10,7 @@ import {useSelector} from "react-redux";
 import PulseLoader from "react-spinners/PulseLoader";
 import OldCovers from "./OldCovers";
 
-export default function Cover({cover, visitor}) {
+export default function Cover({cover, visitor, photos}) {
     const [showCoverMenu, setShowCoverMenu] = useState(false);
     const [coverPicture, setCoverPicture] = useState("");
     const [loading, setLoading] = useState(false);
@@ -219,7 +219,9 @@ export default function Cover({cover, visitor}) {
 
             {
                 show && (
-                    <OldCovers/>
+                    <OldCovers
+                        photos={photos}
+                    />
                 )
             }
         </div>

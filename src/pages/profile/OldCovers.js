@@ -1,4 +1,4 @@
-export default function OldCovers() {
+export default function OldCovers({photos}) {
     return (
         <div className="blur">
             <div className="postBox selectCoverBox">
