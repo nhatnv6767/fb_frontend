@@ -60,7 +60,7 @@ export default function Cover({cover, visitor}) {
 
     useEffect(() => {
         setWidth(coverRef.current.clientWidth);
-    }, []);
+    }, [window.innerWidth]);
     return (
         <div className="profile_cover" ref={coverRef}>
             <input
