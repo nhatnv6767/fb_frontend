@@ -7,10 +7,10 @@ export default function Intro({details}) {
         otherName: details?.otherName ? details.otherName : "",
         job: details?.job ? details.job : "",
         workplace: details?.workplace ? details.workplace : "Google",
-        highSchool: details?.highSchool ? details.highSchool : "",
-        college: details?.college ? details.college : "",
-        currentCity: details?.currentCity ? details.currentCity : "",
-        hometown: details?.hometown ? details.hometown : "",
+        highSchool: details?.highSchool ? details.highSchool : "BMW high school",
+        college: details?.college ? details.college : "Nothing college",
+        currentCity: details?.currentCity ? details.currentCity : "Japan",
+        hometown: details?.hometown ? details.hometown : "Viet Nam",
         relationship: details?.relationship ? details.relationship : "",
         instagram: details?.instagram ? details.instagram : "",
     };
@@ -36,6 +36,38 @@ export default function Intro({details}) {
                             works at {infos.workplace}
                         </div>
                     )
+            }
+
+            {
+                infos?.college &&
+                <div className="info_profile">
+                    <img src="../../../icons/studies.png" alt=""/>
+                    studied at {infos.college}
+                </div>
+            }
+
+            {
+                infos?.highSchool &&
+                <div className="info_profile">
+                    <img src="../../../icons/studies.png" alt=""/>
+                    studied at {infos.highSchool}
+                </div>
+            }
+
+            {
+                infos?.currentCity &&
+                <div className="info_profile">
+                    <img src="../../../icons/home.png" alt=""/>
+                    Lives in {infos.currentCity}
+                </div>
+            }
+
+            {
+                infos?.hometown &&
+                <div className="info_profile">
+                    <img src="../../../icons/home.png" alt=""/>
+                    From {infos.hometown}
+                </div>
             }
         </div>
     );
