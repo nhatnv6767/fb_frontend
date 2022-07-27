@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 
-export default function OldCovers({photos, setCoverPicture}) {
+export default function OldCovers({photos, setCoverPicture, setShow}) {
     const {user} = useSelector((state) => ({...state}));
     return (
         <div className="blur">
@@ -27,7 +27,10 @@ export default function OldCovers({photos, setCoverPicture}) {
                                         src={photo.secure_url}
                                         key={photo.public_id}
                                         alt=""
-                                        onClick={() => setCoverPicture(photo.secure_url)}
+                                        onClick={() => {
+                                            setCoverPicture(photo.secure_url);
+                                            setShow(false);
+                                        }}
                                     />
                                 ))
                         }
@@ -43,7 +46,10 @@ export default function OldCovers({photos, setCoverPicture}) {
                                         src={photo.secure_url}
                                         key={photo.public_id}
                                         alt=""
-                                        onClick={() => setCoverPicture(photo.secure_url)}
+                                        onClick={() => {
+                                            setCoverPicture(photo.secure_url);
+                                            setShow(false);
+                                        }}
                                     />
                                 ))
                         }

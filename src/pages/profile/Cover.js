@@ -222,6 +222,7 @@ export default function Cover({cover, visitor, photos}) {
                     <OldCovers
                         photos={photos}
                         setCoverPicture={setCoverPicture}
+                        setShow={setShow}
                     />
                 )
             }
