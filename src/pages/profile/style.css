@@ -440,6 +440,33 @@
     filter: invert(100%);
 }
 
+.selectCoverBox {
+    width: 570px !important;
+    max-width: 80vw;
+}
+
+.selectCoverBox_links {
+    display: grid;
+    /* It's repeating the columns 2 times and each column will take 1fr of the space. */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px 15px;
+}
+
+.selectCoverBox_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px 0 10px 0;
+    cursor: pointer;
+}
+
+.selectCoverBox_link:first-of-type {
+    color: var(--blue-color);
+    border-bottom: 3px solid var(--blue-color);
+}
+
 /* ------- Profile card -------- */
 
 @media (max-width: 900px) {
