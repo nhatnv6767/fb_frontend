@@ -387,6 +387,20 @@
     border-bottom-left-radius: 8px;
 }
 
+.save_changes_cover {
+    z-index: 999999999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-primary);
+}
+
 /* ------- Profile card -------- */
 
 @media (max-width: 900px) {
