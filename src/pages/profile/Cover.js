@@ -1,7 +1,6 @@
-import {useRef, useState} from "react";
+import {useRef, useState, useCallback} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import Cropper from "react-easy-crop";
-import {useCallback} from "@types/react";
 import getCroppedImg from "../../helpers/getCroppedImg";
 
 export default function Cover({cover, visitor}) {
