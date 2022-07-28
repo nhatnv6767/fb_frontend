@@ -83,6 +83,7 @@ export default function Intro({detailss, visitor}) {
                         handleBioChange={handleBioChange}
                         setShowBio={setShowBio}
                         updateDetails={updateDetails}
+                        placeholder="Add Bio"
                     />
                 )
             }
