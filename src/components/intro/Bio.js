@@ -1,9 +1,9 @@
-export default function Bio({infos, handleBioChange, max, setShowBio, updateDetails, placeholder}) {
+export default function Bio({infos, handleBioChange, max, setShowBio, updateDetails, placeholder, name}) {
     return (
         <div className="add_bio_wrap">
             <textarea
                 placeholder={placeholder}
-                name="bio"
+                name={name}
                 value={infos?.bio}
                 maxLength="100"
                 className="textarea_blue details_input"

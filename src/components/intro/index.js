@@ -84,6 +84,7 @@ export default function Intro({detailss, visitor}) {
                         setShowBio={setShowBio}
                         updateDetails={updateDetails}
                         placeholder="Add Bio"
+                        name="bio"
                     />
                 )
             }
