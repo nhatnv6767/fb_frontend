@@ -19,7 +19,7 @@ export default function Intro({details, visitor}) {
         instagram: details?.instagram ? details.instagram : "",
     };
     const [infos, setInfos] = useState(initial);
-    const [showBio, setShowBio] = useState(true);
+    const [showBio, setShowBio] = useState(false);
     const [max, setMax] = useState(infos?.bio ? 100 - infos?.bio.length : 100);
     const handleBioChange = (e) => {
         setInfos({...infos, bio: e.target.value});
