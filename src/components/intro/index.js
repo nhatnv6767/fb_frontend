@@ -22,6 +22,13 @@ export default function Intro({details, visitor}) {
         setInfos({...infos, bio: e.target.value});
         setMax(100 - e.target.value.length);
     };
+    const updateDetails = async () => {
+        try {
+
+        } catch (e) {
+            console.log(e.response.data.message);
+        }
+    };
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
