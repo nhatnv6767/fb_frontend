@@ -39,7 +39,7 @@ export default function Intro({details, visitor}) {
             {
                 details?.bio && !showBio &&
                 <div className="info_col">
-                    <span className="info_text">{infos.bio}</span>
+                    <span className="info_text">{details?.bio}</span>
                     {
                         !visitor && (
                             <button
@@ -66,18 +66,18 @@ export default function Intro({details, visitor}) {
                 details?.job && details?.workplace ? (
                         <div className="info_profile">
                             <img src="../../../icons/job.png" alt=""/>
-                            works as {details.job} at<b>{details.workplace}</b>
+                            works as {details?.job} at<b>{details?.workplace}</b>
                         </div>
                     )
                     : details?.job && !details?.workplace ? (
                         <div className="info_profile">
                             <img src="../../../icons/job.png" alt=""/>
-                            works as {details.job}
+                            works as {details?.job}
                         </div>
                     ) : details?.workplace && !details?.job && (
                         <div className="info_profile">
                             <img src="../../../icons/job.png" alt=""/>
-                            works at {details.workplace}
+                            works at {details?.workplace}
                         </div>
                     )
             }
@@ -86,7 +86,7 @@ export default function Intro({details, visitor}) {
                 details?.relationship &&
                 <div className="info_profile">
                     <img src="../../../icons/relationship.png" alt=""/>
-                    {details.relationship}
+                    {details?.relationship}
                 </div>
             }
 
@@ -94,7 +94,7 @@ export default function Intro({details, visitor}) {
                 details?.college &&
                 <div className="info_profile">
                     <img src="../../../icons/studies.png" alt=""/>
-                    studied at {details.college}
+                    studied at {details?.college}
                 </div>
             }
 
@@ -102,7 +102,7 @@ export default function Intro({details, visitor}) {
                 details?.highSchool &&
                 <div className="info_profile">
                     <img src="../../../icons/studies.png" alt=""/>
-                    studied at {details.highSchool}
+                    studied at {details?.highSchool}
                 </div>
             }
 
@@ -110,7 +110,7 @@ export default function Intro({details, visitor}) {
                 details?.currentCity &&
                 <div className="info_profile">
                     <img src="../../../icons/home.png" alt=""/>
-                    Lives in {details.currentCity}
+                    Lives in {details?.currentCity}
                 </div>
             }
 
@@ -118,7 +118,7 @@ export default function Intro({details, visitor}) {
                 details?.hometown &&
                 <div className="info_profile">
                     <img src="../../../icons/home.png" alt=""/>
-                    From {details.hometown}
+                    From {details?.hometown}
                 </div>
             }
 
@@ -126,8 +126,8 @@ export default function Intro({details, visitor}) {
                 details?.instagram &&
                 <div className="info_profile">
                     <img src="../../../icons/instagram.png" alt=""/>
-                    <a href={`https://www.instagram.com/${details.instagram}`} target="_blank">
-                        {details.instagram}
+                    <a href={`https://www.instagram.com/${details?.instagram}`} target="_blank">
+                        {details?.instagram}
                     </a>
                 </div>
             }
