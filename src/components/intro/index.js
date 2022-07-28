@@ -46,6 +46,11 @@ export default function Intro({detailss, visitor}) {
             console.log(e.response.data.message);
         }
     };
+    const handleChange = (e) => {
+        const [name, value] = e.target;
+        setInfos({...infos, [name]: value});
+        setMax(100 - e.target.value.length);
+    };
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
@@ -80,7 +85,7 @@ export default function Intro({detailss, visitor}) {
                     <Bio
                         infos={infos}
                         max={max}
-                        handleBioChange={handleBioChange}
+                        handleBioChange={handleChange}
                         setShowBio={setShowBio}
                         updateDetails={updateDetails}
                         placeholder="Add Bio"
