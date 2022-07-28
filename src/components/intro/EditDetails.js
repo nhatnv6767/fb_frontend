@@ -15,7 +15,12 @@ export default function EditDetails({details}) {
                         <span>Customize Your Intro</span>
                         <span>Details you select will be public</span>
                     </div>
-                    <Detail header="Other Name" value={details?.otherName} img="studies"/>
+                    <Detail
+                        header="Other Name"
+                        value={details?.otherName}
+                        img="studies"
+                        placeholder="Add other name"
+                    />
                 </div>
             </div>
         </div>
