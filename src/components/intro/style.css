@@ -30,3 +30,26 @@
     width: 100%;
     margin: 10px 0;
 }
+
+.add_bio_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.details_input {
+    margin-top: 10px;
+    background: var(--bg-secondary) !important;
+}
+
+.details_input:focus {
+    outline-color: var(--blue-color) !important;
+    outline-offset: 1px !important;
+}
+
+.remaining {
+    font-size: 12px;
+    color: var(--color-secondary);
+    /* Aligning the text to the bottom of the div. */
+    align-self: flex-end;
+}
+
