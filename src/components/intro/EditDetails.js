@@ -20,6 +20,7 @@ export default function EditDetails({details}) {
                         value={details?.otherName}
                         img="studies"
                         placeholder="Add other name"
+                        name="otherName"
                     />
                 </div>
             </div>
