@@ -41,6 +41,7 @@ export default function Intro({detailss, visitor}) {
             console.log(e.response.data.message);
         }
     };
+    console.log(details);
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
