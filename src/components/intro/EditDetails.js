@@ -1,3 +1,5 @@
+import Detail from "./Detail";
+
 export default function EditDetails() {
     return (
         <div className="blur">
@@ -14,6 +16,7 @@ export default function EditDetails() {
                         <span>Details you select will be public</span>
                     </div>
                 </div>
+                <Detail header="Other Name" value={}/>
             </div>
         </div>
     );
