@@ -8,6 +8,12 @@ export default function EditDetails() {
                     </div>
                     <span>Edit Details</span>
                 </div>
+                <div className="details_wrapper scrollbar">
+                    <div className="details_col">
+                        <span>Customize Your Intro</span>
+                        <span>Details you select will be public</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
