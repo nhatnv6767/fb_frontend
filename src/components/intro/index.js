@@ -44,7 +44,6 @@ export default function Intro({detailss, visitor}) {
             console.log(e.response.data.message);
         }
     };
-    console.log(details);
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
@@ -67,10 +66,10 @@ export default function Intro({detailss, visitor}) {
             {
                 !details?.bio && !showBio && !visitor && (
                     <button
-                        className="gray_btn hover1"
+                        className="gray_btn hover1 w100"
                         onClick={() => setShowBio(true)}
                     >
-                        Edit Bio
+                        Add Bio
                     </button>
                 )
             }
