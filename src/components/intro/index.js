@@ -31,7 +31,12 @@ export default function Intro({details, visitor}) {
                     }
                 </div>
             }
-            {showBio && <Bio/>}
+            {
+                showBio &&
+                <Bio
+                    infos={infos}
+                />
+            }
             {
                 infos.job && infos.workplace ? (
                         <div className="info_profile">
