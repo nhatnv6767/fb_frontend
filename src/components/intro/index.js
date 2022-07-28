@@ -16,7 +16,7 @@ export default function Intro({details, visitor}) {
         instagram: details?.instagram ? details.instagram : "bbnet0",
     };
     const [infos, setInfos] = useState(initial);
-    const [showBio, setShowBio] = useState(true);
+    const [showBio, setShowBio] = useState(false);
     const [max, setMax] = useState(infos?.bio ? 100 - infos?.bio.length : 100);
     const handleBioChange = (e) => {
         setInfos({...infos, bio: e.target.value});
@@ -31,7 +31,12 @@ export default function Intro({details, visitor}) {
                     <span className="info_text">{infos.bio}</span>
                     {
                         !visitor && (
-                            <button className="gray_btn hover1">Edit Bio</button>
+                            <button
+                                className="gray_btn hover1"
+                                onClick={() => setShowBio(true)}
+                            >
+                                Edit Bio
+                            </button>
                         )
                     }
                 </div>
