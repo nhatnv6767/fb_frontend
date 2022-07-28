@@ -51,5 +51,15 @@
     color: var(--color-secondary);
     /* Aligning the text to the bottom of the div. */
     align-self: flex-end;
+    margin-top: 2px;
+}
+
+.add_bio_wrap .flex {
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.flex_left {
+    font-size: 14px;
 }
 
