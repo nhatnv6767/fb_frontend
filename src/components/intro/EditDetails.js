@@ -1,6 +1,6 @@
 import Detail from "./Detail";
 
-export default function EditDetails() {
+export default function EditDetails({details}) {
     return (
         <div className="blur">
             <div className="postBox infosBox">
@@ -16,7 +16,7 @@ export default function EditDetails() {
                         <span>Details you select will be public</span>
                     </div>
                 </div>
-                <Detail header="Other Name" value={}/>
+                <Detail header="Other Name" value={details?.otherName}/>
             </div>
         </div>
     );

@@ -165,7 +165,7 @@ export default function Intro({detailss, visitor}) {
 
             {
                 visible && !visitor && (
-                    <EditDetails/>
+                    <EditDetails details={details}/>
                 )
             }
 
