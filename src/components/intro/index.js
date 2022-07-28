@@ -4,8 +4,9 @@ import Bio from "./Bio";
 import axios from "axios";
 import {useSelector} from "react-redux";
 
-export default function Intro({details, visitor}) {
+export default function Intro({detailss, visitor}) {
     const {user} = useSelector((state) => ({...state}));
+    const [details, setDetails] = useState(detailss);
     const initial = {
         bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
@@ -35,6 +36,7 @@ export default function Intro({details, visitor}) {
                 }
             });
             setShowBio(false);
+            setDetails(data);
         } catch (e) {
             console.log(e.response.data.message);
         }

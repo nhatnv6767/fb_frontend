@@ -100,7 +100,7 @@ export default function Profile({setVisible}) {
                         <div className="profile_grid">
                             <div className="profile_left">
                                 <Intro
-                                    details={profile.details}
+                                    detailss={profile.details}
                                     visitor={visitor}
                                 />
                                 <Photos
