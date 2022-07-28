@@ -5,16 +5,16 @@ import axios from "axios";
 
 export default function Intro({details, visitor}) {
     const initial = {
-        bio: details?.bio ? details.bio : "Welcome to my profile ",
+        bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
-        job: details?.job ? details.job : "Web developer",
-        workplace: details?.workplace ? details.workplace : "Google",
-        highSchool: details?.highSchool ? details.highSchool : "BMW high school",
-        college: details?.college ? details.college : "Nothing college",
-        currentCity: details?.currentCity ? details.currentCity : "Japan",
-        hometown: details?.hometown ? details.hometown : "Viet Nam",
-        relationship: details?.relationship ? details.relationship : "Single",
-        instagram: details?.instagram ? details.instagram : "bbnet0",
+        job: details?.job ? details.job : "",
+        workplace: details?.workplace ? details.workplace : "",
+        highSchool: details?.highSchool ? details.highSchool : "",
+        college: details?.college ? details.college : "",
+        currentCity: details?.currentCity ? details.currentCity : "",
+        hometown: details?.hometown ? details.hometown : "",
+        relationship: details?.relationship ? details.relationship : "",
+        instagram: details?.instagram ? details.instagram : "",
     };
     const [infos, setInfos] = useState(initial);
     const [showBio, setShowBio] = useState(false);
