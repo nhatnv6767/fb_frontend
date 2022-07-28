@@ -1,6 +1,7 @@
 import "./style.css";
 import {useState} from "react";
 import Bio from "./Bio";
+import axios from "axios";
 
 export default function Intro({details, visitor}) {
     const initial = {
@@ -24,6 +25,9 @@ export default function Intro({details, visitor}) {
     };
     const updateDetails = async () => {
         try {
+            const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/updateDetails`, {
+                infos,
+            });
 
         } catch (e) {
             console.log(e.response.data.message);
@@ -55,6 +59,7 @@ export default function Intro({details, visitor}) {
                     max={max}
                     handleBioChange={handleBioChange}
                     setShowBio={setShowBio}
+                    updateDetails={updateDetails}
                 />
             }
             {
