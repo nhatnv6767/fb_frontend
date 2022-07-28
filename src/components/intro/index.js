@@ -37,7 +37,7 @@ export default function Intro({details, visitor}) {
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
             {
-                infos?.bio && !showBio &&
+                details?.bio && !showBio &&
                 <div className="info_col">
                     <span className="info_text">{infos.bio}</span>
                     {
@@ -63,71 +63,71 @@ export default function Intro({details, visitor}) {
                 />
             }
             {
-                infos.job && infos.workplace ? (
+                details?.job && details?.workplace ? (
                         <div className="info_profile">
                             <img src="../../../icons/job.png" alt=""/>
-                            works as {infos.job} at<b>{infos.workplace}</b>
+                            works as {details.job} at<b>{details.workplace}</b>
                         </div>
                     )
-                    : infos.job && !infos.workplace ? (
+                    : details?.job && !details?.workplace ? (
                         <div className="info_profile">
                             <img src="../../../icons/job.png" alt=""/>
-                            works as {infos.job}
+                            works as {details.job}
                         </div>
-                    ) : infos.workplace && !infos.job && (
+                    ) : details?.workplace && !details?.job && (
                         <div className="info_profile">
                             <img src="../../../icons/job.png" alt=""/>
-                            works at {infos.workplace}
+                            works at {details.workplace}
                         </div>
                     )
             }
 
             {
-                infos?.relationship &&
+                details?.relationship &&
                 <div className="info_profile">
                     <img src="../../../icons/relationship.png" alt=""/>
-                    {infos.relationship}
+                    {details.relationship}
                 </div>
             }
 
             {
-                infos?.college &&
+                details?.college &&
                 <div className="info_profile">
                     <img src="../../../icons/studies.png" alt=""/>
-                    studied at {infos.college}
+                    studied at {details.college}
                 </div>
             }
 
             {
-                infos?.highSchool &&
+                details?.highSchool &&
                 <div className="info_profile">
                     <img src="../../../icons/studies.png" alt=""/>
-                    studied at {infos.highSchool}
+                    studied at {details.highSchool}
                 </div>
             }
 
             {
-                infos?.currentCity &&
+                details?.currentCity &&
                 <div className="info_profile">
                     <img src="../../../icons/home.png" alt=""/>
-                    Lives in {infos.currentCity}
+                    Lives in {details.currentCity}
                 </div>
             }
 
             {
-                infos?.hometown &&
+                details?.hometown &&
                 <div className="info_profile">
                     <img src="../../../icons/home.png" alt=""/>
-                    From {infos.hometown}
+                    From {details.hometown}
                 </div>
             }
 
             {
-                infos?.instagram &&
+                details?.instagram &&
                 <div className="info_profile">
                     <img src="../../../icons/instagram.png" alt=""/>
-                    <a href={`https://www.instagram.com/${infos.instagram}`} target="_blank">
-                        {infos.instagram}
+                    <a href={`https://www.instagram.com/${details.instagram}`} target="_blank">
+                        {details.instagram}
                     </a>
                 </div>
             }
