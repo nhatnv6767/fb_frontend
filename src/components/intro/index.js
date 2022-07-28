@@ -19,6 +19,8 @@ export default function Intro({details, visitor}) {
     const [showBio, setShowBio] = useState(true);
     const [max, setMax] = useState(infos?.bio ? 100 - infos?.bio.length : 100);
     const handleBioChange = (e) => {
+        setInfos({...infos, bio: e.target.value});
+        setMax(100 - e.target.value.length);
     };
     return (
         <div className="profile_card">
