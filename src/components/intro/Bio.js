@@ -25,7 +25,7 @@ export default function Bio({infos, handleBioChange, max, setShowBio, updateDeta
                     </button>
                     <button
                         className="blue_btn"
-                        onClick={() => updateDetails}
+                        onClick={() => updateDetails()}
                     >
                         Save
                     </button>
