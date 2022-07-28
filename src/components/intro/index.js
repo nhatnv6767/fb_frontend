@@ -26,7 +26,7 @@ export default function Intro({details, visitor}) {
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
             {
-                infos?.bio &&
+                infos?.bio && !showBio &&
                 <div className="info_col">
                     <span className="info_text">{infos.bio}</span>
                     {
@@ -42,6 +42,7 @@ export default function Intro({details, visitor}) {
                     infos={infos}
                     max={max}
                     handleBioChange={handleBioChange}
+                    setShowBio={setShowBio}
                 />
             }
             {

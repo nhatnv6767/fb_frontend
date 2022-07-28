@@ -1,4 +1,4 @@
-export default function Bio({infos, handleBioChange, max}) {
+export default function Bio({infos, handleBioChange, max, setShowBio}) {
     return (
         <div className="add_bio_wrap">
             <textarea
@@ -17,7 +17,12 @@ export default function Bio({infos, handleBioChange, max}) {
                     <i className="public_icon"></i>Public
                 </div>
                 <div className="flex flex_right">
-                    <button className="gray_btn">Cancel</button>
+                    <button
+                        className="gray_btn"
+                        onClick={() => setShowBio(false)}
+                    >
+                        Cancel
+                    </button>
                     <button className="blue_btn">Save</button>
                 </div>
             </div>
