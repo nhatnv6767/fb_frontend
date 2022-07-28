@@ -68,3 +68,27 @@
     filter: invert(40%);
 }
 
+.infosBox {
+    height: 82vh;
+    width: 800px;
+}
+
+.details_wrapper {
+    padding: 1rem;
+}
+
+.details_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.details_col span:first-of-type {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.details_col span:last-of-type {
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
