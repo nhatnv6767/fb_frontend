@@ -3,10 +3,12 @@ import {useEffect, useState} from "react";
 import Bio from "./Bio";
 import axios from "axios";
 import {useSelector} from "react-redux";
+import EditDetails from "./EditDetails";
 
 export default function Intro({detailss, visitor}) {
     const {user} = useSelector((state) => ({...state}));
     const [details, setDetails] = useState();
+    const [visible, setVisible] = useState(1);
     useEffect(() => {
         setDetails(detailss);
     }, [detailss]);
@@ -158,6 +160,12 @@ export default function Intro({detailss, visitor}) {
                 !visitor && (
                     <button className="gray_btn hover1 w100">Edit Details</button>
 
+                )
+            }
+
+            {
+                visible && !visitor && (
+                    <EditDetails/>
                 )
             }
 
