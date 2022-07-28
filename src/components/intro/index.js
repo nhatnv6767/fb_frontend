@@ -17,6 +17,7 @@ export default function Intro({details, visitor}) {
     };
     const [infos, setInfos] = useState(initial);
     const [showBio, setShowBio] = useState(true);
+    const [max, setMax] = useState();
     const handleBioChange = (e) => {
     };
     return (
@@ -37,6 +38,7 @@ export default function Intro({details, visitor}) {
                 showBio &&
                 <Bio
                     infos={infos}
+                    max={max}
                 />
             }
             {

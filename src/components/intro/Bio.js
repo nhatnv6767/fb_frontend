@@ -1,4 +1,4 @@
-export default function Bio({infos, handleBioChange}) {
+export default function Bio({infos, handleBioChange, max}) {
     return (
         <div className="add_bio_wrap">
             <textarea
