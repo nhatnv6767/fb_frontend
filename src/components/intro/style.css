@@ -61,5 +61,10 @@
 
 .flex_left {
     font-size: 14px;
+    color: var(--color-secondary);
+}
+
+.flex_left i {
+    filter: invert(40%);
 }
 
