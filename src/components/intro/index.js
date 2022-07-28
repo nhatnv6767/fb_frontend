@@ -4,7 +4,7 @@ import Bio from "./Bio";
 
 export default function Intro({details, visitor}) {
     const initial = {
-        bio: details?.bio ? details.bio : "Welcome to my profile Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dignissimos ex excepturi harum quaerat totam veritatis. Aliquid amet excepturi in inventore laudantium maiores, nobis non odit omnis quos soluta sunt.",
+        bio: details?.bio ? details.bio : "Welcome to my profile ",
         otherName: details?.otherName ? details.otherName : "",
         job: details?.job ? details.job : "Web developer",
         workplace: details?.workplace ? details.workplace : "Google",
@@ -17,7 +17,7 @@ export default function Intro({details, visitor}) {
     };
     const [infos, setInfos] = useState(initial);
     const [showBio, setShowBio] = useState(true);
-    const [max, setMax] = useState();
+    const [max, setMax] = useState(infos?.bio ? 100 - infos?.bio.length : 100);
     const handleBioChange = (e) => {
     };
     return (
