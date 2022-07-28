@@ -41,6 +41,7 @@ export default function Intro({details, visitor}) {
                 <Bio
                     infos={infos}
                     max={max}
+                    handleBioChange={handleBioChange}
                 />
             }
             {
