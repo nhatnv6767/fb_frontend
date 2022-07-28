@@ -16,7 +16,7 @@ export default function EditDetails({details}) {
                         <span>Details you select will be public</span>
                     </div>
                 </div>
-                <Detail header="Other Name" value={details?.otherName}/>
+                <Detail header="Other Name" value={details?.otherName} img="studies"/>
             </div>
         </div>
     );
