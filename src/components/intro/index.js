@@ -17,6 +17,8 @@ export default function Intro({details, visitor}) {
     };
     const [infos, setInfos] = useState(initial);
     const [showBio, setShowBio] = useState(true);
+    const handleBioChange = (e) => {
+    };
     return (
         <div className="profile_card">
             <div className="profile_card_header">Intro</div>
