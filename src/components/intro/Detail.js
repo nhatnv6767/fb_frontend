@@ -2,9 +2,9 @@ export default function Detail({header, img, value}) {
     return (
         <div>
             <div className="details_header">{header}</div>
-            <div className="add_details_flex no_underline">
+            <div className="add_details_flex ">
                 {
-                    value ? <div className="info_profile">
+                    value ? <div className="info_profile no_underline">
                             <img src={`../../../icons/${img}.png`} alt=""/>
                             {value}
                             <i className="edit_icon"></i>
