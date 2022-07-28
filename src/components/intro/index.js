@@ -65,14 +65,25 @@ export default function Intro({detailss, visitor}) {
                 </div>
             }
             {
-                showBio &&
-                <Bio
-                    infos={infos}
-                    max={max}
-                    handleBioChange={handleBioChange}
-                    setShowBio={setShowBio}
-                    updateDetails={updateDetails}
-                />
+                !details?.bio && !showBio && !visitor && (
+                    <button
+                        className="gray_btn hover1"
+                        onClick={() => setShowBio(true)}
+                    >
+                        Edit Bio
+                    </button>
+                )
+            }
+            {
+                showBio && (
+                    <Bio
+                        infos={infos}
+                        max={max}
+                        handleBioChange={handleBioChange}
+                        setShowBio={setShowBio}
+                        updateDetails={updateDetails}
+                    />
+                )
             }
             {
                 details?.job && details?.workplace ? (
