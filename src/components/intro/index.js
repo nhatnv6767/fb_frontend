@@ -12,14 +12,14 @@ export default function Intro({details, visitor}) {
         job: details?.job ? details.job : "",
         workplace: details?.workplace ? details.workplace : "",
         highSchool: details?.highSchool ? details.highSchool : "",
-        college: details?.college ? details.college : "Coco",
+        college: details?.college ? details.college : "",
         currentCity: details?.currentCity ? details.currentCity : "",
         hometown: details?.hometown ? details.hometown : "",
         relationship: details?.relationship ? details.relationship : "",
         instagram: details?.instagram ? details.instagram : "",
     };
     const [infos, setInfos] = useState(initial);
-    const [showBio, setShowBio] = useState(false);
+    const [showBio, setShowBio] = useState(true);
     const [max, setMax] = useState(infos?.bio ? 100 - infos?.bio.length : 100);
     const handleBioChange = (e) => {
         setInfos({...infos, bio: e.target.value});
