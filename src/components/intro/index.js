@@ -9,7 +9,7 @@ export default function Intro({detailss, visitor}) {
     const [details, setDetails] = useState();
     useEffect(() => {
         setDetails(detailss);
-    }, []);
+    }, [detailss]);
     const initial = {
         bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
