@@ -1,12 +1,15 @@
 import "./style.css";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Bio from "./Bio";
 import axios from "axios";
 import {useSelector} from "react-redux";
 
 export default function Intro({detailss, visitor}) {
     const {user} = useSelector((state) => ({...state}));
-    const [details, setDetails] = useState(detailss);
+    const [details, setDetails] = useState();
+    useEffect(() => {
+        setDetails(detailss);
+    }, []);
     const initial = {
         bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
