@@ -34,7 +34,7 @@ export default function Intro({details, visitor}) {
                     Authorization: `Bearer ${user.token}`,
                 }
             });
-
+            setShowBio(false);
         } catch (e) {
             console.log(e.response.data.message);
         }
