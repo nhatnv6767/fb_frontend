@@ -1,4 +1,8 @@
+import {useState} from "react";
+import Bio from "./Bio";
+
 export default function Detail({header, img, value}) {
+    const [show, setShow] = useState(true);
     return (
         <div>
             <div className="details_header">{header}</div>
@@ -17,6 +21,9 @@ export default function Detail({header, img, value}) {
                         )
                 }
             </div>
+            {
+                show && <Bio/>
+            }
         </div>
     );
 }
