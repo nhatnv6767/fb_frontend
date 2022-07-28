@@ -2,15 +2,17 @@ import "./style.css";
 import {useState} from "react";
 import Bio from "./Bio";
 import axios from "axios";
+import {useSelector} from "react-redux";
 
 export default function Intro({details, visitor}) {
+    const {user} = useSelector((state) => ({...state}));
     const initial = {
         bio: details?.bio ? details.bio : "",
         otherName: details?.otherName ? details.otherName : "",
         job: details?.job ? details.job : "",
         workplace: details?.workplace ? details.workplace : "",
         highSchool: details?.highSchool ? details.highSchool : "",
-        college: details?.college ? details.college : "",
+        college: details?.college ? details.college : "Coco",
         currentCity: details?.currentCity ? details.currentCity : "",
         hometown: details?.hometown ? details.hometown : "",
         relationship: details?.relationship ? details.relationship : "",
@@ -27,6 +29,10 @@ export default function Intro({details, visitor}) {
         try {
             const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/updateDetails`, {
                 infos,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${user.token}`,
+                }
             });
 
         } catch (e) {
