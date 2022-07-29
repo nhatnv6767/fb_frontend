@@ -39,6 +39,7 @@ export default function Detail({
                         updateDetails={updateDetails}
                         infos={infos}
                         detail
+                        setShow={setShow}
                     />
                 )
             }

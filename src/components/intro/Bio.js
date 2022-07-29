@@ -6,7 +6,8 @@ export default function Bio({
                                 updateDetails,
                                 placeholder,
                                 name,
-                                detail
+                                detail,
+                                setShow,
                             }) {
     return (
         <div className="add_bio_wrap">
@@ -32,7 +33,7 @@ export default function Bio({
                 <div className="flex flex_right">
                     <button
                         className="gray_btn"
-                        onClick={() => setShowBio(false)}
+                        onClick={() => !detail ? setShowBio(false) : setShow(false)}
                     >
                         Cancel
                     </button>
