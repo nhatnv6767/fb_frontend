@@ -173,6 +173,7 @@ export default function Intro({detailss, visitor}) {
                         details={details}
                         handleChange={handleChange}
                         updateDetails={updateDetails}
+                        infos={infos}
                     />
                 )
             }

@@ -1,7 +1,16 @@
 import {useState} from "react";
 import Bio from "./Bio";
 
-export default function Detail({header, img, value, placeholder, name, handleChange, updateDetails}) {
+export default function Detail({
+                                   header,
+                                   img,
+                                   value,
+                                   placeholder,
+                                   name,
+                                   handleChange,
+                                   updateDetails,
+                                   infos,
+                               }) {
     const [show, setShow] = useState(true);
     return (
         <div>
@@ -28,6 +37,7 @@ export default function Detail({header, img, value, placeholder, name, handleCha
                         name={name}
                         handleChange={handleChange}
                         updateDetails={updateDetails}
+                        infos={infos}
                     />
                 )
             }
