@@ -172,6 +172,7 @@ export default function Intro({detailss, visitor}) {
                     <EditDetails
                         details={details}
                         handleChange={handleChange}
+                        updateDetails={updateDetails}
                     />
                 )
             }
