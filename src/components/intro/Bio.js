@@ -4,7 +4,7 @@ export default function Bio({infos, handleChange, max, setShowBio, updateDetails
             <textarea
                 placeholder={placeholder}
                 name={name}
-                value={infos?.bio}
+                value={infos?.name}
                 maxLength="100"
                 className="textarea_blue details_input"
                 onChange={handleChange}
