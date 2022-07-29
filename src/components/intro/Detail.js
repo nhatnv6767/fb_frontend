@@ -15,7 +15,10 @@ export default function Detail({
     return (
         <div>
             <div className="details_header">{header}</div>
-            <div className="add_details_flex ">
+            <div
+                className="add_details_flex "
+                onClick={() => setShow(true)}
+            >
                 {
                     value ? <div className="info_profile no_underline">
                             <img src={`../../../icons/${img}.png`} alt=""/>
@@ -23,10 +26,10 @@ export default function Detail({
                             <i className="edit_icon"></i>
                         </div>
                         : (
-                            <div onClick={() => setShow(true)}>
+                            <>
                                 <i className="rounded_plus_icon"></i>
                                 Add {header}
-                            </div>
+                            </>
                         )
                 }
             </div>
