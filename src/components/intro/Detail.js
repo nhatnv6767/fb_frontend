@@ -38,6 +38,7 @@ export default function Detail({
                         handleChange={handleChange}
                         updateDetails={updateDetails}
                         infos={infos}
+                        detail
                     />
                 )
             }
