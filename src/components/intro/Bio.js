@@ -20,7 +20,11 @@ export default function Bio({
             >
 
             </textarea>
-            <div className="remaining">{max} characters remaining</div>
+            {
+                !detail && (
+                    <div className="remaining">{max} characters remaining</div>
+                )
+            }
             <div className="flex">
                 <div className="flex flex_left">
                     <i className="public_icon"></i>Public
