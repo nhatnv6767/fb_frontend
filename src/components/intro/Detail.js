@@ -23,10 +23,10 @@ export default function Detail({
                             <i className="edit_icon"></i>
                         </div>
                         : (
-                            <>
+                            <div onClick={() => setShow(true)}>
                                 <i className="rounded_plus_icon"></i>
                                 Add {header}
-                            </>
+                            </div>
                         )
                 }
             </div>
