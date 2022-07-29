@@ -169,7 +169,10 @@ export default function Intro({detailss, visitor}) {
 
             {
                 visible && !visitor && (
-                    <EditDetails details={details}/>
+                    <EditDetails
+                        details={details}
+                        handleChange={handleChange}
+                    />
                 )
             }
 

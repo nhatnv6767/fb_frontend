@@ -1,6 +1,6 @@
 import Detail from "./Detail";
 
-export default function EditDetails({details}) {
+export default function EditDetails({details, handleChange}) {
     return (
         <div className="blur">
             <div className="postBox infosBox">
@@ -21,6 +21,7 @@ export default function EditDetails({details}) {
                         img="studies"
                         placeholder="Add other name"
                         name="otherName"
+                        handleChange={handleChange}
                     />
                 </div>
             </div>
