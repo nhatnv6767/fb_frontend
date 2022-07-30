@@ -48,6 +48,64 @@ export default function EditDetails({details, handleChange, updateDetails, infos
                         updateDetails={updateDetails}
                         infos={infos}
                     />
+
+                    <div className="details_header">Education</div>
+                    <Detail
+                        value={details?.highSchool}
+                        img="studies"
+                        placeholder="Add a high school"
+                        name="highSchool"
+                        text="a high school"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
+                    <Detail
+                        value={details?.college}
+                        img="studies"
+                        placeholder="Add a college"
+                        name="college"
+                        text="a college"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
+
+                    <div className="details_header">Current City</div>
+                    <Detail
+                        value={details?.currentCity}
+                        img="home"
+                        placeholder="Add a current city"
+                        name="currentCity"
+                        text="a current city"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
+
+                    <div className="details_header">Hometown</div>
+                    <Detail
+                        value={details?.hometown}
+                        img="home"
+                        placeholder="Add your hometown"
+                        name="hometown"
+                        text="your hometown"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
+
+                    <div className="details_header">Instagram</div>
+                    <Detail
+                        value={details?.instagram}
+                        img="instagram"
+                        placeholder="Add your instagram"
+                        name="instagram"
+                        text="your instagram"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
                 </div>
             </div>
         </div>
