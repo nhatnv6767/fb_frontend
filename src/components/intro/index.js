@@ -45,7 +45,7 @@ export default function Intro({detailss, visitor}) {
         }
     };
     const handleChange = (e) => {
-        const [name, value] = e.target;
+        const {name, value} = e.target;
         setInfos({...infos, [name]: value});
         setMax(100 - e.target.value.length);
     };
