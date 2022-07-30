@@ -8,7 +8,7 @@ import EditDetails from "./EditDetails";
 export default function Intro({detailss, visitor}) {
     const {user} = useSelector((state) => ({...state}));
     const [details, setDetails] = useState();
-    const [visible, setVisible] = useState(1);
+    const [visible, setVisible] = useState(false);
     useEffect(() => {
         setDetails(detailss);
         // so after mounted we will have all the infos
@@ -177,6 +177,7 @@ export default function Intro({detailss, visitor}) {
                         handleChange={handleChange}
                         updateDetails={updateDetails}
                         infos={infos}
+                        setVisible={setVisible}
                     />
                 )
             }
