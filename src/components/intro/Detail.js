@@ -2,7 +2,6 @@ import {useState} from "react";
 import Bio from "./Bio";
 
 export default function Detail({
-                                   header,
                                    img,
                                    value,
                                    placeholder,
@@ -15,7 +14,6 @@ export default function Detail({
     const [show, setShow] = useState(false);
     return (
         <div>
-            <div className="details_header">{header}</div>
             <div
                 className="add_details_flex "
                 onClick={() => setShow(true)}
