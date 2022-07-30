@@ -1,6 +1,6 @@
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {useEffect, useReducer, useState} from "react";
+import {useEffect, useReducer, useRef, useState} from "react";
 import {profileReducer} from "../../functions/reducers";
 import axios from "axios";
 import Header from "../../components/header";
@@ -80,10 +80,13 @@ export default function Profile({setVisible}) {
             });
         }
     };
+
+    const profileTop = useRef(null);
+
     return (
         <div className="profile">
             <Header page="profile"/>
-            <div className="profile_top">
+            <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
                     <Cover
                         cover={profile.cover}
