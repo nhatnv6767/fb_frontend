@@ -108,7 +108,7 @@ export default function Profile({setVisible}) {
                                 <Intro
                                     detailss={profile.details}
                                     visitor={visitor}
-                                    setOthername={setOthername()}
+                                    setOthername={setOthername}
                                 />
                                 <Photos
                                     username={userName}
