@@ -15,6 +15,7 @@ import Post from "../../components/post";
 import Photos from "./Photos";
 import Friends from "./Friends";
 import Intro from "../../components/intro";
+import {useMediaQuery} from "react-responsive";
 
 export default function Profile({setVisible}) {
     const {username} = useParams();
@@ -82,14 +83,25 @@ export default function Profile({setVisible}) {
     };
 
     const profileTop = useRef(null);
+    const leftSide = useRef(null);
     const [height, setHeight,] = useState();
+    const [leftHeight, setLeftHeight] = useState();
+    const [scrollHeight, setScrollHeight] = useState();
     useEffect(() => {
         /* Setting the height of the profileTop div to the height of the profileTop div.
         * 300: pplumayknow
         * */
         setHeight(profileTop.current.clientHeight + 300);
+
+        setLeftHeight(leftSide.current.clientHeight);
     }, [loading]);
 
+    const check = useMediaQuery({
+        query: "(min-width: 901px)",
+    });
+    const getScroll = () => {
+        setScrollHeight(window.pageYOffset);
+    };
     return (
         <div className="profile">
             <Header page="profile"/>
@@ -114,7 +126,7 @@ export default function Profile({setVisible}) {
                     <div className="bottom_container">
                         <PplYouMayKnow/>
                         <div className="profile_grid">
-                            <div className="profile_left">
+                            <div className="profile_left" ref={leftSide}>
                                 <Intro
                                     detailss={profile.details}
                                     visitor={visitor}
