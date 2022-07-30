@@ -212,10 +212,15 @@
 
     .stories {
         grid-template-columns: repeat(6, 13vw);
+        padding-left: 10px;
     }
 
     .home_middle {
         margin: 56px auto;
+    }
+
+    .createPost_body {
+        padding: 5px 0;
     }
 }
 
