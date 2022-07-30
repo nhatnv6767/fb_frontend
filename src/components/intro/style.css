@@ -109,9 +109,6 @@
     cursor: pointer;
 }
 
-.add_details_flex:hover {
-    text-decoration: underline;
-}
 
 .add_details_flex .edit_icon {
     position: absolute;

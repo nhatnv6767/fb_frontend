@@ -20,7 +20,7 @@ export default function Detail({
                 onClick={() => setShow(true)}
             >
                 {
-                    value ? <div className="info_profile no_underline">
+                    value ? <div className="info_profile">
                             <img src={`../../../icons/${img}.png`} alt=""/>
                             {value}
                             <i className="edit_icon"></i>
