@@ -536,4 +536,8 @@
     width: 504px;
 }
 
+.showLess .profile_left {
+    bottom: 10px;
+}
+
 
