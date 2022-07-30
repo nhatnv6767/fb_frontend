@@ -594,7 +594,7 @@
 
 @media (max-width: 400px) {
     .posts {
-        width: 97%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -609,5 +609,13 @@
     .post_header_left img {
         width: 35px !important;
         height: 35px !important;
+    }
+
+    .reacts_popup {
+        left: -1rem !important;
+    }
+
+    .react img {
+
     }
 }

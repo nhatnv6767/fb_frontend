@@ -194,10 +194,6 @@
 }
 
 @media (max-width: 400px) {
-    .stories, .createPost, .post .send_verification {
-        width: 96% !important;
-        margin: 0 auto;
-    }
 
     .createPost, .post {
         margin-top: 1rem;
