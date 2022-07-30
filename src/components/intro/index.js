@@ -165,7 +165,12 @@ export default function Intro({detailss, visitor}) {
 
             {
                 !visitor && (
-                    <button className="gray_btn hover1 w100">Edit Details</button>
+                    <button
+                        className="gray_btn hover1 w100"
+                        onClick={() => setVisible(true)}
+                    >
+                        Edit Details
+                    </button>
 
                 )
             }

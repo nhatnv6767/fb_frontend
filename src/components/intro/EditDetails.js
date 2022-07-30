@@ -11,7 +11,7 @@ export default function EditDetails({
         <div className="blur">
             <div className="postBox infosBox">
                 <div className="box_header">
-                    <div className="small_circle">
+                    <div className="small_circle" onClick={() => setVisible(false)}>
                         <i className="exit_icon"></i>
                     </div>
                     <span>Edit Details</span>
