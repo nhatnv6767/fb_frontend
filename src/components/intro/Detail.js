@@ -28,7 +28,9 @@ export default function Detail({
                         : (
                             <>
                                 <i className="rounded_plus_icon"></i>
-                                Add {header}
+                                <span className="underline">
+                                    Add {header}
+                                </span>
                             </>
                         )
                 }
