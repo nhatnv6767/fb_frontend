@@ -69,7 +69,9 @@ export default function EmojiPickerBackgrounds({
                                 maxLength="250"
                                 value={text}
                                 placeholder={`What's on your mind, ${user?.first_name}`}
-                                className={`post_input ${type2 ? "input2" : ""}`}
+                                className={`post_input ${type2 ? "input2" : ""} ${
+                                    sm && !background && "l0"
+                                }`}
                                 onChange={(e) => setText(e.target.value)}
                                 style={{
                                     /* It's a way to make the textarea smaller as the user types. */
