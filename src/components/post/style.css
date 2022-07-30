@@ -612,7 +612,7 @@
     }
 
     .reacts_popup {
-        left: 0 !important;
+        top: -3rem;
     }
 
     .react img {
