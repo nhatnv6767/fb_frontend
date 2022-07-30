@@ -15,8 +15,8 @@ export default function EditDetails({details, handleChange, updateDetails, infos
                         <span>Customize Your Intro</span>
                         <span>Details you select will be public</span>
                     </div>
+                    <div className="details_header">Other Name</div>
                     <Detail
-                        header="Other Name"
                         value={details?.otherName}
                         img="studies"
                         placeholder="Add other name"
