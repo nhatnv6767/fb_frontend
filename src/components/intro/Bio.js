@@ -30,7 +30,7 @@ export default function Bio({
                             name={name}
                             /* A way to access a property of an object using a variable. */
                             value={infos?.[name]}
-                            maxLength="100"
+                            maxLength={detail ? 25 : 100}
                             className="textarea_blue details_input"
                             onChange={handleChange}
                         >
