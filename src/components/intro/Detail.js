@@ -45,6 +45,7 @@ export default function Detail({
                         infos={infos}
                         detail
                         setShow={setShow}
+                        rel={rel}
                     />
                 )
             }

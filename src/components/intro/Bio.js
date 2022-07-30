@@ -8,20 +8,26 @@ export default function Bio({
                                 name,
                                 detail,
                                 setShow,
+                                rel,
                             }) {
     return (
         <div className="add_bio_wrap">
-            <textarea
-                placeholder={placeholder}
-                name={name}
-                /* A way to access a property of an object using a variable. */
-                value={infos?.[name]}
-                maxLength="100"
-                className="textarea_blue details_input"
-                onChange={handleChange}
-            >
+            {
+                rel ? <select name={name}></select>
+                    : (
+                        <textarea
+                            placeholder={placeholder}
+                            name={name}
+                            /* A way to access a property of an object using a variable. */
+                            value={infos?.[name]}
+                            maxLength="100"
+                            className="textarea_blue details_input"
+                            onChange={handleChange}
+                        >
 
-            </textarea>
+                        </textarea>
+                    )
+            }
             {
                 !detail && (
                     <div className="remaining">{max} characters remaining</div>
