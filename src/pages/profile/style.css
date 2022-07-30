@@ -526,4 +526,9 @@
     }
 }
 
+.scrollFixed .profile_left {
+    position: fixed;
+    width: 360px;
+}
+
 
