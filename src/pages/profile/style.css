@@ -508,6 +508,10 @@
     .profile_grid .createPost {
         width: 100% !important;
     }
+
+    .bottom_container {
+        padding: 10px;
+    }
 }
 
 
