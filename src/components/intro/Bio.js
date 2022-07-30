@@ -14,7 +14,8 @@ export default function Bio({
             <textarea
                 placeholder={placeholder}
                 name={name}
-                value={infos?.name}
+                /* A way to access a property of an object using a variable. */
+                value={infos?.[name]}
                 maxLength="100"
                 className="textarea_blue details_input"
                 onChange={handleChange}
