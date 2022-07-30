@@ -122,3 +122,13 @@
 .underline:hover {
     text-decoration: underline;
 }
+
+.select_rel {
+    height: 30px;
+    outline: none;
+    border: none;
+    background: var(--bg-secondary);
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+}

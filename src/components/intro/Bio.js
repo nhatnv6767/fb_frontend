@@ -14,6 +14,7 @@ export default function Bio({
         <div className="add_bio_wrap">
             {
                 rel ? <select
+                        className="select_rel"
                         name={name}
                         value={infos.relationship}
                         onChange={handleChange}
