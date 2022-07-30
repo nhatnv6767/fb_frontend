@@ -619,4 +619,8 @@
         width: 32px;
         height: 32px;
     }
+
+    .comment_input_wrap input {
+        font-size: 12px;
+    }
 }
