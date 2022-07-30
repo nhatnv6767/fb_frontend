@@ -82,6 +82,11 @@ export default function Profile({setVisible}) {
     };
 
     const profileTop = useRef(null);
+    const [height, setHeight,] = useState();
+    useEffect(() => {
+        /* Setting the height of the profileTop div to the height of the profileTop div. */
+        setHeight(profileTop.current.clientHeight);
+    }, [loading]);
 
     return (
         <div className="profile">
