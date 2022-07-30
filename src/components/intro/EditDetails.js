@@ -1,4 +1,6 @@
 import Detail from "./Detail";
+import {useRef} from "react";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function EditDetails({
                                         details,
@@ -7,9 +9,11 @@ export default function EditDetails({
                                         infos,
                                         setVisible,
                                     }) {
+    const modal = useRef(null);
+    useClickOutside(modal, () => setVisible(false));
     return (
         <div className="blur">
-            <div className="postBox infosBox">
+            <div className="postBox infosBox" ref={modal}>
                 <div className="box_header">
                     <div className="small_circle" onClick={() => setVisible(false)}>
                         <i className="exit_icon"></i>
