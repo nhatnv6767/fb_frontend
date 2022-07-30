@@ -514,4 +514,16 @@
     }
 }
 
+@media (max-width: 650px) {
+    .profile_menu_wrap {
+        display: none;
+    }
+}
+
+@media (max-width: 510px) {
+    .update_cover_wrapper {
+        bottom: 3rem;
+    }
+}
+
 
