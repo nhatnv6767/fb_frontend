@@ -75,6 +75,8 @@
 
 .details_wrapper {
     padding: 1rem;
+    overflow-y: auto !important;
+    height: 75vh;
 }
 
 .details_col {
