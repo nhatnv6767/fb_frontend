@@ -13,7 +13,15 @@ export default function Bio({
     return (
         <div className="add_bio_wrap">
             {
-                rel ? <select name={name}></select>
+                rel ? <select
+                        name={name}
+                        value={infos.relationship}
+                    >
+                        <option value="Single">Single</option>
+                        <option value="In a relationship">In a relationship</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                    </select>
                     : (
                         <textarea
                             placeholder={placeholder}
