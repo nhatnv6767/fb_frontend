@@ -12,7 +12,7 @@ export default function Detail({
                                    infos,
                                    text,
                                }) {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     return (
         <div>
             <div className="details_header">{header}</div>
