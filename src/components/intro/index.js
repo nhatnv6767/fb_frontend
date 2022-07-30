@@ -11,6 +11,8 @@ export default function Intro({detailss, visitor}) {
     const [visible, setVisible] = useState(1);
     useEffect(() => {
         setDetails(detailss);
+        // so after mounted we will have all the infos
+        setInfos(detailss);
     }, [detailss]);
     const initial = {
         bio: details?.bio ? details.bio : "",
