@@ -84,8 +84,10 @@ export default function Profile({setVisible}) {
     const profileTop = useRef(null);
     const [height, setHeight,] = useState();
     useEffect(() => {
-        /* Setting the height of the profileTop div to the height of the profileTop div. */
-        setHeight(profileTop.current.clientHeight);
+        /* Setting the height of the profileTop div to the height of the profileTop div.
+        * 300: pplumayknow
+        * */
+        setHeight(profileTop.current.clientHeight + 300);
     }, [loading]);
 
     return (
