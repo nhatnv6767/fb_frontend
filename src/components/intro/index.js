@@ -5,7 +5,7 @@ import axios from "axios";
 import {useSelector} from "react-redux";
 import EditDetails from "./EditDetails";
 
-export default function Intro({detailss, visitor}) {
+export default function Intro({detailss, visitor, setOthername}) {
     const {user} = useSelector((state) => ({...state}));
     const [details, setDetails] = useState();
     const [visible, setVisible] = useState(false);
@@ -42,6 +42,7 @@ export default function Intro({detailss, visitor}) {
             });
             setShowBio(false);
             setDetails(data);
+            setOthername(data.otherName);
         } catch (e) {
             console.log(e.response.data.message);
         }
