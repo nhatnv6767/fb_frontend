@@ -26,6 +26,28 @@ export default function EditDetails({details, handleChange, updateDetails, infos
                         updateDetails={updateDetails}
                         infos={infos}
                     />
+
+                    <div className="details_header">Work</div>
+                    <Detail
+                        value={details?.job}
+                        img="job"
+                        placeholder="Add job title"
+                        name="job"
+                        text="a job"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
+                    <Detail
+                        value={details?.workplace}
+                        img="job"
+                        placeholder="Add a workplace"
+                        name="workplace"
+                        text="a workplace"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
                 </div>
             </div>
         </div>
