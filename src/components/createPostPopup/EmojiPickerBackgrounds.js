@@ -1,5 +1,6 @@
 import Picker from "emoji-picker-react";
 import {useEffect, useRef, useState} from "react";
+import {useMediaQuery} from "react-responsive";
 
 export default function EmojiPickerBackgrounds({
                                                    text,
@@ -56,6 +57,9 @@ export default function EmojiPickerBackgrounds({
         bgRef.current.classList.remove("bgHandler");
     };
 
+    const sm = useMediaQuery({
+        query: "(max-width:550px)",
+    });
 
     return (
         <div className={type2 ? "images_input" : ""}>
