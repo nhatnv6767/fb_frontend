@@ -21,6 +21,7 @@ export default function EditDetails({details, handleChange, updateDetails, infos
                         img="studies"
                         placeholder="Add other name"
                         name="otherName"
+                        text="Other Name"
                         handleChange={handleChange}
                         updateDetails={updateDetails}
                         infos={infos}

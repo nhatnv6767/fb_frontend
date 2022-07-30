@@ -10,6 +10,7 @@ export default function Detail({
                                    handleChange,
                                    updateDetails,
                                    infos,
+                                   text,
                                }) {
     const [show, setShow] = useState(true);
     return (
@@ -29,7 +30,7 @@ export default function Detail({
                             <>
                                 <i className="rounded_plus_icon"></i>
                                 <span className="underline">
-                                    Add {header}
+                                    Add {text}
                                 </span>
                             </>
                         )
