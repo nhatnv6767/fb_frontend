@@ -39,7 +39,10 @@ export default function Bio({
                     </button>
                     <button
                         className="blue_btn"
-                        onClick={() => updateDetails()}
+                        onClick={() => {
+                            updateDetails();
+                            setShow(false);
+                        }}
                     >
                         Save
                     </button>
