@@ -190,3 +190,31 @@
 .old_pictures:first-of-type {
     border-bottom: 1px solid var(--bg-third);
 }
+
+@media (max-width: 720px) {
+    .postBox.pictureBox {
+        width: 98% !important;
+    }
+}
+
+@media (max-width: 589px) {
+    .postBox .old_pictures {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .postBox .old_pictures img {
+        width: 100%;
+        height: 110px;
+    }
+}
+
+@media (max-width: 430px) {
+    .postBox .old_pictures {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .box_header span {
+        transform: translateX(-2rem);
+    }
+}
