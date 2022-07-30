@@ -32,8 +32,13 @@ export default function Profile({setVisible}) {
     useEffect(() => {
         getProfile();
     }, [userName]);
+    useEffect(() => {
+        setOthername(profile?.details?.otherName);
+    }, [profile]);
+
     // var visitor = userName === user.username ? false : true;
     var visitor = userName !== user.username;
+    const [othername, setOthername] = useState();
     const path = `${userName}/*`;
     const max = 30;
     const sort = "desc";
@@ -89,6 +94,7 @@ export default function Profile({setVisible}) {
                         profile={profile}
                         visitor={visitor}
                         photos={photos.resources}
+                        othername={othername}
                     />
                     <ProfileMenu/>
                 </div>
