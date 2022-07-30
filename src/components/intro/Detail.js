@@ -10,6 +10,7 @@ export default function Detail({
                                    updateDetails,
                                    infos,
                                    text,
+                                   rel,
                                }) {
     const [show, setShow] = useState(false);
     return (

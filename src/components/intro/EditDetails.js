@@ -105,6 +105,7 @@ export default function EditDetails({details, handleChange, updateDetails, infos
                         handleChange={handleChange}
                         updateDetails={updateDetails}
                         infos={infos}
+                        rel
                     />
                     <div className="details_header">Instagram</div>
                     <Detail
