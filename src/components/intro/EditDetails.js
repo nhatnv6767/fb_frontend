@@ -95,6 +95,17 @@ export default function EditDetails({details, handleChange, updateDetails, infos
                         infos={infos}
                     />
 
+                    <div className="details_header">Relationship</div>
+                    <Detail
+                        value={details?.relationship}
+                        img="relationship"
+                        placeholder="Add your instagram"
+                        name="relationship"
+                        text="your instagram"
+                        handleChange={handleChange}
+                        updateDetails={updateDetails}
+                        infos={infos}
+                    />
                     <div className="details_header">Instagram</div>
                     <Detail
                         value={details?.instagram}
