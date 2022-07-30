@@ -117,6 +117,6 @@
     transform: scale(1.1);
 }
 
-.no_underline:hover {
-    text-decoration: none;
+.underline:hover {
+    text-decoration: underline;
 }
