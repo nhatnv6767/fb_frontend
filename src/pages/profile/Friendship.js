@@ -1,6 +1,6 @@
 export default function Friendship() {
     const friendship = {
-        friends: false,
+        friends: true,
         following: false,
         requestSent: false,
         requestReceived: false,
