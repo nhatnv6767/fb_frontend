@@ -17,6 +17,16 @@ export default function Friendship() {
                             <img src="../../../icons/friends.png" alt=""/>
                             <span>Friends</span>
                         </button>
+                        {
+                            friendsMenu && (
+                                <div className="open_cover_menu">
+                                    <div className="open_cover_menu_item">
+                                        <img src="../../../icons/favoritesOutline.png" alt=""/>
+                                        Favorites
+                                    </div>
+                                </div>
+                            )
+                        }
                     </div>
                 ) : ("")
             }
