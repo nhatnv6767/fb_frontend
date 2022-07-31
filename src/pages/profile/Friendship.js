@@ -1,4 +1,7 @@
+import {useState} from "react";
+
 export default function Friendship() {
+    const [friendsMenu, setFriendsMenu] = useState(true);
     const friendship = {
         friends: true,
         following: false,
@@ -11,7 +14,7 @@ export default function Friendship() {
                 friendship.friends ? (
                     <div className="friends_menu_wrap">
                         <button className="gray_btn">
-                            <img src="../../../friends.png" alt=""/>
+                            <img src="../../../icons/friends.png" alt=""/>
                             <span>Friends</span>
                         </button>
                     </div>
