@@ -6,7 +6,7 @@ export default function Friendship() {
         requestReceived: false,
     };
     return (
-        <div>
+        <div className="friendship">
             {
                 friendship.friends ? (
                     <div className="friends_menu_wrap">
