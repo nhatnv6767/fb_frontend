@@ -548,4 +548,8 @@
     top: 54px;
 }
 
+.friendship {
+    z-index: 9;
+}
+
 
