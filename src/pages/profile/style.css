@@ -569,4 +569,10 @@
     height: 34px;
 }
 
+@media (min-width: 900px) {
+    .friendship {
+        transform: translateX(-2rem);
+    }
+}
+
 
