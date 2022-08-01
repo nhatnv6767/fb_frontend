@@ -112,8 +112,8 @@ export default function Friendship() {
                 )
             }
 
-            <button className="blue_btn">
-                <img src="../../../icons/message.png" alt="" className="invert"/>
+            <button className={friendship.friends ? "blue_btn" : "gray_btn"}>
+                <img src="../../../icons/message.png" alt="" className={friendship.friends ? "invert" : ""}/>
                 <span>Message</span>
             </button>
         </div>
