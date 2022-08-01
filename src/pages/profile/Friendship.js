@@ -100,11 +100,16 @@ export default function Friendship() {
             }
             {
                 friendship.following ? (
-                    <button className="blue_btn">
-                        <img src="../../../icons/follow.png" alt="" className="invert"/>
+                    <button className="gray_btn">
+                        <img src="../../../icons/follow.png" alt=""/>
                         <span>Following</span>
                     </button>
-                ) : ("")
+                ) : (
+                    <button className="blue_btn">
+                        <img src="../../../icons/follow.png" alt="" className="invert"/>
+                        <span>Follow</span>
+                    </button>
+                )
             }
         </div>
     );
