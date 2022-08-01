@@ -1,7 +1,10 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function Friendship() {
     const [friendsMenu, setFriendsMenu] = useState(false);
+    const menu = useRef(null);
+    useClickOutside(menu, () => setFriendsMenu(false));
     const friendship = {
         friends: true,
         following: false,
@@ -19,7 +22,7 @@ export default function Friendship() {
                         </button>
                         {
                             friendsMenu && (
-                                <div className="open_cover_menu">
+                                <div className="open_cover_menu" ref={menu}>
                                     <div className="open_cover_menu_item">
                                         <img src="../../../icons/favoritesOutline.png" alt=""/>
                                         Favorites
