@@ -551,7 +551,12 @@
 .friendship {
     z-index: 9;
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+.friendship .blue_btn {
+    height: 35px;
 }
 
 
