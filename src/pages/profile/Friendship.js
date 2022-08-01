@@ -38,7 +38,7 @@ export default function Friendship({friendshipp, profileid}) {
             friends: true,
             following: true,
             requestSent: false,
-            requestReceived: false
+            requestReceived: false,
         });
         await acceptRequest(profileid, user.token);
     };
