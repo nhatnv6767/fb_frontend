@@ -24,28 +24,28 @@ export default function Friendship() {
                         {
                             friendsMenu && (
                                 <div className="open_cover_menu" ref={menu}>
-                                    <div className="open_cover_menu_item">
+                                    <div className="open_cover_menu_item hover1">
                                         <img src="../../../icons/favoritesOutline.png" alt=""/>
                                         Favorites
                                     </div>
-                                    <div className="open_cover_menu_item">
+                                    <div className="open_cover_menu_item hover1">
                                         <img src="../../../icons/editFriends.png" alt=""/>
                                         Edit Friend list
                                     </div>
                                     {
                                         friendship.following ? (
-                                            <div className="open_cover_menu_item">
+                                            <div className="open_cover_menu_item hover1">
                                                 <img src="../../../icons/unfollowOutlined.png" alt=""/>
                                                 Unfollow
                                             </div>
                                         ) : (
-                                            <div className="open_cover_menu_item">
+                                            <div className="open_cover_menu_item hover1">
                                                 <img src="../../../icons/unfollowOutlined.png" alt=""/>
                                                 Follow
                                             </div>
                                         )
                                     }
-                                    <div className="open_cover_menu_item">
+                                    <div className="open_cover_menu_item hover1">
                                         <i className="unfriend_outlined_icon"></i>
                                         Unfriend
                                     </div>
@@ -81,10 +81,10 @@ export default function Friendship() {
                                 {
                                     respondMenu && (
                                         <div className="open_cover_menu" ref={menu}>
-                                            <div className="open_cover_menu_item">
+                                            <div className="open_cover_menu_item hover1">
                                                 Confirm
                                             </div>
-                                            <div className="open_cover_menu_item">
+                                            <div className="open_cover_menu_item hover1">
                                                 Delete
                                             </div>
 
