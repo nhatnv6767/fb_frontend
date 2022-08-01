@@ -41,13 +41,15 @@ export const addFriend = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/addFriend/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/addFriend/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
         });
+        console.log("Add Friend Data: ", data);
         return "ok";
     } catch (e) {
+        console.log(e.response.data.message);
         return e.response.data.message;
     }
 };
@@ -57,7 +59,7 @@ export const cancelRequest = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/cancelRequest/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/cancelRequest/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
@@ -73,7 +75,7 @@ export const follow = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/follow/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/follow/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
@@ -89,7 +91,7 @@ export const unfollow = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/unfollow/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/unfollow/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
@@ -105,7 +107,7 @@ export const acceptRequest = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/acceptRequest/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/acceptRequest/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
@@ -121,7 +123,7 @@ export const unfriend = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/unfriend/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/unfriend/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
@@ -137,7 +139,7 @@ export const deleteRequest = async (
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/deleteRequest/${id}`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/deleteRequest/${id}`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
