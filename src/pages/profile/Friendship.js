@@ -111,6 +111,11 @@ export default function Friendship() {
                     </button>
                 )
             }
+
+            <button className="blue_btn">
+                <img src="../../../icons/message.png" alt="" className="invert"/>
+                <span>Message</span>
+            </button>
         </div>
     );
 }
