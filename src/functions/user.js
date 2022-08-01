@@ -12,7 +12,6 @@ export const updateprofilePicture = async (
                 Authorization: `Bearer ${token}`,
             }
         });
-        console.log("Data: ", data);
         return "ok";
     } catch (e) {
         return e.response.data.message;
@@ -31,25 +30,22 @@ export const updateCover = async (
                 Authorization: `Bearer ${token}`,
             }
         });
-        console.log("Data: ", data);
         return "ok";
     } catch (e) {
         return e.response.data.message;
     }
 };
+
 export const addFriend = async (
-    url,
+    id,
     token
 ) => {
     try {
-        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/updateCover`, {
-            url
-        }, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/addFriend/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
         });
-        console.log("Data: ", data);
         return "ok";
     } catch (e) {
         return e.response.data.message;
