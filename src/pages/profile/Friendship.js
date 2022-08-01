@@ -52,7 +52,12 @@ export default function Friendship() {
                             )
                         }
                     </div>
-                ) : ("")
+                ) : (
+                    <button className="blue_btn">
+                        <img src="../../../icons/addFriend.png" alt=""/>
+                        <span>Add Friend</span>
+                    </button>
+                )
             }
         </div>
     );
