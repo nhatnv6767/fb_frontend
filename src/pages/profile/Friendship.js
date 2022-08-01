@@ -10,7 +10,7 @@ export default function Friendship() {
     useClickOutside(menu1, () => setRespondMenu(false));
     const friendship = {
         friends: false,
-        following: true,
+        following: false,
         requestSent: false,
         requestReceived: true,
     };

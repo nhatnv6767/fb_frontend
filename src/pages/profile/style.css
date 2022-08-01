@@ -550,6 +550,8 @@
 
 .friendship {
     z-index: 9;
+    display: flex;
+    gap: 10px;
 }
 
 
