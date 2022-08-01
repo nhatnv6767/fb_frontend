@@ -381,6 +381,12 @@
     border-radius: 10px;
 }
 
+.profile_photo_card span {
+    color: var(--color-primary);
+    font-size: 14px;
+    padding-left: 1px;
+}
+
 .cover_copper {
     height: 100%;
 }
