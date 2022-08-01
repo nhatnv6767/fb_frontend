@@ -1,19 +1,14 @@
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 
-export default function Friendship() {
+export default function Friendship({friendship}) {
     const [friendsMenu, setFriendsMenu] = useState(false);
     const [respondMenu, setRespondMenu] = useState(false);
     const menu = useRef(null);
     const menu1 = useRef(null);
     useClickOutside(menu, () => setFriendsMenu(false));
     useClickOutside(menu1, () => setRespondMenu(false));
-    const friendship = {
-        friends: false,
-        following: false,
-        requestSent: false,
-        requestReceived: true,
-    };
+
     return (
         <div className="friendship">
             {
