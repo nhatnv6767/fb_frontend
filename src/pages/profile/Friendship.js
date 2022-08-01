@@ -28,10 +28,19 @@ export default function Friendship() {
                                         <img src="../../../icons/editFriends.png" alt=""/>
                                         Edit Friend list
                                     </div>
-                                    <div className="open_cover_menu_item">
-                                        <img src="../../../icons/favoritesOutline.png" alt=""/>
-                                        Favorites
-                                    </div>
+                                    {
+                                        friendship.following ? (
+                                            <div className="open_cover_menu_item">
+                                                <img src="../../../icons/unfollowOutlined.png" alt=""/>
+                                                Unfollow
+                                            </div>
+                                        ) : (
+                                            <div className="open_cover_menu_item">
+                                                <img src="../../../icons/unfollowOutlined.png" alt=""/>
+                                                Follow
+                                            </div>
+                                        )
+                                    }
                                 </div>
                             )
                         }
