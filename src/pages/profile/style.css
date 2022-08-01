@@ -534,6 +534,12 @@
     }
 }
 
+@media (max-width: 405px) {
+    .friendship {
+        flex-direction: column;
+    }
+}
+
 .scrollFixed .profile_left {
     position: fixed;
     width: 360px;
