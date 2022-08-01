@@ -8,7 +8,7 @@ export default function Friendship() {
     const friendship = {
         friends: false,
         following: false,
-        requestSent: false,
+        requestSent: true,
         requestReceived: false,
     };
     return (
@@ -62,6 +62,15 @@ export default function Friendship() {
                         </button>
                     )
                 )
+            }
+            {
+                friendship.requestSent ?
+                    (
+                        <button className="blue_btn">
+                            <img src="../../../icons/cancelRequest.png" alt=""/>
+                            <span>Cancel Request</span>
+                        </button>
+                    ) : ("")
             }
         </div>
     );
