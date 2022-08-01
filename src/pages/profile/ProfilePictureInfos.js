@@ -46,7 +46,7 @@ export default function ProfilePictureInfos({profile, visitor, photos, othername
             </div>
             {
                 visitor ? (
-                    <Friendship friendship={profile?.friendship} profileid={profile._id}/>
+                    <Friendship friendshipp={profile?.friendship} profileid={profile._id}/>
                 ) : (
                     <div className="profile_w_right">
                         <div className="blue_btn">
