@@ -3,7 +3,7 @@ import useClickOutside from "../../helpers/clickOutside";
 
 export default function Friendship() {
     const [friendsMenu, setFriendsMenu] = useState(false);
-    const [respondMenu, setResponsesMenu] = useState(true);
+    const [respondMenu, setResponsesMenu] = useState(false);
     const menu = useRef(null);
     useClickOutside(menu, () => setFriendsMenu(false));
     const friendship = {
