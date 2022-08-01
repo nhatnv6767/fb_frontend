@@ -20,7 +20,7 @@ export const createPost = async (
                 Authorization: `Bearer ${token}`,
             }
         });
-        console.log("Data: ", data);
+        // console.log("Data: ", data);
         return "ok";
     } catch (e) {
         return e.response.data.message;
