@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import {useSelector} from "react-redux";
-import {addFriend, cancelRequest, follow, unfollow} from "../../functions/user";
+import {acceptRequest, addFriend, cancelRequest, follow, unfollow} from "../../functions/user";
 
 export default function Friendship({friendshipp, profileid}) {
     const [friendship, setFriendship] = useState(friendshipp);
@@ -31,6 +31,16 @@ export default function Friendship({friendshipp, profileid}) {
     const unfollowHandler = async () => {
         setFriendship({...friendship, following: false});
         await unfollow(profileid, user.token);
+    };
+    const acceptRequestHandler = async () => {
+        setFriendship({
+            ...friendship,
+            friends: true,
+            following: true,
+            requestSent: false,
+            requestReceived: false
+        });
+        await acceptRequest(profileid, user.token);
     };
 
     return (
@@ -108,7 +118,10 @@ export default function Friendship({friendshipp, profileid}) {
                                 {
                                     respondMenu && (
                                         <div className="open_cover_menu" ref={menu1}>
-                                            <div className="open_cover_menu_item hover1">
+                                            <div
+                                                className="open_cover_menu_item hover1"
+                                                onClick={() => acceptRequestHandler()}
+                                            >
                                                 Confirm
                                             </div>
                                             <div className="open_cover_menu_item hover1">
