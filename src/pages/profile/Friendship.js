@@ -2,7 +2,7 @@ import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import {useSelector} from "react-redux";
 
-export default function Friendship({friendship}) {
+export default function Friendship({friendship, profileid}) {
     const [friendsMenu, setFriendsMenu] = useState(false);
     const [respondMenu, setRespondMenu] = useState(false);
     const menu = useRef(null);
