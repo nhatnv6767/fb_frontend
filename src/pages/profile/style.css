@@ -516,6 +516,10 @@
     .friendship {
         transform: translateY(-4rem);
     }
+
+    .othername {
+        transform: translateY(-10px);
+    }
 }
 
 @media (max-width: 650px) {
