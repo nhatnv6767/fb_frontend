@@ -55,12 +55,18 @@ export default function Friendship({friendshipp, profileid}) {
                                     </div>
                                     {
                                         friendship?.following ? (
-                                            <div className="open_cover_menu_item hover1" onClick={() => unfollowHandler()}>
+                                            <div
+                                                className="open_cover_menu_item hover1"
+                                                onClick={() => unfollowHandler()}
+                                            >
                                                 <img src="../../../icons/unfollowOutlined.png" alt=""/>
                                                 Unfollow
                                             </div>
                                         ) : (
-                                            <div className="open_cover_menu_item hover1" onClick={() => followHandler()}>
+                                            <div
+                                                className="open_cover_menu_item hover1"
+                                                onClick={() => followHandler()}
+                                            >
                                                 <img src="../../../icons/unfollowOutlined.png" alt=""/>
                                                 Follow
                                             </div>
