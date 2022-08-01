@@ -6,7 +6,7 @@ export default function Friendship() {
     const menu = useRef(null);
     useClickOutside(menu, () => setFriendsMenu(false));
     const friendship = {
-        friends: true,
+        friends: false,
         following: false,
         requestSent: false,
         requestReceived: false,
@@ -53,10 +53,14 @@ export default function Friendship() {
                         }
                     </div>
                 ) : (
-                    <button className="blue_btn">
-                        <img src="../../../icons/addFriend.png" alt=""/>
-                        <span>Add Friend</span>
-                    </button>
+                    !friendship.requestSent &&
+                    !friendship.requestReceived &&
+                    (
+                        <button className="blue_btn">
+                            <img src="../../../icons/addFriend.png" alt="" className="invert"/>
+                            <span>Add Friend</span>
+                        </button>
+                    )
                 )
             }
         </div>
