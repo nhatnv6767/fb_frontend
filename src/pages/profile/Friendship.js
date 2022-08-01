@@ -3,13 +3,14 @@ import useClickOutside from "../../helpers/clickOutside";
 
 export default function Friendship() {
     const [friendsMenu, setFriendsMenu] = useState(false);
+    const [respondMenu, setResponsesMenu] = useState(true);
     const menu = useRef(null);
     useClickOutside(menu, () => setFriendsMenu(false));
     const friendship = {
         friends: false,
         following: false,
-        requestSent: true,
-        requestReceived: false,
+        requestSent: false,
+        requestReceived: true,
     };
     return (
         <div className="friendship">
@@ -73,12 +74,12 @@ export default function Friendship() {
                     ) : (
                         friendship.requestReceived && (
                             <div className="friends_menu_wrap">
-                                <button className="gray_btn" onClick={() => setFriendsMenu(true)}>
+                                <button className="gray_btn" onClick={() => setResponsesMenu(true)}>
                                     <img src="../../../icons/friends.png" alt=""/>
                                     <span>Friends</span>
                                 </button>
                                 {
-                                    friendsMenu && (
+                                    respondMenu && (
                                         <div className="open_cover_menu" ref={menu}>
                                             <div className="open_cover_menu_item">
                                                 <img src="../../../icons/favoritesOutline.png" alt=""/>
