@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import {useSelector} from "react-redux";
-import {addFriend, cancelRequest} from "../../functions/user";
+import {addFriend, cancelRequest, follow, unfollow} from "../../functions/user";
 
 export default function Friendship({friendshipp, profileid}) {
     const [friendship, setFriendship] = useState(friendshipp);
@@ -23,6 +23,14 @@ export default function Friendship({friendshipp, profileid}) {
     const cancelRequestHandler = async () => {
         setFriendship({...friendship, requestSent: false, following: false});
         await cancelRequest(profileid, user.token);
+    };
+    const followHandler = async () => {
+        setFriendship({...friendship, following: true});
+        await follow(profileid, user.token);
+    };
+    const unfollowHandler = async () => {
+        setFriendship({...friendship, following: false});
+        await unfollow(profileid, user.token);
     };
 
     return (
@@ -47,12 +55,12 @@ export default function Friendship({friendshipp, profileid}) {
                                     </div>
                                     {
                                         friendship?.following ? (
-                                            <div className="open_cover_menu_item hover1">
+                                            <div className="open_cover_menu_item hover1" onClick={() => unfollowHandler()}>
                                                 <img src="../../../icons/unfollowOutlined.png" alt=""/>
                                                 Unfollow
                                             </div>
                                         ) : (
-                                            <div className="open_cover_menu_item hover1">
+                                            <div className="open_cover_menu_item hover1" onClick={() => followHandler()}>
                                                 <img src="../../../icons/unfollowOutlined.png" alt=""/>
                                                 Follow
                                             </div>
@@ -111,12 +119,12 @@ export default function Friendship({friendshipp, profileid}) {
             }
             {
                 friendship?.following ? (
-                    <button className="gray_btn">
+                    <button className="gray_btn" onClick={() => unfollowHandler()}>
                         <img src="../../../icons/follow.png" alt=""/>
                         <span>Following</span>
                     </button>
                 ) : (
-                    <button className="blue_btn">
+                    <button className="blue_btn" onClick={() => followHandler()}>
                         <img src="../../../icons/follow.png" alt="" className="invert"/>
                         <span>Follow</span>
                     </button>
