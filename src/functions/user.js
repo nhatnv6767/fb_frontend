@@ -46,10 +46,8 @@ export const addFriend = async (
                 Authorization: `Bearer ${token}`,
             }
         });
-        console.log("Add Friend Data: ", data);
         return "ok";
     } catch (e) {
-        console.log(e.response.data.message);
         return e.response.data.message;
     }
 };

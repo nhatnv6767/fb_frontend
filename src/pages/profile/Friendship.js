@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import {useSelector} from "react-redux";
-import {addFriend} from "../../functions/user";
+import {addFriend, cancelRequest} from "../../functions/user";
 
 export default function Friendship({friendshipp, profileid}) {
     const [friendship, setFriendship] = useState(friendshipp);
@@ -15,9 +15,14 @@ export default function Friendship({friendshipp, profileid}) {
     useClickOutside(menu, () => setFriendsMenu(false));
     useClickOutside(menu1, () => setRespondMenu(false));
     const {user} = useSelector((state) => ({...state}));
+
     const addFriendHandler = async () => {
         setFriendship({...friendship, requestSent: true, following: true});
         await addFriend(profileid, user.token);
+    };
+    const cancelRequestHandler = async () => {
+        setFriendship({...friendship, requestSent: false, following: false});
+        await cancelRequest(profileid, user.token);
     };
 
     return (
@@ -75,7 +80,7 @@ export default function Friendship({friendshipp, profileid}) {
             {
                 friendship?.requestSent ?
                     (
-                        <button className="blue_btn">
+                        <button className="blue_btn" onClick={() => cancelRequestHandler()}>
                             <img src="../../../icons/cancelRequest.png" alt="" className="invert"/>
                             <span>Cancel Request</span>
                         </button>
