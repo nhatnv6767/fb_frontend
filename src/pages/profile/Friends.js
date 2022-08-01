@@ -9,7 +9,7 @@ export default function Friends({friends}) {
                 </div>
             </div>
             {
-                friends && (
+                friends ? (
                     <div className="profile_card_count">
                         {
                             friends.length === 0 ? ""
@@ -17,12 +17,12 @@ export default function Friends({friends}) {
                                     : `${friends.length} friends`
                         }
                     </div>
-                )
+                ) : ("")
             }
             <div className="profile_card_grid">
                 {
-                    friends && friends.slice(0, 9).map((friend) => (
-                        <div className="profile_photo_card">
+                    friends && friends.slice(0, 9).map((friend, i) => (
+                        <div className="profile_photo_card" key={i}>
                         </div>
                     ))
                 }
