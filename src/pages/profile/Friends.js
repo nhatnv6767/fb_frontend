@@ -13,8 +13,8 @@ export default function Friends({friends}) {
                     <div className="profile_card_count">
                         {
                             friends.length === 0 ? ""
-                                : friends.length === 1 ? "1 friend"
-                                    : `${friends.length} friends`
+                                : friends.length === 1 ? "1 Friend"
+                                    : `${friends.length} Friends`
                         }
                     </div>
                 ) : ("")
