@@ -67,10 +67,13 @@ export default function Friendship() {
                 friendship.requestSent ?
                     (
                         <button className="blue_btn">
-                            <img src="../../../icons/cancelRequest.png" alt=""/>
+                            <img src="../../../icons/cancelRequest.png" alt="" className="invert"/>
                             <span>Cancel Request</span>
                         </button>
-                    ) : ("")
+                    ) : (
+                        friendship.requestReceived && ("")
+
+                    )
             }
         </div>
     );
