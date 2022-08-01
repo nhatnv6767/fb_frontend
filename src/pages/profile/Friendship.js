@@ -10,7 +10,7 @@ export default function Friendship() {
     useClickOutside(menu1, () => setRespondMenu(false));
     const friendship = {
         friends: false,
-        following: false,
+        following: true,
         requestSent: false,
         requestReceived: true,
     };
@@ -97,6 +97,14 @@ export default function Friendship() {
                         )
 
                     )
+            }
+            {
+                friendship.following ? (
+                    <button className="blue_btn">
+                        <img src="../../../icons/follow.png" alt="" className="invert"/>
+                        <span>Following</span>
+                    </button>
+                ) : ("")
             }
         </div>
     );
