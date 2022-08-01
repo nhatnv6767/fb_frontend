@@ -41,6 +41,10 @@ export default function Friendship() {
                                             </div>
                                         )
                                     }
+                                    <div className="open_cover_menu_item">
+                                        <i className="unfriend_outlined_icon"></i>
+                                        Unfriend
+                                    </div>
                                 </div>
                             )
                         }
