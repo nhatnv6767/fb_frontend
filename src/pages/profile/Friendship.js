@@ -1,5 +1,6 @@
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
+import {useSelector} from "react-redux";
 
 export default function Friendship({friendship}) {
     const [friendsMenu, setFriendsMenu] = useState(false);
@@ -8,6 +9,7 @@ export default function Friendship({friendship}) {
     const menu1 = useRef(null);
     useClickOutside(menu, () => setFriendsMenu(false));
     useClickOutside(menu1, () => setRespondMenu(false));
+    const {user} = useSelector((state) => ({...state}));
 
     return (
         <div className="friendship">
