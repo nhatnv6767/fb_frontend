@@ -388,8 +388,6 @@
 }
 
 .profile_friend_count {
-    align-items: center;
-    transform: translateY(-15px);
     font-weight: 600;
 }
 
@@ -397,8 +395,6 @@
 .profile_friend_imgs {
     display: flex;
     align-items: center;
-    justify-content: center;
-    transform: translateY(-10px);
 }
 
 .profile_friend_imgs img {
@@ -545,6 +541,16 @@
     }
 
     .othername {
+        transform: translateY(-10px);
+    }
+
+    .profile_friend_count {
+        align-items: center;
+        transform: translateY(-15px);
+    }
+
+    .profile_friend_imgs {
+        justify-content: center;
         transform: translateY(-10px);
     }
 }
