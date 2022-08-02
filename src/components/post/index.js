@@ -3,14 +3,24 @@ import {Link} from "react-router-dom";
 import Moment from "react-moment";
 import {Dots, Public} from "../../svg";
 import ReactsPopup from "./ReactsPopup";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import CreateComment from "./CreateComment";
 import PostMenu from "./PostMenu";
+import async from "async";
+import {getReacts} from "../../functions/post";
 
 
 export default function Post({post, user, profile}) {
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const [reacts, setReacts] = useState();
+    useEffect(() => {
+        getPostReacts();
+    }, [post]);
+    const getPostReacts = async () => {
+        const res = await getReacts(post._id, user.token);
+    };
+    console.log(reacts);
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>
             <div className="post_header">
