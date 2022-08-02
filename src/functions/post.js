@@ -32,7 +32,7 @@ export const reactPost = async (
     token
 ) => {
     try {
-        const {data} = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/reactPost`, {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/reactPost`, {
             postId,
             react,
         }, {
