@@ -1,6 +1,7 @@
 import {useRef, useState} from "react";
 import ProfilePicture from "../../components/profilePicture";
 import Friendship from "./Friendship";
+import {Link} from "react-router-dom";
 
 export default function ProfilePictureInfos({profile, visitor, photos, othername}) {
     const [show, setShow] = useState(false);
@@ -56,12 +57,14 @@ export default function ProfilePictureInfos({profile, visitor, photos, othername
                     <div className="profile_friend_imgs">
                         {
                             profile?.friends && profile.friends.slice(0, 6).map((friend, i) => (
-                                <img
-                                    src={friend.picture}
-                                    key={i}
-                                    alt=""
-                                    style={{transform: `translateX(${-i * 7}px)`, zIndex: `${i}`}}
-                                />
+                                <Link to={`/profile/${friend.username}`}>
+                                    <img
+                                        src={friend.picture}
+                                        key={i}
+                                        alt=""
+                                        style={{transform: `translateX(${-i * 7}px)`, zIndex: `${i}`}}
+                                    />
+                                </Link>
                             ))
                         }
                     </div>
