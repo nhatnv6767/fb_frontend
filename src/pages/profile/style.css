@@ -387,6 +387,12 @@
     padding-left: 1px;
 }
 
+.profile_friend_count {
+    align-items: center;
+    transform: translateY(-10px);
+    font-weight: 600;
+}
+
 .cover_copper {
     height: 100%;
 }
