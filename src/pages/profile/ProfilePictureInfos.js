@@ -57,10 +57,9 @@ export default function ProfilePictureInfos({profile, visitor, photos, othername
                     <div className="profile_friend_imgs">
                         {
                             profile?.friends && profile.friends.slice(0, 6).map((friend, i) => (
-                                <Link to={`/profile/${friend.username}`}>
+                                <Link to={`/profile/${friend.username}`} key={i}>
                                     <img
                                         src={friend.picture}
-                                        key={i}
                                         alt=""
                                         style={{transform: `translateX(${-i * 7}px)`, zIndex: `${i}`}}
                                     />
