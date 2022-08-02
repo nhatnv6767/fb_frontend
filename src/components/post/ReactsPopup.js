@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {reactPost} from "../../functions/post";
+import {useSelector} from "react-redux";
 
 const reactsArray = [
     {
@@ -28,9 +29,10 @@ const reactsArray = [
     },
 ];
 
-export default function ReactsPopup({visible, setVisible}) {
+export default function ReactsPopup({visible, setVisible, postId}) {
+    const {user} = useSelector((state) => ({...state}));
     const reactHandler = async (type) => {
-        reactPost();
+        reactPost(postId, type, user.token);
     };
     return (
         <>

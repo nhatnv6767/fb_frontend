@@ -125,7 +125,11 @@ export default function Post({post, user, profile}) {
             </div>
 
             <div className="post_actions">
-                <ReactsPopup visible={visible} setVisible={setVisible}/>
+                <ReactsPopup
+                    visible={visible}
+                    setVisible={setVisible}
+                    postId={post._id}
+                />
                 <div
                     className="post_action hover1"
                     onMouseOver={() => {
