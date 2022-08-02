@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {reactPost} from "../../functions/post";
 
 const reactsArray = [
     {
@@ -26,8 +27,11 @@ const reactsArray = [
         image: "../../../reacts/angry.gif",
     },
 ];
-export default function ReactsPopup({visible, setVisible}) {
 
+export default function ReactsPopup({visible, setVisible}) {
+    const reactHandler = async (type) => {
+        reactPost();
+    };
     return (
         <>
             {
@@ -47,7 +51,11 @@ export default function ReactsPopup({visible, setVisible}) {
                     >
                         {
                             reactsArray.map((react, i) => (
-                                <div className="react" key={i}>
+                                <div
+                                    className="react"
+                                    key={i}
+                                    onClick={() => reactHandler(react.name)}
+                                >
                                     <img src={react.image} alt=""/>
                                 </div>
                             ))
