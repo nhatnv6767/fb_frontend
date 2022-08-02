@@ -60,7 +60,7 @@ export default function ProfilePictureInfos({profile, visitor, photos, othername
                                     src={friend.picture}
                                     key={i}
                                     alt=""
-                                    style={{transform: `translateX(${-i * 7}px)`}}
+                                    style={{transform: `translateX(${-i * 7}px)`, zIndex: `${i}`}}
                                 />
                             ))
                         }
