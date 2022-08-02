@@ -389,8 +389,23 @@
 
 .profile_friend_count {
     align-items: center;
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     font-weight: 600;
+}
+
+
+.profile_friend_imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-10px);
+}
+
+.profile_friend_imgs img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px var(--shadow-1);
 }
 
 .cover_copper {
