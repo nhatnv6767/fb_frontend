@@ -163,6 +163,9 @@ export default function Post({post, user, profile}) {
                             setVisible(false);
                         }, 500);
                     }}
+                    /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will
+                    select it. */
+                    onClick={() => reactHandler(check ? check : "like")}
                 >
                     {
                         check ? (
