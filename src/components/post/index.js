@@ -18,6 +18,7 @@ export default function Post({post, user, profile}) {
     useEffect(() => {
         getPostReacts();
     }, [post]);
+    console.log(post);
     const getPostReacts = async () => {
         const res = await getReacts(post._id, user.token);
         setReacts(res.reacts);
