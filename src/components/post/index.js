@@ -22,6 +22,7 @@ export default function Post({post, user, profile}) {
         const res = await getReacts(post._id, user.token);
         setReacts(res.reacts);
         setCheck(res.check);
+        setTotal(res.total);
     };
 
     const reactHandler = async (type) => {
