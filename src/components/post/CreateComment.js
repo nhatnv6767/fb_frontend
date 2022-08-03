@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import Picker from "emoji-picker-react";
 
-export default function CreateComment({user}) {
+export default function CreateComment({user, postId}) {
     const [picker, setPicker] = useState(false);
     const [text, setText] = useState("");
     const [error, setError] = useState("");
