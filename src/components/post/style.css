@@ -581,6 +581,22 @@
     object-fit: cover;
 }
 
+.comment_wrap{
+    background: var(--bg-forth);
+    padding: 5px 15px;
+    border-radius:50px;
+}
+
+.comment_actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size:12px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-left: 10px;
+}
+
 /* ---------- Comment ---------- */
 
 
