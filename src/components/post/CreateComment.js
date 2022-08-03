@@ -10,6 +10,7 @@ export default function CreateComment({user, postId}) {
     const [error, setError] = useState("");
     const [commentImage, setCommentImage] = useState("");
     const [cursorPosition, setCursorPosition] = useState();
+    const [loading, setLoading] = useState(false);
     const textRef = useRef(null);
     const imgInput = useRef(null);
 
