@@ -156,7 +156,12 @@ export default function Post({post, user, profile}) {
                 >
                     {
                         check ? (
-                            <img src={`../../../reacts/${check}.svg`} alt=""/>
+                            <img
+                                src={`../../../reacts/${check}.svg`}
+                                alt=""
+                                className="small_react"
+                                style={{width: "18px"}}
+                            />
                         ) : (
                             <i className="like_icon"></i>
                         )
