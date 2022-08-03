@@ -30,12 +30,16 @@ export default function Post({post, user, profile}) {
         /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will select it. */
         if (check === type) {
             setCheck();
+            let index = reacts.findIndex((x) => x.react == check);
+            if (index !== -1) {
+                /* Decrementing the count of the react. */
+                setReacts([...reacts, (reacts[index].count = --reacts[index].count)]);
+            }
         } else {
             setCheck(type);
         }
     };
-    console.log(reacts);
-    //
+
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>
             <div className="post_header">
