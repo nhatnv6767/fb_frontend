@@ -140,6 +140,8 @@ export default function Post({post, user, profile}) {
                     visible={visible}
                     setVisible={setVisible}
                     postId={post._id}
+                    check={check}
+                    setCheck={setCheck}
                 />
                 <div
                     className="post_action hover1"
