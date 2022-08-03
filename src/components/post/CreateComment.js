@@ -78,12 +78,15 @@ export default function CreateComment({user, postId}) {
                     imgComment[0].url,
                     user.token
                 );
-                console.log(comments);
                 setLoading(false);
+                setText("");
+                setCommentImage("");
             } else {
                 setLoading(true);
                 const comments = await comment(postId, text, "", user.token);
                 setLoading(false);
+                setText("");
+                setCommentImage("");
             }
         }
     };
