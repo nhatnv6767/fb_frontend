@@ -14,6 +14,7 @@ export default function Post({post, user, profile}) {
     const [showMenu, setShowMenu] = useState(false);
     const [reacts, setReacts] = useState();
     const [check, setCheck] = useState();
+    const [total, setTotal] = useState(0);
     useEffect(() => {
         getPostReacts();
     }, [post]);
@@ -146,7 +147,11 @@ export default function Post({post, user, profile}) {
                             ))
                         }
                     </div>
-                    <div className="reacts_count_num"></div>
+                    <div className="reacts_count_num">
+                        {
+                            total > 0 ? total : ""
+                        }
+                    </div>
                 </div>
                 <div className="to_right">
                     <div className="comments_count">13 comments</div>
