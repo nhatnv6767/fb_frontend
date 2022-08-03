@@ -39,6 +39,12 @@ export default function Post({post, user, profile}) {
             }
         } else {
             setCheck(type);
+            // type: because we dont have everything
+            let index = reacts.findIndex((x) => x.react == type);
+            if (index !== -1) {
+                setReacts([...reacts, (reacts[index].count = ++reacts[index].count)]);
+                setTotal((prev) => ++prev);
+            }
         }
     };
 
