@@ -20,6 +20,7 @@ export default function Post({post, user, profile}) {
     const getPostReacts = async () => {
         const res = await getReacts(post._id, user.token);
         setReacts(res.reacts);
+        setCheck(res.check);
     };
     console.log(reacts);
     return (
