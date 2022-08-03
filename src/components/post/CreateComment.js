@@ -53,6 +53,10 @@ export default function CreateComment({user, postId}) {
             setCommentImage(event.target.result);
         };
     };
+
+    const handleComment = async (e) => {
+
+    }
     return (
         <div className="create_comment_wrap">
             <div className="create_comment">
@@ -93,6 +97,7 @@ export default function CreateComment({user, postId}) {
                         value={text}
                         placeholder="Write a comment ..."
                         onChange={(e) => setText(e.target.value)}
+                        onKeyUp={handleComment}
                     />
                     <div
                         className="comment_circle_icon hover2"
