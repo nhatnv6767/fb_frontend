@@ -31,9 +31,11 @@ export default function Post({post, user, profile}) {
         if (check === type) {
             setCheck();
             let index = reacts.findIndex((x) => x.react == check);
+            /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will select it. */
             if (index !== -1) {
                 /* Decrementing the count of the react. */
                 setReacts([...reacts, (reacts[index].count = --reacts[index].count)]);
+                setTotal((prev) => --prev);
             }
         } else {
             setCheck(type);
