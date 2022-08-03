@@ -25,6 +25,8 @@ export default function Post({post, user, profile}) {
         setComments(post?.comments);
     }, [post]);
 
+    console.log(comments);
+
     const getPostReacts = async () => {
         const res = await getReacts(post._id, user.token);
         setReacts(res.reacts);
@@ -261,6 +263,11 @@ export default function Post({post, user, profile}) {
             <div className="comments_wrap">
                 <div className="comments_order"></div>
                 <CreateComment user={user} postId={post._id}/>
+                {
+                    comments && comments.slice(0, 3).map((comment, i) => (
+                        ""
+                    ))
+                }
             </div>
             {
                 showMenu && (
