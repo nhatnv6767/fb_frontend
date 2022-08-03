@@ -18,7 +18,7 @@ export default function Comment({comment}) {
                         <span>Like</span>
                         <span>Reply</span>
                         <span>
-                            <Moment fromNow>
+                            <Moment fromNow interval={30}>
                                 {comment?.commentAt}
                             </Moment>
                         </span>
