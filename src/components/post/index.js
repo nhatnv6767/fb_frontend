@@ -166,7 +166,26 @@ export default function Post({post, user, profile}) {
                             <i className="like_icon"></i>
                         )
                     }
-                    <span>{check ? check : "Like"}</span>
+                    <span
+                        style={{
+                            color: `
+                            ${
+                                check === "like"
+                                    ? "#4267b2"
+                                    : check === "love"
+                                        ? "#f63459"
+                                        : check === "haha"
+                                            ? "#f7b125"
+                                            : check === "sad"
+                                                ? "#f7b125"
+                                                : check === "wow"
+                                                    ? "#f7b125" : "#e4605a"
+                            }
+                        `
+                        }}
+                    >
+                        {check ? check : "Like"}
+                    </span>
                 </div>
 
                 <div className="post_action hover1">
