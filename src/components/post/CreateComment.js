@@ -3,6 +3,7 @@ import Picker from "emoji-picker-react";
 import {comment, createPost} from "../../functions/post";
 import {uploadImages} from "../../functions/uploadImages";
 import DataURIToBlob from "../../helpers/dataURIToBlob";
+import {ClipLoader} from "react-spinners";
 
 export default function CreateComment({user, postId}) {
     const [picker, setPicker] = useState(false);
@@ -128,6 +129,9 @@ export default function CreateComment({user, postId}) {
                         onChange={(e) => setText(e.target.value)}
                         onKeyUp={handleComment}
                     />
+                    <div className="comment_circle">
+                        <ClipLoader/>
+                    </div>
                     <div
                         className="comment_circle_icon hover2"
                         onClick={() => {
