@@ -163,9 +163,9 @@ export default function Post({post, user, profile}) {
                             && reacts.sort((a, b) => {
                                 /* It's sorting the array in descending order. */
                                 return b.count - a.count;
-                            }).slice(0, 3).map((react) => (
+                            }).slice(0, 3).map((react, i) => (
                                 react.count > 0 && (
-                                    <img src={`../../../reacts/${react.react}.svg`} alt=""/>
+                                    <img src={`../../../reacts/${react.react}.svg`} alt="" key={i}/>
                                 )
                             ))
                         }
