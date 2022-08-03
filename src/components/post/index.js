@@ -137,7 +137,13 @@ export default function Post({post, user, profile}) {
             }
             <div className="post_infos">
                 <div className="reacts_count">
-                    <div className="reacts_count_imgs"></div>
+                    <div className="reacts_count_imgs">
+                        {
+                            reacts && reacts.map((react) => (
+                                <img src={`../../../reacts/${react.react}.svg`} alt=""/>
+                            ))
+                        }
+                    </div>
                     <div className="reacts_count_num"></div>
                 </div>
                 <div className="to_right">
