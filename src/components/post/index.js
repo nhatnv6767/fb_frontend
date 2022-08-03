@@ -22,7 +22,6 @@ export default function Post({post, user, profile}) {
         setReacts(res.reacts);
         setCheck(res.check);
     };
-    console.log(check);
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>
             <div className="post_header">
@@ -155,7 +154,13 @@ export default function Post({post, user, profile}) {
                         }, 500);
                     }}
                 >
-                    <i className="like_icon"></i>
+                    {
+                        check ? (
+                            <img src={`../../../reacts/${check}.svg`} alt=""/>
+                        ) : (
+                            <i className="like_icon"></i>
+                        )
+                    }
                     <span>Like</span>
                 </div>
 
