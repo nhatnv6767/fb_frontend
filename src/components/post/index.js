@@ -24,7 +24,7 @@ export default function Post({post, user, profile}) {
     };
 
     const reactHandler = async (type) => {
-        reactPost(postId, type, user.token);
+        reactPost(post._id, type, user.token);
         /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will select it. */
         if (check === type) {
             setCheck();
@@ -149,9 +149,7 @@ export default function Post({post, user, profile}) {
                 <ReactsPopup
                     visible={visible}
                     setVisible={setVisible}
-                    postId={post._id}
-                    check={check}
-                    setCheck={setCheck}
+                    reactHandler={reactHandler}
                 />
                 <div
                     className="post_action hover1"
