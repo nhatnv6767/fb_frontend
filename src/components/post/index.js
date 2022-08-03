@@ -45,12 +45,10 @@ export default function Post({post, user, profile}) {
             if (index !== -1) {
                 setReacts([...reacts, (reacts[index].count = ++reacts[index].count)]);
                 setTotal((prev) => ++prev);
-                console.log(reacts);
             }
             if (index1 !== -1) {
                 setReacts([...reacts, (reacts[index1].count = --reacts[index1].count)]);
                 setTotal((prev) => --prev);
-                console.log(reacts);
             }
         }
     };
@@ -212,7 +210,7 @@ export default function Post({post, user, profile}) {
                                 src={`../../../reacts/${check}.svg`}
                                 alt=""
                                 className="small_react"
-                                style={{width: "18px"}}
+                                style={{width: "19px"}}
                             />
                         ) : (
                             <i className="like_icon"></i>
