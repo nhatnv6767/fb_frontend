@@ -129,8 +129,8 @@ export default function CreateComment({user, postId}) {
                         onChange={(e) => setText(e.target.value)}
                         onKeyUp={handleComment}
                     />
-                    <div className="comment_circle">
-                        <ClipLoader/>
+                    <div className="comment_circle" style={{marginTop: "5px"}}>
+                        <ClipLoader size={20} color="#1876f2" loading={loading}/>
                     </div>
                     <div
                         className="comment_circle_icon hover2"
