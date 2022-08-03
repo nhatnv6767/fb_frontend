@@ -40,7 +40,7 @@ export default function ReactsPopup({
     const reactHandler = async (type) => {
         reactPost(postId, type, user.token);
         /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will select it. */
-        if (check == type) {
+        if (check === type) {
             setCheck();
         } else {
             setCheck(type);
