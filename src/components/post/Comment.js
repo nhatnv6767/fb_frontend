@@ -1,4 +1,4 @@
-export default function Comment() {
+export default function Comment({comment}) {
     return (
         <div>Comment</div>
     );
