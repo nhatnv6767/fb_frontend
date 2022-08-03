@@ -181,7 +181,10 @@ export default function Post({post, user, profile}) {
                                             : check === "sad"
                                                 ? "#f7b125"
                                                 : check === "wow"
-                                                    ? "#f7b125" : "#e4605a"
+                                                    ? "#f7b125"
+                                                    : check === "angry"
+                                                        ? "#e4605a"
+                                                        : ""
                             }
                         `
                         }}
