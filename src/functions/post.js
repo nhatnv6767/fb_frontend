@@ -62,3 +62,25 @@ export const getReacts = async (
         return e.response.data.message;
     }
 };
+export const comment = async (
+    postId,
+    comment,
+    image,
+    token
+) => {
+    try {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/comment`, {
+            postId,
+            comment,
+            image,
+        }, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        });
+        // console.log("Data: ", data);
+        return data;
+    } catch (e) {
+        return e.response.data.message;
+    }
+};
