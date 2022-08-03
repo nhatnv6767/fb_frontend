@@ -55,8 +55,10 @@ export default function CreateComment({user, postId}) {
     };
 
     const handleComment = async (e) => {
-
-    }
+        if (e.key === "Enter") {
+            console.log("Click enter");
+        }
+    };
     return (
         <div className="create_comment_wrap">
             <div className="create_comment">
