@@ -64,17 +64,25 @@ export default function CreateComment({user, postId}) {
 
                 setLoading(true);
                 const img = DataURIToBlob(commentImage);
-                const path = `${user.username}/post_images`;
+                const path = `${user.username}/post_images/${postId}`;
                 /* Creating a formData object and appending the path and images to it. */
                 let formData = new FormData();
                 formData.append("path", path);
                 formData.append("file", img);
-                const response = await uploadImages(formData, path, user.token);
+                const imgComment = await uploadImages(formData, path, user.token);
 
+                const comments = await comment(
+                    postId,
+                    text,
+                    imgComment[0].url,
+                    user.token
+                );
+                console.log(comments);
                 setLoading(false);
             } else {
+                setLoading(true);
                 const comments = await comment(postId, text, "", user.token);
-                console.log(comments);
+                setLoading(false);
             }
         }
     };
