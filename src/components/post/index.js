@@ -139,7 +139,7 @@ export default function Post({post, user, profile}) {
                 <div className="reacts_count">
                     <div className="reacts_count_imgs">
                         {
-                            reacts && reacts.map((react) => (
+                            reacts && reacts.slice(0, 3).map((react) => (
                                 react.count > 0 && (
                                     <img src={`../../../reacts/${react.react}.svg`} alt=""/>
                                 )
