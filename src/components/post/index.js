@@ -6,7 +6,7 @@ import ReactsPopup from "./ReactsPopup";
 import {useEffect, useState} from "react";
 import CreateComment from "./CreateComment";
 import PostMenu from "./PostMenu";
-import {getReacts} from "../../functions/post";
+import {getReacts, reactPost} from "../../functions/post";
 
 
 export default function Post({post, user, profile}) {
@@ -21,6 +21,16 @@ export default function Post({post, user, profile}) {
         const res = await getReacts(post._id, user.token);
         setReacts(res.reacts);
         setCheck(res.check);
+    };
+
+    const reactHandler = async (type) => {
+        reactPost(postId, type, user.token);
+        /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will select it. */
+        if (check === type) {
+            setCheck();
+        } else {
+            setCheck(type);
+        }
     };
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>

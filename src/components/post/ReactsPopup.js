@@ -32,20 +32,9 @@ const reactsArray = [
 export default function ReactsPopup({
                                         visible,
                                         setVisible,
-                                        postId,
-                                        check,
-                                        setCheck
+                                        reactHandler,
                                     }) {
-    const {user} = useSelector((state) => ({...state}));
-    const reactHandler = async (type) => {
-        reactPost(postId, type, user.token);
-        /* Checking if the react is already selected. If it is, it will unselect it. If it is not, it will select it. */
-        if (check === type) {
-            setCheck();
-        } else {
-            setCheck(type);
-        }
-    };
+
     return (
         <>
             {
