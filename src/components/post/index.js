@@ -22,7 +22,7 @@ export default function Post({post, user, profile}) {
         setReacts(res.reacts);
         setCheck(res.check);
     };
-    console.log(reacts);
+    console.log(check);
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>
             <div className="post_header">
