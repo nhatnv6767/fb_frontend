@@ -1,8 +1,8 @@
 import {useEffect, useRef, useState} from "react";
 import Picker from "emoji-picker-react";
 import {comment, createPost} from "../../functions/post";
-import DataURIToBlob from "../../helpers/dataURIToBlob";
 import {uploadImages} from "../../functions/uploadImages";
+import DataURIToBlob from "../../helpers/dataURIToBlob";
 
 export default function CreateComment({user, postId}) {
     const [picker, setPicker] = useState(false);
@@ -60,20 +60,16 @@ export default function CreateComment({user, postId}) {
     const handleComment = async (e) => {
         if (e.key === "Enter") {
             if (commentImage !== "") {
-                // from createPostPopup/index
+
                 setLoading(true);
-                const postImages = images.map((img) => {
-                    return DataURIToBlob(img);
-                });
+                const img = DataURIToBlob(commentImage);
                 const path = `${user.username}/post_images`;
                 /* Creating a formData object and appending the path and images to it. */
                 let formData = new FormData();
                 formData.append("path", path);
-                postImages.forEach((image) => {
-                    formData.append("file", image);
-                });
+                formData.append("file", img);
                 const response = await uploadImages(formData, path, user.token);
-                const res = await createPost(null, null, text, response, user.id, user.token);
+
                 setLoading(false);
             } else {
                 const comments = await comment(postId, text, "", user.token);
