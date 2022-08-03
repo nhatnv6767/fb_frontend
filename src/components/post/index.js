@@ -166,7 +166,7 @@ export default function Post({post, user, profile}) {
                             <i className="like_icon"></i>
                         )
                     }
-                    <span>Like</span>
+                    <span>{check ? check : "Like"}</span>
                 </div>
 
                 <div className="post_action hover1">
