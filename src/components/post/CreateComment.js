@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 import Picker from "emoji-picker-react";
+import {comment} from "../../functions/post";
 
 export default function CreateComment({user, postId}) {
     const [picker, setPicker] = useState(false);
@@ -56,7 +57,11 @@ export default function CreateComment({user, postId}) {
 
     const handleComment = async (e) => {
         if (e.key === "Enter") {
-            console.log("Click enter");
+            if (commentImage !== "") {
+            } else {
+                const comments = await comment(postId, text, "", user.token);
+                console.log(comments);
+            }
         }
     };
     return (
