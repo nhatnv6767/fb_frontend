@@ -6,7 +6,6 @@ import ReactsPopup from "./ReactsPopup";
 import {useEffect, useState} from "react";
 import CreateComment from "./CreateComment";
 import PostMenu from "./PostMenu";
-import async from "async";
 import {getReacts} from "../../functions/post";
 
 
@@ -14,6 +13,7 @@ export default function Post({post, user, profile}) {
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [reacts, setReacts] = useState();
+    const [check, setCheck] = useState();
     useEffect(() => {
         getPostReacts();
     }, [post]);
