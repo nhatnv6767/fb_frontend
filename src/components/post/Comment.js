@@ -1,3 +1,5 @@
+import Moment from "react-moment";
+
 export default function Comment({comment}) {
     return (
         <div className="comment">
@@ -12,6 +14,15 @@ export default function Comment({comment}) {
                             <img src={comment?.image} alt="" className="comment_image"/>
                         )
                     }
+                    <div className="comment_actions">
+                        <span>Like</span>
+                        <span>Reply</span>
+                        <span>
+                            <Moment fromNow>
+                                {comment?.commentAt}
+                            </Moment>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
