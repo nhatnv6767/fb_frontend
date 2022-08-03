@@ -15,9 +15,14 @@ export default function Post({post, user, profile}) {
     const [reacts, setReacts] = useState();
     const [check, setCheck] = useState();
     const [total, setTotal] = useState(0);
-    const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState(post?.comments);
+
     useEffect(() => {
         getPostReacts();
+    }, [post]);
+
+    useEffect(() => {
+        setComments(post?.comments);
     }, [post]);
 
     const getPostReacts = async () => {
