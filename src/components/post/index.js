@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import CreateComment from "./CreateComment";
 import PostMenu from "./PostMenu";
 import {getReacts, reactPost} from "../../functions/post";
+import Comment from "./Comment";
 
 
 export default function Post({post, user, profile}) {
@@ -265,7 +266,7 @@ export default function Post({post, user, profile}) {
                 <CreateComment user={user} postId={post._id}/>
                 {
                     comments && comments.slice(0, 3).map((comment, i) => (
-                        ""
+                        <Comment comment={comment} key={i}/>
                     ))
                 }
             </div>
