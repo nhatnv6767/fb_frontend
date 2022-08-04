@@ -64,6 +64,10 @@ export default function Post({post, user, profile}) {
         }
     };
 
+    const showMore = () => {
+        setCount((prev) => prev + 3)
+    }
+
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>
             <div className="post_header">
@@ -272,9 +276,11 @@ export default function Post({post, user, profile}) {
                 }
 
                 {
-                    count < comments.length && <div className="view_comments">
-                        view more comments
-                    </div>
+                    count < comments.length && (
+                        <div className="view_comments" onClick={() => showMore()}>
+                            View more comments
+                        </div>
+                    )
                 }
             </div>
             {
