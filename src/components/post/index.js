@@ -191,7 +191,15 @@ export default function Post({post, user, profile}) {
                     </div>
                 </div>
                 <div className="to_right">
-                    <div className="comments_count">13 comments</div>
+                    <div className="comments_count">
+                        {
+                            comments?.length > 1
+                                ? comments.length + " comments"
+                                : comments.length === 1
+                                    ? comments.length + " comment"
+                                    : ""
+                        }
+                    </div>
                     <div className="share_count">1 share</div>
                 </div>
             </div>
