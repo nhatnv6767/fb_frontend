@@ -597,6 +597,14 @@
     margin-left: 10px;
 }
 
+.view_comments {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-secondary);
+}
+
 /* ---------- Comment ---------- */
 
 
