@@ -24,10 +24,9 @@ export default function Post({post, user, profile}) {
     }, [post]);
 
     useEffect(() => {
-        setComments(post?.comments.reverse());
+        setComments(post?.comments);
     }, [post]);
 
-    console.log(comments);
 
     const getPostReacts = async () => {
         const res = await getReacts(post._id, user.token);
@@ -65,8 +64,8 @@ export default function Post({post, user, profile}) {
     };
 
     const showMore = () => {
-        setCount((prev) => prev + 3)
-    }
+        setCount((prev) => prev + 3);
+    };
 
     return (
         <div className="post" style={{width: `${profile && "100%"}`}}>
@@ -270,9 +269,13 @@ export default function Post({post, user, profile}) {
                 <div className="comments_order"></div>
                 <CreateComment user={user} postId={post._id}/>
                 {
-                    comments && comments.slice(0, count).map((comment, i) => (
-                        <Comment comment={comment} key={i}/>
-                    ))
+                    comments && comments
+                        .sort((a, b) => {
+                            return new Date(b.commentAt) - new Date(a.commentAt);
+                        })
+                        .slice(0, count).map((comment, i) => (
+                            <Comment comment={comment} key={i}/>
+                        ))
                 }
 
                 {
