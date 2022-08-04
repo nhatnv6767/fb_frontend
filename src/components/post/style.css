@@ -605,6 +605,10 @@
     color: var(--color-secondary);
 }
 
+.view_comments:hover {
+    text-decoration: underline;
+}
+
 /* ---------- Comment ---------- */
 
 
