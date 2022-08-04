@@ -267,7 +267,12 @@ export default function Post({post, user, profile}) {
             </div>
             <div className="comments_wrap">
                 <div className="comments_order"></div>
-                <CreateComment user={user} postId={post._id}/>
+                <CreateComment
+                    user={user}
+                    postId={post._id}
+                    setComments={setComments}
+                    setCount={setCount}
+                />
                 {
                     comments && comments
                         .sort((a, b) => {
