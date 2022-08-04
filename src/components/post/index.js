@@ -16,6 +16,7 @@ export default function Post({post, user, profile}) {
     const [reacts, setReacts] = useState();
     const [check, setCheck] = useState();
     const [total, setTotal] = useState(0);
+    const [count, setCount] = useState(1);
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
@@ -265,9 +266,15 @@ export default function Post({post, user, profile}) {
                 <div className="comments_order"></div>
                 <CreateComment user={user} postId={post._id}/>
                 {
-                    comments && comments.slice(0, 3).map((comment, i) => (
+                    comments && comments.slice(0, count).map((comment, i) => (
                         <Comment comment={comment} key={i}/>
                     ))
+                }
+
+                {
+                    count < comments.length && <div className="view_comments">
+                        view more comments
+                    </div>
                 }
             </div>
             {
