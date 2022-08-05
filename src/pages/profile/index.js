@@ -16,6 +16,7 @@ import Photos from "./Photos";
 import Friends from "./Friends";
 import Intro from "../../components/intro";
 import {useMediaQuery} from "react-responsive";
+import CreatePostPopup from "../../components/createPostPopup";
 
 
 export default function Profile({setVisible}) {
@@ -113,6 +114,15 @@ export default function Profile({setVisible}) {
     // console.log(profile);
     return (
         <div className="profile">
+            {
+                visible &&
+                <CreatePostPopup
+                    user={user}
+                    setVisible={setVisible}
+                    posts={posts}
+                    dispatch={dispatch}
+                />
+            }
             <Header page="profile"/>
             <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
