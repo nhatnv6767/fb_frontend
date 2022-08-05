@@ -38,7 +38,7 @@ export default function CreatePostPopup({user, setVisible}) {
             );
             setLoading(false);
 
-            if (response === "ok") {
+            if (response.status === "ok") {
                 setBackground("");
                 setText("");
                 setVisible(false);
@@ -61,7 +61,7 @@ export default function CreatePostPopup({user, setVisible}) {
             const response = await uploadImages(formData, path, user.token);
             const res = await createPost(null, null, text, response, user.id, user.token);
             setLoading(false);
-            if (res === "ok") {
+            if (res.status === "ok") {
                 setText("");
                 setImages([]);
                 setVisible(false);
@@ -81,7 +81,7 @@ export default function CreatePostPopup({user, setVisible}) {
             );
             setLoading(false);
 
-            if (response === "ok") {
+            if (response.status === "ok") {
                 setBackground("");
                 setText("");
                 setVisible(false);
