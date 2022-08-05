@@ -19,7 +19,8 @@ import {useMediaQuery} from "react-responsive";
 import CreatePostPopup from "../../components/createPostPopup";
 
 
-export default function Profile({setVisible}) {
+export default function Profile({}) {
+    const [visible, setVisible] = useState(false);
     const {username} = useParams();
     const navigate = useNavigate();
     const {user} = useSelector((state) => ({...state}));
@@ -119,8 +120,9 @@ export default function Profile({setVisible}) {
                 <CreatePostPopup
                     user={user}
                     setVisible={setVisible}
-                    posts={posts}
+                    posts={profile?.posts}
                     dispatch={dispatch}
+                    profile
                 />
             }
             <Header page="profile"/>
