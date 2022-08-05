@@ -56,6 +56,8 @@ function App() {
                 <CreatePostPopup
                     user={user}
                     setVisible={setVisible}
+                    posts={posts}
+                    dispatch={dispatch}
                 />
             }
 
