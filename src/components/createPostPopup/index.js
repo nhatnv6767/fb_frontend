@@ -10,7 +10,13 @@ import PostError from "./PostError";
 import DataURIToBlob from "../../helpers/dataURIToBlob";
 import {uploadImages} from "../../functions/uploadImages";
 
-export default function CreatePostPopup({user, setVisible, posts, dispatch}) {
+export default function CreatePostPopup({
+                                            user,
+                                            setVisible,
+                                            posts,
+                                            dispatch,
+                                            profile,
+                                        }) {
     const popup = useRef(null);
     const [text, setText] = useState("");
     const [showPrev, setShowPrev] = useState(false);
@@ -40,7 +46,7 @@ export default function CreatePostPopup({user, setVisible, posts, dispatch}) {
 
             if (response.status === "ok") {
                 dispatch({
-                    type: "POSTS_SUCCESS",
+                    type: profile ? "" : "POSTS_SUCCESS",
                     payload: [response.data, ...posts]
                 });
                 setBackground("");
