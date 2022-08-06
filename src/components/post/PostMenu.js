@@ -6,6 +6,8 @@ export default function PostMenu({postUserId, userId, imagesLength, setShowMenu}
     const [test, setTest] = useState(postUserId === userId ? true : false);
     const menu = useRef(null);
     useClickOutside(menu, () => setShowMenu(false));
+    const saveHandler = async () => {
+    };
     return (
         <ul className="post_menu" ref={menu}>
             {
