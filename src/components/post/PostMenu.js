@@ -2,6 +2,7 @@ import MenuItem from "./MenuItem";
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import {savePost} from "../../functions/post";
+import {saveAs} from 'file-saver';
 
 export default function PostMenu({
                                      postUserId,
@@ -23,6 +24,8 @@ export default function PostMenu({
         } else {
             setCheckSaved(true);
         }
+    };
+    const downloadImages = async () => {
     };
     return (
         <ul className="post_menu" ref={menu}>
@@ -76,10 +79,12 @@ export default function PostMenu({
 
             {
                 imagesLength && (
-                    <MenuItem
-                        icon="download_icon"
-                        title="Download"
-                    />
+                    <div onClick={() => downloadImages()}>
+                        <MenuItem
+                            icon="download_icon"
+                            title="Download"
+                        />
+                    </div>
                 )
             }
 
