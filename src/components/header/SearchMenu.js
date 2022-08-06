@@ -5,6 +5,8 @@ import useClickOutside from "../../helpers/clickOutside";
 /* Destructuring the props object. */
 export default function SearchMenu({color, setShowSearchMenu}) {
     const [iconVisible, setIconVisible] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [results, setResults] = useState([]);
     const menu = useRef(null);
     const input = useRef(null);
     useClickOutside(menu, () => {
@@ -41,6 +43,8 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                         type="text"
                         placeholder="Search Facebook"
                         ref={input}
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                         onFocus={() => {
                             setIconVisible(false);
                         }}
