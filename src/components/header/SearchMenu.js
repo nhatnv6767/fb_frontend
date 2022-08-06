@@ -5,7 +5,7 @@ import async from "async";
 import {search} from "../../functions/user";
 
 /* Destructuring the props object. */
-export default function SearchMenu({color, setShowSearchMenu}) {
+export default function SearchMenu({color, setShowSearchMenu, token}) {
     const [iconVisible, setIconVisible] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [results, setResults] = useState([]);
@@ -21,7 +21,7 @@ export default function SearchMenu({color, setShowSearchMenu}) {
         if (searchTerm === "") {
             setResults([]);
         } else {
-            const res = await search(searchTerm,);
+            const res = await search(searchTerm, token);
         }
     };
     return (
