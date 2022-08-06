@@ -531,6 +531,12 @@ header {
     height: 20px;
 }
 
+.search_user_item i {
+    position: absolute;
+    right: 10px;
+    transform: scale(0.6);
+}
+
 /*--- User menu -----*/
 .search_results {
     width: 100%;
