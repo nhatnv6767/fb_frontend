@@ -532,6 +532,9 @@ header {
 }
 
 /*--- User menu -----*/
+.search_results {
+    width: 100%;
+}
 
 .search_user_item {
     position: relative;

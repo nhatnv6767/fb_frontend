@@ -76,7 +76,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             <div className="search_results scrollbar">
                 {
                     results && results.map((user, i) => (
-                        <Link to={`/profile/${user.username}`} className="search_user_item">
+                        <Link to={`/profile/${user.username}`} className="search_user_item hover1">
                             <img src={user.picture} alt=""/>
                             <span>
                                 {user.first_name} {user.last_name}
