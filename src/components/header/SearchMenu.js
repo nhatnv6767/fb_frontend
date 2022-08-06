@@ -23,7 +23,6 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
         const res = await getSearchHistory(token);
         setSearchHistory(res);
     };
-    console.log(searchHistory);
     useEffect(() => {
         input.current.focus();
     }, []);
@@ -79,10 +78,14 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                     />
                 </div>
             </div>
-            <div className="search_history_header">
-                <span>Recent searches</span>
-                <a>Edit</a>
-            </div>
+            {
+                results === "" && (
+                    <div className="search_history_header">
+                        <span>Recent searches</span>
+                        <a>Edit</a>
+                    </div>
+                )
+            }
             <div className="search_history"></div>
             <div className="search_results scrollbar">
                 {
