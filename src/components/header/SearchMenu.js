@@ -86,7 +86,16 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                     </div>
                 )
             }
-            <div className="search_history"></div>
+            <div className="search_history">
+                {
+                    searchHistory
+                    && results === "" && searchHistory.map((user) => (
+                        <div className="search_user_item hover1" key={user._id}>
+                            <Link></Link>
+                        </div>
+                    ))
+                }
+            </div>
             <div className="search_results scrollbar">
                 {
                     results && results.map((user, i) => (
@@ -94,6 +103,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                             to={`/profile/${user.username}`}
                             className="search_user_item hover1"
                             onClick={() => addToSearchHistoryHandler(user._id)}
+                            key={user._id}
                         >
                             <img src={user.picture} alt=""/>
                             <span>
