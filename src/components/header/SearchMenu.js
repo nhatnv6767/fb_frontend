@@ -88,6 +88,8 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             }
             <div className="search_history">
                 {
+                    /* Checking if the searchHistory array is empty. If it is not empty, it is mapping through the array
+                    and returning a div for each user. */
                     searchHistory
                     && results == "" && searchHistory.map((user) => (
                         <div className="search_user_item hover1" key={user._id}>
