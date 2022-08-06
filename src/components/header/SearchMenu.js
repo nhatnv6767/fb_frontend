@@ -36,6 +36,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
     };
     const addToSearchHistoryHandler = async (searchUser) => {
         const res = await addToSearchHistory(searchUser, token);
+        await getHistory();
     };
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
@@ -91,7 +92,10 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                     /* Checking if the searchHistory array is empty. If it is not empty, it is mapping through the array
                     and returning a div for each user. */
                     searchHistory
-                    && results == "" && searchHistory.map((user) => (
+                    && results == ""
+                    && searchHistory.sort((a, b) => {
+                        return new Date(b.createdAt) - new Date(a.createdAt)
+                    }).map((user) => (
                         <div className="search_user_item hover1" key={user._id}>
                             <Link className="flex" to={`/profile/${user.user.username}`}>
                                 <img src={user.user.picture} alt=""/>
