@@ -315,6 +315,7 @@ export default function Post({post, user, profile}) {
                         checkSaved={checkSaved}
                         setCheckSaved={setCheckSaved}
                         images={post?.images}
+                        postRef={postRef}
                     />
                 )
             }

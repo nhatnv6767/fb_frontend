@@ -14,6 +14,7 @@ export default function PostMenu({
                                      checkSaved,
                                      setCheckSaved,
                                      images,
+                                     postRef,
                                  }) {
     const [test, setTest] = useState(postUserId === userId ? true : false);
     const menu = useRef(null);
@@ -33,7 +34,7 @@ export default function PostMenu({
     };
 
     const deleteHandler = async () => {
-        await deletePost(postId, token);
+        const res = await deletePost(postId, token);
     };
     return (
         <ul className="post_menu" ref={menu}>
