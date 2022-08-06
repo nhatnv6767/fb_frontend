@@ -18,6 +18,11 @@ export default function PostMenu({
     useClickOutside(menu, () => setShowMenu(false));
     const saveHandler = async () => {
         savePost(postId, token);
+        if (checkSaved) {
+            setCheckSaved(false);
+        } else {
+            setCheckSaved(true);
+        }
     };
     return (
         <ul className="post_menu" ref={menu}>
