@@ -1,7 +1,7 @@
 import MenuItem from "./MenuItem";
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
-import {savePost} from "../../functions/post";
+import {deletePost, savePost} from "../../functions/post";
 import {saveAs} from 'file-saver';
 
 export default function PostMenu({
@@ -31,6 +31,10 @@ export default function PostMenu({
             saveAs(img.url, "image.jpg");
         });
     };
+
+    const deleteHandler = async () => {
+        deletePost(postId, token);
+    }
     return (
         <ul className="post_menu" ref={menu}>
             {
@@ -157,11 +161,13 @@ export default function PostMenu({
 
             {
                 test && (
-                    <MenuItem
-                        icon="trash_icon"
-                        title="Move to trash"
-                        subtitle="Items in your trash are deleted after 30 days"
-                    />
+                    <div onClick={() => deleteHandler()}>
+                        <MenuItem
+                            icon="trash_icon"
+                            title="Move to trash"
+                            subtitle="Items in your trash are deleted after 30 days"
+                        />
+                    </div>
                 )
             }
 
