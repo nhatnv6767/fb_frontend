@@ -97,6 +97,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                                 {user.first_name} {user.last_name}
                             </span>
                             </Link>
+                            <i className="exit_icon"></i>
                         </div>
                     ))
                 }
