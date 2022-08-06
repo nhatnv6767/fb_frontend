@@ -72,7 +72,15 @@ function App() {
                             />}
                         exact
                     />
-                    <Route path="/profile/:username" element={<Profile setVisible={setVisible}/>} exact/>
+                    <Route
+                        path="/profile/:username"
+                        element={
+                            <Profile
+                                setVisible={setVisible}
+                                getAllPosts={getAllPosts}
+                            />}
+                        exact
+                    />
                     <Route
                         path="/"
                         element={
@@ -80,6 +88,7 @@ function App() {
                                 setVisible={setVisible}
                                 posts={posts}
                                 loading={loading}
+                                getAllPosts={getAllPosts}
                             />
                         }
                         exact
