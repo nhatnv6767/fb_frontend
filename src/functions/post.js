@@ -100,3 +100,19 @@ export const savePost = async (
         return e.response.data.message;
     }
 };
+export const deletePost = async (
+    postId,
+    token
+) => {
+    try {
+        const {data} = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deletePost/${postId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        });
+        // console.log("Data: ", data);
+        return data;
+    } catch (e) {
+        return e.response.data.message;
+    }
+};
