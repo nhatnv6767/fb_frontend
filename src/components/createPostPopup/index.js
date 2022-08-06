@@ -46,7 +46,7 @@ export default function CreatePostPopup({
 
             if (response.status === "ok") {
                 dispatch({
-                    type: profile ? "" : "POSTS_SUCCESS",
+                    type: profile ? "PROFILE_POSTS" : "POSTS_SUCCESS",
                     payload: [response.data, ...posts]
                 });
                 setBackground("");
@@ -73,7 +73,7 @@ export default function CreatePostPopup({
             setLoading(false);
             if (res.status === "ok") {
                 dispatch({
-                    type: "POSTS_SUCCESS",
+                    type: profile ? "PROFILE_POSTS" : "POSTS_SUCCESS",
                     payload: [res.data, ...posts]
                 });
                 setText("");
@@ -97,7 +97,7 @@ export default function CreatePostPopup({
 
             if (response.status === "ok") {
                 dispatch({
-                    type: "POSTS_SUCCESS",
+                    type: profile ? "PROFILE_POSTS" : "POSTS_SUCCESS",
                     payload: [response.data, ...posts]
                 });
                 setBackground("");
