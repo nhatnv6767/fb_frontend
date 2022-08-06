@@ -26,8 +26,8 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             setResults(res);
         }
     };
-    const addToSearchHistoryHandler = async () => {
-        addToSearchHistory();
+    const addToSearchHistoryHandler = async (searchUser) => {
+        const res = await addToSearchHistory(searchUser, token);
     };
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
