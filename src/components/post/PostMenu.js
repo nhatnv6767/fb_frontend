@@ -35,6 +35,9 @@ export default function PostMenu({
 
     const deleteHandler = async () => {
         const res = await deletePost(postId, token);
+        if (res.status === "ok") {
+            postRef.current.style.display = "none";
+        }
     };
     return (
         <ul className="post_menu" ref={menu}>
