@@ -28,13 +28,13 @@ export default function PostMenu({
                 )
             }
 
-
-            <MenuItem
-                icon="save_icon"
-                title="Save Post"
-                subtitle="Add this to your saved items."
-                onClick={() => saveHandler()}
-            />
+            <div onClick={() => saveHandler()}>
+                <MenuItem
+                    icon="save_icon"
+                    title="Save Post"
+                    subtitle="Add this to your saved items."
+                />
+            </div>
 
             <div className="line"></div>
 
