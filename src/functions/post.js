@@ -84,3 +84,19 @@ export const comment = async (
         return e.response.data.message;
     }
 };
+export const savePost = async (
+    postId,
+    token
+) => {
+    try {
+        const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/savePost/${postId}`, {}, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        });
+        // console.log("Data: ", data);
+        return data;
+    } catch (e) {
+        return e.response.data.message;
+    }
+};
