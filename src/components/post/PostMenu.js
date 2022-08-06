@@ -1,12 +1,14 @@
 import MenuItem from "./MenuItem";
 import {useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
+import {savePost} from "../../functions/post";
 
 export default function PostMenu({postUserId, userId, imagesLength, setShowMenu}) {
     const [test, setTest] = useState(postUserId === userId ? true : false);
     const menu = useRef(null);
     useClickOutside(menu, () => setShowMenu(false));
     const saveHandler = async () => {
+        savePost();
     };
     return (
         <ul className="post_menu" ref={menu}>
