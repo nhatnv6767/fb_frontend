@@ -87,7 +87,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                     </div>
                 )
             }
-            <div className="search_history">
+            <div className="search_history scrollbar">
                 {
                     /* Checking if the searchHistory array is empty. If it is not empty, it is mapping through the array
                     and returning a div for each user. */
