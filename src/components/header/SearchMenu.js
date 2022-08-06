@@ -1,6 +1,8 @@
 import {Return, Search} from "../../svg";
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
+import async from "async";
+import {search} from "../../functions/user";
 
 /* Destructuring the props object. */
 export default function SearchMenu({color, setShowSearchMenu}) {
@@ -15,6 +17,13 @@ export default function SearchMenu({color, setShowSearchMenu}) {
     useEffect(() => {
         input.current.focus();
     }, []);
+    const searchHandler = async () => {
+        if (searchTerm === "") {
+            setResults([]);
+        } else {
+            const res = await search(searchTerm,);
+        }
+    };
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
             <div className="search_wrap">
@@ -45,6 +54,7 @@ export default function SearchMenu({color, setShowSearchMenu}) {
                         ref={input}
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
+                        onKeyUp={searchHandler}
                         onFocus={() => {
                             setIconVisible(false);
                         }}
