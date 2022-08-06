@@ -2,7 +2,7 @@ import {Return, Search} from "../../svg";
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import async from "async";
-import {addToSearchHistory, search} from "../../functions/user";
+import {addToSearchHistory, getSearchHistory, search} from "../../functions/user";
 import {Link} from "react-router-dom";
 
 /* Destructuring the props object. */
@@ -10,11 +10,19 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
     const [iconVisible, setIconVisible] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [results, setResults] = useState([]);
+    const [searchHistory, setSearchHistory] = useState([]);
     const menu = useRef(null);
     const input = useRef(null);
     useClickOutside(menu, () => {
         setShowSearchMenu(false);
     });
+    useEffect(() => {
+
+    }, [])
+    const getHistory = async () => {
+        const res = await getSearchHistory(token)
+        setSearchHistory(res)
+    }
     useEffect(() => {
         input.current.focus();
     }, []);
