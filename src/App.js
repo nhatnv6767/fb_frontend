@@ -63,7 +63,15 @@ function App() {
 
             <Routes>
                 <Route element={<LoggedInRoutes/>}>
-                    <Route path="/profile" element={<Profile setVisible={setVisible}/>} exact/>
+                    <Route
+                        path="/profile"
+                        element={
+                            <Profile
+                                setVisible={setVisible}
+                                getAllPosts={getAllPosts}
+                            />}
+                        exact
+                    />
                     <Route path="/profile/:username" element={<Profile setVisible={setVisible}/>} exact/>
                     <Route
                         path="/"

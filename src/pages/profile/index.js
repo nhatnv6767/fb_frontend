@@ -19,7 +19,7 @@ import {useMediaQuery} from "react-responsive";
 import CreatePostPopup from "../../components/createPostPopup";
 
 
-export default function Profile({}) {
+export default function Profile({getAllPosts}) {
     const [visible, setVisible] = useState(false);
     const {username} = useParams();
     const navigate = useNavigate();
@@ -125,7 +125,7 @@ export default function Profile({}) {
                     profile
                 />
             }
-            <Header page="profile"/>
+            <Header page="profile" getAllPosts={getAllPosts}/>
             <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
                     <Cover
