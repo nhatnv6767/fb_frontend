@@ -306,6 +306,8 @@ export default function Post({post, user, profile}) {
                         postUserId={post.user._id}
                         imagesLength={post?.images?.length}
                         setShowMenu={setShowMenu}
+                        postId={post._id}
+                        token={user.token}
                     />
                 )
             }
