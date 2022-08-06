@@ -79,7 +79,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                 </div>
             </div>
             {
-                results === "" && (
+                results == "" && (
                     <div className="search_history_header">
                         <span>Recent searches</span>
                         <a>Edit</a>
@@ -89,12 +89,12 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             <div className="search_history">
                 {
                     searchHistory
-                    && results === "" && searchHistory.map((user) => (
+                    && results == "" && searchHistory.map((user) => (
                         <div className="search_user_item hover1" key={user._id}>
-                            <Link className="flex" to={`/profile/${user.username}`}>
-                                <img src={user.picture} alt=""/>
+                            <Link className="flex" to={`/profile/${user.user.username}`}>
+                                <img src={user.user.picture} alt=""/>
                                 <span>
-                                {user.first_name} {user.last_name}
+                                {user.user.first_name} {user.user.last_name}
                             </span>
                             </Link>
                             <i className="exit_icon"></i>
