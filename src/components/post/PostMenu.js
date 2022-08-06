@@ -13,6 +13,7 @@ export default function PostMenu({
                                      postId,
                                      checkSaved,
                                      setCheckSaved,
+                                     images,
                                  }) {
     const [test, setTest] = useState(postUserId === userId ? true : false);
     const menu = useRef(null);
@@ -26,6 +27,9 @@ export default function PostMenu({
         }
     };
     const downloadImages = async () => {
+        images.map((img) => {
+            saveAs(img.url, "image.jpg");
+        });
     };
     return (
         <ul className="post_menu" ref={menu}>
