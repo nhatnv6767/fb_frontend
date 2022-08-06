@@ -91,7 +91,12 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                     searchHistory
                     && results === "" && searchHistory.map((user) => (
                         <div className="search_user_item hover1" key={user._id}>
-                            <Link></Link>
+                            <Link className="flex" to={`/profile/${user.username}`}>
+                                <img src={user.picture} alt=""/>
+                                <span>
+                                {user.first_name} {user.last_name}
+                            </span>
+                            </Link>
                         </div>
                     ))
                 }
