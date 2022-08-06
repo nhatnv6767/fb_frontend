@@ -10,6 +10,8 @@ export default function PostMenu({
                                      setShowMenu,
                                      token,
                                      postId,
+                                     checkSaved,
+                                     setCheckSaved,
                                  }) {
     const [test, setTest] = useState(postUserId === userId ? true : false);
     const menu = useRef(null);
@@ -29,11 +31,22 @@ export default function PostMenu({
             }
 
             <div onClick={() => saveHandler()}>
-                <MenuItem
-                    icon="save_icon"
-                    title="Save Post"
-                    subtitle="Add this to your saved items."
-                />
+                {
+                    checkSaved ? (
+                        <MenuItem
+                            icon="save_icon"
+                            title="Un-save Post"
+                            subtitle="Remove this from your saved items."
+                        />
+                    ) : (
+                        <MenuItem
+                            icon="save_icon"
+                            title="Save Post"
+                            subtitle="Add this to your saved items."
+                        />
+                    )
+                }
+
             </div>
 
             <div className="line"></div>
