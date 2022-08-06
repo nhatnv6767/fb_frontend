@@ -2,7 +2,7 @@ import {Return, Search} from "../../svg";
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import async from "async";
-import {search} from "../../functions/user";
+import {addToSearchHistory, search} from "../../functions/user";
 import {Link} from "react-router-dom";
 
 /* Destructuring the props object. */
@@ -26,7 +26,9 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             setResults(res);
         }
     };
-    console.log(results);
+    const addToSearchHistoryHandler = async () => {
+        addToSearchHistory();
+    };
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
             <div className="search_wrap">
@@ -76,7 +78,11 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             <div className="search_results scrollbar">
                 {
                     results && results.map((user, i) => (
-                        <Link to={`/profile/${user.username}`} className="search_user_item hover1">
+                        <Link
+                            to={`/profile/${user.username}`}
+                            className="search_user_item hover1"
+                            onClick={() => addToSearchHistoryHandler(user._id)}
+                        >
                             <img src={user.picture} alt=""/>
                             <span>
                                 {user.first_name} {user.last_name}
