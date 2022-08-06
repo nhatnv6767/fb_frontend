@@ -16,13 +16,14 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
     useClickOutside(menu, () => {
         setShowSearchMenu(false);
     });
-    useEffect(() => {
-
-    }, [])
+    useEffect(async () => {
+        await getHistory();
+    }, []);
     const getHistory = async () => {
-        const res = await getSearchHistory(token)
-        setSearchHistory(res)
-    }
+        const res = await getSearchHistory(token);
+        setSearchHistory(res);
+    };
+    console.log(searchHistory);
     useEffect(() => {
         input.current.focus();
     }, []);
