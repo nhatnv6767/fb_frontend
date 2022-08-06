@@ -33,8 +33,8 @@ export default function PostMenu({
     };
 
     const deleteHandler = async () => {
-        deletePost(postId, token);
-    }
+        await deletePost(postId, token);
+    };
     return (
         <ul className="post_menu" ref={menu}>
             {
