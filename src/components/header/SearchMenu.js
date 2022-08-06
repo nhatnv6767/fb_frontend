@@ -3,6 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
 import async from "async";
 import {search} from "../../functions/user";
+import {Link} from "react-router-dom";
 
 /* Destructuring the props object. */
 export default function SearchMenu({color, setShowSearchMenu, token}) {
@@ -72,7 +73,18 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                 <a>Edit</a>
             </div>
             <div className="search_history"></div>
-            <div className="search_results scrollbar"></div>
+            <div className="search_results scrollbar">
+                {
+                    results && results.map((user, i) => (
+                        <Link to={`/profile/${user.username}`} className="search_user_item">
+                            <img src={user.picture} alt=""/>
+                            <span>
+                                {user.first_name} {user.last_name}
+                            </span>
+                        </Link>
+                    ))
+                }
+            </div>
         </div>
     );
 }
