@@ -22,8 +22,10 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
             setResults([]);
         } else {
             const res = await search(searchTerm, token);
+            setResults(res);
         }
     };
+    console.log(results);
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
             <div className="search_wrap">
