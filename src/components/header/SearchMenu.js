@@ -114,9 +114,10 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                                 </Link>
                                 <i
                                     className="exit_icon"
-                                    onClick={() =>
-                                        handleRemove(user.user._id)
-                                    }></i>
+                                    onClick={() => {
+                                        handleRemove(user.user._id);
+                                    }}
+                                ></i>
                             </div>
                         ))
                 }

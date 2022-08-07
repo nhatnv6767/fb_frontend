@@ -197,11 +197,11 @@ export const getSearchHistory = async (
 };
 export const removeFromSearch = async (
     searchUser,
-    token,
+    token
 ) => {
     try {
         const {data} = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/removeFromSearch`, {
-                searchUser,
+                searchUser
             },
             {
                 headers: {
