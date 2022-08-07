@@ -54,3 +54,11 @@
 .dark .left_home .small_circle {
     background: var(--bg-fifth);
 }
+
+.dark .open_post:hover {
+    background: #333;
+}
+
+.dark .post_action i {
+    filter: invert(90%);
+}
