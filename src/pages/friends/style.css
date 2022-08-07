@@ -45,6 +45,10 @@
     background: var(--bg-secondary);
 }
 
+.active_friends .small_circle {
+    background: #1876f2;
+}
+
 .see_link {
     color: var(--blue-color);
     padding: 5px;
