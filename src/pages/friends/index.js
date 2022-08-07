@@ -4,6 +4,7 @@ import {useEffect, useReducer} from "react";
 import {getFriendsPageInfos} from "../../functions/user";
 import {useSelector} from "react-redux";
 import {friendspage} from "../../functions/reducers";
+import Card from "./Card";
 
 export default function Friends() {
     const {user} = useSelector((state) => ({...state}));
@@ -108,7 +109,7 @@ export default function Friends() {
                         <div className="flex_wrap">
                             {
                                 data.requests && data.requests.map((user) => (
-                                    ""
+                                    <Card user={user} key={user._id}/>
                                 ))
                             }
                         </div>
