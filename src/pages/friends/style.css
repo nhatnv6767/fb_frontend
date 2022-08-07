@@ -118,7 +118,7 @@
         width: 50px;
     }
 
-    .req_card button {
-        width: 130px !important;
+    .friends_right {
+        padding: 5px;
     }
 }
