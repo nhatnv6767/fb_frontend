@@ -40,3 +40,7 @@
 .friends_left .mmenu_item {
     cursor: pointer;
 }
+
+.active_friends {
+    background: var(--bg-secondary);
+}

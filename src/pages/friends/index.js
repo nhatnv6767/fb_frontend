@@ -14,17 +14,19 @@ export default function Friends() {
                         </div>
                     </div>
                     <div className="friends_left_wrap">
-                        <div className="mmenu_item hover3 active_friends">
+                        <div className="mmenu_item active_friends">
                             <div className="small_circle" style={{background: "#1876f2"}}>
                                 <i className="friends_home_icon invert"></i>
                             </div>
                             <span>Home</span>
                         </div>
-                        <div className="mmenu_item hover3"></div>
-                        <div className="mmenu_item hover3"></div>
-                        <div className="mmenu_item hover3"></div>
-                        <div className="mmenu_item hover3"></div>
-                        <div className="mmenu_item hover3"></div>
+                        <div className="mmenu_item hover3">
+                            <div className="small_circle">
+                                <i className=""></i>
+                            </div>
+                            <span></span>
+                            <div className="rArrow"></div>
+                        </div>
                     </div>
                 </div>
                 <div className="friends_right"></div>
