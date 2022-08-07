@@ -53,6 +53,10 @@
     filter: invert(100%);
 }
 
+.active_friends .rArrow {
+    display: none;
+}
+
 .see_link {
     color: var(--blue-color);
     padding: 5px;

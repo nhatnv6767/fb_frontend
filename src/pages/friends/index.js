@@ -39,14 +39,20 @@ export default function Friends() {
                         </div>
                     </div>
                     <div className="friends_left_wrap">
-                        <Link to="/friends" className={`mmenu_item hover3 ${type === undefined && "active_friends"}`}>
+                        <Link to="/friends"
+                              className={`mmenu_item hover3 ${type === undefined && "active_friends"}`}
+                        >
                             <div className="small_circle">
                                 <i className="friends_home_icon"></i>
                             </div>
                             <span>Home</span>
+                            <div className="rArrow">
+                                <i className="right_icon"></i>
+                            </div>
                         </Link>
                         <Link to="/friends/requests"
-                              className={`mmenu_item hover3 ${type === "requests" && "active_friends"}`}>
+                              className={`mmenu_item hover3 ${type === "requests" && "active_friends"}`}
+                        >
                             <div className="small_circle">
                                 <i className="friends_requests_icon"></i>
                             </div>
@@ -55,7 +61,9 @@ export default function Friends() {
                                 <i className="right_icon"></i>
                             </div>
                         </Link>
-                        <Link to="/friends/sent" className="mmenu_item hover3">
+                        <Link to="/friends/sent"
+                              className={`mmenu_item hover3 ${type === "sent" && "active_friends"}`}
+                        >
                             <div className="small_circle">
                                 <i className="friends_requests_icon"></i>
                             </div>
@@ -73,7 +81,9 @@ export default function Friends() {
                                 <i className="right_icon"></i>
                             </div>
                         </div>
-                        <Link to="/friends/all" className="mmenu_item hover3">
+                        <Link to="/friends/all"
+                              className={`mmenu_item hover3 ${type === "all" && "active_friends"}`}
+                        >
                             <div className="small_circle">
                                 <i className="all_friends_icon"></i>
                             </div>
