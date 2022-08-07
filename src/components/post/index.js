@@ -204,7 +204,7 @@ export default function Post({post, user, profile}) {
                                     : ""
                         }
                     </div>
-                    <div className="share_count">1 share</div>
+                    <div className="share_count">0 share</div>
                 </div>
             </div>
 
