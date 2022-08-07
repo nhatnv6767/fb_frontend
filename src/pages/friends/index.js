@@ -11,7 +11,6 @@ export default function Friends() {
     }, []);
     const getData = async () => {
         const data = await getFriendsPageInfos(user.token);
-        console.log(data);
     };
     return (
         <>
