@@ -105,7 +105,7 @@ export default function Friends() {
                     <div className="friends_right_wrap">
                         <div className="friends_left_header">
                             <h3>Friend Requests</h3>
-                            <a className="see_link hover3">See all</a>
+                            <Link to="/friends/requests" className="see_link hover3">See all</Link>
                         </div>
                         <div className="flex_wrap">
                             {
@@ -123,7 +123,7 @@ export default function Friends() {
                     <div className="friends_right_wrap">
                         <div className="friends_left_header">
                             <h3>Sent Requests</h3>
-                            <a className="see_link hover3">See all</a>
+                            <Link to="/friends/sent" className="see_link hover3">See all</Link>
                         </div>
                         <div className="flex_wrap">
                             {
@@ -141,7 +141,7 @@ export default function Friends() {
                     <div className="friends_right_wrap">
                         <div className="friends_left_header">
                             <h3>Friends</h3>
-                            <a className="see_link hover3">See all</a>
+                            <Link to="/friends/all" className="see_link hover3">See all</Link>
                         </div>
                         <div className="flex_wrap">
                             {
