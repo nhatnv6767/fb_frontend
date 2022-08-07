@@ -14,7 +14,16 @@ export default function Card({user, type}) {
                     (
                         <button className="blue_btn">Cancel Request</button>
                     )
-                    : ("")
+                    : (
+                        type === "requests" ?
+                            (
+                                <>
+                                    <button className="blue_btn">Confirm</button>
+                                    <button className="gray_btn">Delete</button>
+                                </>
+                            )
+                            : ("")
+                    )
             }
         </div>
     );

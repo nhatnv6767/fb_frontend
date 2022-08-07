@@ -85,3 +85,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.req_card button {
+    width: 170px !important;
+}
