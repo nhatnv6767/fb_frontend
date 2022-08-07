@@ -61,6 +61,10 @@ a {
     fill: #fff;
 }
 
+.dark .all_right_circle i {
+    filter: invert(100%);
+}
+
 /* ------ Buttons --------- */
 .blue_btn {
     border: none;
