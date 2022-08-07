@@ -5,6 +5,17 @@ export default function Friends() {
     return (
         <>
             <Header page="friends"/>
+            <div className="friends">
+                <div className="friends_left">
+                    <div className="friends_left_header">
+                        <h2>Friends</h2>
+                        <div className="small_circle">
+                            <i className="settings_filled_icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div className="friends_right"></div>
+            </div>
         </>
     );
 }
