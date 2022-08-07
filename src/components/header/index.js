@@ -79,7 +79,9 @@ export default function Header({page, getAllPosts}) {
 
 
                 </Link>
-                <Link to="/friends" className="middle_icon hover1">
+                <Link to="/friends"
+                      className={`middle_icon ${page === "friends" ? "active" : "hover1"} `}
+                >
                     <Friends color={color}/>
                 </Link>
                 <Link to="/" className="middle_icon hover1">
