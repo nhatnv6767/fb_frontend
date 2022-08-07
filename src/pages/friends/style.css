@@ -24,6 +24,7 @@
     left: 360px;
     right: 0;
     width: calc(100% - 360px);
+    min-height: 100vh;
 }
 
 .friends_left_header {
