@@ -2,7 +2,7 @@ import "./style.css";
 import {Link} from "react-router-dom";
 import {
     ArrowDown,
-    Friends,
+    Friends, FriendsActive,
     Gaming, Home,
     HomeActive,
     Logo,
@@ -20,7 +20,7 @@ import AllMenu from "./AllMenu";
 import useClickOutside from "../../helpers/clickOutside";
 import UserMenu from "./userMenu";
 
-export default function Header({page}) {
+export default function Header({page, getAllPosts}) {
     const {user} = useSelector((user) => ({...user}));
     const color = "#65676b";
     const [showSearchMenu, setShowSearchMenu] = useState(false);
@@ -61,6 +61,7 @@ export default function Header({page}) {
                     <SearchMenu
                         color={color}
                         setShowSearchMenu={setShowSearchMenu}
+                        token={user.token}
                     />
                 )
             }
@@ -68,15 +69,23 @@ export default function Header({page}) {
             <div className="header_middle">
                 {/* A ternary operator. It is used to check if the page is home or not. If it is home then it will add the
                 class active to the element. */}
-                <Link to="/" className={`middle_icon ${page === "home" ? "active" : "hover1"} `}>
+                <Link to="/"
+                      className={`middle_icon ${page === "home" ? "active" : "hover1"} `}
+                      onClick={() => getAllPosts()}
+                >
                     {
                         page === "home" ? <HomeActive color={color}/> : <Home color={color}/>
                     }
 
 
                 </Link>
-                <Link to="/" className="middle_icon hover1">
-                    <Friends color={color}/>
+                <Link to="/friends"
+                      className={`middle_icon ${page === "friends" ? "active" : "hover1"} `}
+                >
+                    {
+                        page === "friends" ? <FriendsActive color={color}/> : <Friends color={color}/>
+                    }
+
                 </Link>
                 <Link to="/" className="middle_icon hover1">
                     <Watch color={color}/>

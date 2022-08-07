@@ -22,6 +22,10 @@
     border-bottom: 1px solid var(--bg-third);
 }
 
+.box_header span {
+    color: var(--color-primary);
+}
+
 .postBox .small_circle {
     position: absolute;
     right: 16px;
@@ -43,6 +47,7 @@
 
 .box_col {
     transform: translateY(-7px);
+    color: var(--color-primary);
 }
 
 .box_profile_name {
@@ -87,7 +92,7 @@
     font-family: inherit;
     font-size: 24px;
     background: var(--bg-primary);
-    color: var(--color-primary);
+    color: #000;
 }
 
 .flex_center textarea {
@@ -143,6 +148,7 @@
     width: 50%;
     font-weight: 600;
     font-size: 14px;
+    color: var(--color-primary);
 }
 
 .post_header_right {
@@ -201,6 +207,7 @@
     padding: 10px;
     border: 1px solid var(--bg-third);
     border-radius: 10px;
+    color: var(--color-primary);
 }
 
 .add_pics_inside1 {

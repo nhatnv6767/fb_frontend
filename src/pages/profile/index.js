@@ -16,9 +16,11 @@ import Photos from "./Photos";
 import Friends from "./Friends";
 import Intro from "../../components/intro";
 import {useMediaQuery} from "react-responsive";
+import CreatePostPopup from "../../components/createPostPopup";
 
 
-export default function Profile({setVisible}) {
+export default function Profile({getAllPosts}) {
+    const [visible, setVisible] = useState(false);
     const {username} = useParams();
     const navigate = useNavigate();
     const {user} = useSelector((state) => ({...state}));
@@ -109,9 +111,21 @@ export default function Profile({setVisible}) {
     const getScroll = () => {
         setScrollHeight(window.pageYOffset);
     };
+
+    // console.log(profile);
     return (
         <div className="profile">
-            <Header page="profile"/>
+            {
+                visible &&
+                <CreatePostPopup
+                    user={user}
+                    setVisible={setVisible}
+                    posts={profile?.posts}
+                    dispatch={dispatch}
+                    profile
+                />
+            }
+            <Header page="profile" getAllPosts={getAllPosts}/>
             <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
                     <Cover

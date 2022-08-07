@@ -174,6 +174,7 @@
 .profile_menu_active {
     height: 60px !important;
     width: 65px !important;
+    margin: 0 !important;
     color: var(--blue-color) !important;
     border-bottom: 3px solid var(--blue-color);
     border-radius: 0 !important;
@@ -374,11 +375,42 @@
     cursor: pointer;
 }
 
+.profile_photo_card:hover {
+    filter: brightness(110%);
+}
+
 .profile_photo_card img {
     width: 100%;
     height: 105px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.profile_photo_card span {
+    color: var(--color-primary);
+    font-size: 14px;
+    padding-left: 1px;
+}
+
+.profile_friend_count {
+    font-weight: 600;
+}
+
+
+.profile_friend_imgs {
+    display: flex;
+    align-items: center;
+}
+
+.profile_friend_imgs img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px var(--shadow-1);
+}
+
+.profile_friend_imgs img:hover {
+    filter: brightness(110%);
 }
 
 .cover_copper {
@@ -388,6 +420,10 @@
 .cover_copper img {
     object-fit: cover;
     width: 100%;
+}
+
+.friends_menu_wrap {
+    position: relative;
 }
 
 .cover_copper .reactEasyCrop_Container {
@@ -489,7 +525,7 @@
     }
 
     .profile_circle {
-        right: 0.7rem;
+        right: 1rem;
     }
 
     .profile_name {
@@ -505,12 +541,30 @@
         grid-template-columns: 1fr;
     }
 
-    .profile_grid, .createPost {
+    .profile_grid .createPost {
         width: 100% !important;
     }
 
     .bottom_container {
         padding: 5px;
+    }
+
+    .friendship {
+        transform: translateY(-4rem);
+    }
+
+    .othername {
+        transform: translateY(-10px);
+    }
+
+    .profile_friend_count {
+        text-align: center;
+        transform: translateY(-15px);
+    }
+
+    .profile_friend_imgs {
+        justify-content: center;
+        transform: translateY(-10px);
     }
 }
 
@@ -526,6 +580,12 @@
     }
 }
 
+@media (max-width: 405px) {
+    .friendship {
+        flex-direction: column;
+    }
+}
+
 .scrollFixed .profile_left {
     position: fixed;
     width: 360px;
@@ -533,7 +593,7 @@
 
 .scrollFixed .profile_right {
     margin-left: 370px;
-    width: 504px;
+    width: 505px;
 }
 
 .showLess .profile_left {
@@ -542,6 +602,23 @@
 
 .showMore .profile_left {
     top: 54px;
+}
+
+.friendship {
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.friendship .blue_btn {
+    height: 34px;
+}
+
+@media (min-width: 900px) {
+    .friendship {
+        transform: translateX(-2rem);
+    }
 }
 
 

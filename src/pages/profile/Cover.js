@@ -96,7 +96,7 @@ export default function Cover({cover, visitor, photos}) {
                     user.id,
                     user.token
                 );
-                console.log(new_post);
+                // console.log(new_post);
                 if (new_post === "ok") {
                     setLoading(false);
                     setCoverPicture("");
