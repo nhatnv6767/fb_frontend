@@ -88,3 +88,19 @@
 .dark .add_pics_wrap i {
     filter: invert(100%);
 }
+
+
+/* ------- Profile -------*/
+.dark .active_link:hover {
+    background: var(--light-blue-color);
+}
+
+.dark .open_cover_menu i {
+    filter: invert(100%);
+}
+
+.dark .profile_circle i {
+    filter: invert(100%);
+}
+
+/* ------- Profile -------*/
