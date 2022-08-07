@@ -88,3 +88,22 @@
 .req_card button {
     width: 170px !important;
 }
+
+@media (max-width: 870px) {
+    .friends_left {
+        width: 100px;
+    }
+
+    .friends_right {
+        left: 100px;
+        width: calc(100vw - 100px);
+    }
+
+    .friends_left .friends_left_header .small_circle {
+        display: none;
+    }
+
+    .friends_left .mmenu_item span {
+        display: none;
+    }
+}
