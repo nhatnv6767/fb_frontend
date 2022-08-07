@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import {cancelRequest} from "../../functions/user";
 import {useSelector} from "react-redux";
 
-export default function Card({userr, type}) {
+export default function Card({userr, type, getData}) {
     const {user} = useSelector((state) => ({...state}));
     const cancelRequestHandler = async (userId) => {
         await cancelRequest(userId, user.token);

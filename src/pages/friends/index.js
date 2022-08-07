@@ -109,7 +109,12 @@ export default function Friends() {
                         <div className="flex_wrap">
                             {
                                 data.requests && data.requests.map((user) => (
-                                    <Card userr={user} key={user._id} type="requests"/>
+                                    <Card
+                                        userr={user}
+                                        key={user._id}
+                                        type="requests"
+                                        getData={getData}
+                                    />
                                 ))
                             }
                         </div>
@@ -122,7 +127,12 @@ export default function Friends() {
                         <div className="flex_wrap">
                             {
                                 data.sentRequests && data.sentRequests.map((user) => (
-                                    <Card userr={user} key={user._id} type="sent"/>
+                                    <Card
+                                        userr={user}
+                                        key={user._id}
+                                        type="sent"
+                                        getData={getData}
+                                    />
                                 ))
                             }
                         </div>
@@ -135,7 +145,12 @@ export default function Friends() {
                         <div className="flex_wrap">
                             {
                                 data.friends && data.friends.map((user) => (
-                                    <Card userr={user} key={user._id} type="friends"/>
+                                    <Card
+                                        userr={user}
+                                        key={user._id}
+                                        type="friends"
+                                        getData={getData}
+                                    />
                                 ))
                             }
                         </div>
