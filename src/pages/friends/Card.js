@@ -1,10 +1,12 @@
 import {Link} from "react-router-dom";
 import {cancelRequest} from "../../functions/user";
+import {useSelector} from "react-redux";
 
 export default function Card({userr, type}) {
+    const {user} = useSelector((state) => ({...state}));
     const cancelRequestHandler = async (userId) => {
-        await cancelRequest()
-    }
+        await cancelRequest(userId, user.token);
+    };
     return (
         <div className="req_card">
             <Link to={`/profile/${userr?.username}`}>
