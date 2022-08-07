@@ -53,6 +53,10 @@ a {
     background: rgba(1, 1, 1, 0.53);
 }
 
+.dark .hover1:hover {
+    background: var(--bg-third);
+}
+
 
 /* ------ Buttons --------- */
 .blue_btn {
