@@ -7,17 +7,18 @@ import {friendspage} from "../../functions/reducers";
 
 export default function Friends() {
     const {user} = useSelector((state) => ({...state}));
-    useEffect(async () => {
-        await getData();
-    }, []);
-    const getData = async () => {
-        const data = await getFriendsPageInfos(user.token);
-    };
     const [{loading, error, data}, dispatch] = useReducer(friendspage, {
         loading: false,
         data: {},
         error: "",
     });
+    useEffect(async () => {
+        await getData();
+    }, []);
+    const getData = async () => {
+        dispatch({type: "FRIENDS_REQUEST"});
+        const data = await getFriendsPageInfos(user.token);
+    };
     return (
         <>
             <Header page="friends"/>

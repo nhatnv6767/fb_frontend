@@ -223,7 +223,7 @@ export const getFriendsPageInfos = async (
                     Authorization: `Bearer ${token}`,
                 }
             });
-        return data;
+        return {status: "ok", data};
     } catch (e) {
         return e.response.data.message;
     }
