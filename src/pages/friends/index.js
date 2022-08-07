@@ -1,7 +1,17 @@
 import "./style.css";
 import Header from "../../components/header";
+import {useEffect} from "react";
+import {getFriendsPageInfos} from "../../functions/user";
+import {useSelector} from "react-redux";
 
 export default function Friends() {
+    const {user} = useSelector((state) => ({...state}));
+    useEffect(() => {
+
+    }, []);
+    const getData = async () => {
+        const data = await getFriendsPageInfos(user.token);
+    };
     return (
         <>
             <Header page="friends"/>
