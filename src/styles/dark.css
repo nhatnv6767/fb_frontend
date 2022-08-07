@@ -40,4 +40,8 @@
     color: var(--color-primary);
 }
 
+.dark .small_circle i {
+    filter: invert(100%) !important;
+}
+
 /* ------- Header -------*/
