@@ -103,4 +103,8 @@
     filter: invert(100%);
 }
 
+.dark .gray_btn {
+    background: var(--bg-third);
+}
+
 /* ------- Profile -------*/
