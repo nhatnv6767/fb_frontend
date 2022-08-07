@@ -67,3 +67,11 @@
 .dark .post_menu img {
     filter: invert(100%);
 }
+
+.dark .comment_circle_icon i {
+    filter: invert(95%);
+}
+
+.dark .comment_circle_icon:hover {
+    background: var(--bg-fifth);
+}
