@@ -32,4 +32,12 @@
     fill: var(--blue-color) !important;
 }
 
+.dark .header_right .circle_icon:hover {
+    background: #888888;
+}
+
+.dark input {
+    color: var(--color-primary);
+}
+
 /* ------- Header -------*/
