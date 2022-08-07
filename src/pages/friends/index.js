@@ -102,60 +102,74 @@ export default function Friends() {
                     </div>
                 </div>
                 <div className="friends_right">
-                    <div className="friends_right_wrap">
-                        <div className="friends_left_header">
-                            <h3>Friend Requests</h3>
-                            <Link to="/friends/requests" className="see_link hover3">See all</Link>
-                        </div>
-                        <div className="flex_wrap">
-                            {
-                                data.requests && data.requests.map((user) => (
-                                    <Card
-                                        userr={user}
-                                        key={user._id}
-                                        type="requests"
-                                        getData={getData}
-                                    />
-                                ))
-                            }
-                        </div>
-                    </div>
-                    <div className="friends_right_wrap">
-                        <div className="friends_left_header">
-                            <h3>Sent Requests</h3>
-                            <Link to="/friends/sent" className="see_link hover3">See all</Link>
-                        </div>
-                        <div className="flex_wrap">
-                            {
-                                data.sentRequests && data.sentRequests.map((user) => (
-                                    <Card
-                                        userr={user}
-                                        key={user._id}
-                                        type="sent"
-                                        getData={getData}
-                                    />
-                                ))
-                            }
-                        </div>
-                    </div>
-                    <div className="friends_right_wrap">
-                        <div className="friends_left_header">
-                            <h3>Friends</h3>
-                            <Link to="/friends/all" className="see_link hover3">See all</Link>
-                        </div>
-                        <div className="flex_wrap">
-                            {
-                                data.friends && data.friends.map((user) => (
-                                    <Card
-                                        userr={user}
-                                        key={user._id}
-                                        type="friends"
-                                        getData={getData}
-                                    />
-                                ))
-                            }
-                        </div>
-                    </div>
+                    {
+                        (type === undefined || type === "requests") && (
+                            <div className="friends_right_wrap">
+                                <div className="friends_left_header">
+                                    <h3>Friend Requests</h3>
+                                    <Link to="/friends/requests" className="see_link hover3">See all</Link>
+                                </div>
+                                <div className="flex_wrap">
+                                    {
+                                        data.requests && data.requests.map((user) => (
+                                            <Card
+                                                userr={user}
+                                                key={user._id}
+                                                type="requests"
+                                                getData={getData}
+                                            />
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        )
+                    }
+                    {
+                        (type === undefined || type === "sent") && (
+                            <div className="friends_right_wrap">
+                                <div className="friends_left_header">
+                                    <h3>Sent Requests</h3>
+                                    <Link to="/friends/sent" className="see_link hover3">See all</Link>
+                                </div>
+                                <div className="flex_wrap">
+                                    {
+                                        data.sentRequests && data.sentRequests.map((user) => (
+                                            <Card
+                                                userr={user}
+                                                key={user._id}
+                                                type="sent"
+                                                getData={getData}
+                                            />
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        )
+                    }
+                    {
+                        (type === undefined || type === "all") && (
+                            <div className="friends_right_wrap">
+                                <div className="friends_left_header">
+                                    <h3>Friends</h3>
+                                    <Link to="/friends/all" className="see_link hover3">See all</Link>
+                                </div>
+                                <div className="flex_wrap">
+                                    {
+                                        data.friends && data.friends.map((user) => (
+                                            <Card
+                                                userr={user}
+                                                key={user._id}
+                                                type="friends"
+                                                getData={getData}
+                                            />
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        )
+                    }
+
+
                 </div>
             </div>
         </>
