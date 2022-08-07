@@ -7,3 +7,10 @@
     color: var(--color-primary);
 }
 
+.friends_left {
+    background: var(--bg-primary);
+    box-shadow: 0 12px 12px var(--shadow-1);
+    padding: 10px;
+    position: fixed;
+    width: 360px;
+}
