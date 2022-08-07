@@ -207,6 +207,7 @@
     padding: 10px;
     border: 1px solid var(--bg-third);
     border-radius: 10px;
+    color: var(--color-primary);
 }
 
 .add_pics_inside1 {
