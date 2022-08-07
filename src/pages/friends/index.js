@@ -18,7 +18,13 @@ export default function Friends() {
     const getData = async () => {
         dispatch({type: "FRIENDS_REQUEST"});
         const data = await getFriendsPageInfos(user.token);
+        if (data.status === "ok") {
+            dispatch({type: "FRIENDS_SUCCESS", payload: data.data});
+        } else {
+            dispatch({type: "FRIENDS_ERROR", payload: data.data});
+        }
     };
+    console.log("Data: ", data);
     return (
         <>
             <Header page="friends"/>
