@@ -73,5 +73,5 @@
 }
 
 .dark .comment_circle_icon:hover {
-    background: var(--bg-fifth);
+    background: #555;
 }
