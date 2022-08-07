@@ -40,6 +40,10 @@ a {
     --shadow-inset: rgba(255, 255, 255, 0.5);
 }
 
+.dark {
+
+}
+
 
 /* ------ Buttons --------- */
 .blue_btn {
