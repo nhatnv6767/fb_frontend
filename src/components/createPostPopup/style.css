@@ -92,7 +92,7 @@
     font-family: inherit;
     font-size: 24px;
     background: var(--bg-primary);
-    color: var(--color-primary);
+    color: #000;
 }
 
 .flex_center textarea {
