@@ -49,6 +49,10 @@
     background: #1876f2;
 }
 
+.active_friends i {
+    filter: invert(100%);
+}
+
 .see_link {
     color: var(--blue-color);
     padding: 5px;
