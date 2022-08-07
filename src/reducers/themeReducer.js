@@ -1,18 +1,14 @@
 import Cookies from "js-cookie";
 
 export function themeReducer(
-    state = Cookies.get("user")
-        ? JSON.parse(Cookies.get("user")) : null,
+    state = Cookies.get("darkTheme")
+        ? JSON.parse(Cookies.get("darkTheme")) : false,
     action) {
     switch (action.type) {
-        case "LOGIN":
-            return action.payload;
-        case "LOGOUT":
-            return null;
-        case "UPDATEPICTURE":
-            return {...state, picture: action.payload};
-        case "VERIFY":
-            return {...state, verified: action.payload};
+        case "DARK":
+            return true;
+        case "LIGHT":
+            return false;
         default:
             return state;
     }
