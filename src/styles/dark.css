@@ -36,11 +36,12 @@
     background: #888888;
 }
 
-.dark input {
+.dark input[type="text"] {
     color: var(--color-primary);
 }
 
-.dark .small_circle i {
+.dark .small_circle i,
+.dark .circle i {
     filter: invert(100%) !important;
 }
 
