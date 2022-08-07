@@ -99,7 +99,14 @@ export default function Friends() {
                         </div>
                     </div>
                 </div>
-                <div className="friends_right"></div>
+                <div className="friends_right">
+                    <div className="friends_right_wrap">
+                        <div className="friends_right_header">
+                            <h3>Friend Requests</h3>
+                            <a className="see_link hover3">See all</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

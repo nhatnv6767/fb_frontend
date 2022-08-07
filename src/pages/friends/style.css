@@ -44,3 +44,9 @@
 .active_friends {
     background: var(--bg-secondary);
 }
+
+.see_link {
+    color: var(--blue-color);
+    padding: 5px;
+    cursor: pointer;
+}
