@@ -75,3 +75,8 @@
 .dark .comment_circle_icon:hover {
     background: #555;
 }
+
+.dark .box_privacy i,
+.dark .box_privacy img {
+    filter: invert(90%);
+}
