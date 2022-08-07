@@ -13,6 +13,16 @@ export default function Friends() {
                             <i className="settings_filled_icon"></i>
                         </div>
                     </div>
+                    <div className="friends_left_wrap">
+                        <div className="mmenu_item hover3 active_friends">
+                            <div className="small_circle"></div>
+                        </div>
+                        <div className="mmenu_item hover3"></div>
+                        <div className="mmenu_item hover3"></div>
+                        <div className="mmenu_item hover3"></div>
+                        <div className="mmenu_item hover3"></div>
+                        <div className="mmenu_item hover3"></div>
+                    </div>
                 </div>
                 <div className="friends_right"></div>
             </div>
