@@ -118,7 +118,11 @@ export default function Friends() {
                             <div className="friends_right_wrap">
                                 <div className="friends_left_header">
                                     <h3>Friend Requests</h3>
-                                    <Link to="/friends/requests" className="see_link hover3">See all</Link>
+                                    {
+                                        type === undefined && (
+                                            <Link to="/friends/requests" className="see_link hover3">See all</Link>
+                                        )
+                                    }
                                 </div>
                                 <div className="flex_wrap">
                                     {
@@ -140,7 +144,11 @@ export default function Friends() {
                             <div className="friends_right_wrap">
                                 <div className="friends_left_header">
                                     <h3>Sent Requests</h3>
-                                    <Link to="/friends/sent" className="see_link hover3">See all</Link>
+                                    {
+                                        type === undefined && (
+                                            <Link to="/friends/sent" className="see_link hover3">See all</Link>
+                                        )
+                                    }
                                 </div>
                                 <div className="flex_wrap">
                                     {
@@ -162,7 +170,11 @@ export default function Friends() {
                             <div className="friends_right_wrap">
                                 <div className="friends_left_header">
                                     <h3>Friends</h3>
-                                    <Link to="/friends/all" className="see_link hover3">See all</Link>
+                                    {
+                                        type === undefined && (
+                                            <Link to="/friends/all" className="see_link hover3">See all</Link>
+                                        )
+                                    }
                                 </div>
                                 <div className="flex_wrap">
                                     {
