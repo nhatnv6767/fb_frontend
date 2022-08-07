@@ -1,7 +1,6 @@
 import {Return, Search} from "../../svg";
 import {useEffect, useRef, useState} from "react";
 import useClickOutside from "../../helpers/clickOutside";
-import async from "async";
 import {addToSearchHistory, getSearchHistory, removeFromSearch, search} from "../../functions/user";
 import {Link} from "react-router-dom";
 
@@ -41,6 +40,7 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
 
     const handleRemove = async (searchUser) => {
         await removeFromSearch(searchUser, token);
+        await getHistory();
     };
     return (
         <div className="header_left search_area scrollbar" ref={menu}>
@@ -112,9 +112,11 @@ export default function SearchMenu({color, setShowSearchMenu, token}) {
                                 {user.user.first_name} {user.user.last_name}
                             </span>
                                 </Link>
-                                <i className="exit_icon" onClick={() => {
-                                    handleRemove(user.user._id);
-                                }}></i>
+                                <i
+                                    className="exit_icon"
+                                    onClick={() =>
+                                        handleRemove(user.user._id)
+                                    }></i>
                             </div>
                         ))
                 }
