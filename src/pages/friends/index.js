@@ -6,11 +6,12 @@ import {useSelector} from "react-redux";
 
 export default function Friends() {
     const {user} = useSelector((state) => ({...state}));
-    useEffect(() => {
-
+    useEffect(async () => {
+        await getData();
     }, []);
     const getData = async () => {
         const data = await getFriendsPageInfos(user.token);
+        console.log(data);
     };
     return (
         <>
