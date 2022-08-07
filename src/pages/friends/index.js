@@ -39,13 +39,13 @@ export default function Friends() {
                         </div>
                     </div>
                     <div className="friends_left_wrap">
-                        <Link to="/friends/" className="mmenu_item active_friends">
+                        <Link to="/friends" className="mmenu_item active_friends">
                             <div className="small_circle" style={{background: "#1876f2"}}>
                                 <i className="friends_home_icon invert"></i>
                             </div>
                             <span>Home</span>
                         </Link>
-                        <Link to="/friends/" className="mmenu_item hover3">
+                        <Link to="/friends/requests" className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="friends_requests_icon"></i>
                             </div>
@@ -54,7 +54,7 @@ export default function Friends() {
                                 <i className="right_icon"></i>
                             </div>
                         </Link>
-                        <Link to="/friends/" className="mmenu_item hover3">
+                        <Link to="/friends/sent" className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="friends_requests_icon"></i>
                             </div>
@@ -72,7 +72,7 @@ export default function Friends() {
                                 <i className="right_icon"></i>
                             </div>
                         </div>
-                        <Link to="/friends/" className="mmenu_item hover3">
+                        <Link to="/friends/all" className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="all_friends_icon"></i>
                             </div>
