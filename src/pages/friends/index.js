@@ -101,9 +101,16 @@ export default function Friends() {
                 </div>
                 <div className="friends_right">
                     <div className="friends_right_wrap">
-                        <div className="friends_right_header">
+                        <div className="friends_left_header">
                             <h3>Friend Requests</h3>
                             <a className="see_link hover3">See all</a>
+                        </div>
+                        <div className="flex_wrap">
+                            {
+                                data.requests && data.requests.map((user) => (
+                                    ""
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
