@@ -25,7 +25,9 @@ export default function Friends() {
                                 <i className=""></i>
                             </div>
                             <span></span>
-                            <div className="rArrow"></div>
+                            <div className="rArrow">
+                                <i className="right_icon"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
