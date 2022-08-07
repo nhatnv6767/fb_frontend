@@ -82,5 +82,5 @@
 }
 
 .dark .emoji_icon_large:hover {
-    filter: invert(100%);
+    filter: invert(0);
 }
