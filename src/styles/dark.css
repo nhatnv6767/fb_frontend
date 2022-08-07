@@ -78,5 +78,9 @@
 
 .dark .box_privacy i,
 .dark .box_privacy img {
-    filter: invert(90%);
+    filter: invert(95%);
+}
+
+.dark .emoji_icon_large:hover {
+    filter: invert(100%);
 }
