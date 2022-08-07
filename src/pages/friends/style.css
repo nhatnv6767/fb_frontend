@@ -107,3 +107,18 @@
         display: none;
     }
 }
+
+@media (max-width: 400px) {
+    .friends_left_header h3 {
+        font-size: 16px;
+    }
+
+    .see_link {
+        font-size: 12px;
+        width: 50px;
+    }
+
+    .req_card button {
+        width: 130px !important;
+    }
+}
