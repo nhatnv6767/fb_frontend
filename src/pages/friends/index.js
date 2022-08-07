@@ -13,7 +13,11 @@ export default function Friends() {
     const getData = async () => {
         const data = await getFriendsPageInfos(user.token);
     };
-    const [{loading, error, data}, dispatch] = useReducer(friendspage);
+    const [{loading, error, data}, dispatch] = useReducer(friendspage, {
+        loading: false,
+        data: {},
+        error: "",
+    });
     return (
         <>
             <Header page="friends"/>
