@@ -1,4 +1,5 @@
 import {useDispatch} from "react-redux";
+import Cookies from "js-cookie";
 
 export default function DisplayAccessibility({setVisible}) {
     const dispatch = useDispatch();
@@ -31,6 +32,7 @@ export default function DisplayAccessibility({setVisible}) {
                 htmlFor="darkOff"
                 className="hover1"
                 onClick={() => {
+                    Cookies.set("darkTheme", false);
                     dispatch({type: "LIGHT"});
                 }}
             >
@@ -41,6 +43,7 @@ export default function DisplayAccessibility({setVisible}) {
                 htmlFor="darkOn"
                 className="hover1"
                 onClick={() => {
+                    Cookies.set("darkTheme", true);
                     dispatch({type: "DARK"});
                 }}
             >
