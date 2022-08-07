@@ -129,7 +129,7 @@ export default function Friends() {
                     </div>
                     <div className="friends_right_wrap">
                         <div className="friends_left_header">
-                            <h3>Friend Lists</h3>
+                            <h3>Friends</h3>
                             <a className="see_link hover3">See all</a>
                         </div>
                         <div className="flex_wrap">
