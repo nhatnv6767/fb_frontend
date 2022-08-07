@@ -15,9 +15,10 @@ export default function Friends() {
                     </div>
                     <div className="friends_left_wrap">
                         <div className="mmenu_item hover3 active_friends">
-                            <div className="small_circle">
-                                <i className="friends_home_icon"></i>
+                            <div className="small_circle" style={{background: "#1876f2"}}>
+                                <i className="friends_home_icon invert"></i>
                             </div>
+                            <span>Home</span>
                         </div>
                         <div className="mmenu_item hover3"></div>
                         <div className="mmenu_item hover3"></div>
