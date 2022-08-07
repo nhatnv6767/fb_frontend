@@ -28,7 +28,6 @@ export default function Friends() {
             dispatch({type: "FRIENDS_ERROR", payload: data.data});
         }
     };
-    console.log("Data: ", data);
     return (
         <>
             <Header page="friends"/>
