@@ -5,12 +5,11 @@ import {getFriendsPageInfos} from "../../functions/user";
 import {useSelector} from "react-redux";
 import {friendspage} from "../../functions/reducers";
 import Card from "./Card";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 export default function Friends() {
     const {user} = useSelector((state) => ({...state}));
     const {type} = useParams();
-    console.log(type);
     const [{loading, error, data}, dispatch] = useReducer(friendspage, {
         loading: false,
         data: {},
@@ -40,13 +39,13 @@ export default function Friends() {
                         </div>
                     </div>
                     <div className="friends_left_wrap">
-                        <div className="mmenu_item active_friends">
+                        <Link to="/friends/" className="mmenu_item active_friends">
                             <div className="small_circle" style={{background: "#1876f2"}}>
                                 <i className="friends_home_icon invert"></i>
                             </div>
                             <span>Home</span>
-                        </div>
-                        <div className="mmenu_item hover3">
+                        </Link>
+                        <Link to="/friends/" className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="friends_requests_icon"></i>
                             </div>
@@ -54,8 +53,8 @@ export default function Friends() {
                             <div className="rArrow">
                                 <i className="right_icon"></i>
                             </div>
-                        </div>
-                        <div className="mmenu_item hover3">
+                        </Link>
+                        <Link to="/friends/" className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="friends_requests_icon"></i>
                             </div>
@@ -63,7 +62,7 @@ export default function Friends() {
                             <div className="rArrow">
                                 <i className="right_icon"></i>
                             </div>
-                        </div>
+                        </Link>
                         <div className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="friends_suggestions_icon"></i>
@@ -73,7 +72,7 @@ export default function Friends() {
                                 <i className="right_icon"></i>
                             </div>
                         </div>
-                        <div className="mmenu_item hover3">
+                        <Link to="/friends/" className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="all_friends_icon"></i>
                             </div>
@@ -81,7 +80,7 @@ export default function Friends() {
                             <div className="rArrow">
                                 <i className="right_icon"></i>
                             </div>
-                        </div>
+                        </Link>
                         <div className="mmenu_item hover3">
                             <div className="small_circle">
                                 <i className="birthdays_icon"></i>
