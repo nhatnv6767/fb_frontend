@@ -5,7 +5,10 @@ import {useSelector} from "react-redux";
 export default function Card({userr, type, getData}) {
     const {user} = useSelector((state) => ({...state}));
     const cancelRequestHandler = async (userId) => {
-        await cancelRequest(userId, user.token);
+        const res = await cancelRequest(userId, user.token);
+        if (res == "ok") {
+            getData();
+        }
     };
     return (
         <div className="req_card">
