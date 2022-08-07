@@ -95,7 +95,8 @@
     background: var(--light-blue-color);
 }
 
-.dark .open_cover_menu i {
+.dark .open_cover_menu i,
+.dark .open_cover_menu img {
     filter: invert(100%);
 }
 
@@ -115,5 +116,26 @@
 .dark .gray_btn img {
     filter: invert(100%);
 }
+
+.dark .profile_container svg {
+    filter: invert(80%);
+}
+
+.dark .grid_icon {
+    filter: invert(80%);
+}
+
+.dark .pictureBox i {
+    filter: invert(100%) !important;
+}
+
+.dark .slider i {
+    filter: invert(100%) !important;
+}
+
+.dark .flex_p_t i {
+    filter: invert(100%) !important;
+}
+
 
 /* ------- Profile -------*/
