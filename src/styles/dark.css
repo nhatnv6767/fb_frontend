@@ -107,4 +107,13 @@
     background: var(--bg-third);
 }
 
+.dark .gray_btn:hover {
+    background: #777;
+}
+
+.dark .gray_btn i,
+.dark .gray_btn img {
+    filter: invert(100%);
+}
+
 /* ------- Profile -------*/
