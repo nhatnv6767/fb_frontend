@@ -1,11 +1,23 @@
 import {Link} from "react-router-dom";
-import {cancelRequest} from "../../functions/user";
+import {acceptRequest, cancelRequest, deleteRequest} from "../../functions/user";
 import {useSelector} from "react-redux";
 
 export default function Card({userr, type, getData}) {
     const {user} = useSelector((state) => ({...state}));
     const cancelRequestHandler = async (userId) => {
         const res = await cancelRequest(userId, user.token);
+        if (res == "ok") {
+            getData();
+        }
+    };
+    const confirmHandler = async (userId) => {
+        const res = await acceptRequest(userId, user.token);
+        if (res == "ok") {
+            getData();
+        }
+    };
+    const deleteHandler = async (userId) => {
+        const res = await deleteRequest(userId, user.token);
         if (res == "ok") {
             getData();
         }
@@ -32,8 +44,18 @@ export default function Card({userr, type, getData}) {
                         type === "requests" ?
                             (
                                 <>
-                                    <button className="blue_btn">Confirm</button>
-                                    <button className="gray_btn">Delete</button>
+                                    <button
+                                        className="blue_btn"
+                                        onClick={() => confirmHandler(userr?._id)}
+                                    >
+                                        Confirm
+                                    </button>
+                                    <button
+                                        className="gray_btn"
+                                        onClick={() => deleteHandler(userr?._id)}
+                                    >
+                                        Delete
+                                    </button>
                                 </>
                             )
                             : ("")
