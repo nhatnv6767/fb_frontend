@@ -31,6 +31,15 @@ export default function Friends() {
                         </div>
                         <div className="mmenu_item hover3">
                             <div className="small_circle">
+                                <i className="friends_requests_icon"></i>
+                            </div>
+                            <span>Sent Requests</span>
+                            <div className="rArrow">
+                                <i className="right_icon"></i>
+                            </div>
+                        </div>
+                        <div className="mmenu_item hover3">
+                            <div className="small_circle">
                                 <i className="friends_suggestions_icon"></i>
                             </div>
                             <span>Suggestions</span>
