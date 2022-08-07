@@ -62,3 +62,8 @@
 .dark .post_action i {
     filter: invert(90%);
 }
+
+.dark .post_menu i,
+.dark .post_menu img {
+    filter: invert(100%);
+}
