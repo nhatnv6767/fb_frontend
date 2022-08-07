@@ -11,6 +11,7 @@ import {useSelector} from "react-redux";
 import {useEffect, useReducer, useState} from "react";
 import axios from "axios";
 import {postsReducer} from "./functions/reducers";
+import Friends from "./pages/friends";
 
 
 function App() {
@@ -76,6 +77,15 @@ function App() {
                         path="/profile/:username"
                         element={
                             <Profile
+                                setVisible={setVisible}
+                                getAllPosts={getAllPosts}
+                            />}
+                        exact
+                    />
+                    <Route
+                        path="/friends"
+                        element={
+                            <Friends
                                 setVisible={setVisible}
                                 getAllPosts={getAllPosts}
                             />}
