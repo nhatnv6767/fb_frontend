@@ -17,6 +17,8 @@ import Friends from "./Friends";
 import Intro from "../../components/intro";
 import {useMediaQuery} from "react-responsive";
 import CreatePostPopup from "../../components/createPostPopup";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 
 export default function Profile({getAllPosts}) {
