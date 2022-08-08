@@ -131,7 +131,7 @@ export default function Profile({getAllPosts}) {
             <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
                     {
-                        true ? (
+                        loading ? (
                             <>
                                 <div className="profile_cover">
                                     <Skeleton
@@ -252,17 +252,33 @@ export default function Profile({getAllPosts}) {
                             && "scrollFixed showMore"
                         }`}>
                             <div className="profile_left" ref={leftSide}>
-                                <Intro
-                                    detailss={profile.details}
-                                    visitor={visitor}
-                                    setOthername={setOthername}
-                                />
-                                <Photos
-                                    username={userName}
-                                    token={user.token}
-                                    photos={photos}
-                                />
-                                <Friends friends={profile.friends}/>
+                                {
+                                    true ?
+                                        <>
+                                            <div className="profile_card">
+                                                <div className="profile_card_header">
+                                                    Photos
+                                                    <div className="profile_header_link">
+                                                        See all photos
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                        :
+                                        <>
+                                            <Intro
+                                                detailss={profile.details}
+                                                visitor={visitor}
+                                                setOthername={setOthername}
+                                            />
+                                            <Photos
+                                                username={userName}
+                                                token={user.token}
+                                                photos={photos}
+                                            />
+                                            <Friends friends={profile.friends}/>
+                                        </>
+                                }
                                 <div className="relative_fb_copyright">
                                     <Link to="/">Privacy </Link>
                                     <span>. </span>
