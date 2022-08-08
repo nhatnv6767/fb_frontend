@@ -139,6 +139,14 @@ export default function Profile({getAllPosts}) {
                                         containerClassName="avatar-skeleton"
                                     />
                                 </div>
+                                <div className="profile_img_wrap">
+                                    <Skeleton
+                                        circle
+                                        height="180px"
+                                        width="180px"
+                                        containerClassName="avatar-skeleton"
+                                    />
+                                </div>
                             </>
                         ) : (
                             <>
