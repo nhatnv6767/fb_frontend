@@ -187,7 +187,7 @@ export default function Profile({getAllPosts}) {
                                                                     height="32px"
                                                                     width="32px"
                                                                     containerClassName="avatar-skeleton"
-                                                                    style={{marginTop: "5px"}}
+                                                                    style={{transform: `translateX(${-i * 7}px)`}}
                                                                 />
                                                             )
                                                         )
