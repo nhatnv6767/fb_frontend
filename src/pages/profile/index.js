@@ -161,6 +161,12 @@ export default function Profile({getAllPosts}) {
                                                     width="200px"
                                                     containerClassName="avatar-skeleton"
                                                 />
+                                                <Skeleton
+                                                    height="30px"
+                                                    width="100px"
+                                                    containerClassName="avatar-skeleton"
+                                                    style={{transform: "translateY(2.5px)"}}
+                                                />
                                             </div>
                                         </div>
                                     </div>
