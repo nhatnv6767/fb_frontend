@@ -19,6 +19,7 @@ import {useMediaQuery} from "react-responsive";
 import CreatePostPopup from "../../components/createPostPopup";
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import {HashLoader} from "react-spinners";
 
 
 export default function Profile({getAllPosts}) {
@@ -261,6 +262,9 @@ export default function Profile({getAllPosts}) {
                                                     <div className="profile_header_link">
                                                         See all photos
                                                     </div>
+                                                </div>
+                                                <div className="sekelton_loader">
+                                                    <HashLoader color="#1876f2"/>
                                                 </div>
                                             </div>
                                         </>
