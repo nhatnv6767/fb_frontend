@@ -117,6 +117,11 @@ export default function Profile({getAllPosts}) {
     // console.log(profile);
     return (
         <div className="profile">
+            <Skeleton
+                circle
+                height="100%"
+                containerClassName="avatar-skeleton"
+            />
             {
                 visible &&
                 <CreatePostPopup
