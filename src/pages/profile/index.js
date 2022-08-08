@@ -154,6 +154,15 @@ export default function Profile({getAllPosts}) {
                                             containerClassName="avatar-skeleton"
                                             style={{transform: "translateY(-3.3rem)"}}
                                         />
+                                        <div className="profile_w_col">
+                                            <div className="profile_name">
+                                                <Skeleton
+                                                    height="35px"
+                                                    width="200px"
+                                                    containerClassName="avatar-skeleton"
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </>
