@@ -181,6 +181,16 @@ export default function Profile({getAllPosts}) {
                                                 {
                                                     Array
                                                         .from(new Array(6), (val, i) => i + 1)
+                                                        .map((id, i) => (
+                                                                <Skeleton
+                                                                    circle
+                                                                    height="32px"
+                                                                    width="32px"
+                                                                    containerClassName="avatar-skeleton"
+                                                                    style={{marginTop: "5px"}}
+                                                                />
+                                                            )
+                                                        )
                                                 }
                                             </div>
                                         </div>
