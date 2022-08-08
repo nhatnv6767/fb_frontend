@@ -333,22 +333,31 @@ export default function Profile({getAllPosts}) {
                                     )
                                 }
                                 <GridPosts/>
-                                <div className="posts">
-                                    {
-                                        profile.posts &&
-                                        profile.posts.length ?
-                                            profile.posts.map((post) => (
-                                                <Post
-                                                    post={post}
-                                                    user={user}
-                                                    key={post._id}
-                                                    profile
-                                                />
-                                            ))
-                                            :
-                                            <div className="no_posts">No posts available</div>
-                                    }
-                                </div>
+                                {
+                                    loading ? (
+                                        <div className="sekelton_loader">
+                                            <HashLoader color="#1876f2"/>
+                                        </div>
+                                    ) : (
+                                        <div className="posts">
+                                            {
+                                                profile.posts &&
+                                                profile.posts.length ?
+                                                    profile.posts.map((post) => (
+                                                        <Post
+                                                            post={post}
+                                                            user={user}
+                                                            key={post._id}
+                                                            profile
+                                                        />
+                                                    ))
+                                                    :
+                                                    <div className="no_posts">No posts available</div>
+                                            }
+                                        </div>
+                                    )
+                                }
+
                             </div>
                         </div>
                     </div>
