@@ -195,6 +195,12 @@ export default function Profile({getAllPosts}) {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="friendship">
+                                        <Skeleton
+                                            height="36px"
+                                            containerClassName="avatar-skeleton"
+                                        />
+                                    </div>
                                 </div>
                             </>
                         ) : (
