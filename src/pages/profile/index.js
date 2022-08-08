@@ -142,7 +142,7 @@ export default function Profile({getAllPosts}) {
                                 <div
                                     className="profile_img_wrap"
                                     style={{
-                                        marginBottom: "-3.2rem",
+                                        marginBottom: "-3rem",
                                         transform: "translateY(-8px)"
                                     }}
                                 >
@@ -152,7 +152,7 @@ export default function Profile({getAllPosts}) {
                                             height="180px"
                                             width="180px"
                                             containerClassName="avatar-skeleton"
-                                            style={{transform: "translateY(-3.6rem)"}}
+                                            style={{transform: "translateY(-3.3rem)"}}
                                         />
                                     </div>
                                 </div>
