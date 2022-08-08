@@ -132,10 +132,12 @@ export default function Profile({getAllPosts}) {
                 <div className="profile_container">
                     {
                         true ? (
-                            <Skeleton
-                                height="350px"
-                                containerClassName="avatar-skeleton"
-                            />
+                            <>
+                                <Skeleton
+                                    height="350px"
+                                    containerClassName="avatar-skeleton"
+                                />
+                            </>
                         ) : (
                             <>
                                 <Cover
