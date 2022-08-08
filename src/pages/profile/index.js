@@ -168,6 +168,14 @@ export default function Profile({getAllPosts}) {
                                                     style={{transform: "translateY(2.5px)"}}
                                                 />
                                             </div>
+                                            <div className="profile_friend_count">
+                                                <Skeleton
+                                                    height="20px"
+                                                    width="90px"
+                                                    containerClassName="avatar-skeleton"
+                                                    style={{marginTop: "5px"}}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
