@@ -117,10 +117,6 @@ export default function Profile({getAllPosts}) {
     // console.log(profile);
     return (
         <div className="profile">
-            <Skeleton
-                height="350px"
-                containerClassName="avatar-skeleton"
-            />
             {
                 visible &&
                 <CreatePostPopup
@@ -134,17 +130,29 @@ export default function Profile({getAllPosts}) {
             <Header page="profile" getAllPosts={getAllPosts}/>
             <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
-                    <Cover
-                        cover={profile.cover}
-                        visitor={visitor}
-                        photos={photos.resources}
-                    />
-                    <ProfilePictureInfos
-                        profile={profile}
-                        visitor={visitor}
-                        photos={photos.resources}
-                        othername={othername}
-                    />
+                    {
+                        true ? (
+                            <Skeleton
+                                height="350px"
+                                containerClassName="avatar-skeleton"
+                            />
+                        ) : (
+                            <>
+                                <Cover
+                                    cover={profile.cover}
+                                    visitor={visitor}
+                                    photos={photos.resources}
+                                />
+                                <ProfilePictureInfos
+                                    profile={profile}
+                                    visitor={visitor}
+                                    photos={photos.resources}
+                                    othername={othername}
+                                />
+                            </>
+                        )
+                    }
+
                     <ProfileMenu/>
                 </div>
             </div>
