@@ -118,7 +118,6 @@ export default function Profile({getAllPosts}) {
     return (
         <div className="profile">
             <Skeleton
-                circle
                 height="350px"
                 containerClassName="avatar-skeleton"
             />
