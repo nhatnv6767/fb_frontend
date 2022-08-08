@@ -207,11 +207,15 @@ export default function Profile({getAllPosts}) {
                                                 width={120}
                                                 containerClassName="avatar-skeleton"
                                             />
-                                            <Skeleton
-                                                height="36px"
-                                                width={120}
-                                                containerClassName="avatar-skeleton"
-                                            />
+                                            {
+                                                visitor && (
+                                                    <Skeleton
+                                                        height="36px"
+                                                        width={120}
+                                                        containerClassName="avatar-skeleton"
+                                                    />
+                                                )
+                                            }
                                         </div>
                                     </div>
                                 </div>
