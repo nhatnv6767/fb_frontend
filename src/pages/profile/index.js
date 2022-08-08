@@ -195,7 +195,7 @@ export default function Profile({getAllPosts}) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="friendship">
+                                    <div className={`friendship ${!visitor && "fix"}`}>
                                         <Skeleton
                                             height="36px"
                                             width={120}
