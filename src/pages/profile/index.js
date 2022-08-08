@@ -131,7 +131,7 @@ export default function Profile({getAllPosts}) {
             <div className="profile_top" ref={profileTop}>
                 <div className="profile_container">
                     {
-                        true ? (
+                        loading ? (
                             <>
                                 <div className="profile_cover">
                                     <Skeleton
@@ -139,14 +139,22 @@ export default function Profile({getAllPosts}) {
                                         containerClassName="avatar-skeleton"
                                     />
                                 </div>
-                                <div className="profile_img_wrap">
-                                    <Skeleton
-                                        circle
-                                        height="180px"
-                                        width="180px"
-                                        containerClassName="avatar-skeleton"
-                                        style={{transform: "translateY(-3.6rem)"}}
-                                    />
+                                <div
+                                    className="profile_img_wrap"
+                                    style={{
+                                        marginBottom: "-3.2rem",
+                                        transform: "translateY(-8px)"
+                                    }}
+                                >
+                                    <div className="profile_w_left">
+                                        <Skeleton
+                                            circle
+                                            height="180px"
+                                            width="180px"
+                                            containerClassName="avatar-skeleton"
+                                            style={{transform: "translateY(-3.6rem)"}}
+                                        />
+                                    </div>
                                 </div>
                             </>
                         ) : (
