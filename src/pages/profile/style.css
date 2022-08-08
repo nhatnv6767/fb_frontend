@@ -621,4 +621,18 @@
     }
 }
 
+.fix {
+    flex-direction: row !important;
+}
 
+.react-loading-skeleton {
+    --base-color: #ccc !important;
+    --highlight-color: #ddd !important;
+}
+
+.sekelton_loader {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
