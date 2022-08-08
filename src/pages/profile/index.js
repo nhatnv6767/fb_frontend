@@ -135,8 +135,9 @@ export default function Profile({getAllPosts}) {
                             <>
                                 <div className="profile_cover">
                                     <Skeleton
-                                        height="350px"
+                                        height="347px"
                                         containerClassName="avatar-skeleton"
+                                        style={{borderRadius: "8px"}}
                                     />
                                 </div>
                                 <div
@@ -175,6 +176,12 @@ export default function Profile({getAllPosts}) {
                                                     containerClassName="avatar-skeleton"
                                                     style={{marginTop: "5px"}}
                                                 />
+                                            </div>
+                                            <div className="profile_friend_imgs">
+                                                {
+                                                    Array
+                                                        .from(new Array(6), (val, i) => i + 1)
+                                                }
                                             </div>
                                         </div>
                                     </div>
