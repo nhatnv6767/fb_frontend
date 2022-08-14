@@ -45,7 +45,7 @@ function App() {
         } catch (e) {
             dispatch({
                 type: "POSTS_ERROR",
-                payload: e.response.data.message,
+                payload: e.response?.data.message,
             });
         }
     };
